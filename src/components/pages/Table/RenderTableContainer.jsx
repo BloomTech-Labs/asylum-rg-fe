@@ -5,7 +5,7 @@ import { columns } from '../../../data/columns';
 import { makeStyles } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { getAllData } from '../../../state/actions';
-import SearchBar from './SearchBar';
+import SearchBar from './SearchBar/SearchBar';
 
 const useStyles = makeStyles({
   container: {
@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 
 //data will come in as props and not be hard coded
 function RenderTablePage(props) {
-  const { cases, getAllData, filteredCount, filteredData } = props;
+  const { asylum, getAllData, filteredCount, filteredData } = props;
 
   const classes = useStyles();
 
@@ -30,9 +30,9 @@ function RenderTablePage(props) {
       <Table
         className={classes.container}
         bordered={true}
-        loading={cases.length === 0 ? true : false}
+        loading={asylum.length === 0 ? true : false}
         columns={columns}
-        dataSource={filteredCount === 0 ? cases : filteredData}
+        dataSource={filteredCount === 0 ? asylum : filteredData}
         scroll={{ y: 550 }}
         pagination={{
           position: ['bottomCenter'],
@@ -45,11 +45,10 @@ function RenderTablePage(props) {
 }
 
 const mapStateToProps = state => {
-  const reducerState = state.dataReducer;
-  const filteredReducer = reducerState.filteredReducer;
+  const filteredReducer = state.filterReducer;
 
   return {
-    cases: reducerState.casesReducer,
+    asylum: state.dataReducer,
     filteredData: filteredReducer.data,
     filteredCount: filteredReducer.count,
   };

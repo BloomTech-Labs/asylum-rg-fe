@@ -33,7 +33,6 @@ function RenderTablePage(props) {
         loading={cases.length === 0 ? true : false}
         columns={columns}
         dataSource={filteredCount === 0 ? cases : filteredData}
-
         scroll={{ y: 550 }}
         pagination={{
           position: ['bottomCenter'],
@@ -46,7 +45,6 @@ function RenderTablePage(props) {
 }
 
 const mapStateToProps = state => {
-
   const reducerState = state.dataReducer;
   const filteredReducer = reducerState.filteredReducer;
 

@@ -7,17 +7,14 @@ const initialCasesData = [];
 const initialFilteredStates = {
   count: 0,
   data: [],
-
 };
 
 // Reducers
 function casesReducer(state = initialCasesData, action) {
   switch (action.type) {
-
     case GET_DATA: {
       return action.payload;
     }
-
 
     default: {
       return state;

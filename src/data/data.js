@@ -27,8 +27,3 @@ export const generateData = (numberOfEntries = 200) =>
       currentDate: currentDate(),
     };
   });
-// For randomly generated data, once the RenderTableContainer is fixed, use this data and delete the other:
-// Adjust the number used below to adjust for number of dummy cases desired for testing.
-// Using 100 to allow for pagination to start.
-
-export const data = [...generateData(100)];

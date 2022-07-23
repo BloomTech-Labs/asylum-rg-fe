@@ -405,11 +405,11 @@ export const regions = [
     continent: continentEnum.europe,
     geopolitical: geopoliticalEnum.europe,
   },
-  {
-    territory: 'ESWATINI',
-    continent: continentEnum.africa,
-    geopolitical: geopoliticalEnum.subSaharanAfrica,
-  }, //Not yet included, formerly Swaziland
+  // {
+  //   territory: 'ESWATINI',
+  //   continent: continentEnum.africa,
+  //   geopolitical: geopoliticalEnum.subSaharanAfrica,
+  // }, //Not yet included, formerly Swaziland
   {
     territory: 'ETHIOPIA',
     continent: continentEnum.africa,
@@ -420,11 +420,11 @@ export const regions = [
     continent: continentEnum.oceania,
     geopolitical: geopoliticalEnum.eastAsiaPacific,
   },
-  {
-    territory: 'FINLAND',
-    continent: continentEnum.europe,
-    geopolitical: geopoliticalEnum.europe,
-  }, //Not included in the data
+  // {
+  //   territory: 'FINLAND',
+  //   continent: continentEnum.europe,
+  //   geopolitical: geopoliticalEnum.europe,
+  // }, //Not included in the data
   {
     territory: 'FRANCE',
     continent: continentEnum.europe,
@@ -620,11 +620,11 @@ export const regions = [
     continent: continentEnum.europe,
     geopolitical: geopoliticalEnum.europe,
   },
-  {
-    territory: 'MACAO',
-    continent: continentEnum.asia,
-    geopolitical: geopoliticalEnum.eastAsiaPacific,
-  }, //Not included in current data but is similar to Hong Kong in its political standing
+  // {
+  //   territory: 'MACAO',
+  //   continent: continentEnum.asia,
+  //   geopolitical: geopoliticalEnum.eastAsiaPacific,
+  // }, //Not included in current data but is similar to Hong Kong in its political standing
   {
     territory: 'MADAGASCAR',
     continent: continentEnum.africa,
@@ -695,11 +695,11 @@ export const regions = [
     continent: continentEnum.africa,
     geopolitical: geopoliticalEnum.subSaharanAfrica,
   },
-  {
-    territory: 'MYANMAR',
-    continent: continentEnum.asia,
-    geopolitical: geopoliticalEnum.eastAsiaPacific,
-  }, //Not yet in the data -- formerly Burma
+  // {
+  //   territory: 'MYANMAR',
+  //   continent: continentEnum.asia,
+  //   geopolitical: geopoliticalEnum.eastAsiaPacific,
+  // }, //Not yet in the data -- formerly Burma
   {
     territory: 'NAMIBIA',
     continent: continentEnum.africa,

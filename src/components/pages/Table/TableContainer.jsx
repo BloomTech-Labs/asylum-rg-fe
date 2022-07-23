@@ -1,12 +1,15 @@
 import React, { useEffect, useCallback } from 'react';
-import Table from './Table';
-import AsylumOfficeSelect from './AsylumOfficeSelect';
-import ContinentSelect from './ContinentSelect';
-import GeopoliticalSelect from './GeopoliticalSelect';
-import SearchSubmitButton from './SearchSubmitButton';
+import DataTable from './DataTable';
 
 import { connect } from 'react-redux';
-import { getFilteredData, getMockFilteredData } from '../../../state/actions';
+import {
+  getFilteredData,
+  getMockFilteredData,
+} from '../../../state/actionCreators';
+
+const mapStateToProps = state => ({
+  cases: state.dataReducer.cases,
+});
 
 const TableContainer = ({ cases, getFilteredData, getMockFilteredData }) => {
   /*As JavaScript treats functions like first class objects, when it rerenders it
@@ -35,28 +38,11 @@ const TableContainer = ({ cases, getFilteredData, getMockFilteredData }) => {
           backgroundColor: '#f7e4ca',
         }}
       >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            height: '15vh',
-            alignItems: 'center',
-          }}
-        >
-          <AsylumOfficeSelect />
-          <ContinentSelect />
-          <GeopoliticalSelect />
-          <SearchSubmitButton />
-        </div>
-        <Table />
+        <DataTable />
       </div>
     </>
   );
 };
-
-const mapStateToProps = state => ({
-  cases: state.apiDataReducer.cases,
-});
 
 export default connect(mapStateToProps, {
   getFilteredData,

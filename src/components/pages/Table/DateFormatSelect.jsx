@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setDateFilterFormat } from '../../../state/actions';
+import { setDateFilterFormat } from '../../../state/actionCreators';
 import 'antd/dist/antd.css';
 import { Select } from 'antd';
 // import '../../../styles/FilterMenuStyles/DateFormatSelect.less';
@@ -8,7 +8,7 @@ import { Select } from 'antd';
 const { Option } = Select;
 
 const mapStateToProps = state => ({
-  isFiscalYear: state.apiFilterReducer.isFiscalYear,
+  isFiscalYear: state.fetchFilterReducer.isFiscalYear,
 });
 
 const DateFormatSelect = ({ isFiscalYear, setDateFilterFormat }) => (

@@ -1,9 +1,18 @@
 import React from 'react';
 import { Button } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
-import { getFilteredData, getMockFilteredData } from '../../../state/actions';
-import { buildQueryString } from '../../../state/reducers/filterReducer';
+import {
+  getFilteredData,
+  getMockFilteredData,
+} from '../../../state/actionCreators';
+import { buildQueryString } from '../../../state/reducers/fetchFilterReducer';
 import { connect } from 'react-redux';
+
+const mapStateToProps = state => {
+  return {
+    filters: state.fetchFilterReducer,
+  };
+};
 
 function SearchSubmitButton({ filters, getFilteredData, getMockFilteredData }) {
   return (
@@ -21,12 +30,6 @@ function SearchSubmitButton({ filters, getFilteredData, getMockFilteredData }) {
     </Button>
   );
 }
-
-const mapStateToProps = state => {
-  return {
-    filters: state.filterReducer,
-  };
-};
 
 export default connect(mapStateToProps, {
   getFilteredData,

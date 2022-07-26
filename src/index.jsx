@@ -12,24 +12,12 @@ import {
 } from 'react-router-dom';
 // import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
 import './styles/styles.css';
-
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { ExampleListPage } from './components/pages/ExampleList';
 import { LandingPage } from './components/pages/Landing';
 import { TablePage } from './components/pages/Table';
 import { ExampleDataViz } from './components/pages/ExampleDataViz';
-
-// currently unused imports/components
-/**
- * import { LoadingComponent } from './components/common';
- * import { config } from './utils/oktaConfig';
- * import { HomePage } from './components/pages/Home';
- * import { LoginPage } from './components/pages/Login';
- * import { ProfileListPage } from './components/pages/ProfileList';
- *
- */
-
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import reducer from './state/reducers';

@@ -17,9 +17,9 @@ function AllOfficesRoute() {
       ALL OFFICES
       <ViewSelect />
       <Switch>
-        <Route path="citizenship" component={CitizenshipMapAll} />
-        <Route path="office-heat-map" component={OfficeHeatMap} />
-        <Route path="time-series" component={TimeSeriesAll} />
+        <Route path="/heatmap/all/citizenship" component={CitizenshipMapAll} />
+        <Route path="/heatmap/all/office-heat-map" component={OfficeHeatMap} />
+        <Route path="/heatmap/all/time-series" component={TimeSeriesAll} />
       </Switch>
     </div>
   );

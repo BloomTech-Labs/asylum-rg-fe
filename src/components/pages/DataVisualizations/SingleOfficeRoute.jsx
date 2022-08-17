@@ -10,6 +10,7 @@ import { Select } from 'antd';
 const { Option } = Select;
 
 function SingleOfficeRoute() {
+  let { office } = useParams();
   return (
     <div
       className="single-office-route"
@@ -20,10 +21,17 @@ function SingleOfficeRoute() {
         backgroundColor: 'lightgreen',
       }}
     >
+      {office}
       <ViewSelect />
       <Switch>
-        <Route path="citizenship" component={CitizenshipMapSingleOffice} />
-        <Route path="time-series" component={TimeSeriesSingleOffice} />
+        <Route
+          path="/heatmap/:office/citizenship"
+          component={CitizenshipMapSingleOffice}
+        />
+        <Route
+          path="/heatmap/:office/time-series"
+          component={TimeSeriesSingleOffice}
+        />
       </Switch>
     </div>
   );

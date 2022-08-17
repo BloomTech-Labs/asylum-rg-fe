@@ -14,9 +14,13 @@ function ViewSelect() {
       }}
     >
       VIEW SELECT
-      <Link to="time-series">Time Series</Link>
-      {office ? '' : <Link to="officexyear">Office x Year</Link>}
-      <Link to="citizenship">Citizenship</Link>
+      <Link to={`/heatmap/${office ? office : 'all'}/time-series`}>
+        Time Series
+      </Link>
+      {office ? '' : <Link to={`/heatmap/all/officexyear`}>Office x Year</Link>}
+      <Link to={`/heatmap/${office ? office : 'all'}/citizenship`}>
+        Citizenship
+      </Link>
     </div>
   );
 }

@@ -17,7 +17,11 @@ function ViewSelect() {
       <Link to={`/heatmap/${office ? office : 'all'}/time-series`}>
         Time Series
       </Link>
-      {office ? '' : <Link to={`/heatmap/all/officexyear`}>Office x Year</Link>}
+      {office ? (
+        ''
+      ) : (
+        <Link to={`/heatmap/all/office-heat-map`}>Office x Year</Link>
+      )}
       <Link to={`/heatmap/${office ? office : 'all'}/citizenship`}>
         Citizenship
       </Link>

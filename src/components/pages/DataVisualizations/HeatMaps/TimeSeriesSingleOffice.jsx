@@ -7,8 +7,10 @@ function TimeSeriesSingleOffice() {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        height: '100%',
+        justifyContent: 'center',
+        minHeight: '100px',
         backgroundColor: 'lightgreen',
+        padding: '10%',
       }}
     >
       TIME SERIES SINGLE OFFICE

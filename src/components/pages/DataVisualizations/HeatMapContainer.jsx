@@ -39,13 +39,13 @@ function HeatMapContainer() {
         }}
       >
         HEAT MAP CONTAINER
-        <Link to="/heatmap/all">All</Link>
+        <Link to="/heatmap/all/time-series">All</Link>
         {offices.map(office => (
-          <Link to={`/heatmap/${office}`}>{office}</Link>
+          <Link to={`/heatmap/${office}/time-series`}>{office}</Link>
         ))}
         <Switch>
-          <Route path="/heatmap/all" component={AllOfficesRoute} />
-          <Route path="/heatmap/:office" component={SingleOfficeRoute} />
+          <Route path="/heatmap/all/:view" component={AllOfficesRoute} />
+          <Route path="/heatmap/:office/:view" component={SingleOfficeRoute} />
         </Switch>
       </div>
     </div>

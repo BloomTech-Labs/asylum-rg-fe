@@ -4,13 +4,14 @@ import { Switch, Route, useParams } from 'react-router-dom';
 import CitizenshipMapSingleOffice from './HeatMaps/CitizenshipMapAll';
 import TimeSeriesSingleOffice from './HeatMaps/TimeSeriesSingleOffice';
 import ViewSelect from './ViewSelect';
+import MapWrapper from './MapWrapper';
 
 import 'antd/dist/antd.css';
 import { Select } from 'antd';
 const { Option } = Select;
 
 function SingleOfficeRoute() {
-  let { office } = useParams();
+  let { office, view } = useParams();
   return (
     <div
       className="single-office-route"
@@ -22,17 +23,7 @@ function SingleOfficeRoute() {
       }}
     >
       {office}
-      <ViewSelect />
-      <Switch>
-        <Route
-          path="/heatmap/:office/citizenship"
-          component={CitizenshipMapSingleOffice}
-        />
-        <Route
-          path="/heatmap/:office/time-series"
-          component={TimeSeriesSingleOffice}
-        />
-      </Switch>
+      <MapWrapper />
     </div>
   );
 }

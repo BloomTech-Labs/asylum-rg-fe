@@ -8,11 +8,13 @@ function CitizenshipMapAll() {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        height: '100%',
+        minHeight: '100px',
+        justifyContent: 'center',
         backgroundColor: 'lightgreen',
+        padding: '10%',
       }}
     >
-      {'CITIZENSHIP MAP WILL GO HERE'}
+      CITIZENSHIP MAP ALL
     </div>
   );
 }

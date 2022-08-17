@@ -2,12 +2,20 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 function ViewSelect() {
-  let { office } = useParams;
+  let { office } = useParams();
   return (
-    <div className="view-select-container">
+    <div
+      className="view-select-container"
+      style={{
+        backgroundColor: 'lightblue',
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100px',
+      }}
+    >
       VIEW SELECT
       <Link to="time-series">Time Series</Link>
-      office==='all'?<Link to="officexyear">Office x Year</Link>:''
+      {office ? '' : <Link to="officexyear">Office x Year</Link>}
       <Link to="citizenship">Citizenship</Link>
     </div>
   );

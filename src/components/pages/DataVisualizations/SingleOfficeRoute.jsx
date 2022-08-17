@@ -11,7 +11,7 @@ import { Select } from 'antd';
 const { Option } = Select;
 
 function SingleOfficeRoute(props) {
-  const { setView } = props;
+  const { set_view } = props;
   let { office, view } = useParams();
   return (
     <div
@@ -24,7 +24,7 @@ function SingleOfficeRoute(props) {
       }}
     >
       {office}
-      <MapWrapper setView={setView} />
+      <MapWrapper set_view={set_view} />
     </div>
   );
 }

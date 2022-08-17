@@ -24,7 +24,14 @@ function HeatMapContainer() {
     'ZOL',
   ];
   function handle_office_select(e) {
-    history.push(`/heatmap/${e.target.value}/${view}`);
+    if (view === 'office-heat-map') {
+      set_view('time-series');
+    }
+    history.push(
+      `/heatmap/${e.target.value}/${
+        view === 'office-heat-map' ? 'time-series' : view
+      }`
+    );
   }
   return (
     <div

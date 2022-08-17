@@ -9,7 +9,7 @@ import YearLimitsSelect from './YearLimitsSelect';
 import ViewSelect from './ViewSelect';
 
 function MapWrapper(props) {
-  const { setView } = props;
+  const { set_view } = props;
   const { office, view } = useParams();
   let map_to_render;
   if (!office) {
@@ -55,7 +55,7 @@ function MapWrapper(props) {
     >
       {map_to_render()}
       <div className="user-input-sidebar-container">
-        <ViewSelect setView={setView} />
+        <ViewSelect set_view={set_view} />
         <YearLimitsSelect />
       </div>
     </div>

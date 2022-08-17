@@ -1,9 +1,14 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useHistory } from 'react-router-dom';
 
 function ViewSelect(props) {
-  const { setView } = props;
+  const history = useHistory();
+  const { set_view } = props;
   let { office } = useParams();
+  function update_view(view, office) {
+    set_view(view);
+    history.push(`/heatmap/${office ? office : 'all'}/${view}`);
+  }
   return (
     <div
       className="view-select-container"
@@ -15,15 +20,19 @@ function ViewSelect(props) {
       }}
     >
       VIEW SELECT
-      <button onClick={() => setView('time-series')}>Time Series</button>
+      <button onClick={() => update_view('time-series', office)}>
+        Time Series
+      </button>
       {office ? (
         ''
       ) : (
-        <button onClick={() => setView('office-heat-map')}>
+        <button onClick={() => update_view('office-heat-map', office)}>
           Office Heat Map
         </button>
       )}
-      <button onClick={() => setView('citizenship')}>Citizenship</button>
+      <button onClick={() => update_view('citizenship', office)}>
+        Citizenship
+      </button>
     </div>
   );
 }

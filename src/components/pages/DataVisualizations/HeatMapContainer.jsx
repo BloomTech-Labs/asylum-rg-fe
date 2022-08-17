@@ -9,6 +9,18 @@ import { Select } from 'antd';
 const { Option } = Select;
 
 function HeatMapContainer() {
+  const offices = [
+    'ZLA',
+    'ZSF',
+    'ZNY',
+    'ZHN',
+    'ZCH',
+    'ZNK',
+    'ZAR',
+    'ZBO',
+    'ZMI',
+    'ZOL',
+  ];
   return (
     <div
       style={{
@@ -18,12 +30,22 @@ function HeatMapContainer() {
         backgroundColor: 'rgb(247,228,202)',
       }}
     >
-      <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          width: '100%',
+        }}
+      >
         HEAT MAP CONTAINER
-        <Link to="all">All</Link>
+        <Link to="/heatmap/all">All</Link>
+        {offices.map(office => (
+          <Link to={`/heatmap/${office}`}>{office}</Link>
+        ))}
         <Switch>
-          <Route path="all/:view" element={<AllOfficesRoute />} />
-          <Route path=":office/:view" element={<SingleOfficeRoute />} />
+          <Route path="/heatmap/all" component={AllOfficesRoute} />
+          <Route path="/heatmap/:office" component={SingleOfficeRoute} />
         </Switch>
       </div>
     </div>

@@ -11,11 +11,19 @@ const { Option } = Select;
 
 function SingleOfficeRoute() {
   return (
-    <div className="single-office-route">
+    <div
+      className="single-office-route"
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100%',
+        backgroundColor: 'lightgreen',
+      }}
+    >
       <ViewSelect />
       <Switch>
-        <Route path="citizenship" element={<CitizenshipMapSingleOffice />} />
-        <Route path="time-series" element={<TimeSeriesSingleOffice />} />
+        <Route path="citizenship" component={CitizenshipMapSingleOffice} />
+        <Route path="time-series" component={TimeSeriesSingleOffice} />
       </Switch>
     </div>
   );

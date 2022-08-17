@@ -12,17 +12,7 @@ import { Select } from 'antd';
 const { Option } = Select;
 
 function AllOfficesRoute() {
-  return (
-    <div className="all-offices-route">
-      ALL OFFICES
-      <ViewSelect />
-      <Switch>
-        <Route path="citizenship" element={<CitizenshipMapAll />} />
-        <Route path="officexyear" element={<OfficeHeatMap />} />
-        <Route path="time-series" element={<TimeSeriesAll />} />
-      </Switch>
-    </div>
-  );
+  return <div className="all-offices-route">ALL OFFICES</div>;
 }
 
 export default AllOfficesRoute;

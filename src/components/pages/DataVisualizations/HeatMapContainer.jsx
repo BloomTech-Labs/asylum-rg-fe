@@ -1,5 +1,5 @@
-import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useHistory, Switch, Route, Link } from 'react-router-dom';
 
 import AllOfficesRoute from './AllOfficesRoute';
 import SingleOfficeRoute from './SingleOfficeRoute';
@@ -9,6 +9,8 @@ import { Select } from 'antd';
 const { Option } = Select;
 
 function HeatMapContainer() {
+  const [view, set_view] = useState('time-series');
+  const history = useHistory();
   const offices = [
     'ZLA',
     'ZSF',
@@ -21,6 +23,9 @@ function HeatMapContainer() {
     'ZMI',
     'ZOL',
   ];
+  function handle_office_select(e) {
+    history.push(`/heatmap/${e.target.value}/${view}`);
+  }
   return (
     <div
       style={{
@@ -39,13 +44,23 @@ function HeatMapContainer() {
         }}
       >
         HEAT MAP CONTAINER
-        <Link to="/heatmap/all/time-series">All</Link>
-        {offices.map(office => (
-          <Link to={`/heatmap/${office}/time-series`}>{office}</Link>
-        ))}
+        <Link to={`/heatmap/all/${view}`}>All</Link>
+        <select className="office-select" onChange={handle_office_select}>
+          {offices.map((office, idx) => (
+            <option key={idx} value={office}>
+              {office}
+            </option>
+          ))}
+        </select>
         <Switch>
-          <Route path="/heatmap/all/:view" component={AllOfficesRoute} />
-          <Route path="/heatmap/:office/:view" component={SingleOfficeRoute} />
+          <Route
+            path="/heatmap/all/:view"
+            component={() => AllOfficesRoute({ set_view })}
+          />
+          <Route
+            path="/heatmap/:office/:view"
+            component={() => SingleOfficeRoute({ set_view })}
+          />
         </Switch>
       </div>
     </div>

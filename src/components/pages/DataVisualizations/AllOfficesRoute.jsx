@@ -12,11 +12,12 @@ import 'antd/dist/antd.css';
 import { Select } from 'antd';
 const { Option } = Select;
 
-function AllOfficesRoute() {
+function AllOfficesRoute(props) {
+  const { set_view } = props;
   return (
     <div className="all-offices-route">
       ALL OFFICES
-      <MapWrapper />
+      <MapWrapper set_view={set_view} />
     </div>
   );
 }

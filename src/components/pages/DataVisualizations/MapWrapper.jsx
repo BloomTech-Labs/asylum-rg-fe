@@ -8,7 +8,8 @@ import TimeSeriesSingleOffice from './HeatMaps/TimeSeriesSingleOffice';
 import YearLimitsSelect from './YearLimitsSelect';
 import ViewSelect from './ViewSelect';
 
-function MapWrapper() {
+function MapWrapper(props) {
+  const { setView } = props;
   const { office, view } = useParams();
   let map_to_render;
   if (!office) {
@@ -54,7 +55,7 @@ function MapWrapper() {
     >
       {map_to_render()}
       <div className="user-input-sidebar-container">
-        <ViewSelect />
+        <ViewSelect setView={setView} />
         <YearLimitsSelect />
       </div>
     </div>

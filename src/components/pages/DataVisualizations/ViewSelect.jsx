@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-function ViewSelect() {
+function ViewSelect(props) {
+  const { setView } = props;
   let { office } = useParams();
   return (
     <div
@@ -14,17 +15,15 @@ function ViewSelect() {
       }}
     >
       VIEW SELECT
-      <Link to={`/heatmap/${office ? office : 'all'}/time-series`}>
-        Time Series
-      </Link>
+      <button onClick={() => setView('time-series')}>Time Series</button>
       {office ? (
         ''
       ) : (
-        <Link to={`/heatmap/all/office-heat-map`}>Office x Year</Link>
+        <button onClick={() => setView('office-heat-map')}>
+          Office Heat Map
+        </button>
       )}
-      <Link to={`/heatmap/${office ? office : 'all'}/citizenship`}>
-        Citizenship
-      </Link>
+      <button onClick={() => setView('citizenship')}>Citizenship</button>
     </div>
   );
 }

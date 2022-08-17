@@ -10,7 +10,8 @@ import 'antd/dist/antd.css';
 import { Select } from 'antd';
 const { Option } = Select;
 
-function SingleOfficeRoute() {
+function SingleOfficeRoute(props) {
+  const { setView } = props;
   let { office, view } = useParams();
   return (
     <div
@@ -23,7 +24,7 @@ function SingleOfficeRoute() {
       }}
     >
       {office}
-      <MapWrapper />
+      <MapWrapper setView={setView} />
     </div>
   );
 }

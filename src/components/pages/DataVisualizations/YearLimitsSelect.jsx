@@ -1,7 +1,9 @@
 import React from 'react';
 import YearLimitsSlider from './YearLimitsSlider';
+import { Form, Button, Input } from 'antd';
 
 function YearLimitsSelect() {
+  const [form] = Form.useForm();
   return (
     <div
       className="year-limits-select-container"
@@ -12,33 +14,31 @@ function YearLimitsSelect() {
       }}
     >
       <YearLimitsSlider />
-      <label
+      <Form
+        form={form}
+        name="yearLimitsSelect"
+        onFinish={() => {}}
+        autoComplete="off"
+        layout="inline"
+        wrapperCol={{ span: 45 }}
         style={{
           display: 'flex',
           flexDirection: 'column',
+          alignContent: 'start',
         }}
       >
-        From:
-        <input name="year-start" type="text" />
-      </label>
-      <label
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
-        To:
-        <input name="year-end" type="text" />
-      </label>
-      <button
-        style={{
-          backgroundColor: 'rgb(150,100,180)',
-          border: '1px solid white',
-          borderRadius: '10px',
-        }}
-      >
-        UPDATE QUERY
-      </button>
+        <Form.Item label="From:" name="year_start" rules={[{ required: true }]}>
+          <Input />
+        </Form.Item>
+        <Form.Item label="To:" name="year_end" rules={[{ required: true }]}>
+          <Input />
+        </Form.Item>
+        <Form.Item>
+          <Button type="primary" htmlType="submit" data-testid="filter">
+            Update Query
+          </Button>
+        </Form.Item>
+      </Form>
     </div>
   );
 }

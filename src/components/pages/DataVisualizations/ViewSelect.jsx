@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
+import { Button } from 'antd';
 
 function ViewSelect(props) {
   const history = useHistory();
@@ -16,22 +17,23 @@ function ViewSelect(props) {
         backgroundColor: 'lightblue',
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'space-around',
         minHeight: '100px',
       }}
     >
-      <button onClick={() => update_view('time-series', office)}>
+      <Button onClick={() => update_view('time-series', office)}>
         Time Series
-      </button>
+      </Button>
       {office ? (
         ''
       ) : (
-        <button onClick={() => update_view('office-heat-map', office)}>
+        <Button onClick={() => update_view('office-heat-map', office)}>
           Office Heat Map
-        </button>
+        </Button>
       )}
-      <button onClick={() => update_view('citizenship', office)}>
+      <Button onClick={() => update_view('citizenship', office)}>
         Citizenship
-      </button>
+      </Button>
     </div>
   );
 }

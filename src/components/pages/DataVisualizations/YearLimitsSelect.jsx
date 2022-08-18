@@ -11,10 +11,25 @@ function YearLimitsSelect() {
         minHeight: '50px',
       }}
     >
-      YEAR LIMITS SELECT
       <YearLimitsSlider />
-      <input name="year-start" type="text" />
-      <input name="year-end" type="text" />
+      <label
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        From:
+        <input name="year-start" type="text" />
+      </label>
+      <label
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        To:
+        <input name="year-end" type="text" />
+      </label>
       <button
         style={{
           backgroundColor: 'rgb(150,100,180)',

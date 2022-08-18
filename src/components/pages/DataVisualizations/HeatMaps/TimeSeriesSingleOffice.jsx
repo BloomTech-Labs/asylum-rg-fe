@@ -1,6 +1,8 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 function TimeSeriesSingleOffice() {
+  const { office } = useParams();
   return (
     <div
       className="time-series-single-office-container"
@@ -13,7 +15,7 @@ function TimeSeriesSingleOffice() {
         padding: '10%',
       }}
     >
-      TIME SERIES SINGLE OFFICE
+      TIME SERIES {office}
     </div>
   );
 }

@@ -23,7 +23,6 @@ function SingleOfficeRoute(props) {
         backgroundColor: 'lightgreen',
       }}
     >
-      {office}
       <MapWrapper set_view={set_view} />
     </div>
   );

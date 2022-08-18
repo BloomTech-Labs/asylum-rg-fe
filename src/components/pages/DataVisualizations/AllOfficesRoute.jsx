@@ -16,7 +16,6 @@ function AllOfficesRoute(props) {
   const { set_view } = props;
   return (
     <div className="all-offices-route">
-      ALL OFFICES
       <MapWrapper set_view={set_view} />
     </div>
   );

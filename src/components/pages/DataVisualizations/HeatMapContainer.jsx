@@ -23,14 +23,12 @@ function HeatMapContainer() {
     'ZMI',
     'ZOL',
   ];
-  function handle_office_select(e) {
+  function handle_office_select(value) {
     if (view === 'office-heat-map') {
       set_view('time-series');
     }
     history.push(
-      `/heatmap/${e.target.value}/${
-        view === 'office-heat-map' ? 'time-series' : view
-      }`
+      `/heatmap/${value}/${view === 'office-heat-map' ? 'time-series' : view}`
     );
   }
   return (
@@ -50,15 +48,22 @@ function HeatMapContainer() {
           width: '100%',
         }}
       >
-        HEAT MAP CONTAINER
-        <Link to={`/heatmap/all/${view}`}>All</Link>
-        <select className="office-select" onChange={handle_office_select}>
-          {offices.map((office, idx) => (
-            <option key={idx} value={office}>
-              {office}
-            </option>
-          ))}
-        </select>
+        <div
+          className="heatmaps-main-nav-container"
+          style={{
+            display: 'flex',
+            justifyContent: 'space-around',
+          }}
+        >
+          <Link to={`/heatmap/all/${view}`}>All</Link>
+          <Select onSelect={value => handle_office_select(value)}>
+            {offices.map((office, idx) => (
+              <Option key={idx} value={office}>
+                {office}
+              </Option>
+            ))}
+          </Select>
+        </div>
         <Switch>
           <Route
             path="/heatmap/all/:view"

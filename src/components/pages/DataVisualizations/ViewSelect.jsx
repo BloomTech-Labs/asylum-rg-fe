@@ -19,7 +19,6 @@ function ViewSelect(props) {
         minHeight: '100px',
       }}
     >
-      VIEW SELECT
       <button onClick={() => update_view('time-series', office)}>
         Time Series
       </button>

@@ -2,7 +2,8 @@ import React from 'react';
 import YearLimitsSlider from './YearLimitsSlider';
 import { Form, Button, Input } from 'antd';
 
-function YearLimitsSelect() {
+function YearLimitsSelect(props) {
+  const { update_query } = props;
   const [form] = Form.useForm();
   return (
     <div
@@ -17,7 +18,7 @@ function YearLimitsSelect() {
       <Form
         form={form}
         name="yearLimitsSelect"
-        onFinish={() => {}}
+        onFinish={update_query}
         autoComplete="off"
         layout="inline"
         wrapperCol={{ span: 45 }}

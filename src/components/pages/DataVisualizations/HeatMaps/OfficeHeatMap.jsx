@@ -1,6 +1,7 @@
 import React from 'react';
 
-function OfficeHeatMap() {
+function OfficeHeatMap(props) {
+  const { query_received_data } = props;
   return (
     <div
       className="office-heat-map-container"
@@ -15,6 +16,29 @@ function OfficeHeatMap() {
       }}
     >
       OFFICE HEAT MAP
+      {query_received_data
+        .filter(data_item => data_item.year !== 'citizenshipData')
+        .map(data_item => {
+          return (
+            <div>
+              <p>{`year: ${data_item.year}`}</p>
+              {data_item.yearData.map(office => {
+                return (
+                  <div
+                    style={{
+                      backgroundColor: 'lightblue',
+                      minWidth: '280px',
+                      margin: '10% 0 10% 0',
+                    }}
+                  >
+                    <p>{`office: ${office.office}`}</p>
+                    <p>{`%  accepted: ${office.granted}`}</p>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
     </div>
   );
 }

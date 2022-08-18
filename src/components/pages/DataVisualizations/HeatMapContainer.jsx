@@ -56,7 +56,10 @@ function HeatMapContainer() {
           }}
         >
           <Link to={`/heatmap/all/${view}`}>All</Link>
-          <Select onSelect={value => handle_office_select(value)}>
+          <Select
+            defaultValue={offices[0]}
+            onSelect={value => handle_office_select(value)}
+          >
             {offices.map((office, idx) => (
               <Option key={idx} value={office}>
                 {office}

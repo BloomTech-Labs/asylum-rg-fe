@@ -1,6 +1,8 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 function CitizenshipMapSingleOffice() {
+  const { office } = useParams();
   return (
     <div
       className="citizenship-map-single-office-container"
@@ -14,7 +16,7 @@ function CitizenshipMapSingleOffice() {
         padding: '10%',
       }}
     >
-      CITIZENSHIP MAP SINGLE OFFICE
+      CITIZENSHIP MAP {office}
     </div>
   );
 }

@@ -16,7 +16,8 @@ import {
   RESET_CASE_DATA,
   TOGGLE_ADVANCED_SEARCH,
   PERFORM_ADVANCED_SEARCH,
-  SET_HEAT_MAP_YEAR,
+  SET_VISUALIZATION_DATA,
+  SET_HEAT_MAP_YEARS,
 } from '../actionTypes';
 import { generateMockFilteredData } from '../../data/mockAPI';
 
@@ -120,6 +121,25 @@ export function performAdvancedSearch(parameters) {
   return { type: PERFORM_ADVANCED_SEARCH, payload: payloadData };
 }
 
-export const setHeatMapYear = year => {
-  return { type: SET_HEAT_MAP_YEAR, payload: year };
+export const setVisualizationData = (view, office, data) => {
+  return {
+    type: SET_VISUALIZATION_DATA,
+    payload: {
+      view,
+      office,
+      data,
+    },
+  };
+};
+
+export const setHeatMapYears = (view, office, idx, year) => {
+  return {
+    type: SET_HEAT_MAP_YEARS,
+    payload: {
+      view,
+      office,
+      idx,
+      year,
+    },
+  };
 };

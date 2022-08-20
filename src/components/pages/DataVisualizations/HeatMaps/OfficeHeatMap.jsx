@@ -1,7 +1,19 @@
 import React from 'react';
 
+import Redux from 'redux';
+import { connect } from 'react-redux';
+
+import reducer from '../../../../state/reducers';
+import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
+
+const mapStateToProps = state => {
+  return {
+    officeHeatMapData: state.vizReducer.officeHeatMapData,
+  };
+};
+
 function OfficeHeatMap(props) {
-  const { query_received_data } = props;
+  const { officeHeatMapData } = props;
   return (
     <div
       className="office-heat-map-container"
@@ -15,32 +27,10 @@ function OfficeHeatMap(props) {
         padding: '10%',
       }}
     >
-      OFFICE HEAT MAP
-      {query_received_data
-        .filter(data_item => data_item.year !== 'citizenshipData')
-        .map(data_item => {
-          return (
-            <div>
-              <p>{`year: ${data_item.year}`}</p>
-              {data_item.yearData.map(office => {
-                return (
-                  <div
-                    style={{
-                      backgroundColor: 'lightblue',
-                      minWidth: '280px',
-                      margin: '10% 0 10% 0',
-                    }}
-                  >
-                    <p>{`office: ${office.office}`}</p>
-                    <p>{`%  accepted: ${office.granted}`}</p>
-                  </div>
-                );
-              })}
-            </div>
-          );
-        })}
+      <p>OFFICE HEAT MAP</p>
+      <p>{JSON.stringify(officeHeatMapData)}</p>
     </div>
   );
 }
 
-export default OfficeHeatMap;
+export default connect(mapStateToProps)(OfficeHeatMap);

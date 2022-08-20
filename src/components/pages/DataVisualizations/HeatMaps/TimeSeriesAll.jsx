@@ -1,7 +1,21 @@
 import React from 'react';
 
+import Redux from 'redux';
+import { connect } from 'react-redux';
+
+import reducer from '../../../../state/reducers';
+import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
+
+const mapStateToProps = state => {
+  return {
+    timeSeriesAllData: state.vizReducer.timeSeriesAllData,
+  };
+};
+
 function TimeSeriesAll(props) {
-  const { query_received_data } = props;
+  const { timeSeriesAllData } = props;
+  console.log(`timeSeriesAllData:`);
+  console.log(timeSeriesAllData);
   return (
     <div
       className="time-series-all-container"
@@ -14,25 +28,10 @@ function TimeSeriesAll(props) {
         padding: '10%',
       }}
     >
-      TIME SERIES ALL
-      {query_received_data
-        .filter(data_item => data_item.year !== 'citizenshipData')
-        .map(data_item => {
-          return (
-            <div
-              style={{
-                backgroundColor: 'lightblue',
-                minWidth: '280px',
-                margin: '10% 0 10% 0',
-              }}
-            >
-              <p>{`year: ${data_item.year}`}</p>
-              <p>{`%  accepted: ${data_item.granted}`}</p>
-            </div>
-          );
-        })}
+      <p>TIME SERIES ALL</p>
+      <p>{JSON.stringify(timeSeriesAllData)}</p>
     </div>
   );
 }
 
-export default TimeSeriesAll;
+export default connect(mapStateToProps)(TimeSeriesAll);

@@ -1,9 +1,23 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
+import Redux from 'redux';
+import { connect } from 'react-redux';
+
+import reducer from '../../../../state/reducers';
+import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
+
+const mapStateToProps = (state, ownProps) => {
+  const { office } = ownProps;
+  return {
+    citizenshipMapData: state.vizReducer.offices[office].citizenshipMapData,
+  };
+};
+
 function CitizenshipMapSingleOffice(props) {
-  const { query_received_data } = props;
-  const { office } = useParams();
+  const { office, citizenshipMapData } = props;
+  console.log(`CITIZENSHIP DATA FOR ${office}:`);
+  console.log(citizenshipMapData);
   return (
     <div
       className="citizenship-map-single-office-container"
@@ -17,27 +31,10 @@ function CitizenshipMapSingleOffice(props) {
         padding: '10%',
       }}
     >
-      CITIZENSHIP MAP {office}
-      {Object.entries(
-        query_received_data.filter(
-          data_item => data_item.year === 'citizenshipData'
-        )[0]
-      ).map(entry => {
-        return (
-          <div
-            style={{
-              backgroundColor: 'lightblue',
-              minWidth: '280px',
-              margin: '10% 0 10% 0',
-            }}
-          >
-            <p>{`nation: ${entry[0]}`}</p>
-            <p>{`% granted: ${entry[1]['granted']}`}</p>
-          </div>
-        );
-      })}
+      <p>CITIZENSHIP MAP {office}</p>
+      <p>{JSON.stringify(citizenshipMapData)}</p>
     </div>
   );
 }
 
-export default CitizenshipMapSingleOffice;
+export default connect(mapStateToProps)(CitizenshipMapSingleOffice);

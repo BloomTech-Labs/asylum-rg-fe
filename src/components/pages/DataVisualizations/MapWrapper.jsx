@@ -7,24 +7,22 @@ import OfficeHeatMap from './HeatMaps/OfficeHeatMap';
 import TimeSeriesSingleOffice from './HeatMaps/TimeSeriesSingleOffice';
 import YearLimitsSelect from './YearLimitsSelect';
 import ViewSelect from './ViewSelect';
-import { dummy_data } from './dummy_data';
 import axios from 'axios';
 
 function MapWrapper(props) {
   const { set_view } = props;
   const { office, view } = useParams();
-  const [query_received_data, set_query_received_data] = useState([]);
   let map_to_render;
   if (!office) {
     switch (view) {
       case 'time-series':
-        map_to_render = TimeSeriesAll;
+        map_to_render = <TimeSeriesAll />;
         break;
       case 'office-heat-map':
-        map_to_render = OfficeHeatMap;
+        map_to_render = <OfficeHeatMap />;
         break;
       case 'citizenship':
-        map_to_render = CitizenshipMapAll;
+        map_to_render = <CitizenshipMapAll />;
         break;
       default:
         break;
@@ -32,31 +30,37 @@ function MapWrapper(props) {
   } else {
     switch (view) {
       case 'time-series':
-        map_to_render = TimeSeriesSingleOffice;
-        break;
-      case 'office-heat-map':
-        map_to_render = OfficeHeatMap;
+        map_to_render = <TimeSeriesSingleOffice office={office} />;
         break;
       case 'citizenship':
-        map_to_render = CitizenshipMapSingleOffice;
+        map_to_render = <CitizenshipMapSingleOffice office={office} />;
         break;
       default:
         break;
     }
   }
-  function update_query() {
-    axios
-      .get('localhost:3002/')
-      .then(result => {
-        set_query_received_data(result.data);
-      })
-      .catch(err => {
-        console.error(err);
-      });
+  function updateStateWithNewData(view, office, stateSettingCallback) {
+    if (office === 'all' || !office) {
+      axios
+        .get('http://localhost:3002')
+        .then(result => {
+          stateSettingCallback(view, office, result.data);
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    } else {
+      axios
+        .get('http://localhost:3002')
+        .then(result => {
+          stateSettingCallback(view, office, result.data);
+          console.log(result.data);
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    }
   }
-  useEffect(() => {
-    update_query();
-  }, []);
   return (
     <div
       className="map-wrapper-container"
@@ -69,10 +73,14 @@ function MapWrapper(props) {
         border: '1px solid red',
       }}
     >
-      {map_to_render({ query_received_data })}
+      {map_to_render}
       <div className="user-input-sidebar-container">
         <ViewSelect set_view={set_view} />
-        <YearLimitsSelect update_query={update_query} />
+        <YearLimitsSelect
+          view={view}
+          office={office}
+          updateStateWithNewData={updateStateWithNewData}
+        />
       </div>
     </div>
   );

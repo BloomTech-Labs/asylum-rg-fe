@@ -1,8 +1,20 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
 
+import Redux from 'redux';
+import { connect } from 'react-redux';
+
+import reducer from '../../../../state/reducers';
+import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
+
+const mapStateToProps = state => {
+  return {
+    citizenshipMapAllData: state.vizReducer.citizenshipMapAllData,
+  };
+};
+
 function CitizenshipMapAll(props) {
-  const { query_received_data } = props;
+  const { citizenshipMapAllData } = props;
   return (
     <div
       className="citizenship-map-all-container"
@@ -15,27 +27,10 @@ function CitizenshipMapAll(props) {
         padding: '10%',
       }}
     >
-      CITIZENSHIP MAP ALL
-      {Object.entries(
-        query_received_data.filter(
-          data_item => data_item.year === 'citizenshipData'
-        )[0]
-      ).map(entry => {
-        return (
-          <div
-            style={{
-              backgroundColor: 'lightblue',
-              minWidth: '280px',
-              margin: '10% 0 10% 0',
-            }}
-          >
-            <p>{`nation: ${entry[0]}`}</p>
-            <p>{`% granted: ${entry[1]['granted']}`}</p>
-          </div>
-        );
-      })}
+      <p>CITIZENSHIP MAP ALL</p>
+      <p>{JSON.stringify(citizenshipMapAllData)}</p>
     </div>
   );
 }
 
-export default CitizenshipMapAll;
+export default connect(mapStateToProps)(CitizenshipMapAll);

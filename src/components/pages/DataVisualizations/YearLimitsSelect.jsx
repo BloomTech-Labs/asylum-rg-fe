@@ -1,6 +1,6 @@
 import React from 'react';
 import YearLimitsSlider from './YearLimitsSlider';
-import { Form, Button, Input } from 'antd';
+import { Form, Button, Input, getFieldValue } from 'antd';
 import {
   setVisualizationData,
   setHeatMapYears,
@@ -120,10 +120,11 @@ function YearLimitsSelect(props) {
                 return value &&
                   parseInt(value) == value &&
                   value >= 2015 &&
-                  value <= 2022
+                  value <= 2022 &&
+                  value > form.getFieldValue('year_start')
                   ? Promise.resolve()
                   : Promise.reject(
-                      'Please enter a year between 2015 and 2022.'
+                      "Please enter a year between 2015 and 2022, and after the 'From:' year."
                     );
               },
             },

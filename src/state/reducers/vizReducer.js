@@ -1,5 +1,30 @@
 import { SET_VISUALIZATION_DATA, SET_HEAT_MAP_YEARS } from '../actionTypes';
 
+/*
+      ------------------------------------------------------
+
+      NOTE ON ALL THE SWITCH STATEMENTS:
+
+          Technically, for queries that don't have
+        to do with citizenship, we COULD set the data
+        in state for ALL the non-citizenship views between 
+        those years, since we get all the necessary data 
+        anyway, but I think it's more intuitive and 
+        convenient for the UI to be able to remember a 
+        DIFFERENT user query for each individual view. 
+        That way if, say, a researcher wants to see all
+        the data by office just from 2017, and then they
+        tab over to view all the data as a time series from
+        2015-2022, and then they go back to the Office tab,
+        their previous query won't be overwritten by the
+        one they made in the different tab, and they'll
+        be able to seamlessly resume.
+
+            -- Mack
+
+      ------------------------------------------------------
+*/
+
 export const initialState = {
   timeSeriesAllData: [],
   timeSeriesAllYears: [2015, 2022],

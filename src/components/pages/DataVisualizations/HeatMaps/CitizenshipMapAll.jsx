@@ -32,23 +32,27 @@ function CitizenshipMapAll(props) {
       <Plot
         data={[
           {
-            type: 'chloropleth',
+            type: 'choropleth',
             locationmode: 'country names',
-            locations: ['MEXICO', 'UNITED STATES', 'CANADA'],
-            z: ['red', 'orange', 'blue'],
-            autocolorscale: 'true',
-            text: ['MEXICO', 'UNITED STATES', 'CANADA'],
+            locations: ['Mexico', 'Canada', 'El Salvador'],
+            z: [1, 2, 3],
+            text: ['Mexico', 'Canada', 'El Salvador'],
+            autocolorscale: true,
           },
         ]}
         layout={{
+          paper_bgcolor: '#f7e4ca',
+          hoverlabel: {
+            bordercolor: '#f7e4ca',
+          },
           geo: {
+            scope: 'world',
             projection: {
               type: 'robinson',
             },
           },
-          height: 400,
-          width: 400,
         }}
+        style={{ width: '100%', fontWeight: '900' }}
       />
     </div>
   );

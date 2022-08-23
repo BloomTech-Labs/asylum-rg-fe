@@ -34,9 +34,9 @@ function CitizenshipMapAll(props) {
           {
             type: 'choropleth',
             locationmode: 'country names',
-            locations: ['Mexico', 'Canada', 'El Salvador'],
+            locations: ['MEXICO', 'CANADA', 'EL SALVADOR'],
             z: [1, 2, 3],
-            text: ['Mexico', 'Canada', 'El Salvador'],
+            text: ['MEXICO', 'CANADA', 'EL SALVADOR'],
             autocolorscale: true,
           },
         ]}

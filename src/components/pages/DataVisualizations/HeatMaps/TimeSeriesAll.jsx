@@ -1,4 +1,5 @@
 import React from 'react';
+import Plot from 'react-plotly.js';
 
 import Redux from 'redux';
 import { connect } from 'react-redux';
@@ -30,6 +31,24 @@ function TimeSeriesAll(props) {
     >
       <p>TIME SERIES ALL</p>
       <p>{JSON.stringify(timeSeriesAllData)}</p>
+      <Plot
+        data={[
+          {
+            x: [1, 2, 3],
+            y: [1, 2, 3],
+            type: 'scatter',
+            mode: 'lines+markers',
+            y0: 0,
+            x0: 2015,
+            dy: 1,
+            dx: 1, // setting these explicitly so they are easy to change later
+          },
+        ]}
+        layout={{
+          height: 400,
+          width: 400,
+        }}
+      />
     </div>
   );
 }

@@ -29,6 +29,27 @@ function CitizenshipMapAll(props) {
     >
       <p>CITIZENSHIP MAP ALL</p>
       <p>{JSON.stringify(citizenshipMapAllData)}</p>
+      <Plot
+        data={[
+          {
+            type: 'chloropleth',
+            locationmode: 'country names',
+            locations: ['MEXICO', 'UNITED STATES', 'CANADA'],
+            z: ['red', 'orange', 'blue'],
+            autocolorscale: 'true',
+            text: ['MEXICO', 'UNITED STATES', 'CANADA'],
+          },
+        ]}
+        layout={{
+          geo: {
+            projection: {
+              type: 'robinson',
+            },
+          },
+          height: 400,
+          width: 400,
+        }}
+      />
     </div>
   );
 }

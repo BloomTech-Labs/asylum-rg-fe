@@ -3,6 +3,8 @@ import React from 'react';
 import Redux from 'redux';
 import { connect } from 'react-redux';
 
+import Plot from 'react-plotly.js';
+
 import reducer from '../../../../state/reducers';
 import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
 
@@ -29,6 +31,19 @@ function OfficeHeatMap(props) {
     >
       <p>OFFICE HEAT MAP</p>
       <p>{JSON.stringify(officeHeatMapData)}</p>
+      <Plot
+        data={[
+          {
+            x: [1, 2, 3],
+            y: [1, 2, 3],
+            type: 'heatmap',
+          },
+        ]}
+        layout={{
+          height: 400,
+          width: 400,
+        }}
+      />
     </div>
   );
 }

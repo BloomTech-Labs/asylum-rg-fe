@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import Redux from 'redux';
 import { connect } from 'react-redux';
 
+import Plot from 'react-plotly.js';
+
 import reducer from '../../../../state/reducers';
 import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
 
@@ -30,6 +32,24 @@ function TimeSeriesSingleOffice(props) {
     >
       <p>TIME SERIES {office}</p>
       <p>{JSON.stringify(timeSeriesData)}</p>
+      <Plot
+        data={[
+          {
+            x: [1, 2, 3],
+            y: [1, 2, 3],
+            type: 'scatter',
+            mode: 'lines+markers',
+            y0: 0,
+            x0: 2015,
+            dy: 1,
+            dx: 1, // setting these explicitly so they are easy to change later
+          },
+        ]}
+        layout={{
+          height: 400,
+          width: 400,
+        }}
+      />
     </div>
   );
 }

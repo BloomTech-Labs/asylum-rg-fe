@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import Redux from 'redux';
 import { connect } from 'react-redux';
 
+import Plot from 'react-plotly.js';
+
 import reducer from '../../../../state/reducers';
 import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
 
@@ -33,6 +35,17 @@ function CitizenshipMapSingleOffice(props) {
     >
       <p>CITIZENSHIP MAP {office}</p>
       <p>{JSON.stringify(citizenshipMapData)}</p>
+      <Plot
+        data={[
+          {
+            type: 'chloropleth',
+          },
+        ]}
+        layout={{
+          height: 400,
+          width: 400,
+        }}
+      />
     </div>
   );
 }

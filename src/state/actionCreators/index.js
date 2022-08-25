@@ -17,6 +17,7 @@ import {
   TOGGLE_ADVANCED_SEARCH,
   PERFORM_ADVANCED_SEARCH,
   SET_VISUALIZATION_DATA,
+  RESET_VISUALIZATION_QUERY,
   SET_HEAT_MAP_YEARS,
 } from '../actionTypes';
 import { generateMockFilteredData } from '../../data/mockAPI';
@@ -128,6 +129,16 @@ export const setVisualizationData = (view, office, data) => {
       view,
       office,
       data,
+    },
+  };
+};
+
+export const resetVisualizationQuery = (view, office) => {
+  return {
+    type: RESET_VISUALIZATION_QUERY,
+    payload: {
+      view,
+      office,
     },
   };
 };

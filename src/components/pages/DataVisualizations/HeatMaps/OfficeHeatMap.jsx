@@ -16,6 +16,17 @@ const mapStateToProps = state => {
 
 function OfficeHeatMap(props) {
   const { officeHeatMapData } = props;
+  let {
+    yYearsStart,
+    yYearsEnd,
+    yYears,
+    totalsByOffice,
+    zPercentGrantedsByOffice,
+    percentAdminClosedsByOffice,
+    percentDeniedsByOffice,
+  } = officeHeatMapData;
+  console.log(officeHeatMapData);
+  console.log(zPercentGrantedsByOffice);
   const officeCodes = [
     'ZLA',
     'ZSF',
@@ -28,15 +39,26 @@ function OfficeHeatMap(props) {
     'ZMI',
     'ZOL',
   ];
-  const {
-    yYearsStart,
-    yYearsEnd,
-    yYears,
-    totalsByOffice,
-    zPercentGrantedsByOffice,
-    percentAdminClosedsByOffice,
-    percentDeniedsByOffice,
-  } = officeHeatMapData;
+  const displayOfficeData = [];
+  if (zPercentGrantedsByOffice) {
+    for (let years_idx = 0; years_idx < yYears.length; years_idx++) {
+      let yearDataItem = [];
+      for (
+        let offices_idx = 0;
+        offices_idx < officeCodes.length;
+        offices_idx++
+      ) {
+        if (zPercentGrantedsByOffice.hasOwnProperty(officeCodes[offices_idx])) {
+          yearDataItem.push(
+            zPercentGrantedsByOffice[officeCodes[offices_idx]][years_idx]
+          );
+        } else {
+          yearDataItem.push(0);
+        }
+      }
+      displayOfficeData.push(yearDataItem);
+    }
+  }
   return (
     <div
       className="office-heat-map-container"
@@ -51,23 +73,12 @@ function OfficeHeatMap(props) {
       }}
     >
       <p>OFFICE HEAT MAP</p>
-      <p>{JSON.stringify(officeHeatMapData)}</p>
       <Plot
         data={[
           {
-            x: officeHeatMapData[0] ? [1, 2, 3] : [1, 2, 3],
-            y: officeHeatMapData[0] ? [1, 2, 3] : [1, 2, 3],
-            z: officeHeatMapData[0]
-              ? [
-                  [0, 2, 1],
-                  [2, 4, 5],
-                  [1, 3, 4],
-                ]
-              : [
-                  [0, 2, 1],
-                  [2, 4, 5],
-                  [1, 3, 4],
-                ],
+            x: officeCodes,
+            y: yYears,
+            z: displayOfficeData,
             type: 'heatmap',
           },
         ]}

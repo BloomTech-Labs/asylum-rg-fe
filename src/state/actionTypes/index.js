@@ -13,5 +13,6 @@ export const SET_GEOPOLITICAL_FILTER = 'SET_GEOPOLITICAL_FILTER';
 //This is for use until the proper API is up and running, though it may
 //Prove valuable for testing purposes even after
 export const GET_MOCK_FILTERED_DATA = 'GET_MOCK_FILTERED_DATA';
+export const RESET_VISUALIZATION_QUERY = 'RESET_VISUALIZATION_QUERY';
 export const SET_VISUALIZATION_DATA = 'SET_VISUALIZATION_DATA';
 export const SET_HEAT_MAP_YEARS = 'SET_HEAT_MAP_YEARS';

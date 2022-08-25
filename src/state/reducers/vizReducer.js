@@ -1,4 +1,8 @@
-import { SET_VISUALIZATION_DATA, SET_HEAT_MAP_YEARS } from '../actionTypes';
+import {
+  SET_VISUALIZATION_DATA,
+  SET_HEAT_MAP_YEARS,
+  RESET_VISUALIZATION_QUERY,
+} from '../actionTypes';
 
 /*
       ------------------------------------------------------
@@ -26,71 +30,71 @@ import { SET_VISUALIZATION_DATA, SET_HEAT_MAP_YEARS } from '../actionTypes';
 */
 
 export const initialState = {
-  timeSeriesAllData: [],
+  timeSeriesAllData: {},
   timeSeriesAllYears: [2015, 2022],
-  officeHeatMapData: [],
+  officeHeatMapData: {},
   officeHeatMapYears: [2015, 2022],
-  citizenshipMapAllData: [],
+  citizenshipMapAllData: {},
   citizenshipMapAllYears: [2015, 2022],
   offices: {
     ZLA: {
-      timeSeriesData: [],
+      timeSeriesData: {},
       timeSeriesYears: [2015, 2022],
-      citizenshipMapData: [],
+      citizenshipMapData: {},
       citizenshipMapYears: [2015, 2022],
     },
     ZSF: {
-      timeSeriesData: [],
+      timeSeriesData: {},
       timeSeriesYears: [2015, 2022],
-      citizenshipMapData: [],
+      citizenshipMapData: {},
       citizenshipMapYears: [2015, 2022],
     },
     ZNY: {
-      timeSeriesData: [],
+      timeSeriesData: {},
       timeSeriesYears: [2015, 2022],
-      citizenshipMapData: [],
+      citizenshipMapData: {},
       citizenshipMapYears: [2015, 2022],
     },
     ZHN: {
-      timeSeriesData: [],
+      timeSeriesData: {},
       timeSeriesYears: [2015, 2022],
-      citizenshipMapData: [],
+      citizenshipMapData: {},
       citizenshipMapYears: [2015, 2022],
     },
     ZCH: {
-      timeSeriesData: [],
+      timeSeriesData: {},
       timeSeriesYears: [2015, 2022],
-      citizenshipMapData: [],
+      citizenshipMapData: {},
       citizenshipMapYears: [2015, 2022],
     },
     ZNK: {
-      timeSeriesData: [],
+      timeSeriesData: {},
       timeSeriesYears: [2015, 2022],
-      citizenshipMapData: [],
+      citizenshipMapData: {},
       citizenshipMapYears: [2015, 2022],
     },
     ZAR: {
-      timeSeriesData: [],
+      timeSeriesData: {},
       timeSeriesYears: [2015, 2022],
-      citizenshipMapData: [],
+      citizenshipMapData: {},
       citizenshipMapYears: [2015, 2022],
     },
     ZBO: {
-      timeSeriesData: [],
+      timeSeriesData: {},
       timeSeriesYears: [2015, 2022],
-      citizenshipMapData: [],
+      citizenshipMapData: {},
       citizenshipMapYears: [2015, 2022],
     },
     ZMI: {
-      timeSeriesData: [],
+      timeSeriesData: {},
       timeSeriesYears: [2015, 2022],
-      citizenshipMapData: [],
+      citizenshipMapData: {},
       citizenshipMapYears: [2015, 2022],
     },
     ZOL: {
-      timeSeriesData: [],
+      timeSeriesData: {},
       timeSeriesYears: [2015, 2022],
-      citizenshipMapData: [],
+      citizenshipMapData: {},
       citizenshipMapYears: [2015, 2022],
     },
   },
@@ -99,6 +103,56 @@ export const initialState = {
 const vizReducer = (state = initialState, action) => {
   let dataKey = '';
   switch (action.type) {
+    case RESET_VISUALIZATION_QUERY:
+      if (!action.payload.office) {
+        switch (action.payload.view) {
+          case 'time-series':
+            return {
+              ...state,
+              timeSeriesAllData: {},
+              timeSeriesAllYears: [2015, 2022],
+            };
+          case 'office-heat-map':
+            return {
+              ...state,
+              officeHeatMapData: {},
+              officeHeatMapYears: [2015, 2022],
+            };
+          case 'citizenship':
+            return {
+              ...state,
+              citizenshipMapAllData: {},
+              citizenshipMapAllYears: [2015, 2022],
+            };
+        }
+      } else {
+        switch (action.payload.view) {
+          case 'time-series':
+            return {
+              ...state,
+              offices: {
+                ...state.offices,
+                [action.payload.office]: {
+                  ...state.offices[action.payload.office],
+                  timeSeriesData: {},
+                  timeSeriesYears: [2015, 2022],
+                },
+              },
+            };
+          case 'citizenship':
+            return {
+              ...state,
+              offices: {
+                ...state.offices,
+                [action.payload.office]: {
+                  ...state.offices[action.payload.office],
+                  citizenshipMapData: {},
+                  citizenshipMapYears: [2015, 2022],
+                },
+              },
+            };
+        }
+      }
     case SET_VISUALIZATION_DATA:
       if (!action.payload.office) {
         switch (action.payload.view) {
@@ -114,12 +168,14 @@ const vizReducer = (state = initialState, action) => {
           default:
             break;
         }
+
         /** SIDE EFFECTS FOR TEST PURPOSES --MACK **/
         console.log('ACTION.PAYLOAD:');
         console.log(action.payload);
         console.log('STATE:');
         console.log(state);
         /** **/
+
         return {
           ...state,
           [dataKey]: action.payload.data,
@@ -135,12 +191,14 @@ const vizReducer = (state = initialState, action) => {
           default:
             break;
         }
+
         /** SIDE EFFECTS FOR TEST PURPOSES --MACK **/
         console.log('ACTION.PAYLOAD:');
         console.log(action.payload);
         console.log('STATE:');
         console.log(state);
         /** **/
+
         return {
           ...state,
           offices: {
@@ -168,12 +226,14 @@ const vizReducer = (state = initialState, action) => {
             dataKey = 'timeSeriesAllYears';
             break;
         }
+
         /** SIDE EFFECTS FOR TEST PURPOSES --MACK **/
         console.log('ACTION.PAYLOAD:');
         console.log(action.payload);
         console.log('STATE:');
         console.log(state);
         /** **/
+
         return {
           ...state,
           [dataKey]:
@@ -193,12 +253,14 @@ const vizReducer = (state = initialState, action) => {
             dataKey = 'timeSeriesYears';
             break;
         }
+
         /** SIDE EFFECTS FOR TEST PURPOSES --MACK **/
         console.log('ACTION.PAYLOAD:');
         console.log(action.payload);
         console.log('STATE:');
         console.log(state);
         /** **/
+
         return {
           ...state,
           offices: {

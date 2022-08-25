@@ -174,12 +174,12 @@ function YearLimitsSelect(props) {
           for (let officeKey of officeCodes) {
             officeData[officeKey] = {
               xYears: [
-                ...data[0].results
+                ...data[0].yearResults
                   .sort((a, b) => a.year - b.year)
                   .map(yearItem => yearItem.year),
               ],
               totals: [
-                ...data[0].results
+                ...data[0].yearResults
                   .sort((a, b) => a.year - b.year)
                   .reduce((acc, yearItem) => {
                     return yearItem.yearData.filter(
@@ -194,7 +194,7 @@ function YearLimitsSelect(props) {
                   }, []),
               ],
               yPercentGranteds: [
-                ...data[0].results
+                ...data[0].yearResults
                   .sort((a, b) => a.year - b.year)
                   .reduce((acc, yearItem) => {
                     return yearItem.yearData.filter(
@@ -209,7 +209,7 @@ function YearLimitsSelect(props) {
                   }, []),
               ],
               percentAdminCloseds: [
-                ...data[0].results
+                ...data[0].yearResults
                   .sort((a, b) => a.year - b.year)
                   .reduce((acc, yearItem) => {
                     return yearItem.yearData.filter(
@@ -224,7 +224,7 @@ function YearLimitsSelect(props) {
                   }, []),
               ],
               percentDenieds: [
-                ...data[0].results
+                ...data[0].yearResults
                   .sort((a, b) => a.year - b.year)
                   .reduce((acc, yearItem) => {
                     return yearItem.yearData.filter(
@@ -241,31 +241,31 @@ function YearLimitsSelect(props) {
             };
           }
           return {
-            xYearsStart: data[0].results.reduce(
+            xYearsStart: data[0].yearResults.reduce(
               (acc, yearItem) => (yearItem.year < acc ? yearItem.year : acc),
-              data[0].results[0].year
+              data[0].yearResults[0].year
             ), // min year
-            xYearsEnd: data[0].results.reduce(
+            xYearsEnd: data[0].yearResults.reduce(
               (acc, yearItem) => (yearItem.year > acc ? yearItem.year : acc),
-              data[0].results[0].year
+              data[0].yearResults[0].year
             ), // max year
             xYears: [
-              ...data[0].results
+              ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .map(yearItem => yearItem.year),
             ],
             yTotalPercentGranteds: [
-              ...data[0].results
+              ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .map(yearItem => yearItem.granted),
             ],
             totalPercentAdminCloseds: [
-              ...data[0].results
+              ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .map(yearItem => yearItem.adminClosed),
             ],
             totalPercentDenieds: [
-              ...data[0].results
+              ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .map(yearItem => yearItem.denied),
             ],
@@ -279,7 +279,7 @@ function YearLimitsSelect(props) {
           const percentDeniedsByOffice = {};
           for (let officeKey of officeCodes) {
             totalsByOffice[officeKey] = [
-              ...data[0].results
+              ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .reduce((acc, yearItem) => {
                   return yearItem.yearData.filter(
@@ -294,7 +294,7 @@ function YearLimitsSelect(props) {
                 }, []),
             ];
             zPercentGrantedsByOffice[officeKey] = [
-              ...data[0].results
+              ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .reduce((acc, yearItem) => {
                   return yearItem.yearData.filter(
@@ -309,7 +309,7 @@ function YearLimitsSelect(props) {
                 }, []),
             ];
             percentAdminClosedsByOffice[officeKey] = [
-              ...data[0].results
+              ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .reduce((acc, yearItem) => {
                   return yearItem.yearData.filter(
@@ -324,7 +324,7 @@ function YearLimitsSelect(props) {
                 }, []),
             ];
             percentDeniedsByOffice[officeKey] = [
-              ...data[0].results
+              ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .reduce((acc, yearItem) => {
                   return yearItem.yearData.filter(
@@ -340,16 +340,16 @@ function YearLimitsSelect(props) {
             ];
           }
           return {
-            yYearsStart: data[0].results.reduce(
+            yYearsStart: data[0].yearResults.reduce(
               (acc, yearItem) => (yearItem.year < acc ? yearItem.year : acc),
-              data[0].results[0].year
+              data[0].yearResults[0].year
             ), // min year
-            yYearsEnd: data[0].results.reduce(
+            yYearsEnd: data[0].yearResults.reduce(
               (acc, yearItem) => (yearItem.year > acc ? yearItem.year : acc),
-              data[0].results[0].year
+              data[0].yearResults[0].year
             ), // max year
             yYears: [
-              ...data[0].results
+              ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .map(yearItem => yearItem.year),
             ],
@@ -393,21 +393,21 @@ function YearLimitsSelect(props) {
       switch (view) {
         case 'time-series':
           return {
-            xYearsStart: data[0].results.reduce(
+            xYearsStart: data[0].yearResults.reduce(
               (acc, yearItem) => (yearItem.year > acc ? yearItem.year : acc),
-              data[0].results[0].year
+              data[0].yearResults[0].year
             ),
-            xYearsEnd: data[0].results.reduce(
+            xYearsEnd: data[0].yearResults.reduce(
               (acc, yearItem) => (yearItem.year < acc ? yearItem.year : acc),
-              data[0].results[0].year
+              data[0].yearResults[0].year
             ),
             xYears: [
-              ...data[0].results
+              ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .map(yearItem => yearItem.year),
             ],
             yPercentGranteds: [
-              ...data[0].results
+              ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .reduce((acc, yearItem) => {
                   return yearItem.yearData.filter(
@@ -422,7 +422,7 @@ function YearLimitsSelect(props) {
                 }, []),
             ],
             percentAdminCloseds: [
-              ...data[0].results
+              ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .reduce((acc, yearItem) => {
                   return yearItem.yearData.filter(
@@ -437,7 +437,7 @@ function YearLimitsSelect(props) {
                 }, []),
             ],
             percentDenieds: [
-              ...data[0].results
+              ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .reduce((acc, yearItem) => {
                   return yearItem.yearData.filter(

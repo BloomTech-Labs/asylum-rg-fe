@@ -52,7 +52,7 @@ function CitizenshipMapAll(props) {
             bordercolor: '#f7e4ca',
           },
           geo: {
-            scope: 'world',
+            scope: 'USA',
             projection: {
               type: 'robinson',
             },

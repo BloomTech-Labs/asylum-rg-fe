@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Redux from 'redux';
+import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import CitizenshipMapAll from './HeatMaps/CitizenshipMapAll';
 import CitizenshipMapSingleOffice from './HeatMaps/CitizenshipMapSingleOffice';
@@ -8,9 +10,10 @@ import TimeSeriesSingleOffice from './HeatMaps/TimeSeriesSingleOffice';
 import YearLimitsSelect from './YearLimitsSelect';
 import ViewSelect from './ViewSelect';
 import axios from 'axios';
+import { resetVisualizationQuery } from '../../../state/actionCreators';
 
 function MapWrapper(props) {
-  const { set_view } = props;
+  const { set_view, dispatch } = props;
   const { office, view } = useParams();
   let map_to_render;
   if (!office) {
@@ -61,6 +64,8 @@ function MapWrapper(props) {
         });
     }
   }
+  const clearQuery = (view, office) =>
+    dispatch(resetVisualizationQuery(view, office));
   return (
     <div
       className="map-wrapper-container"
@@ -79,6 +84,7 @@ function MapWrapper(props) {
         <YearLimitsSelect
           view={view}
           office={office}
+          clearQuery={clearQuery}
           updateStateWithNewData={updateStateWithNewData}
         />
       </div>
@@ -86,4 +92,4 @@ function MapWrapper(props) {
   );
 }
 
-export default MapWrapper;
+export default connect()(MapWrapper);

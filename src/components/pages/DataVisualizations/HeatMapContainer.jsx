@@ -35,7 +35,7 @@ function HeatMapContainer() {
       set_view('time-series');
     }
     history.push(
-      `/heatmap/${value}/${view === 'office-heat-map' ? 'time-series' : view}`
+      `/graphs/${value}/${view === 'office-heat-map' ? 'time-series' : view}`
     );
   }
   return (
@@ -62,7 +62,7 @@ function HeatMapContainer() {
             justifyContent: 'space-around',
           }}
         >
-          <Link to={`/heatmap/all/${view}`}>All</Link>
+          <Link to={`/graphs/all/${view}`}>All</Link>
           <Select
             defaultValue={offices[0]}
             onSelect={value => handle_office_select(value)}
@@ -76,11 +76,11 @@ function HeatMapContainer() {
         </div>
         <Switch>
           <Route
-            path="/heatmap/all/:view"
+            path="/graphs/all/:view"
             component={() => AllOfficesRoute({ set_view })}
           />
           <Route
-            path="/heatmap/:office/:view"
+            path="/graphs/:office/:view"
             component={() => SingleOfficeRoute({ set_view })}
           />
         </Switch>

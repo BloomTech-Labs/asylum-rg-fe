@@ -41,7 +41,7 @@ export function App() {
           <Switch>
             <Route path="/" exact component={LandingPage} />
             <Route path="/table" component={TablePage} />
-            <Route path="/heatmap" component={HeatMapContainer} />
+            <Route path="/graphs" component={HeatMapContainer} />
             <Route component={NotFoundPage} />
           </Switch>
         </Content>

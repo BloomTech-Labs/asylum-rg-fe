@@ -17,6 +17,15 @@ function TimeSeriesAll(props) {
   const { timeSeriesAllData } = props;
   console.log(`timeSeriesAllData:`);
   console.log(timeSeriesAllData);
+  let {
+    xYearsStart,
+    xYearsEnd,
+    xYears,
+    yTotalPercentGranteds,
+    totalPercentAdminCloseds,
+    totalPercentDenieds,
+    officeData,
+  } = timeSeriesAllData;
   return (
     <div
       className="time-series-all-container"
@@ -30,16 +39,13 @@ function TimeSeriesAll(props) {
       }}
     >
       <p>TIME SERIES ALL</p>
-      <p>{JSON.stringify(timeSeriesAllData)}</p>
       <Plot
         data={[
           {
-            x: [1, 2, 3],
-            y: [1, 2, 3],
+            x: xYears,
+            y: yTotalPercentGranteds,
             type: 'scatter',
             mode: 'lines+markers',
-            y0: 0,
-            x0: 2015,
             dy: 1,
             dx: 1, // setting these explicitly so they are easy to change later
           },
@@ -47,6 +53,16 @@ function TimeSeriesAll(props) {
         layout={{
           height: 400,
           width: 400,
+          yaxis: {
+            range: [0, 100],
+          },
+          xaxis: {
+            range: [xYearsStart, xYearsEnd],
+          },
+          paper_bgcolor: '#f7e4ca',
+          hoverlabel: {
+            bordercolor: '#f7e4ca',
+          },
         }}
       />
     </div>

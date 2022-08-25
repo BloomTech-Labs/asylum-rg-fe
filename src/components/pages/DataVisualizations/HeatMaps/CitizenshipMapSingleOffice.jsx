@@ -20,6 +20,13 @@ function CitizenshipMapSingleOffice(props) {
   const { office, citizenshipMapData } = props;
   console.log(`CITIZENSHIP DATA FOR ${office}:`);
   console.log(citizenshipMapData);
+  const {
+    countries,
+    countriesTotals,
+    countriesPercentGranteds,
+    countriesPercentAdminCloseds,
+    countriesPercentDenieds,
+  } = citizenshipMapData;
   return (
     <div
       className="citizenship-map-single-office-container"
@@ -34,17 +41,32 @@ function CitizenshipMapSingleOffice(props) {
       }}
     >
       <p>CITIZENSHIP MAP {office}</p>
-      <p>{JSON.stringify(citizenshipMapData)}</p>
       <Plot
         data={[
           {
-            type: 'chloropleth',
+            type: 'choropleth',
+            locationmode: 'country names',
+            locations: countries,
+            z: countriesPercentGranteds,
+            text: countries,
+            autocolorscale: true,
           },
         ]}
         layout={{
+          paper_bgcolor: '#f7e4ca',
+          hoverlabel: {
+            bordercolor: '#f7e4ca',
+          },
+          geo: {
+            scope: 'world',
+            projection: {
+              type: 'robinson',
+            },
+          },
           height: 400,
           width: 400,
         }}
+        style={{ width: '100%', fontWeight: '900' }}
       />
     </div>
   );

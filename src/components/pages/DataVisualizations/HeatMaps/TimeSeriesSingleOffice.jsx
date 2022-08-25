@@ -18,6 +18,14 @@ const mapStateToProps = (state, ownProps) => {
 
 function TimeSeriesSingleOffice(props) {
   const { office, timeSeriesData } = props;
+  const {
+    xYearsStart,
+    xYearsEnd,
+    xYears,
+    yPercentGranteds,
+    percentAdminCloseds,
+    percentDenieds,
+  } = timeSeriesData;
   return (
     <div
       className="time-series-single-office-container"
@@ -31,16 +39,14 @@ function TimeSeriesSingleOffice(props) {
       }}
     >
       <p>TIME SERIES {office}</p>
-      <p>{JSON.stringify(timeSeriesData)}</p>
       <Plot
         data={[
           {
-            x: [1, 2, 3],
-            y: [1, 2, 3],
+            x: xYears,
+            y: yPercentGranteds,
             type: 'scatter',
             mode: 'lines+markers',
-            y0: 0,
-            x0: 2015,
+            yMax: 1,
             dy: 1,
             dx: 1, // setting these explicitly so they are easy to change later
           },
@@ -48,6 +54,16 @@ function TimeSeriesSingleOffice(props) {
         layout={{
           height: 400,
           width: 400,
+          yaxis: {
+            range: [0, 100],
+          },
+          xaxis: {
+            range: [xYearsStart, xYearsEnd],
+          },
+          paper_bgcolor: '#f7e4ca',
+          hoverlabel: {
+            bordercolor: '#f7e4ca',
+          },
         }}
       />
     </div>

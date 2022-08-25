@@ -15,6 +15,13 @@ const mapStateToProps = state => {
 
 function CitizenshipMapAll(props) {
   const { citizenshipMapAllData } = props;
+  const {
+    countries,
+    countriesTotals,
+    countriesPercentGranteds,
+    countriesPercentAdminCloseds,
+    countriesPercentDenieds,
+  } = citizenshipMapAllData;
   return (
     <div
       className="citizenship-map-all-container"
@@ -28,15 +35,14 @@ function CitizenshipMapAll(props) {
       }}
     >
       <p>CITIZENSHIP MAP ALL</p>
-      <p>{JSON.stringify(citizenshipMapAllData)}</p>
       <Plot
         data={[
           {
             type: 'choropleth',
             locationmode: 'country names',
-            locations: ['MEXICO', 'CANADA', 'EL SALVADOR'],
-            z: [1, 2, 3],
-            text: ['MEXICO', 'CANADA', 'EL SALVADOR'],
+            locations: countries,
+            z: countriesPercentGranteds,
+            text: countries,
             autocolorscale: true,
           },
         ]}
@@ -51,6 +57,8 @@ function CitizenshipMapAll(props) {
               type: 'robinson',
             },
           },
+          height: 400,
+          width: 400,
         }}
         style={{ width: '100%', fontWeight: '900' }}
       />

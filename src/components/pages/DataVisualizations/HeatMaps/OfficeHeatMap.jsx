@@ -16,6 +16,27 @@ const mapStateToProps = state => {
 
 function OfficeHeatMap(props) {
   const { officeHeatMapData } = props;
+  const officeCodes = [
+    'ZLA',
+    'ZSF',
+    'ZNY',
+    'ZHN',
+    'ZCH',
+    'ZNK',
+    'ZAR',
+    'ZBO',
+    'ZMI',
+    'ZOL',
+  ];
+  const {
+    yYearsStart,
+    yYearsEnd,
+    yYears,
+    totalsByOffice,
+    zPercentGrantedsByOffice,
+    percentAdminClosedsByOffice,
+    percentDeniedsByOffice,
+  } = officeHeatMapData;
   return (
     <div
       className="office-heat-map-container"
@@ -34,14 +55,29 @@ function OfficeHeatMap(props) {
       <Plot
         data={[
           {
-            x: [1, 2, 3],
-            y: [1, 2, 3],
+            x: officeHeatMapData[0] ? [1, 2, 3] : [1, 2, 3],
+            y: officeHeatMapData[0] ? [1, 2, 3] : [1, 2, 3],
+            z: officeHeatMapData[0]
+              ? [
+                  [0, 2, 1],
+                  [2, 4, 5],
+                  [1, 3, 4],
+                ]
+              : [
+                  [0, 2, 1],
+                  [2, 4, 5],
+                  [1, 3, 4],
+                ],
             type: 'heatmap',
           },
         ]}
         layout={{
           height: 400,
           width: 400,
+          paper_bgcolor: '#f7e4ca',
+          hoverlabel: {
+            bordercolor: '#f7e4ca',
+          },
         }}
       />
     </div>

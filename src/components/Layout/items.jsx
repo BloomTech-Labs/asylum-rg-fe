@@ -467,7 +467,7 @@ const items = [
       'data1'
     ),
     getItem(
-      <a href="/heatmap" title="heatmap">
+      <a href="/graphs" title="heatmap">
         Heat Map
       </a>,
       'data2'

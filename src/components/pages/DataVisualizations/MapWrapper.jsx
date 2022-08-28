@@ -84,7 +84,7 @@ function MapWrapper(props) {
         style={{
           position: 'sticky',
           width: '100%',
-          top: '40vh',
+          top: '20vh',
           right: '5vh',
         }}
       >

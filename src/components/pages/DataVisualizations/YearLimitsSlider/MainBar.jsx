@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import VerticalBar from './VerticalBar';
+import Tick from './Tick';
 import Thumb from './Thumb';
 
 function MainBar(props) {
   const { lowerLimit, upperLimit, step, yearStart, yearEnd } = props;
   const values = [];
-  for (let i = lowerLimit; i < upperLimit; i += step) {
+  for (let i = lowerLimit; i <= upperLimit; i += step) {
     values.push(i);
   }
   const n_ticks = values.length;
@@ -95,17 +95,20 @@ function MainBar(props) {
   const bar_width = bar_ref.current
     ? bar_ref.current.getBoundingClientRect().width
     : null;
+  console.log(`bar_width: ${bar_width}`);
+  console.log(`left_thumb_snap_tick: ${left_thumb_snap_tick}`);
+  console.log(`right_thumb_snap_tick: ${right_thumb_snap_tick}`);
 
   return (
     <div
       className="slider-bar-alignment-container"
       style={{
         border: '1px solid red',
-        height: '300px',
+        height: '100px',
+        width: '300px',
         display: 'flex',
         alignItems: 'center',
         flexWrap: 'wrap',
-        margin: '10%',
       }}
       onMouseMove={bar_on_mouse_move}
       onMouseUp={bar_on_mouse_up}
@@ -137,13 +140,13 @@ function MainBar(props) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          width: '100%',
+          width: '300px',
           height: '1px',
           backgroundColor: 'blue',
         }}
       >
         {values.map((val, idx) => {
-          return <VerticalBar value={val} key={val} />;
+          return <Tick value={val} key={val} />;
         })}
       </div>
     </div>

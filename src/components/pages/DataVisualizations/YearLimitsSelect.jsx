@@ -1,12 +1,11 @@
 import React from 'react';
-import YearLimitsSlider from './YearLimitsSlider';
 import { Form, Button, Input, getFieldValue } from 'antd';
 import {
   setVisualizationData,
   resetVisualizationQuery,
   setHeatMapYears,
 } from '../../../state/actionCreators';
-import SubTable from './HeatMaps/TableComponents/SubTable';
+import YearLimitsSlider from './YearLimitsSlider';
 
 import Redux from 'redux';
 import { connect } from 'react-redux';
@@ -601,7 +600,13 @@ function YearLimitsSelect(props) {
         minHeight: '50px',
       }}
     >
-      <YearLimitsSlider />
+      <YearLimitsSlider
+        yearStart={years[0]}
+        yearEnd={years[1]}
+        lowerLimit={2015}
+        upperLimit={2022}
+        step={1}
+      />
       <Form
         form={form}
         name="yearLimitsSelect"

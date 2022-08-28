@@ -14,6 +14,11 @@ function Thumb(props) {
   const my_width = thumb_ref.current
     ? thumb_ref.current.getBoundingClientRect().width
     : 0;
+  console.log(
+    `THUMB STARTING POSITION: ${bar_start} + ${
+      (snap_tick * bar_width) / (n_ticks - 1) - Math.floor(my_width / 2)
+    }`
+  );
   return (
     <div
       className="thumb-outer"

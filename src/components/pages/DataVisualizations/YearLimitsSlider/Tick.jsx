@@ -9,12 +9,13 @@ function Tick(props) {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        height: '100px',
       }}
     >
       <div
         style={{
           borderRight: '3px solid green',
-          height: '200px',
+          height: '100%',
           width: '0px',
         }}
       ></div>

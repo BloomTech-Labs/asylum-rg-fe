@@ -1,24 +1,35 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { useInterval } from '../../../../utils';
 
 function Thumb(props) {
   const {
     thumb_key,
     snap_tick,
-    bar_start, // we pass in ALL these props
-    bar_width, // and have the Thumb dynamically reposition itself
-    thumb_ref, // so it responds to the width of the slider changing within the DOM!
+    bar_ref,
+    thumb_ref,
     color,
     n_ticks,
     thumb_on_mouse_down,
   } = props;
-  const my_width = thumb_ref.current
-    ? thumb_ref.current.getBoundingClientRect().width
-    : 0;
-  console.log(
-    `THUMB STARTING POSITION: ${bar_start} + ${
-      (snap_tick * bar_width) / (n_ticks - 1) - Math.floor(my_width / 2)
-    }`
-  );
+  const [pos, set_pos] = useState(0);
+  let my_width;
+  let bar_start;
+  let bar_width;
+  useInterval(() => {
+    my_width = thumb_ref.current.getBoundingClientRect().width;
+    bar_start = bar_ref.current.getBoundingClientRect().left;
+    bar_width = bar_ref.current.getBoundingClientRect().width;
+    set_pos(
+      bar_start +
+        (snap_tick * bar_width) / (n_ticks - 1) -
+        Math.floor(my_width / 2)
+    );
+    console.log(
+      `THUMB POSITION: ${bar_start} + ${
+        (snap_tick * bar_width) / (n_ticks - 1) - Math.floor(my_width / 2)
+      }`
+    );
+  }, 100);
   return (
     <div
       className="thumb-outer"
@@ -29,11 +40,7 @@ function Thumb(props) {
         borderRadius: '50%',
         backgroundColor: color,
         position: 'absolute',
-        left:
-          bar_start +
-          (snap_tick * bar_width) / (n_ticks - 1) -
-          Math.floor(my_width / 2) +
-          'px',
+        left: pos + 'px',
         cursor: 'grab',
         dataKey: thumb_key,
       }}

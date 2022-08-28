@@ -82,7 +82,6 @@ function MapWrapper(props) {
       <div
         className="user-input-sidebar-container"
         style={{
-          position: 'sticky',
           width: '100%',
           top: '20vh',
           right: '5vh',

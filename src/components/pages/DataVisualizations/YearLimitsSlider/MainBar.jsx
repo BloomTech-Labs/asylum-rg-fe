@@ -2,8 +2,11 @@ import React, { useState, useRef, useEffect } from 'react';
 import Tick from './Tick';
 import Thumb from './Thumb';
 
+/* '[the useRef hook makes it possible to acces DOM nodes
+    from within functional components' -Codevolution tutorial */
+
 function MainBar(props) {
-  const { lowerLimit, upperLimit, step, yearStart, yearEnd } = props;
+  const { lowerLimit, upperLimit, step, leftStart, rightStart } = props;
   const values = [];
   for (let i = lowerLimit; i <= upperLimit; i += step) {
     values.push(i);
@@ -15,12 +18,11 @@ function MainBar(props) {
   const right_thumb_ref = useRef();
   const [thumb_dragging, set_thumb_dragging] = useState(null);
 
-  const years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022];
   const [left_thumb_snap_tick, set_left_thumb_snap_tick] = useState(
-    years.indexOf(yearStart)
+    values.indexOf(leftStart)
   );
   const [right_thumb_snap_tick, set_right_thumb_snap_tick] = useState(
-    years.indexOf(yearEnd)
+    values.indexOf(rightStart)
   );
 
   const thumb_on_mouse_down = (e, thumb) => {
@@ -95,28 +97,24 @@ function MainBar(props) {
   const bar_width = bar_ref.current
     ? bar_ref.current.getBoundingClientRect().width
     : null;
-  console.log(`bar_width: ${bar_width}`);
-  console.log(`left_thumb_snap_tick: ${left_thumb_snap_tick}`);
-  console.log(`right_thumb_snap_tick: ${right_thumb_snap_tick}`);
 
   return (
     <div
       className="slider-bar-alignment-container"
       style={{
         border: '1px solid red',
-        height: '100px',
-        width: '300px',
+        height: '300px',
         display: 'flex',
         alignItems: 'center',
         flexWrap: 'wrap',
+        margin: '10%',
       }}
       onMouseMove={bar_on_mouse_move}
       onMouseUp={bar_on_mouse_up}
       ref={bar_ref}
     >
       <Thumb
-        bar_start={bar_start}
-        bar_width={bar_width}
+        bar_ref={bar_ref ? bar_ref : null}
         snap_tick={left_thumb_snap_tick}
         n_ticks={values.length}
         thumb_key={'left'}
@@ -125,8 +123,7 @@ function MainBar(props) {
         color={'blue'}
       />
       <Thumb
-        bar_start={bar_start}
-        bar_width={bar_width}
+        bar_ref={bar_ref ? bar_ref : null}
         snap_tick={right_thumb_snap_tick}
         n_ticks={values.length}
         thumb_key={'right'}
@@ -140,7 +137,7 @@ function MainBar(props) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          width: '300px',
+          width: '100%',
           height: '1px',
           backgroundColor: 'blue',
         }}

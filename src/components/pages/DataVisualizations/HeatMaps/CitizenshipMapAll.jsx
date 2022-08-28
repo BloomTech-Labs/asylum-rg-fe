@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 
 import reducer from '../../../../state/reducers';
 import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
+import Table from './TableComponents/Table';
 
 const mapStateToProps = state => {
   return {
@@ -15,13 +16,39 @@ const mapStateToProps = state => {
 
 function CitizenshipMapAll(props) {
   const { citizenshipMapAllData } = props;
-  const {
-    countries,
-    countriesTotals,
-    countriesPercentGranteds,
-    countriesPercentAdminCloseds,
-    countriesPercentDenieds,
-  } = citizenshipMapAllData;
+  const countries = citizenshipMapAllData.hasOwnProperty('countries')
+    ? citizenshipMapAllData.countries
+    : [];
+  const countriesTotals = citizenshipMapAllData.hasOwnProperty(
+    'countriesTotals'
+  )
+    ? citizenshipMapAllData.countriesTotals
+    : [];
+  const countriesPercentGranteds = citizenshipMapAllData.hasOwnProperty(
+    'countriesPercentGranteds'
+  )
+    ? citizenshipMapAllData.countriesPercentGranteds
+    : [];
+  const countriesPercentAdminCloseds = citizenshipMapAllData.hasOwnProperty(
+    'countriesPercentAdminCloseds'
+  )
+    ? citizenshipMapAllData.countriesPercentAdminCloseds
+    : [];
+  const countriesPercentDenieds = citizenshipMapAllData.hasOwnProperty(
+    'countriesPercentDenieds'
+  )
+    ? citizenshipMapAllData.countriesPercentDenieds
+    : [];
+  const rowsForTable = citizenshipMapAllData.hasOwnProperty('rowsForTable')
+    ? citizenshipMapAllData.rowsForTable
+    : [];
+  const columnsForTable = [
+    'Citizenship',
+    'Total Cases',
+    '% Granted',
+    '% Admin Close / Dismissal',
+    '% Denied',
+  ];
   return (
     <div
       className="citizenship-map-all-container"
@@ -29,6 +56,7 @@ function CitizenshipMapAll(props) {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100px',
+        alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'lightgreen',
         padding: '10%',
@@ -60,7 +88,16 @@ function CitizenshipMapAll(props) {
           height: 400,
           width: 400,
         }}
-        style={{ width: '100%', fontWeight: '900' }}
+        style={{
+          width: '100%',
+          fontWeight: '900',
+        }}
+      />
+      <Table
+        rows={rowsForTable}
+        columns={columnsForTable}
+        tableWidth={'100%'}
+        rowHeight={'50px'}
       />
     </div>
   );

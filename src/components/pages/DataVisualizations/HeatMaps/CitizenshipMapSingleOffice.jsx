@@ -8,6 +8,7 @@ import Plot from 'react-plotly.js';
 
 import reducer from '../../../../state/reducers';
 import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
+import Table from './TableComponents/Table';
 
 const mapStateToProps = (state, ownProps) => {
   const { office } = ownProps;
@@ -20,13 +21,37 @@ function CitizenshipMapSingleOffice(props) {
   const { office, citizenshipMapData } = props;
   console.log(`CITIZENSHIP DATA FOR ${office}:`);
   console.log(citizenshipMapData);
-  const {
-    countries,
-    countriesTotals,
-    countriesPercentGranteds,
-    countriesPercentAdminCloseds,
-    countriesPercentDenieds,
-  } = citizenshipMapData;
+  const countries = citizenshipMapData.hasOwnProperty('countries')
+    ? citizenshipMapData.countries
+    : [];
+  const countriesTotals = citizenshipMapData.hasOwnProperty('countriesTotals')
+    ? citizenshipMapData.countriesTotals
+    : [];
+  const countriesPercentGranteds = citizenshipMapData.hasOwnProperty(
+    'countriesPercentGranteds'
+  )
+    ? citizenshipMapData.countriesPercentGranteds
+    : [];
+  const countriesPercentAdminCloseds = citizenshipMapData.hasOwnProperty(
+    'countriesPercentAdminCloseds'
+  )
+    ? citizenshipMapData.countriesPercentAdminCloseds
+    : [];
+  const countriesPercentDenieds = citizenshipMapData.hasOwnProperty(
+    'countriesPercentDenieds'
+  )
+    ? citizenshipMapData.countriesPercentDenieds
+    : [];
+  const rowsForTable = citizenshipMapData.hasOwnProperty('rowsForTable')
+    ? citizenshipMapData.rowsForTable
+    : [];
+  const columnsForTable = [
+    'Citizenship',
+    'Total Cases',
+    '% Granted',
+    '% Admin Close / Dismissal',
+    '% Denied',
+  ];
   return (
     <div
       className="citizenship-map-single-office-container"
@@ -35,7 +60,6 @@ function CitizenshipMapSingleOffice(props) {
         flexDirection: 'column',
         minHeight: '100px',
         justifyContent: 'center',
-        color: 'white',
         backgroundColor: 'rgb(220,150,150)',
         padding: '10%',
       }}
@@ -67,6 +91,12 @@ function CitizenshipMapSingleOffice(props) {
           width: 400,
         }}
         style={{ width: '100%', fontWeight: '900' }}
+      />
+      <Table
+        rows={rowsForTable}
+        columns={columnsForTable}
+        tableWidth={'100%'}
+        rowHeight={'50px'}
       />
     </div>
   );

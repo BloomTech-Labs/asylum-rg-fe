@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 import reducer from '../../../../state/reducers';
 import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
 
+import Table from './TableComponents/Table';
+
 const mapStateToProps = state => {
   return {
     timeSeriesAllData: state.vizReducer.timeSeriesAllData,
@@ -17,15 +19,58 @@ function TimeSeriesAll(props) {
   const { timeSeriesAllData } = props;
   console.log(`timeSeriesAllData:`);
   console.log(timeSeriesAllData);
-  let {
-    xYearsStart,
-    xYearsEnd,
-    xYears,
-    yTotalPercentGranteds,
-    totalPercentAdminCloseds,
-    totalPercentDenieds,
-    officeData,
-  } = timeSeriesAllData;
+  let xYearsStart = timeSeriesAllData.hasOwnProperty('xYearsStart')
+    ? timeSeriesAllData.xYearsStart
+    : 2015;
+  let xYearsEnd = timeSeriesAllData.hasOwnProperty('xYearsEnd')
+    ? timeSeriesAllData.xYearsEnd
+    : 2022;
+  let xYears = timeSeriesAllData.hasOwnProperty('xYears')
+    ? timeSeriesAllData.xYears
+    : [];
+  let totals = timeSeriesAllData.hasOwnProperty('totals')
+    ? timeSeriesAllData.totals
+    : [];
+  let yTotalPercentGranteds = timeSeriesAllData.hasOwnProperty(
+    'yTotalPercentGranteds'
+  )
+    ? timeSeriesAllData.yTotalPercentGranteds
+    : [];
+  let totalPercentAdminCloseds = timeSeriesAllData.hasOwnProperty(
+    'totalPercentAdminCloseds'
+  )
+    ? timeSeriesAllData.totalPercentAdminCloseds
+    : [];
+  let totalPercentDenieds = timeSeriesAllData.hasOwnProperty(
+    'totalPercentDenieds'
+  )
+    ? timeSeriesAllData.totalPercentDenieds
+    : [];
+  let officeData = timeSeriesAllData.hasOwnProperty('officeData')
+    ? timeSeriesAllData.officeData
+    : {};
+  let rowsForAllDisplay = timeSeriesAllData.hasOwnProperty('rowsForAllDisplay')
+    ? timeSeriesAllData.rowsForAllDisplay
+    : [];
+  const officeCodes = [
+    'ZLA',
+    'ZSF',
+    'ZNY',
+    'ZHN',
+    'ZCH',
+    'ZNK',
+    'ZAR',
+    'ZBO',
+    'ZMI',
+    'ZOL',
+  ];
+  const columnsForAllDisplay = [
+    'Year',
+    'Total Cases',
+    '% Granted',
+    '% Admin Close / Dismissal',
+    '% Denied',
+  ];
   return (
     <div
       className="time-series-all-container"
@@ -64,6 +109,12 @@ function TimeSeriesAll(props) {
             bordercolor: '#f7e4ca',
           },
         }}
+      />
+      <Table
+        columns={columnsForAllDisplay}
+        rows={rowsForAllDisplay}
+        tableWidth={'100%'}
+        rowHeight={'50px'}
       />
     </div>
   );

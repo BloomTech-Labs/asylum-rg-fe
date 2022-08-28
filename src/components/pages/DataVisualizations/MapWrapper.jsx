@@ -71,15 +71,23 @@ function MapWrapper(props) {
       className="map-wrapper-container"
       style={{
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-around',
+        alignItems: 'flex-start',
+        justifyContent: 'center',
         minHeight: '50px',
         backgroundColor: 'white',
         border: '1px solid red',
       }}
     >
       {map_to_render}
-      <div className="user-input-sidebar-container">
+      <div
+        className="user-input-sidebar-container"
+        style={{
+          position: 'sticky',
+          width: '100%',
+          top: '40vh',
+          right: '5vh',
+        }}
+      >
         <ViewSelect set_view={set_view} />
         <YearLimitsSelect
           view={view}

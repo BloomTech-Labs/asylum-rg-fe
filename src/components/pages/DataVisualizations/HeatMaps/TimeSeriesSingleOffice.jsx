@@ -8,6 +8,7 @@ import Plot from 'react-plotly.js';
 
 import reducer from '../../../../state/reducers';
 import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
+import Table from './TableComponents/Table';
 
 const mapStateToProps = (state, ownProps) => {
   const { office, timeSeriesData } = ownProps;
@@ -18,14 +19,36 @@ const mapStateToProps = (state, ownProps) => {
 
 function TimeSeriesSingleOffice(props) {
   const { office, timeSeriesData } = props;
-  const {
-    xYearsStart,
-    xYearsEnd,
-    xYears,
-    yPercentGranteds,
-    percentAdminCloseds,
-    percentDenieds,
-  } = timeSeriesData;
+  const xYearsStart = timeSeriesData.hasOwnProperty('xYearsStart')
+    ? timeSeriesData.xYearsStart
+    : 2015;
+  const xYearsEnd = timeSeriesData.hasOwnProperty('xYearsEnd')
+    ? timeSeriesData.xYearsEnd
+    : 2022;
+  const xYears = timeSeriesData.hasOwnProperty('xYears')
+    ? timeSeriesData.xYears
+    : [];
+  const yPercentGranteds = timeSeriesData.hasOwnProperty('yPercentGranteds')
+    ? timeSeriesData.yPercentGranteds
+    : [];
+  const percentAdminCloseds = timeSeriesData.hasOwnProperty(
+    'percentAdminCloseds'
+  )
+    ? timeSeriesData.percentAdminCloseds
+    : [];
+  const percentDenieds = timeSeriesData.hasOwnProperty('percentDenieds')
+    ? timeSeriesData.percentDenieds
+    : [];
+  const rowsForTable = timeSeriesData.hasOwnProperty('rowsForTable')
+    ? timeSeriesData.rowsForTable
+    : [];
+  const columnsForTable = [
+    'Year',
+    'Total Cases',
+    '% Granted',
+    '% Admin Close / Dismissal',
+    '% Denied',
+  ];
   return (
     <div
       className="time-series-single-office-container"
@@ -65,6 +88,12 @@ function TimeSeriesSingleOffice(props) {
             bordercolor: '#f7e4ca',
           },
         }}
+      />
+      <Table
+        columns={columnsForTable}
+        rows={rowsForTable}
+        tableWidth={'100%'}
+        rowHeight={'50px'}
       />
     </div>
   );

@@ -7,6 +7,7 @@ import Plot from 'react-plotly.js';
 
 import reducer from '../../../../state/reducers';
 import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
+import Table from './TableComponents/Table';
 
 const mapStateToProps = state => {
   return {
@@ -16,17 +17,26 @@ const mapStateToProps = state => {
 
 function OfficeHeatMap(props) {
   const { officeHeatMapData } = props;
-  let {
-    yYearsStart,
-    yYearsEnd,
-    yYears,
-    totalsByOffice,
-    zPercentGrantedsByOffice,
-    percentAdminClosedsByOffice,
-    percentDeniedsByOffice,
-  } = officeHeatMapData;
-  console.log(officeHeatMapData);
-  console.log(zPercentGrantedsByOffice);
+  const yYearsStart = officeHeatMapData.hasOwnProperty('yYearsStart')
+    ? officeHeatMapData.yYearsStart
+    : 2015;
+  const yYearsEnd = officeHeatMapData.hasOwnProperty('yYearsEnd')
+    ? officeHeatMapData.yYearsEnd
+    : 2022;
+  const yYears = officeHeatMapData.hasOwnProperty('yYears')
+    ? officeHeatMapData.yYears
+    : [];
+  const totalsByOffice = officeHeatMapData.hasOwnProperty('totalsByOffice')
+    ? officeHeatMapData.totalsByOffice
+    : [];
+  const zPercentGrantedsByOffice = officeHeatMapData.hasOwnProperty(
+    'zPercentGrantedsByOffice'
+  )
+    ? officeHeatMapData.zPercentGrantedsByOffice
+    : [];
+  const rowsForTable = officeHeatMapData.hasOwnProperty('rowsForTable')
+    ? officeHeatMapData.rowsForTable
+    : [];
   const officeCodes = [
     'ZLA',
     'ZSF',
@@ -59,6 +69,13 @@ function OfficeHeatMap(props) {
       displayOfficeData.push(yearDataItem);
     }
   }
+  const columnsForTable = [
+    'Year [Office]',
+    'Total Cases',
+    '% Granted',
+    '% Admin Close / Dismissal',
+    '% Denied',
+  ];
   return (
     <div
       className="office-heat-map-container"
@@ -68,7 +85,6 @@ function OfficeHeatMap(props) {
         backgroundColor: 'lightgray',
         minHeight: '100px',
         justifyContent: 'center',
-        color: 'white',
         padding: '10%',
       }}
     >
@@ -90,6 +106,12 @@ function OfficeHeatMap(props) {
             bordercolor: '#f7e4ca',
           },
         }}
+      />
+      <Table
+        rows={rowsForTable}
+        columns={columnsForTable}
+        tableWidth={'100%'}
+        rowHeight={'50px'}
       />
     </div>
   );

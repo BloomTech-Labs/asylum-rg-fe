@@ -6,6 +6,7 @@ import {
   resetVisualizationQuery,
   setHeatMapYears,
 } from '../../../state/actionCreators';
+import SubTable from './HeatMaps/TableComponents/SubTable';
 
 import Redux from 'redux';
 import { connect } from 'react-redux';
@@ -74,6 +75,8 @@ function YearLimitsSelect(props) {
       'ZMI',
       'ZOL',
     ];
+    let rowItem;
+    let rowsForTable;
     /*
         The data from our API will have this shape:
           [
@@ -170,6 +173,18 @@ function YearLimitsSelect(props) {
     if (!office || office === 'all') {
       switch (view) {
         case 'time-series':
+          const rowsForAllDisplay = [];
+          data[0].yearResults.sort((a, b) => a.year - b.year);
+          for (let i = 0; i < data[0].yearResults.length; i++) {
+            rowItem = {
+              Year: data[0].yearResults[i].year,
+              'Total Cases': data[0].yearResults[i].totalCases,
+              '% Granted': data[0].yearResults[i].granted,
+              '% Admin Close / Dismissal': data[0].yearResults[i].adminClosed,
+              '% Denied': data[0].yearResults[i].denied,
+            };
+            rowsForAllDisplay.push(rowItem);
+          }
           const officeData = {};
           for (let officeKey of officeCodes) {
             officeData[officeKey] = {
@@ -241,6 +256,7 @@ function YearLimitsSelect(props) {
             };
           }
           return {
+            rowsForAllDisplay,
             xYearsStart: data[0].yearResults.reduce(
               (acc, yearItem) => (yearItem.year < acc ? yearItem.year : acc),
               data[0].yearResults[0].year
@@ -253,6 +269,11 @@ function YearLimitsSelect(props) {
               ...data[0].yearResults
                 .sort((a, b) => a.year - b.year)
                 .map(yearItem => yearItem.year),
+            ],
+            totals: [
+              ...data[0].yearResults
+                .sort((a, b) => a.year - b.year)
+                .map(yearItem => yearItem.totalCases),
             ],
             yTotalPercentGranteds: [
               ...data[0].yearResults
@@ -273,6 +294,40 @@ function YearLimitsSelect(props) {
             officeData,
           };
         case 'office-heat-map':
+          data[0].yearResults.sort((a, b) => a.year - b.year);
+          rowsForTable = [];
+          for (let i = 0; i < data[0].yearResults.length; i++) {
+            for (let officeKey of officeCodes) {
+              if (
+                data[0].yearResults[i].yearData.filter(
+                  yearItem => yearItem.office === officeKey
+                ).length > 0
+              ) {
+                rowItem = {
+                  'Year [Office]':
+                    String(data[0].yearResults[i].year) +
+                    ' [' +
+                    String(officeKey) +
+                    ']',
+                  'Total Cases': data[0].yearResults[i].yearData.filter(
+                    yearItem => yearItem.office === officeKey
+                  )[0].totalCases,
+                  '% Granted': data[0].yearResults[i].yearData.filter(
+                    yearItem => yearItem.office === officeKey
+                  )[0].granted,
+                  '% Admin Close / Dismissal': data[0].yearResults[
+                    i
+                  ].yearData.filter(
+                    yearItem => yearItem.office === officeKey
+                  )[0].adminClosed,
+                  '% Denied': data[0].yearResults[i].yearData.filter(
+                    yearItem => yearItem.office === officeKey
+                  )[0].denied,
+                };
+                rowsForTable.push(rowItem);
+              }
+            }
+          }
           const totalsByOffice = {};
           const zPercentGrantedsByOffice = {};
           const percentAdminClosedsByOffice = {};
@@ -340,6 +395,7 @@ function YearLimitsSelect(props) {
             ];
           }
           return {
+            rowsForTable,
             yYearsStart: data[0].yearResults.reduce(
               (acc, yearItem) => (yearItem.year < acc ? yearItem.year : acc),
               data[0].yearResults[0].year
@@ -359,7 +415,19 @@ function YearLimitsSelect(props) {
             percentDeniedsByOffice,
           };
         case 'citizenship':
+          rowsForTable = [];
+          for (let item of data[0].citizenshipResults) {
+            rowItem = {
+              Citizenship: item.citizenship,
+              'Total Cases': item.totalCases,
+              '% Granted': item.granted,
+              '% Admin Close / Dismissal': item.adminClosed,
+              '% Denied': item.denied,
+            };
+            rowsForTable.push(rowItem);
+          }
           return {
+            rowsForTable,
             countries: [
               ...data[0].citizenshipResults.map(
                 countryItem => countryItem.citizenship
@@ -392,7 +460,29 @@ function YearLimitsSelect(props) {
     } else {
       switch (view) {
         case 'time-series':
+          rowsForTable = [];
+          data[0].yearResults.sort((a, b) => a.year - b.year);
+          for (let i = 0; i < data[0].yearResults.length; i++) {
+            if (
+              data[0].yearResults[i].yearData.filter(
+                dataItem => dataItem.office === office
+              )[0]
+            ) {
+              const officeObj = data[0].yearResults[i].yearData.filter(
+                dataItem => dataItem.office === office
+              )[0];
+              rowItem = {
+                Year: data[0].yearResults[i].year,
+                'Total Cases': officeObj.totalCases,
+                '% Granted': officeObj.granted,
+                '% Admin Close / Dismissal': officeObj.adminClosed,
+                '% Denied': officeObj.denied,
+              };
+              rowsForTable.push(rowItem);
+            }
+          }
           return {
+            rowsForTable,
             xYearsStart: data[0].yearResults.reduce(
               (acc, yearItem) => (yearItem.year > acc ? yearItem.year : acc),
               data[0].yearResults[0].year
@@ -453,7 +543,19 @@ function YearLimitsSelect(props) {
             ],
           };
         case 'citizenship':
+          rowsForTable = [];
+          for (let item of data[0].citizenshipResults) {
+            rowItem = {
+              Citizenship: item.citizenship,
+              'Total Cases': item.totalCases,
+              '% Granted': item.granted,
+              '% Admin Close / Dismissal': item.adminClosed,
+              '% Denied': item.denied,
+            };
+            rowsForTable.push(rowItem);
+          }
           return {
+            rowsForTable,
             countries: [
               ...data[0].citizenshipResults.map(
                 countryItem => countryItem.citizenship

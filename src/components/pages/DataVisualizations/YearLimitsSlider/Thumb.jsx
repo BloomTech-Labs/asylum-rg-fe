@@ -24,11 +24,6 @@ function Thumb(props) {
         (snap_tick * bar_width) / (n_ticks - 1) -
         Math.floor(my_width / 2)
     );
-    console.log(
-      `THUMB POSITION: ${bar_start} + ${
-        (snap_tick * bar_width) / (n_ticks - 1) - Math.floor(my_width / 2)
-      }`
-    );
   }, 100);
   return (
     <div

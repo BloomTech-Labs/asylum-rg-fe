@@ -64,8 +64,9 @@ function MapWrapper(props) {
         });
     }
   }
-  const clearQuery = (view, office) =>
+  const clearQuery = (view, office) => {
     dispatch(resetVisualizationQuery(view, office));
+  };
   return (
     <div
       className="map-wrapper-container"

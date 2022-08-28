@@ -77,8 +77,8 @@ function YearLimitsSelect(props) {
       }}
     >
       <YearLimitsSlider
-        leftStart={years[0]}
-        rightStart={years[1]}
+        leftStart={parseInt(years[0])}
+        rightStart={parseInt(years[1])}
         lowerLimit={2015}
         upperLimit={2022}
         step={1}

@@ -11,6 +11,7 @@ import YearLimitsSelect from './YearLimitsSelect';
 import ViewSelect from './ViewSelect';
 import axios from 'axios';
 import { resetVisualizationQuery } from '../../../state/actionCreators';
+import test_data from '../../../data/test_data.json';
 
 function MapWrapper(props) {
   const { set_view, dispatch } = props;
@@ -45,18 +46,18 @@ function MapWrapper(props) {
   function updateStateWithNewData(view, office, stateSettingCallback) {
     if (office === 'all' || !office) {
       axios
-        .get('http://localhost:3002')
+        .get('http://localhost:3000')
         .then(result => {
-          stateSettingCallback(view, office, result.data);
+          stateSettingCallback(view, office, test_data);
         })
         .catch(err => {
           console.error(err);
         });
     } else {
       axios
-        .get('http://localhost:3002')
+        .get('http://localhost:3000')
         .then(result => {
-          stateSettingCallback(view, office, result.data);
+          stateSettingCallback(view, office, test_data);
         })
         .catch(err => {
           console.error(err);

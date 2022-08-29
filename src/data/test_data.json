@@ -1,0 +1,2977 @@
+[
+{
+
+    "granted": 22.669316111939064,
+
+    "adminClosed": 20.8809405530717,
+
+    "denied": 56.449743334989236,
+
+    "totalCases": 6039,
+
+    "yearResults": [
+
+        {
+
+            "year": "2015",
+
+            "granted": 38.059701492537314,
+
+            "adminClosed": 14.17910447761194,
+
+            "denied": 47.76119402985074,
+
+            "totalCases": 134,
+
+            "yearData": [
+
+                {
+
+                    "office": "ZHN",
+
+                    "granted": 33.33333333333333,
+
+                    "adminClosed": 50.0,
+
+                    "denied": 16.666666666666664,
+
+                    "totalCases": 6
+
+                },
+
+                {
+
+                    "office": "ZNY",
+
+                    "granted": 7.4074074074074066,
+
+                    "adminClosed": 7.4074074074074066,
+
+                    "denied": 85.18518518518519,
+
+                    "totalCases": 27
+
+                },
+
+                {
+
+                    "office": "ZNK",
+
+                    "granted": 15.384615384615385,
+
+                    "adminClosed": 15.384615384615385,
+
+                    "denied": 69.23076923076923,
+
+                    "totalCases": 13
+
+                },
+
+                {
+
+                    "office": "ZBO",
+
+                    "granted": 40.0,
+
+                    "adminClosed": 40.0,
+
+                    "denied": 20.0,
+
+                    "totalCases": 5
+
+                },
+
+                {
+
+                    "office": "ZMI",
+
+                    "granted": 30.0,
+
+                    "adminClosed": 0.0,
+
+                    "denied": 70.0,
+
+                    "totalCases": 10
+
+                },
+
+                {
+
+                    "office": "ZAR",
+
+                    "granted": 41.66666666666667,
+
+                    "adminClosed": 0.0,
+
+                    "denied": 58.333333333333336,
+
+                    "totalCases": 12
+
+                },
+
+                {
+
+                    "office": "ZSF",
+
+                    "granted": 47.05882352941176,
+
+                    "adminClosed": 29.411764705882355,
+
+                    "denied": 23.52941176470588,
+
+                    "totalCases": 17
+
+                },
+
+                {
+
+                    "office": "ZLA",
+
+                    "granted": 61.111111111111114,
+
+                    "adminClosed": 11.11111111111111,
+
+                    "denied": 27.77777777777778,
+
+                    "totalCases": 36
+
+                },
+
+                {
+
+                    "office": "ZCH",
+
+                    "granted": 62.5,
+
+                    "adminClosed": 12.5,
+
+                    "denied": 25.0,
+
+                    "totalCases": 8
+
+                }
+
+            ]
+
+        },
+
+        {
+
+            "year": "2016",
+
+            "granted": 33.764135702746366,
+
+            "adminClosed": 20.84006462035541,
+
+            "denied": 45.39579967689822,
+
+            "totalCases": 619,
+
+            "yearData": [
+
+                {
+
+                    "office": "ZHN",
+
+                    "granted": 32.25806451612903,
+
+                    "adminClosed": 38.70967741935484,
+
+                    "denied": 29.03225806451613,
+
+                    "totalCases": 31
+
+                },
+
+                {
+
+                    "office": "ZNY",
+
+                    "granted": 11.578947368421053,
+
+                    "adminClosed": 13.684210526315791,
+
+                    "denied": 74.73684210526315,
+
+                    "totalCases": 95
+
+                },
+
+                {
+
+                    "office": "ZNK",
+
+                    "granted": 30.337078651685395,
+
+                    "adminClosed": 19.101123595505616,
+
+                    "denied": 50.56179775280899,
+
+                    "totalCases": 89
+
+                },
+
+                {
+
+                    "office": "ZBO",
+
+                    "granted": 14.285714285714285,
+
+                    "adminClosed": 28.57142857142857,
+
+                    "denied": 57.14285714285714,
+
+                    "totalCases": 21
+
+                },
+
+                {
+
+                    "office": "ZOL",
+
+                    "granted": 10.0,
+
+                    "adminClosed": 40.0,
+
+                    "denied": 50.0,
+
+                    "totalCases": 20
+
+                },
+
+                {
+
+                    "office": "ZMI",
+
+                    "granted": 30.76923076923077,
+
+                    "adminClosed": 15.384615384615385,
+
+                    "denied": 53.84615384615385,
+
+                    "totalCases": 65
+
+                },
+
+                {
+
+                    "office": "ZAR",
+
+                    "granted": 23.636363636363637,
+
+                    "adminClosed": 12.727272727272727,
+
+                    "denied": 63.63636363636363,
+
+                    "totalCases": 55
+
+                },
+
+                {
+
+                    "office": "ZSF",
+
+                    "granted": 68.75,
+
+                    "adminClosed": 13.541666666666666,
+
+                    "denied": 17.708333333333336,
+
+                    "totalCases": 96
+
+                },
+
+                {
+
+                    "office": "ZCH",
+
+                    "granted": 37.2093023255814,
+
+                    "adminClosed": 18.6046511627907,
+
+                    "denied": 44.18604651162791,
+
+                    "totalCases": 43
+
+                },
+
+                {
+
+                    "office": "ZLA",
+
+                    "granted": 39.42307692307692,
+
+                    "adminClosed": 33.65384615384615,
+
+                    "denied": 26.923076923076923,
+
+                    "totalCases": 104
+
+                }
+
+            ]
+
+        },
+
+        {
+
+            "year": "2017",
+
+            "granted": 23.88059701492537,
+
+            "adminClosed": 18.563432835820894,
+
+            "denied": 57.55597014925373,
+
+            "totalCases": 1072,
+
+            "yearData": [
+
+                {
+
+                    "office": "ZHN",
+
+                    "granted": 21.62162162162162,
+
+                    "adminClosed": 18.91891891891892,
+
+                    "denied": 59.45945945945946,
+
+                    "totalCases": 74
+
+                },
+
+                {
+
+                    "office": "ZNY",
+
+                    "granted": 8.96551724137931,
+
+                    "adminClosed": 7.586206896551724,
+
+                    "denied": 83.44827586206897,
+
+                    "totalCases": 145
+
+                },
+
+                {
+
+                    "office": "ZBO",
+
+                    "granted": 7.142857142857142,
+
+                    "adminClosed": 25.0,
+
+                    "denied": 67.85714285714286,
+
+                    "totalCases": 28
+
+                },
+
+                {
+
+                    "office": "ZNK",
+
+                    "granted": 17.67955801104972,
+
+                    "adminClosed": 11.049723756906078,
+
+                    "denied": 71.27071823204419,
+
+                    "totalCases": 181
+
+                },
+
+                {
+
+                    "office": "ZOL",
+
+                    "granted": 36.95652173913043,
+
+                    "adminClosed": 21.73913043478261,
+
+                    "denied": 41.30434782608695,
+
+                    "totalCases": 46
+
+                },
+
+                {
+
+                    "office": "ZMI",
+
+                    "granted": 19.047619047619047,
+
+                    "adminClosed": 25.0,
+
+                    "denied": 55.952380952380956,
+
+                    "totalCases": 84
+
+                },
+
+                {
+
+                    "office": "ZAR",
+
+                    "granted": 28.57142857142857,
+
+                    "adminClosed": 12.857142857142856,
+
+                    "denied": 58.57142857142858,
+
+                    "totalCases": 70
+
+                },
+
+                {
+
+                    "office": "ZSF",
+
+                    "granted": 30.57851239669421,
+
+                    "adminClosed": 15.702479338842975,
+
+                    "denied": 53.71900826446281,
+
+                    "totalCases": 121
+
+                },
+
+                {
+
+                    "office": "ZLA",
+
+                    "granted": 32.82442748091603,
+
+                    "adminClosed": 29.389312977099237,
+
+                    "denied": 37.786259541984734,
+
+                    "totalCases": 262
+
+                },
+
+                {
+
+                    "office": "ZCH",
+
+                    "granted": 27.86885245901639,
+
+                    "adminClosed": 18.0327868852459,
+
+                    "denied": 54.09836065573771,
+
+                    "totalCases": 61
+
+                }
+
+            ]
+
+        },
+
+        {
+
+            "year": "2018",
+
+            "granted": 21.245186136071887,
+
+            "adminClosed": 16.43132220795892,
+
+            "denied": 62.323491655969185,
+
+            "totalCases": 1558,
+
+            "yearData": [
+
+                {
+
+                    "office": "ZHN",
+
+                    "granted": 16.483516483516482,
+
+                    "adminClosed": 14.285714285714285,
+
+                    "denied": 69.23076923076923,
+
+                    "totalCases": 91
+
+                },
+
+                {
+
+                    "office": "ZNY",
+
+                    "granted": 6.132075471698113,
+
+                    "adminClosed": 15.566037735849056,
+
+                    "denied": 78.30188679245283,
+
+                    "totalCases": 212
+
+                },
+
+                {
+
+                    "office": "ZBO",
+
+                    "granted": 17.307692307692307,
+
+                    "adminClosed": 15.384615384615385,
+
+                    "denied": 67.3076923076923,
+
+                    "totalCases": 52
+
+                },
+
+                {
+
+                    "office": "ZNK",
+
+                    "granted": 18.181818181818183,
+
+                    "adminClosed": 13.986013986013987,
+
+                    "denied": 67.83216783216784,
+
+                    "totalCases": 286
+
+                },
+
+                {
+
+                    "office": "ZOL",
+
+                    "granted": 56.896551724137936,
+
+                    "adminClosed": 22.413793103448278,
+
+                    "denied": 20.689655172413794,
+
+                    "totalCases": 58
+
+                },
+
+                {
+
+                    "office": "ZMI",
+
+                    "granted": 17.747440273037544,
+
+                    "adminClosed": 21.160409556313994,
+
+                    "denied": 61.092150170648466,
+
+                    "totalCases": 293
+
+                },
+
+                {
+
+                    "office": "ZAR",
+
+                    "granted": 16.666666666666664,
+
+                    "adminClosed": 23.52941176470588,
+
+                    "denied": 59.80392156862745,
+
+                    "totalCases": 102
+
+                },
+
+                {
+
+                    "office": "ZSF",
+
+                    "granted": 32.63888888888889,
+
+                    "adminClosed": 9.027777777777777,
+
+                    "denied": 58.333333333333336,
+
+                    "totalCases": 144
+
+                },
+
+                {
+
+                    "office": "ZCH",
+
+                    "granted": 37.5,
+
+                    "adminClosed": 21.153846153846153,
+
+                    "denied": 41.34615384615385,
+
+                    "totalCases": 104
+
+                },
+
+                {
+
+                    "office": "ZLA",
+
+                    "granted": 25.0,
+
+                    "adminClosed": 12.962962962962962,
+
+                    "denied": 62.03703703703704,
+
+                    "totalCases": 216
+
+                }
+
+            ]
+
+        },
+
+        {
+
+            "year": "2019",
+
+            "granted": 21.143250688705233,
+
+            "adminClosed": 16.528925619834713,
+
+            "denied": 62.32782369146006,
+
+            "totalCases": 1452,
+
+            "yearData": [
+
+                {
+
+                    "office": "ZHN",
+
+                    "granted": 28.846153846153843,
+
+                    "adminClosed": 9.615384615384617,
+
+                    "denied": 61.53846153846154,
+
+                    "totalCases": 104
+
+                },
+
+                {
+
+                    "office": "ZNY",
+
+                    "granted": 6.024096385542169,
+
+                    "adminClosed": 14.457831325301203,
+
+                    "denied": 79.51807228915662,
+
+                    "totalCases": 249
+
+                },
+
+                {
+
+                    "office": "ZNK",
+
+                    "granted": 28.515625,
+
+                    "adminClosed": 9.765625,
+
+                    "denied": 61.71875,
+
+                    "totalCases": 256
+
+                },
+
+                {
+
+                    "office": "ZBO",
+
+                    "granted": 11.904761904761903,
+
+                    "adminClosed": 42.857142857142854,
+
+                    "denied": 45.23809523809524,
+
+                    "totalCases": 42
+
+                },
+
+                {
+
+                    "office": "ZOL",
+
+                    "granted": 36.666666666666664,
+
+                    "adminClosed": 30.0,
+
+                    "denied": 33.33333333333333,
+
+                    "totalCases": 30
+
+                },
+
+                {
+
+                    "office": "ZMI",
+
+                    "granted": 10.071942446043165,
+
+                    "adminClosed": 24.100719424460433,
+
+                    "denied": 65.82733812949641,
+
+                    "totalCases": 278
+
+                },
+
+                {
+
+                    "office": "ZAR",
+
+                    "granted": 27.77777777777778,
+
+                    "adminClosed": 11.11111111111111,
+
+                    "denied": 61.111111111111114,
+
+                    "totalCases": 54
+
+                },
+
+                {
+
+                    "office": "ZSF",
+
+                    "granted": 38.35616438356164,
+
+                    "adminClosed": 13.698630136986301,
+
+                    "denied": 47.94520547945205,
+
+                    "totalCases": 146
+
+                },
+
+                {
+
+                    "office": "ZCH",
+
+                    "granted": 26.5625,
+
+                    "adminClosed": 14.84375,
+
+                    "denied": 58.59375,
+
+                    "totalCases": 128
+
+                },
+
+                {
+
+                    "office": "ZLA",
+
+                    "granted": 24.242424242424242,
+
+                    "adminClosed": 18.181818181818183,
+
+                    "denied": 57.57575757575758,
+
+                    "totalCases": 165
+
+                }
+
+            ]
+
+        },
+
+        {
+
+            "year": "2020",
+
+            "granted": 17.194570135746606,
+
+            "adminClosed": 35.74660633484163,
+
+            "denied": 47.05882352941176,
+
+            "totalCases": 884,
+
+            "yearData": [
+
+                {
+
+                    "office": "ZHN",
+
+                    "granted": 12.5,
+
+                    "adminClosed": 36.53846153846153,
+
+                    "denied": 50.96153846153846,
+
+                    "totalCases": 104
+
+                },
+
+                {
+
+                    "office": "ZNY",
+
+                    "granted": 3.225806451612903,
+
+                    "adminClosed": 24.731182795698924,
+
+                    "denied": 72.04301075268818,
+
+                    "totalCases": 93
+
+                },
+
+                {
+
+                    "office": "ZBO",
+
+                    "granted": 4.0,
+
+                    "adminClosed": 60.0,
+
+                    "denied": 36.0,
+
+                    "totalCases": 25
+
+                },
+
+                {
+
+                    "office": "ZNK",
+
+                    "granted": 17.857142857142858,
+
+                    "adminClosed": 35.714285714285715,
+
+                    "denied": 46.42857142857143,
+
+                    "totalCases": 112
+
+                },
+
+                {
+
+                    "office": "ZOL",
+
+                    "granted": 6.666666666666667,
+
+                    "adminClosed": 56.666666666666664,
+
+                    "denied": 36.666666666666664,
+
+                    "totalCases": 30
+
+                },
+
+                {
+
+                    "office": "ZMI",
+
+                    "granted": 13.986013986013987,
+
+                    "adminClosed": 50.349650349650354,
+
+                    "denied": 35.66433566433567,
+
+                    "totalCases": 143
+
+                },
+
+                {
+
+                    "office": "ZAR",
+
+                    "granted": 17.56756756756757,
+
+                    "adminClosed": 39.189189189189186,
+
+                    "denied": 43.24324324324324,
+
+                    "totalCases": 74
+
+                },
+
+                {
+
+                    "office": "ZSF",
+
+                    "granted": 30.851063829787233,
+
+                    "adminClosed": 32.97872340425532,
+
+                    "denied": 36.17021276595745,
+
+                    "totalCases": 94
+
+                },
+
+                {
+
+                    "office": "ZCH",
+
+                    "granted": 20.149253731343283,
+
+                    "adminClosed": 15.671641791044777,
+
+                    "denied": 64.17910447761194,
+
+                    "totalCases": 134
+
+                },
+
+                {
+
+                    "office": "ZLA",
+
+                    "granted": 32.0,
+
+                    "adminClosed": 40.0,
+
+                    "denied": 28.000000000000004,
+
+                    "totalCases": 75
+
+                }
+
+            ]
+
+        },
+
+        {
+
+            "year": "2021",
+
+            "granted": 19.6875,
+
+            "adminClosed": 31.874999999999996,
+
+            "denied": 48.4375,
+
+            "totalCases": 320,
+
+            "yearData": [
+
+                {
+
+                    "office": "ZHN",
+
+                    "granted": 7.142857142857142,
+
+                    "adminClosed": 39.285714285714285,
+
+                    "denied": 53.57142857142857,
+
+                    "totalCases": 28
+
+                },
+
+                {
+
+                    "office": "ZNY",
+
+                    "granted": 2.564102564102564,
+
+                    "adminClosed": 30.76923076923077,
+
+                    "denied": 66.66666666666666,
+
+                    "totalCases": 39
+
+                },
+
+                {
+
+                    "office": "ZOL",
+
+                    "granted": 30.0,
+
+                    "adminClosed": 35.0,
+
+                    "denied": 35.0,
+
+                    "totalCases": 20
+
+                },
+
+                {
+
+                    "office": "ZNK",
+
+                    "granted": 11.11111111111111,
+
+                    "adminClosed": 25.925925925925924,
+
+                    "denied": 62.96296296296296,
+
+                    "totalCases": 27
+
+                },
+
+                {
+
+                    "office": "ZBO",
+
+                    "granted": 28.57142857142857,
+
+                    "adminClosed": 42.857142857142854,
+
+                    "denied": 28.57142857142857,
+
+                    "totalCases": 7
+
+                },
+
+                {
+
+                    "office": "ZMI",
+
+                    "granted": 7.317073170731707,
+
+                    "adminClosed": 58.536585365853654,
+
+                    "denied": 34.146341463414636,
+
+                    "totalCases": 41
+
+                },
+
+                {
+
+                    "office": "ZAR",
+
+                    "granted": 36.58536585365854,
+
+                    "adminClosed": 24.390243902439025,
+
+                    "denied": 39.02439024390244,
+
+                    "totalCases": 41
+
+                },
+
+                {
+
+                    "office": "ZSF",
+
+                    "granted": 30.434782608695656,
+
+                    "adminClosed": 30.434782608695656,
+
+                    "denied": 39.130434782608695,
+
+                    "totalCases": 23
+
+                },
+
+                {
+
+                    "office": "ZCH",
+
+                    "granted": 26.08695652173913,
+
+                    "adminClosed": 13.043478260869565,
+
+                    "denied": 60.86956521739131,
+
+                    "totalCases": 46
+
+                },
+
+                {
+
+                    "office": "ZLA",
+
+                    "granted": 25.0,
+
+                    "adminClosed": 31.25,
+
+                    "denied": 43.75,
+
+                    "totalCases": 48
+
+                }
+
+            ]
+
+        }
+
+    ],
+
+    "citizenshipResults": [
+
+        {
+
+            "citizenship": "KOSOVO",
+
+            "granted": 20.0,
+
+            "adminClosed": 20.0,
+
+            "denied": 60.0,
+
+            "totalCases": 15
+
+        },
+
+        {
+
+            "citizenship": "ISRAEL",
+
+            "granted": 25.0,
+
+            "adminClosed": 75.0,
+
+            "denied": 0.0,
+
+            "totalCases": 4
+
+        },
+
+        {
+
+            "citizenship": "EQUATORIAL GUINEA",
+
+            "granted": 100.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 0.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "SERBIA",
+
+            "granted": 25.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 75.0,
+
+            "totalCases": 8
+
+        },
+
+        {
+
+            "citizenship": "FRANCE",
+
+            "granted": 0.0,
+
+            "adminClosed": 100.0,
+
+            "denied": 0.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "NEPAL",
+
+            "granted": 15.068493150684931,
+
+            "adminClosed": 13.698630136986301,
+
+            "denied": 71.23287671232876,
+
+            "totalCases": 73
+
+        },
+
+        {
+
+            "citizenship": "ECUADOR",
+
+            "granted": 2.051282051282051,
+
+            "adminClosed": 13.333333333333334,
+
+            "denied": 84.61538461538461,
+
+            "totalCases": 195
+
+        },
+
+        {
+
+            "citizenship": "BENIN",
+
+            "granted": 33.33333333333333,
+
+            "adminClosed": 0.0,
+
+            "denied": 66.66666666666666,
+
+            "totalCases": 3
+
+        },
+
+        {
+
+            "citizenship": "NICARAGUA",
+
+            "granted": 11.11111111111111,
+
+            "adminClosed": 36.11111111111111,
+
+            "denied": 52.77777777777778,
+
+            "totalCases": 36
+
+        },
+
+        {
+
+            "citizenship": "ALBANIA",
+
+            "granted": 15.0,
+
+            "adminClosed": 20.0,
+
+            "denied": 65.0,
+
+            "totalCases": 20
+
+        },
+
+        {
+
+            "citizenship": "BELARUS",
+
+            "granted": 39.130434782608695,
+
+            "adminClosed": 26.08695652173913,
+
+            "denied": 34.78260869565217,
+
+            "totalCases": 23
+
+        },
+
+        {
+
+            "citizenship": "CONGO",
+
+            "granted": 33.33333333333333,
+
+            "adminClosed": 11.11111111111111,
+
+            "denied": 55.55555555555556,
+
+            "totalCases": 18
+
+        },
+
+        {
+
+            "citizenship": "SPAIN",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "BULGARIA",
+
+            "granted": 50.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 50.0,
+
+            "totalCases": 2
+
+        },
+
+        {
+
+            "citizenship": "PORTUGAL",
+
+            "granted": 0.0,
+
+            "adminClosed": 100.0,
+
+            "denied": 0.0,
+
+            "totalCases": 2
+
+        },
+
+        {
+
+            "citizenship": "PAKISTAN",
+
+            "granted": 40.42553191489361,
+
+            "adminClosed": 17.02127659574468,
+
+            "denied": 42.5531914893617,
+
+            "totalCases": 47
+
+        },
+
+        {
+
+            "citizenship": "TUNISIA",
+
+            "granted": 0.0,
+
+            "adminClosed": 16.666666666666664,
+
+            "denied": 83.33333333333334,
+
+            "totalCases": 6
+
+        },
+
+        {
+
+            "citizenship": "YEMEN",
+
+            "granted": 50.0,
+
+            "adminClosed": 21.428571428571427,
+
+            "denied": 28.57142857142857,
+
+            "totalCases": 14
+
+        },
+
+        {
+
+            "citizenship": "CHILE",
+
+            "granted": 0.0,
+
+            "adminClosed": 60.0,
+
+            "denied": 40.0,
+
+            "totalCases": 5
+
+        },
+
+        {
+
+            "citizenship": "BRAZIL",
+
+            "granted": 13.559322033898304,
+
+            "adminClosed": 37.28813559322034,
+
+            "denied": 49.152542372881356,
+
+            "totalCases": 59
+
+        },
+
+        {
+
+            "citizenship": "CUBA",
+
+            "granted": 5.0,
+
+            "adminClosed": 80.0,
+
+            "denied": 15.0,
+
+            "totalCases": 20
+
+        },
+
+        {
+
+            "citizenship": "ALGERIA",
+
+            "granted": 33.33333333333333,
+
+            "adminClosed": 33.33333333333333,
+
+            "denied": 33.33333333333333,
+
+            "totalCases": 3
+
+        },
+
+        {
+
+            "citizenship": "THAILAND",
+
+            "granted": 16.666666666666664,
+
+            "adminClosed": 66.66666666666666,
+
+            "denied": 16.666666666666664,
+
+            "totalCases": 6
+
+        },
+
+        {
+
+            "citizenship": "MALI",
+
+            "granted": 33.33333333333333,
+
+            "adminClosed": 0.0,
+
+            "denied": 66.66666666666666,
+
+            "totalCases": 3
+
+        },
+
+        {
+
+            "citizenship": "IRAN",
+
+            "granted": 56.451612903225815,
+
+            "adminClosed": 27.419354838709676,
+
+            "denied": 16.129032258064516,
+
+            "totalCases": 62
+
+        },
+
+        {
+
+            "citizenship": "GHANA",
+
+            "granted": 0.0,
+
+            "adminClosed": 66.66666666666666,
+
+            "denied": 33.33333333333333,
+
+            "totalCases": 3
+
+        },
+
+        {
+
+            "citizenship": "LAOS",
+
+            "granted": 25.0,
+
+            "adminClosed": 25.0,
+
+            "denied": 50.0,
+
+            "totalCases": 4
+
+        },
+
+        {
+
+            "citizenship": "IRAQ",
+
+            "granted": 52.112676056338024,
+
+            "adminClosed": 19.718309859154928,
+
+            "denied": 28.169014084507044,
+
+            "totalCases": 71
+
+        },
+
+        {
+
+            "citizenship": "HUNGARY",
+
+            "granted": 0.0,
+
+            "adminClosed": 50.0,
+
+            "denied": 50.0,
+
+            "totalCases": 4
+
+        },
+
+        {
+
+            "citizenship": "MOLDOVA",
+
+            "granted": 28.57142857142857,
+
+            "adminClosed": 14.285714285714285,
+
+            "denied": 57.14285714285714,
+
+            "totalCases": 14
+
+        },
+
+        {
+
+            "citizenship": "INDIA",
+
+            "granted": 11.616161616161616,
+
+            "adminClosed": 19.19191919191919,
+
+            "denied": 69.1919191919192,
+
+            "totalCases": 198
+
+        },
+
+        {
+
+            "citizenship": "TURKMENISTAN",
+
+            "granted": 33.33333333333333,
+
+            "adminClosed": 0.0,
+
+            "denied": 66.66666666666666,
+
+            "totalCases": 3
+
+        },
+
+        {
+
+            "citizenship": "STATELESS",
+
+            "granted": 20.0,
+
+            "adminClosed": 20.0,
+
+            "denied": 60.0,
+
+            "totalCases": 20
+
+        },
+
+        {
+
+            "citizenship": "ZIMBABWE",
+
+            "granted": 33.33333333333333,
+
+            "adminClosed": 11.11111111111111,
+
+            "denied": 55.55555555555556,
+
+            "totalCases": 9
+
+        },
+
+        {
+
+            "citizenship": "THE GAMBIA",
+
+            "granted": 87.5,
+
+            "adminClosed": 0.0,
+
+            "denied": 12.5,
+
+            "totalCases": 8
+
+        },
+
+        {
+
+            "citizenship": "SENEGAL",
+
+            "granted": 22.22222222222222,
+
+            "adminClosed": 22.22222222222222,
+
+            "denied": 55.55555555555556,
+
+            "totalCases": 9
+
+        },
+
+        {
+
+            "citizenship": "TAJIKISTAN",
+
+            "granted": 66.66666666666666,
+
+            "adminClosed": 0.0,
+
+            "denied": 33.33333333333333,
+
+            "totalCases": 3
+
+        },
+
+        {
+
+            "citizenship": "SOUTH AFRICA",
+
+            "granted": 0.0,
+
+            "adminClosed": 14.285714285714285,
+
+            "denied": 85.71428571428571,
+
+            "totalCases": 7
+
+        },
+
+        {
+
+            "citizenship": "NORTH KOREA",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "ARGENTINA",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 4
+
+        },
+
+        {
+
+            "citizenship": "UKRAINE",
+
+            "granted": 23.52941176470588,
+
+            "adminClosed": 21.176470588235293,
+
+            "denied": 55.294117647058826,
+
+            "totalCases": 85
+
+        },
+
+        {
+
+            "citizenship": "GUYANA",
+
+            "granted": 12.5,
+
+            "adminClosed": 0.0,
+
+            "denied": 87.5,
+
+            "totalCases": 8
+
+        },
+
+        {
+
+            "citizenship": "CHAD",
+
+            "granted": 25.0,
+
+            "adminClosed": 50.0,
+
+            "denied": 25.0,
+
+            "totalCases": 4
+
+        },
+
+        {
+
+            "citizenship": "ZAMBIA",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "SRI LANKA",
+
+            "granted": 0.0,
+
+            "adminClosed": 6.666666666666667,
+
+            "denied": 93.33333333333333,
+
+            "totalCases": 15
+
+        },
+
+        {
+
+            "citizenship": "USSR",
+
+            "granted": 66.66666666666666,
+
+            "adminClosed": 33.33333333333333,
+
+            "denied": 0.0,
+
+            "totalCases": 3
+
+        },
+
+        {
+
+            "citizenship": "SOUTH KOREA",
+
+            "granted": 0.0,
+
+            "adminClosed": 100.0,
+
+            "denied": 0.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "YUGOSLAVIA",
+
+            "granted": 100.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 0.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "ROMANIA",
+
+            "granted": 0.0,
+
+            "adminClosed": 69.23076923076923,
+
+            "denied": 30.76923076923077,
+
+            "totalCases": 13
+
+        },
+
+        {
+
+            "citizenship": "ANGOLA",
+
+            "granted": 25.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 75.0,
+
+            "totalCases": 8
+
+        },
+
+        {
+
+            "citizenship": "JORDAN",
+
+            "granted": 16.129032258064516,
+
+            "adminClosed": 25.806451612903224,
+
+            "denied": 58.06451612903226,
+
+            "totalCases": 31
+
+        },
+
+        {
+
+            "citizenship": "FIJI",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 4
+
+        },
+
+        {
+
+            "citizenship": "SINGAPORE",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "POLAND",
+
+            "granted": 0.0,
+
+            "adminClosed": 12.5,
+
+            "denied": 87.5,
+
+            "totalCases": 8
+
+        },
+
+        {
+
+            "citizenship": "SERBIA AND MONTENEGRO",
+
+            "granted": 20.0,
+
+            "adminClosed": 20.0,
+
+            "denied": 60.0,
+
+            "totalCases": 5
+
+        },
+
+        {
+
+            "citizenship": "MAURITANIA",
+
+            "granted": 36.36363636363637,
+
+            "adminClosed": 36.36363636363637,
+
+            "denied": 27.27272727272727,
+
+            "totalCases": 11
+
+        },
+
+        {
+
+            "citizenship": "HONDURAS",
+
+            "granted": 18.995633187772924,
+
+            "adminClosed": 29.475982532751093,
+
+            "denied": 51.52838427947598,
+
+            "totalCases": 458
+
+        },
+
+        {
+
+            "citizenship": "LITHUANIA",
+
+            "granted": 0.0,
+
+            "adminClosed": 100.0,
+
+            "denied": 0.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "BOSNIA-HERZEGOVINA",
+
+            "granted": 50.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 50.0,
+
+            "totalCases": 2
+
+        },
+
+        {
+
+            "citizenship": "SUDAN",
+
+            "granted": 27.27272727272727,
+
+            "adminClosed": 36.36363636363637,
+
+            "denied": 36.36363636363637,
+
+            "totalCases": 11
+
+        },
+
+        {
+
+            "citizenship": "SIERRA LEONE",
+
+            "granted": 50.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 50.0,
+
+            "totalCases": 2
+
+        },
+
+        {
+
+            "citizenship": "NORTH MACEDONIA",
+
+            "granted": 33.33333333333333,
+
+            "adminClosed": 0.0,
+
+            "denied": 66.66666666666666,
+
+            "totalCases": 3
+
+        },
+
+        {
+
+            "citizenship": "SAUDI ARABIA",
+
+            "granted": 57.14285714285714,
+
+            "adminClosed": 0.0,
+
+            "denied": 42.857142857142854,
+
+            "totalCases": 7
+
+        },
+
+        {
+
+            "citizenship": "LIBYA",
+
+            "granted": 18.181818181818183,
+
+            "adminClosed": 36.36363636363637,
+
+            "denied": 45.45454545454545,
+
+            "totalCases": 11
+
+        },
+
+        {
+
+            "citizenship": "ARMENIA",
+
+            "granted": 31.25,
+
+            "adminClosed": 12.5,
+
+            "denied": 56.25,
+
+            "totalCases": 16
+
+        },
+
+        {
+
+            "citizenship": "KENYA",
+
+            "granted": 22.22222222222222,
+
+            "adminClosed": 27.77777777777778,
+
+            "denied": 50.0,
+
+            "totalCases": 18
+
+        },
+
+        {
+
+            "citizenship": "CZECHOSLOVAKIA",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "BURKINA FASO",
+
+            "granted": 29.72972972972973,
+
+            "adminClosed": 2.7027027027027026,
+
+            "denied": 67.56756756756756,
+
+            "totalCases": 37
+
+        },
+
+        {
+
+            "citizenship": "SYRIA",
+
+            "granted": 59.45945945945946,
+
+            "adminClosed": 24.324324324324326,
+
+            "denied": 16.216216216216218,
+
+            "totalCases": 74
+
+        },
+
+        {
+
+            "citizenship": "GABON",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 4
+
+        },
+
+        {
+
+            "citizenship": "TOGO",
+
+            "granted": 40.0,
+
+            "adminClosed": 20.0,
+
+            "denied": 40.0,
+
+            "totalCases": 10
+
+        },
+
+        {
+
+            "citizenship": "TURKEY",
+
+            "granted": 73.13432835820896,
+
+            "adminClosed": 8.955223880597014,
+
+            "denied": 17.91044776119403,
+
+            "totalCases": 67
+
+        },
+
+        {
+
+            "citizenship": "MOROCCO",
+
+            "granted": 80.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 20.0,
+
+            "totalCases": 5
+
+        },
+
+        {
+
+            "citizenship": "MALAWI",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 2
+
+        },
+
+        {
+
+            "citizenship": "AZERBAIJAN",
+
+            "granted": 30.0,
+
+            "adminClosed": 20.0,
+
+            "denied": 50.0,
+
+            "totalCases": 10
+
+        },
+
+        {
+
+            "citizenship": "CÃƒâ€�TE D'IVOIRE",
+
+            "granted": 30.0,
+
+            "adminClosed": 10.0,
+
+            "denied": 60.0,
+
+            "totalCases": 10
+
+        },
+
+        {
+
+            "citizenship": "PHILIPPINES",
+
+            "granted": 0.0,
+
+            "adminClosed": 41.17647058823529,
+
+            "denied": 58.82352941176471,
+
+            "totalCases": 17
+
+        },
+
+        {
+
+            "citizenship": "GRENADA",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "KYRGYZSTAN",
+
+            "granted": 19.35483870967742,
+
+            "adminClosed": 29.03225806451613,
+
+            "denied": 51.61290322580645,
+
+            "totalCases": 31
+
+        },
+
+        {
+
+            "citizenship": "GUINEA",
+
+            "granted": 26.666666666666668,
+
+            "adminClosed": 20.0,
+
+            "denied": 53.333333333333336,
+
+            "totalCases": 15
+
+        },
+
+        {
+
+            "citizenship": "GREECE",
+
+            "granted": 0.0,
+
+            "adminClosed": 100.0,
+
+            "denied": 0.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "BELIZE",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "INDONESIA",
+
+            "granted": 21.428571428571427,
+
+            "adminClosed": 17.857142857142858,
+
+            "denied": 60.71428571428571,
+
+            "totalCases": 28
+
+        },
+
+        {
+
+            "citizenship": "GEORGIA",
+
+            "granted": 40.0,
+
+            "adminClosed": 10.0,
+
+            "denied": 50.0,
+
+            "totalCases": 20
+
+        },
+
+        {
+
+            "citizenship": "MALAYSIA",
+
+            "granted": 0.0,
+
+            "adminClosed": 14.285714285714285,
+
+            "denied": 85.71428571428571,
+
+            "totalCases": 7
+
+        },
+
+        {
+
+            "citizenship": "DOMINICAN REPUBLIC",
+
+            "granted": 0.0,
+
+            "adminClosed": 22.22222222222222,
+
+            "denied": 77.77777777777779,
+
+            "totalCases": 9
+
+        },
+
+        {
+
+            "citizenship": "ITALY",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "UNITED ARAB EMIRATES",
+
+            "granted": 100.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 0.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "BURUNDI",
+
+            "granted": 50.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 50.0,
+
+            "totalCases": 16
+
+        },
+
+        {
+
+            "citizenship": "JAMAICA",
+
+            "granted": 62.5,
+
+            "adminClosed": 0.0,
+
+            "denied": 37.5,
+
+            "totalCases": 8
+
+        },
+
+        {
+
+            "citizenship": "NIGERIA",
+
+            "granted": 20.0,
+
+            "adminClosed": 9.0,
+
+            "denied": 71.0,
+
+            "totalCases": 100
+
+        },
+
+        {
+
+            "citizenship": "AFGHANISTAN",
+
+            "granted": 20.0,
+
+            "adminClosed": 20.0,
+
+            "denied": 60.0,
+
+            "totalCases": 15
+
+        },
+
+        {
+
+            "citizenship": "GUATEMALA",
+
+            "granted": 21.25984251968504,
+
+            "adminClosed": 24.409448818897637,
+
+            "denied": 54.330708661417326,
+
+            "totalCases": 762
+
+        },
+
+        {
+
+            "citizenship": "TRINIDAD AND TOBAGO",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "SOMALIA",
+
+            "granted": 50.0,
+
+            "adminClosed": 50.0,
+
+            "denied": 0.0,
+
+            "totalCases": 2
+
+        },
+
+        {
+
+            "citizenship": "LIBERIA",
+
+            "granted": 23.076923076923077,
+
+            "adminClosed": 15.384615384615385,
+
+            "denied": 61.53846153846154,
+
+            "totalCases": 13
+
+        },
+
+        {
+
+            "citizenship": "PANAMA",
+
+            "granted": 0.0,
+
+            "adminClosed": 100.0,
+
+            "denied": 0.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "VIETNAM",
+
+            "granted": 0.0,
+
+            "adminClosed": 20.0,
+
+            "denied": 80.0,
+
+            "totalCases": 5
+
+        },
+
+        {
+
+            "citizenship": "TAIWAN",
+
+            "granted": 0.0,
+
+            "adminClosed": 50.0,
+
+            "denied": 50.0,
+
+            "totalCases": 2
+
+        },
+
+        {
+
+            "citizenship": "DEM REP OF THE CONGO",
+
+            "granted": 23.076923076923077,
+
+            "adminClosed": 7.6923076923076925,
+
+            "denied": 69.23076923076923,
+
+            "totalCases": 13
+
+        },
+
+        {
+
+            "citizenship": "KOREA",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "DJIBOUTI",
+
+            "granted": 50.0,
+
+            "adminClosed": 50.0,
+
+            "denied": 0.0,
+
+            "totalCases": 6
+
+        },
+
+        {
+
+            "citizenship": "URUGUAY",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "SWAZILAND",
+
+            "granted": 0.0,
+
+            "adminClosed": 100.0,
+
+            "denied": 0.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "EGYPT",
+
+            "granted": 79.13043478260869,
+
+            "adminClosed": 6.086956521739131,
+
+            "denied": 14.782608695652174,
+
+            "totalCases": 115
+
+        },
+
+        {
+
+            "citizenship": "VENEZUELA",
+
+            "granted": 31.753554502369667,
+
+            "adminClosed": 12.322274881516588,
+
+            "denied": 55.92417061611374,
+
+            "totalCases": 633
+
+        },
+
+        {
+
+            "citizenship": "JAPAN",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "COSTA RICA",
+
+            "granted": 0.0,
+
+            "adminClosed": 8.333333333333332,
+
+            "denied": 91.66666666666666,
+
+            "totalCases": 12
+
+        },
+
+        {
+
+            "citizenship": "PERU",
+
+            "granted": 5.263157894736842,
+
+            "adminClosed": 26.31578947368421,
+
+            "denied": 68.42105263157895,
+
+            "totalCases": 19
+
+        },
+
+        {
+
+            "citizenship": "UZBEKISTAN",
+
+            "granted": 17.857142857142858,
+
+            "adminClosed": 28.57142857142857,
+
+            "denied": 53.57142857142857,
+
+            "totalCases": 28
+
+        },
+
+        {
+
+            "citizenship": "CAMEROON",
+
+            "granted": 34.375,
+
+            "adminClosed": 15.625,
+
+            "denied": 50.0,
+
+            "totalCases": 32
+
+        },
+
+        {
+
+            "citizenship": "ETHIOPIA",
+
+            "granted": 48.97959183673469,
+
+            "adminClosed": 14.285714285714285,
+
+            "denied": 36.734693877551024,
+
+            "totalCases": 49
+
+        },
+
+        {
+
+            "citizenship": "BANGLADESH",
+
+            "granted": 7.6923076923076925,
+
+            "adminClosed": 23.076923076923077,
+
+            "denied": 69.23076923076923,
+
+            "totalCases": 39
+
+        },
+
+        {
+
+            "citizenship": "BHUTAN",
+
+            "granted": 0.0,
+
+            "adminClosed": 25.0,
+
+            "denied": 75.0,
+
+            "totalCases": 4
+
+        },
+
+        {
+
+            "citizenship": "LEBANON",
+
+            "granted": 50.0,
+
+            "adminClosed": 33.33333333333333,
+
+            "denied": 16.666666666666664,
+
+            "totalCases": 6
+
+        },
+
+        {
+
+            "citizenship": "MEXICO",
+
+            "granted": 6.962025316455696,
+
+            "adminClosed": 24.050632911392405,
+
+            "denied": 68.9873417721519,
+
+            "totalCases": 948
+
+        },
+
+        {
+
+            "citizenship": "UGANDA",
+
+            "granted": 42.42424242424242,
+
+            "adminClosed": 9.090909090909092,
+
+            "denied": 48.484848484848484,
+
+            "totalCases": 33
+
+        },
+
+        {
+
+            "citizenship": "HAITI",
+
+            "granted": 7.5,
+
+            "adminClosed": 43.333333333333336,
+
+            "denied": 49.166666666666664,
+
+            "totalCases": 120
+
+        },
+
+        {
+
+            "citizenship": "ERITREA",
+
+            "granted": 64.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 36.0,
+
+            "totalCases": 25
+
+        },
+
+        {
+
+            "citizenship": "CHINA, PEOPLE'S REPUBLIC OF",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "PARAGUAY",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "COLOMBIA",
+
+            "granted": 18.478260869565215,
+
+            "adminClosed": 11.956521739130435,
+
+            "denied": 69.56521739130434,
+
+            "totalCases": 92
+
+        },
+
+        {
+
+            "citizenship": "KAZAKHSTAN",
+
+            "granted": 28.57142857142857,
+
+            "adminClosed": 7.142857142857142,
+
+            "denied": 64.28571428571429,
+
+            "totalCases": 28
+
+        },
+
+        {
+
+            "citizenship": "NIGER",
+
+            "granted": 40.0,
+
+            "adminClosed": 20.0,
+
+            "denied": 40.0,
+
+            "totalCases": 5
+
+        },
+
+        {
+
+            "citizenship": "EL SALVADOR",
+
+            "granted": 20.689655172413794,
+
+            "adminClosed": 20.239880059970012,
+
+            "denied": 59.070464767616194,
+
+            "totalCases": 667
+
+        },
+
+        {
+
+            "citizenship": "MONTENEGRO",
+
+            "granted": 16.666666666666664,
+
+            "adminClosed": 16.666666666666664,
+
+            "denied": 66.66666666666666,
+
+            "totalCases": 6
+
+        },
+
+        {
+
+            "citizenship": "CYPRUS",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "RUSSIA",
+
+            "granted": 39.09090909090909,
+
+            "adminClosed": 20.909090909090907,
+
+            "denied": 40.0,
+
+            "totalCases": 110
+
+        },
+
+        {
+
+            "citizenship": "RWANDA",
+
+            "granted": 38.46153846153847,
+
+            "adminClosed": 0.0,
+
+            "denied": 61.53846153846154,
+
+            "totalCases": 13
+
+        },
+
+        {
+
+            "citizenship": "BURMA",
+
+            "granted": 41.17647058823529,
+
+            "adminClosed": 11.76470588235294,
+
+            "denied": 47.05882352941176,
+
+            "totalCases": 17
+
+        },
+
+        {
+
+            "citizenship": "TANZANIA",
+
+            "granted": 0.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 100.0,
+
+            "totalCases": 3
+
+        },
+
+        {
+
+            "citizenship": "UNKNOWN",
+
+            "granted": 100.0,
+
+            "adminClosed": 0.0,
+
+            "denied": 0.0,
+
+            "totalCases": 1
+
+        },
+
+        {
+
+            "citizenship": "MONGOLIA",
+
+            "granted": 22.22222222222222,
+
+            "adminClosed": 11.11111111111111,
+
+            "denied": 66.66666666666666,
+
+            "totalCases": 18
+
+        }
+
+    ]
+
+}
+]
+
+

@@ -461,12 +461,6 @@ const items = [
   ]),
   getItem(<span title="Asylum Case Data">Case Data</span>, 'data', [
     getItem(
-      <a href="/table" title="table">
-        Table
-      </a>,
-      'data1'
-    ),
-    getItem(
       <a href="/graphs" title="heatmap">
         Heat Map
       </a>,

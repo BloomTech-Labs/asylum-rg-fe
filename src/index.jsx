@@ -10,7 +10,6 @@ import {
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { LandingPage } from './components/pages/Landing';
-import { TablePage } from './components/pages/Table';
 import { FooterContent, SiderContent, SubFooter } from './components/Layout';
 import { Layout } from 'antd';
 import HeatMapContainer from './components/pages/DataVisualizations/HeatMapContainer';
@@ -40,7 +39,6 @@ export function App() {
         <Content>
           <Switch>
             <Route path="/" exact component={LandingPage} />
-            <Route path="/table" component={TablePage} />
             <Route path="/graphs" component={HeatMapContainer} />
             <Route component={NotFoundPage} />
           </Switch>

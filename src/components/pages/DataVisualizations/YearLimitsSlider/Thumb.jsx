@@ -27,7 +27,7 @@ function Thumb(props) {
   }, 100);
   return (
     <div
-      className="thumb-outer"
+      className={thumb_key}
       ref={thumb_ref}
       style={{
         height: '20px',

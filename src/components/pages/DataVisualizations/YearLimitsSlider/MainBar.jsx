@@ -107,7 +107,7 @@ function MainBar(props) {
         (tick_to_snap_to * bar_width) / (n_ticks - 1) -
         Math.floor(thumb_width / 2) +
         'px';
-      const key = thumb_dragging.current.getAttribute('data-key');
+      const key = thumb_dragging.current.className;
       console.log(key);
       if (key === 'left') {
         set_left_thumb_snap_tick(tick_to_snap_to);

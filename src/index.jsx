@@ -10,8 +10,8 @@ import {
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { LandingPage } from './components/pages/Landing';
-import { FooterContent, SubFooter } from './components/Footer';
-import { HeaderContent } from './components/Header';
+import { FooterContent, SubFooter } from './components/Layout/Footer';
+import { HeaderContent } from './components/Layout/Header';
 import { Layout } from 'antd';
 import HeatMapContainer from './components/pages/DataVisualizations/HeatMapContainer';
 import { Provider } from 'react-redux';

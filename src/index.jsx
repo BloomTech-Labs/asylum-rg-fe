@@ -11,6 +11,7 @@ import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { LandingPage } from './components/pages/Landing';
 import { FooterContent, SubFooter } from './components/Footer';
+import { HeaderContent } from './components/Header';
 import { Layout } from 'antd';
 import HeatMapContainer from './components/pages/DataVisualizations/HeatMapContainer';
 import { Provider } from 'react-redux';
@@ -30,9 +31,18 @@ ReactDOM.render(
 );
 
 export function App() {
-  const { Content, Footer } = Layout;
+  const { Content, Footer, Header } = Layout;
   return (
     <Layout>
+      <Header
+        style={{
+          height: '15vh',
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        <HeaderContent />
+      </Header>
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/graphs" component={HeatMapContainer} />

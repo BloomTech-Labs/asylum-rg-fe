@@ -115,9 +115,11 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           rowItem = {
             Year: data[0].yearResults[i].year,
             'Total Cases': data[0].yearResults[i].totalCases,
-            '% Granted': data[0].yearResults[i].granted,
-            '% Admin Close / Dismissal': data[0].yearResults[i].adminClosed,
-            '% Denied': data[0].yearResults[i].denied,
+            '% Granted': Number(data[0].yearResults[i].granted).toFixed(2),
+            '% Admin Close / Dismissal': Number(
+              data[0].yearResults[i].adminClosed
+            ).toFixed(2),
+            '% Denied': Number(data[0].yearResults[i].denied).toFixed(2),
           };
           rowsForAllDisplay.push(rowItem);
         }
@@ -248,16 +250,21 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
                 'Total Cases': data[0].yearResults[i].yearData.filter(
                   yearItem => yearItem.office === officeKey
                 )[0].totalCases,
-                '% Granted': data[0].yearResults[i].yearData.filter(
-                  yearItem => yearItem.office === officeKey
-                )[0].granted,
-                '% Admin Close / Dismissal': data[0].yearResults[
-                  i
-                ].yearData.filter(yearItem => yearItem.office === officeKey)[0]
-                  .adminClosed,
-                '% Denied': data[0].yearResults[i].yearData.filter(
-                  yearItem => yearItem.office === officeKey
-                )[0].denied,
+                '% Granted': Number(
+                  data[0].yearResults[i].yearData.filter(
+                    yearItem => yearItem.office === officeKey
+                  )[0].granted
+                ).toFixed(2),
+                '% Admin Close / Dismissal': Number(
+                  data[0].yearResults[i].yearData.filter(
+                    yearItem => yearItem.office === officeKey
+                  )[0].adminClosed
+                ).toFixed(2),
+                '% Denied': Number(
+                  data[0].yearResults[i].yearData.filter(
+                    yearItem => yearItem.office === officeKey
+                  )[0].denied
+                ).toFixed(2),
               };
               rowsForTable.push(rowItem);
             }
@@ -355,9 +362,9 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           rowItem = {
             Citizenship: item.citizenship,
             'Total Cases': item.totalCases,
-            '% Granted': item.granted,
-            '% Admin Close / Dismissal': item.adminClosed,
-            '% Denied': item.denied,
+            '% Granted': Number(item.granted).toFixed(2),
+            '% Admin Close / Dismissal': Number(item.adminClosed).toFixed(2),
+            '% Denied': Number(item.denied).toFixed(2),
           };
           rowsForTable.push(rowItem);
         }
@@ -409,9 +416,11 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
             rowItem = {
               Year: data[0].yearResults[i].year,
               'Total Cases': officeObj.totalCases,
-              '% Granted': officeObj.granted,
-              '% Admin Close / Dismissal': officeObj.adminClosed,
-              '% Denied': officeObj.denied,
+              '% Granted': Number(officeObj.granted).toFixed(2),
+              '% Admin Close / Dismissal': Number(
+                officeObj.adminClosed
+              ).toFixed(2),
+              '% Denied': Number(officeObj.denied).toFixed(2),
             };
             rowsForTable.push(rowItem);
           }
@@ -483,9 +492,9 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           rowItem = {
             Citizenship: item.citizenship,
             'Total Cases': item.totalCases,
-            '% Granted': item.granted,
-            '% Admin Close / Dismissal': item.adminClosed,
-            '% Denied': item.denied,
+            '% Granted': Number(item.granted).toFixed(2),
+            '% Admin Close / Dismissal': Number(item.adminClosed).toFixed(2),
+            '% Denied': Number(item.denied).toFixed(2),
           };
           rowsForTable.push(rowItem);
         }

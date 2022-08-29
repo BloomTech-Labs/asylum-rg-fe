@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Plot from 'react-plotly.js';
 
 import Redux from 'redux';
@@ -16,6 +16,22 @@ const mapStateToProps = state => {
 
 function CitizenshipMapAll(props) {
   const { citizenshipMapAllData } = props;
+  const geoScopeArray = [
+    'world',
+    'usa',
+    'europe',
+    'asia',
+    'africa',
+    'north america',
+    'south america',
+  ];
+  const [geoScope, setGeoScope] = useState('world');
+  const handleScopeChange = e => {
+    //update Plotly region based on dropdown selection
+    const { value } = e.target;
+    setGeoScope(value);
+  };
+
   const countries = citizenshipMapAllData.hasOwnProperty('countries')
     ? citizenshipMapAllData.countries
     : [];
@@ -60,7 +76,10 @@ function CitizenshipMapAll(props) {
         justifyContent: 'center',
       }}
     >
-      <p>Showing: Rates of 'granted' case decision by nationality of origin, for all offices</p>
+      <p>
+        Showing: Rates of 'granted' case decision by nationality of origin, for
+        all offices
+      </p>
       <Plot
         data={[
           {
@@ -78,10 +97,7 @@ function CitizenshipMapAll(props) {
             bordercolor: '#f7e4ca',
           },
           geo: {
-            scope: 'world',
-            projection: {
-              type: 'robinson',
-            },
+            scope: geoScope,
           },
           height: 500,
           width: 700,
@@ -91,12 +107,24 @@ function CitizenshipMapAll(props) {
           fontWeight: '900',
         }}
       />
+      <label for="regionSelect">Select another region below</label>
+      <select name="regionSelect" onChange={handleScopeChange}>
+        {geoScopeArray.map(a => {
+          return <option value={a}>{a.toUpperCase()}</option>;
+        })}
+      </select>
       <p>Table view</p>
       <Table
+        bordered={true}
         rows={rowsForTable}
         columns={columnsForTable}
         tableWidth={'100%'}
         rowHeight={'50px'}
+        scroll={{ y: 550 }}
+        pagination={{
+          position: ['bottomCenter'],
+          pageSize: 25,
+        }}
       />
     </div>
   );

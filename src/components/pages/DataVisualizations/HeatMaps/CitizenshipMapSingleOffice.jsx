@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import Redux from 'redux';
@@ -19,6 +19,21 @@ const mapStateToProps = (state, ownProps) => {
 
 function CitizenshipMapSingleOffice(props) {
   const { office, citizenshipMapData } = props;
+  const geoScopeArray = [
+    'world',
+    'usa',
+    'europe',
+    'asia',
+    'africa',
+    'north america',
+    'south america',
+  ];
+  const [geoScope, setGeoScope] = useState('world');
+  const handleScopeChange = e => {
+    //update Plotly region based on dropdown selection
+    const { value } = e.target;
+    setGeoScope(value);
+  };
   const countries = citizenshipMapData.hasOwnProperty('countries')
     ? citizenshipMapData.countries
     : [];
@@ -61,7 +76,10 @@ function CitizenshipMapSingleOffice(props) {
         justifyContent: 'center',
       }}
     >
-      <p>Showing: Rates of 'granted' case decision by nationality of origin, for {office}</p>
+      <p>
+        Showing: Rates of 'granted' case decision by nationality of origin, for{' '}
+        {office}
+      </p>
       <Plot
         data={[
           {
@@ -79,16 +97,19 @@ function CitizenshipMapSingleOffice(props) {
             bordercolor: '#f7e4ca',
           },
           geo: {
-            scope: 'world',
-            projection: {
-              type: 'robinson',
-            },
+            scope: geoScope,
           },
           height: 500,
           width: 700,
         }}
         style={{ width: '100%', fontWeight: '900' }}
       />
+      <label for="regionSelect">Select another region below</label>
+      <select name="regionSelect" onChange={handleScopeChange}>
+        {geoScopeArray.map(a => {
+          return <option value={a}>{a.toUpperCase()}</option>;
+        })}
+      </select>
       <p>Table view</p>
       <Table
         rows={rowsForTable}

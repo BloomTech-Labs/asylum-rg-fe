@@ -74,13 +74,18 @@ function TimeSeriesSingleOffice(props) {
           },
         ]}
         layout={{
+          title: `Grant Rate % for ${office}`,
           height: 500,
           width: 700,
           yaxis: {
             range: [0, 100],
+            title: `Grant Rate %`,
+            autotick: false,
+            dtick: 10,
           },
           xaxis: {
             range: [xYearsStart, xYearsEnd],
+            title: `Year`,
           },
           paper_bgcolor: '#f7e4ca',
           hoverlabel: {

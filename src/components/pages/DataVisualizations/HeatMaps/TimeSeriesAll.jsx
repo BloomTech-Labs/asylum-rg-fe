@@ -1,12 +1,6 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
-
-import Redux from 'redux';
 import { connect } from 'react-redux';
-
-import reducer from '../../../../state/reducers';
-import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
-
 import Table from './TableComponents/Table';
 
 const mapStateToProps = state => {
@@ -93,13 +87,18 @@ function TimeSeriesAll(props) {
           },
         ]}
         layout={{
+          title: 'Grant Rate for All Offices',
           height: 500,
           width: 700,
           yaxis: {
             range: [0, 100],
+            title: `Grant Rate %`,
+            autotick: false,
+            dtick: 10,
           },
           xaxis: {
             range: [xYearsStart, xYearsEnd],
+            title: 'Year',
           },
           paper_bgcolor: '#f7e4ca',
           hoverlabel: {

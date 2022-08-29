@@ -88,10 +88,18 @@ function CitizenshipMapAll(props) {
             locations: countries,
             z: countriesPercentGranteds,
             text: countries,
-            autocolorscale: true,
+            colorscale: [
+              [0, 'rgb(255,78,17)'],
+              [0.5, 'rgb(250,183,51)'],
+              [1, 'rgb(105,179,76)'],
+            ],
+            colorbar: {
+              title: 'Grant %',
+            },
           },
         ]}
         layout={{
+          title: 'Grant Percentage by Citizenship',
           paper_bgcolor: '#f7e4ca',
           hoverlabel: {
             bordercolor: '#f7e4ca',

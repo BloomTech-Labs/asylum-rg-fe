@@ -39,6 +39,7 @@ export function App() {
           height: '15vh',
           display: 'flex',
           alignItems: 'center',
+          backgroundColor: '#403737' 
         }}
       >
         <HeaderContent />

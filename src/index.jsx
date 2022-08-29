@@ -10,7 +10,7 @@ import {
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { LandingPage } from './components/pages/Landing';
-import { FooterContent, SiderContent, SubFooter } from './components/Layout';
+import { FooterContent, SubFooter } from './components/Footer';
 import { Layout } from 'antd';
 import HeatMapContainer from './components/pages/DataVisualizations/HeatMapContainer';
 import { Provider } from 'react-redux';
@@ -18,7 +18,6 @@ import { configureStore } from '@reduxjs/toolkit';
 import reducer from './state/reducers';
 
 const store = configureStore({ reducer: reducer });
-
 ReactDOM.render(
   <Router>
     <Provider store={store}>
@@ -34,16 +33,11 @@ export function App() {
   const { Content, Footer } = Layout;
   return (
     <Layout>
-      <Layout>
-        <SiderContent />
-        <Content>
-          <Switch>
-            <Route path="/" exact component={LandingPage} />
-            <Route path="/graphs" component={HeatMapContainer} />
-            <Route component={NotFoundPage} />
-          </Switch>
-        </Content>
-      </Layout>
+      <Switch>
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/graphs" component={HeatMapContainer} />
+        <Route component={NotFoundPage} />
+      </Switch>
       <Footer
         style={{
           backgroundColor: '#473D3D',

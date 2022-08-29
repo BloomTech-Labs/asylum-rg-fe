@@ -1,9 +1,6 @@
-import React from 'react';
 import { Button, Space, Typography, Layout, Image } from 'antd';
-import Logo from '../../styles/Images/WhiteLogo.png';
-import { DownloadButton } from '../common/DownloadButton';
-import '../../styles/styles.css';
-
+import React from 'react';
+import Logo from '../styles/Images/WhiteLogo.png';
 const { Text } = Typography;
 function FooterContent() {
 

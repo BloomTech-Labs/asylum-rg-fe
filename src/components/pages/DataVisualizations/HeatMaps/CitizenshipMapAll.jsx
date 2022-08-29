@@ -58,11 +58,9 @@ function CitizenshipMapAll(props) {
         minHeight: '100px',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'lightgreen',
-        padding: '10%',
       }}
     >
-      <p>CITIZENSHIP MAP ALL</p>
+      <p>Showing: Rates of 'granted' case decision by nationality of origin, for all offices</p>
       <Plot
         data={[
           {
@@ -80,19 +78,20 @@ function CitizenshipMapAll(props) {
             bordercolor: '#f7e4ca',
           },
           geo: {
-            scope: 'USA',
+            scope: 'world',
             projection: {
               type: 'robinson',
             },
           },
-          height: 400,
-          width: 400,
+          height: 500,
+          width: 700,
         }}
         style={{
           width: '100%',
           fontWeight: '900',
         }}
       />
+      <p>Table view</p>
       <Table
         rows={rowsForTable}
         columns={columnsForTable}

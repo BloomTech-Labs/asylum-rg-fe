@@ -19,8 +19,6 @@ const mapStateToProps = (state, ownProps) => {
 
 function CitizenshipMapSingleOffice(props) {
   const { office, citizenshipMapData } = props;
-  console.log(`CITIZENSHIP DATA FOR ${office}:`);
-  console.log(citizenshipMapData);
   const countries = citizenshipMapData.hasOwnProperty('countries')
     ? citizenshipMapData.countries
     : [];
@@ -58,13 +56,12 @@ function CitizenshipMapSingleOffice(props) {
       style={{
         display: 'flex',
         flexDirection: 'column',
+        alignItems: 'center',
         minHeight: '100px',
         justifyContent: 'center',
-        backgroundColor: 'rgb(220,150,150)',
-        padding: '10%',
       }}
     >
-      <p>CITIZENSHIP MAP {office}</p>
+      <p>Showing: Rates of 'granted' case decision by nationality of origin, for {office}</p>
       <Plot
         data={[
           {
@@ -87,11 +84,12 @@ function CitizenshipMapSingleOffice(props) {
               type: 'robinson',
             },
           },
-          height: 400,
-          width: 400,
+          height: 500,
+          width: 700,
         }}
         style={{ width: '100%', fontWeight: '900' }}
       />
+      <p>Table view</p>
       <Table
         rows={rowsForTable}
         columns={columnsForTable}

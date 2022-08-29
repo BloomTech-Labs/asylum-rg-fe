@@ -17,8 +17,6 @@ const mapStateToProps = state => {
 
 function TimeSeriesAll(props) {
   const { timeSeriesAllData } = props;
-  console.log(`timeSeriesAllData:`);
-  console.log(timeSeriesAllData);
   let xYearsStart = timeSeriesAllData.hasOwnProperty('xYearsStart')
     ? timeSeriesAllData.xYearsStart
     : 2015;
@@ -77,13 +75,12 @@ function TimeSeriesAll(props) {
       style={{
         display: 'flex',
         flexDirection: 'column',
+        alignItems: 'center',
         minHeight: '100px',
-        backgroundColor: 'rgb(200,200,100)',
         justifyContent: 'center',
-        padding: '10%',
       }}
     >
-      <p>TIME SERIES ALL</p>
+      <p>Showing: Time series data for all asylum offices</p>
       <Plot
         data={[
           {
@@ -96,8 +93,8 @@ function TimeSeriesAll(props) {
           },
         ]}
         layout={{
-          height: 400,
-          width: 400,
+          height: 500,
+          width: 700,
           yaxis: {
             range: [0, 100],
           },
@@ -110,6 +107,7 @@ function TimeSeriesAll(props) {
           },
         }}
       />
+      <p>Table view</p>
       <Table
         columns={columnsForAllDisplay}
         rows={rowsForAllDisplay}

@@ -32,13 +32,13 @@ function Thumb(props) {
       style={{
         height: '20px',
         width: '20px',
-        borderRadius: '50%',
-        backgroundColor: color,
+        backgroundColor: 'lightgray',
+        border: '1px solid gray',
         position: 'absolute',
         left: pos + 'px',
         cursor: 'grab',
-        dataKey: thumb_key,
       }}
+      
       onMouseDown={e => thumb_on_mouse_down(e, thumb_key)}
     ></div>
   );

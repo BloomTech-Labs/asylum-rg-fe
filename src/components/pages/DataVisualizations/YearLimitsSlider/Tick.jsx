@@ -9,12 +9,13 @@ function Tick(props) {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        height: '100px',
+        height: '50px',
+        transform: 'translateY(5px)',
       }}
     >
       <div
         style={{
-          borderRight: '3px solid green',
+          borderRight: '1.5px solid green',
           height: '100%',
           width: '0px',
         }}
@@ -22,9 +23,10 @@ function Tick(props) {
       <p
         style={{
           lineHeight: '0px',
+          fontSize: '0.75rem',
           height: '0px',
           width: '0px',
-          transform: 'translateX(-10px)',
+          transform: 'translate(-10px,10px)',
         }}
       >
         {value}

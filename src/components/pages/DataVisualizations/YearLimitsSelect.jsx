@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form, Button, Input, getFieldValue } from 'antd';
 import {
   setVisualizationData,
@@ -6,10 +6,13 @@ import {
   setHeatMapYears,
 } from '../../../state/actionCreators';
 import YearLimitsSlider from './YearLimitsSlider';
-import { rawApiDataToPlotlyReadyInfo } from '../../../utils';
+import { rawApiDataToPlotlyReadyInfo, useInterval } from '../../../utils';
+import reducers from '../../../state/reducers';
 
-import Redux from 'redux';
+import Redux, { createStore } from 'redux';
 import { connect } from 'react-redux';
+
+const store = createStore(reducers);
 
 const mapStateToProps = (state, ownProps) => {
   const { view, office } = ownProps;
@@ -51,8 +54,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 function YearLimitsSelect(props) {
-  const { view, office, dispatch, clearQuery, updateStateWithNewData, years } =
-    props;
+  let { view, office, dispatch, clearQuery, updateStateWithNewData, years } = props;
   const yearInputsOnChange = (view, office, e) =>
     dispatch(
       setHeatMapYears(
@@ -67,6 +69,12 @@ function YearLimitsSelect(props) {
     dispatch(setVisualizationData(view, office, plotlyReadyData));
   };
   const [form] = Form.useForm();
+  useInterval(() => {
+    form.setFieldsValue({
+      year_start: years[0],
+      year_end: years[1],
+    });
+  },1000);
   return (
     <div
       className="year-limits-select-container"
@@ -77,8 +85,8 @@ function YearLimitsSelect(props) {
       }}
     >
       <YearLimitsSlider
-        leftStart={parseInt(years[0])}
-        rightStart={parseInt(years[1])}
+        office={office}
+        view={view}
         lowerLimit={2015}
         upperLimit={2022}
         step={1}
@@ -87,7 +95,9 @@ function YearLimitsSelect(props) {
         form={form}
         name="yearLimitsSelect"
         initialValues={{ year_start: years[0], year_end: years[1] }}
-        onFinish={() => updateStateWithNewData(view, office, stateSettingFn)}
+        onFinish={() => {
+          updateStateWithNewData(view, office, stateSettingFn);
+        }}
         autoComplete="off"
         layout="inline"
         wrapperCol={{ span: 45 }}
@@ -153,7 +163,9 @@ function YearLimitsSelect(props) {
         style={{
           width: '122px', // this is to match the width of the Form.Item button
         }}
-        onClick={() => clearQuery(view, office)}
+        onClick={() => {
+          clearQuery(view, office);
+        }}
       >
         Clear Query
       </Button>

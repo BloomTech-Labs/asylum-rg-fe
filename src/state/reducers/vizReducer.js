@@ -104,6 +104,7 @@ const vizReducer = (state = initialState, action) => {
   let dataKey = '';
   switch (action.type) {
     case RESET_VISUALIZATION_QUERY:
+      console.log(action);
       if (!action.payload.office) {
         switch (action.payload.view) {
           case 'time-series':
@@ -168,14 +169,6 @@ const vizReducer = (state = initialState, action) => {
           default:
             break;
         }
-
-        /** SIDE EFFECTS FOR TEST PURPOSES --MACK **/
-        console.log('ACTION.PAYLOAD:');
-        console.log(action.payload);
-        console.log('STATE:');
-        console.log(state);
-        /** **/
-
         return {
           ...state,
           [dataKey]: action.payload.data,
@@ -191,14 +184,6 @@ const vizReducer = (state = initialState, action) => {
           default:
             break;
         }
-
-        /** SIDE EFFECTS FOR TEST PURPOSES --MACK **/
-        console.log('ACTION.PAYLOAD:');
-        console.log(action.payload);
-        console.log('STATE:');
-        console.log(state);
-        /** **/
-
         return {
           ...state,
           offices: {
@@ -211,6 +196,7 @@ const vizReducer = (state = initialState, action) => {
         };
       }
     case SET_HEAT_MAP_YEARS:
+      console.log(action);
       if (!action.payload.office) {
         switch (action.payload.view) {
           case 'time-series':
@@ -226,14 +212,6 @@ const vizReducer = (state = initialState, action) => {
             dataKey = 'timeSeriesAllYears';
             break;
         }
-
-        /** SIDE EFFECTS FOR TEST PURPOSES --MACK **/
-        console.log('ACTION.PAYLOAD:');
-        console.log(action.payload);
-        console.log('STATE:');
-        console.log(state);
-        /** **/
-
         return {
           ...state,
           [dataKey]:
@@ -253,14 +231,6 @@ const vizReducer = (state = initialState, action) => {
             dataKey = 'timeSeriesYears';
             break;
         }
-
-        /** SIDE EFFECTS FOR TEST PURPOSES --MACK **/
-        console.log('ACTION.PAYLOAD:');
-        console.log(action.payload);
-        console.log('STATE:');
-        console.log(state);
-        /** **/
-
         return {
           ...state,
           offices: {

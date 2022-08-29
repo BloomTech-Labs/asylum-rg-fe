@@ -3,8 +3,6 @@ import TableInnerSquare from './TableInnerSquare';
 
 function SubTable(props) {
   const { dataObject, rowHeight } = props;
-  console.log('dataObject:');
-  console.log(dataObject);
   return (
     <div
       className="sub-table"

@@ -32,8 +32,10 @@ function Table(props) {
                 backgroundColor: 'lightblue',
                 border: '1px solid blue',
                 width: '100%',
-                padding: '2%',
                 overflow: 'hidden',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}
               key={idx}
             >

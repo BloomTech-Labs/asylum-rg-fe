@@ -82,13 +82,12 @@ function OfficeHeatMap(props) {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: 'lightgray',
+        alignItems: 'center',
         minHeight: '100px',
         justifyContent: 'center',
-        padding: '10%',
       }}
     >
-      <p>OFFICE HEAT MAP</p>
+      <p>Showing: Rates of 'granted' case decision by asylum office, by year</p>
       <Plot
         data={[
           {
@@ -99,14 +98,15 @@ function OfficeHeatMap(props) {
           },
         ]}
         layout={{
-          height: 400,
-          width: 400,
+          height: 500,
+          width: 700,
           paper_bgcolor: '#f7e4ca',
           hoverlabel: {
             bordercolor: '#f7e4ca',
           },
         }}
       />
+      <p>Table view</p>
       <Table
         rows={rowsForTable}
         columns={columnsForTable}

@@ -1,17 +1,68 @@
 import React, { useState, useRef, useEffect } from 'react';
+import Redux from 'redux';
+import { connect } from 'react-redux';
 import Tick from './Tick';
 import Thumb from './Thumb';
+import { useInterval } from '../../../../utils';
+import { setHeatMapYears } from '../../../../state/actionCreators';
 
 /* '[the useRef hook makes it possible to acces DOM nodes
     from within functional components' -Codevolution tutorial */
+const mapStateToProps = (state, ownProps) => {
+  const { view, office } = ownProps;
+  if (office === 'all' || !office) {
+    switch (view) {
+      case 'time-series':
+        return {
+          years: state.vizReducer.timeSeriesAllYears,
+        };
+      case 'office-heat-map':
+        return {
+          years: state.vizReducer.officeHeatMapYears,
+        };
+      case 'citizenship':
+        return {
+          years: state.vizReducer.citizenshipMapAllYears,
+        };
+      default:
+        return {
+          years: ['', ''],
+        };
+    }
+  } else {
+    switch (view) {
+      case 'time-series':
+        return {
+          years: state.vizReducer.offices[office].timeSeriesYears,
+        };
+      case 'citizenship':
+        return {
+          years: state.vizReducer.offices[office].citizenshipMapYears,
+        };
+      default:
+        return {
+          years: ['', ''],
+        };
+    }
+  }
+};
 
 function MainBar(props) {
-  const { lowerLimit, upperLimit, step, leftStart, rightStart } = props;
+  const { lowerLimit, upperLimit, step, years, dispatch, view, office } = props;
   const values = [];
   for (let i = lowerLimit; i <= upperLimit; i += step) {
     values.push(i);
   }
   const n_ticks = values.length;
+
+  let leftStart = parseInt(years[0]);
+  let rightStart = parseInt(years[1]);
+  useInterval(() => {
+    leftStart = parseInt(years[0]);
+    rightStart = parseInt(years[1]);
+    set_left_thumb_snap_tick(values.indexOf(leftStart));
+    set_right_thumb_snap_tick(values.indexOf(rightStart));
+  },1000);
 
   const bar_ref = useRef();
   const left_thumb_ref = useRef();
@@ -36,7 +87,8 @@ function MainBar(props) {
       right_thumb_ref.current.style.cursor = 'grabbing';
     }
   };
-  const bar_on_mouse_up = e => {
+  const bar_on_mouse_up = (e,view,office) => {
+    console.log('????');
     thumb_dragging.current.style.cursor = 'grab';
     if (thumb_dragging) {
       const pos =
@@ -55,11 +107,17 @@ function MainBar(props) {
         (tick_to_snap_to * bar_width) / (n_ticks - 1) -
         Math.floor(thumb_width / 2) +
         'px';
-      const key = thumb_dragging.current.dataKey;
+      const key = thumb_dragging.current.getAttribute('data-key');
+      console.log(key);
       if (key === 'left') {
         set_left_thumb_snap_tick(tick_to_snap_to);
+        console.log(tick_to_snap_to);
+        dispatch(setHeatMapYears(view, office, 0, values[tick_to_snap_to]));
+        console.log('GETS HERE');
       } else if (key === 'right') {
         set_right_thumb_snap_tick(tick_to_snap_to);
+        dispatch(setHeatMapYears(view, office, 1, values[tick_to_snap_to]));
+        console.log('GETS HERE');
       }
     }
     set_thumb_dragging(null);
@@ -102,15 +160,14 @@ function MainBar(props) {
     <div
       className="slider-bar-alignment-container"
       style={{
-        border: '1px solid red',
-        height: '300px',
+        height: '100px',
         display: 'flex',
         alignItems: 'center',
         flexWrap: 'wrap',
         margin: '10%',
       }}
       onMouseMove={bar_on_mouse_move}
-      onMouseUp={bar_on_mouse_up}
+      onMouseUp={e => bar_on_mouse_up(e,view,office)}
       ref={bar_ref}
     >
       <Thumb
@@ -150,4 +207,4 @@ function MainBar(props) {
   );
 }
 
-export default MainBar;
+export default connect(mapStateToProps)(MainBar);

@@ -57,7 +57,6 @@ function MapWrapper(props) {
         .get('http://localhost:3002')
         .then(result => {
           stateSettingCallback(view, office, result.data);
-          console.log(result.data);
         })
         .catch(err => {
           console.error(err);
@@ -83,9 +82,7 @@ function MapWrapper(props) {
       <div
         className="user-input-sidebar-container"
         style={{
-          width: '100%',
-          top: '20vh',
-          right: '5vh',
+          width: '300px',
         }}
       >
         <ViewSelect set_view={set_view} />

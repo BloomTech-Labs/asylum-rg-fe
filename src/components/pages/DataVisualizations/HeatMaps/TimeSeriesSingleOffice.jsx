@@ -56,12 +56,11 @@ function TimeSeriesSingleOffice(props) {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+        alignItems: 'center',
         minHeight: '100px',
-        backgroundColor: 'lightgreen',
-        padding: '10%',
       }}
     >
-      <p>TIME SERIES {office}</p>
+      <p>Showing: Time series data for {office}</p>
       <Plot
         data={[
           {
@@ -75,8 +74,8 @@ function TimeSeriesSingleOffice(props) {
           },
         ]}
         layout={{
-          height: 400,
-          width: 400,
+          height: 500,
+          width: 700,
           yaxis: {
             range: [0, 100],
           },
@@ -89,6 +88,7 @@ function TimeSeriesSingleOffice(props) {
           },
         }}
       />
+      <p>Table view</p>
       <Table
         columns={columnsForTable}
         rows={rowsForTable}

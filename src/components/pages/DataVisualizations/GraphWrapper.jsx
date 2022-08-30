@@ -86,6 +86,10 @@ function GraphWrapper(props) {
         className="user-input-sidebar-container"
         style={{
           width: '300px',
+          height: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
         }}
       >
         <ViewSelect set_view={set_view} />

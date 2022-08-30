@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { useHistory, Switch, Route, Link } from 'react-router-dom';
+import React, { useState } from 'react'; import { useHistory, Switch, Route, Link } from 'react-router-dom';
 import AllOfficesRoute from './AllOfficesRoute';
 import SingleOfficeRoute from './SingleOfficeRoute';
 import 'antd/dist/antd.css';
@@ -54,6 +53,8 @@ function GraphsContainer() {
           style={{
             display: 'flex',
             justifyContent: 'space-around',
+            height: '10vh',
+            alignItems: 'center',
           }}
         >
           <Link to={`/graphs/all/${view}`}

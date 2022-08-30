@@ -108,7 +108,7 @@ function YearLimitsSelect(props) {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          alignContent: 'start',
+          alignItems: 'center',
         }}
       >
         <Form.Item
@@ -169,18 +169,26 @@ function YearLimitsSelect(props) {
           </Button>
         </Form.Item>
       </Form>
-      <Button
+      <div className='clear-query-button-alignment-container'
         style={{
-          width: '122px', // this is to match the width of the Form.Item button
-          backgroundColor: primary_accent_color,
-          color: 'white',
-        }}
-        onClick={() => {
-          clearQuery(view, office);
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
         }}
       >
-        Clear Query
-      </Button>
+        <Button
+          style={{
+            width: '122px', // this is to match the width of the Form.Item button
+            backgroundColor: primary_accent_color,
+            color: 'white',
+          }}
+          onClick={() => {
+            clearQuery(view, office);
+          }}
+        >
+          Clear Query
+        </Button>
+      </div>
     </div>
   );
 }

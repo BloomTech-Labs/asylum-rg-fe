@@ -111,6 +111,7 @@ function CitizenshipMapAll(props) {
         style={{
           width: '100%',
           fontWeight: '900',
+          backgroundColor: background_color,
         }}
       />
       <label htmlFor="regionSelect">Select another region below</label>

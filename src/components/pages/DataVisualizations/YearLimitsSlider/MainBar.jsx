@@ -166,6 +166,18 @@ function MainBar(props) {
     : null;
 
   return (
+    <div className="slider-bar-visual-border"
+      onMouseMove={bar_on_mouse_move}
+      onMouseUp={e => bar_on_mouse_up(e,view,office)}
+      style={{
+        width: '360px',
+        height: '70px',
+        border: '1px solid gray',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
     <div
       className="slider-bar-alignment-container"
       style={{
@@ -173,11 +185,9 @@ function MainBar(props) {
         display: 'flex',
         alignItems: 'center',
         flexWrap: 'wrap',
+        width: '300px',
         margin: '10%',
-        backgroundColor: 'lightgray',
       }}
-      onMouseMove={bar_on_mouse_move}
-      onMouseUp={e => bar_on_mouse_up(e,view,office)}
       ref={bar_ref}
     >
       <Thumb
@@ -222,6 +232,7 @@ function MainBar(props) {
           return <Tick value={val} key={val} />;
         })}
       </div>
+    </div>
     </div>
   );
 }

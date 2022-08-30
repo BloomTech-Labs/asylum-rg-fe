@@ -14,73 +14,6 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
   let rowItem;
   let rowsForTable;
   /*
-        The data from our API will have this shape:
-          [
-            {
-              "granted": <%>,
-              "adminClosed": <%>,
-              "denied": <%>,
-              "totalCases": <%>,
-              "results": [
-                {
-                  "year": <year>,
-                  "granted": <%>, 
-                  "adminClosed": <%>,
-                  "denied": <%>,
-                  "totalCases": <#>,
-                  "yearData": [
-                    {
-                      "office": <office>,
-                      "granted": <%>,
-                      "adminClosed": <%>,
-                      "denied": <%>,
-                      "totalCases": <#>,
-                    },
-                    {
-  
-                      <same as above>
-  
-                    },
-    
-                    .
-                    .
-                    .
-
-                  ]
-                },
-                {
-
-                  <same as above>
-
-                },
-              
-                .
-                .
-                .
-
-              ],
-              "citizenshipResults": [             // these [ citizenshipResults ] will be specific to an office IF AND ONLY IF we queried by one
-                {
-                  "citizenship": <country>,
-                  "granted": <%>,
-                  "adminClosed": <%>,
-                  "denied": <%>,
-                  "totalCases": <#>
-                },
-                {
-
-                  <same as above>
-
-                },
-
-                . 
-                .
-                .
-  
-              ],
-            }
-          ]
-
       ------------------------------------------------------
 
       NOTE ON ALL THE SWITCH STATEMENTS:
@@ -105,6 +38,8 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
       ------------------------------------------------------
 
     */
+
+  //extra variable to set minYear and MaxYear
 
   const yearByOfficeByGrant = {}; //Object that contacts year by Office by grant rate information
   for (let office of data[0]['yearResults']) {

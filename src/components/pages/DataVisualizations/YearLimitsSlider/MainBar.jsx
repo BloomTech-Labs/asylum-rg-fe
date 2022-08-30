@@ -60,7 +60,17 @@ function MainBar(props) {
     rightStart = parseInt(years[1]);
     set_left_thumb_snap_tick(values.indexOf(leftStart));
     set_right_thumb_snap_tick(values.indexOf(rightStart));
-  },1000);
+    if (left_thumb_ref.current) {
+    set_filler_left(left_thumb_ref.current.getBoundingClientRect().right
+                    - Math.floor(left_thumb_ref.current.getBoundingClientRect().width / 2));
+    set_filler_width(right_thumb_ref.current.getBoundingClientRect().right
+                      - left_thumb_ref.current.getBoundingClientRect().right); 
+    } else {
+        console.log(left_thumb_ref.current);
+      set_filler_left(bar_start);
+      set_filler_width(0);
+    }
+  },100);
 
   const bar_ref = useRef();
   const left_thumb_ref = useRef();
@@ -73,6 +83,8 @@ function MainBar(props) {
   const [right_thumb_snap_tick, set_right_thumb_snap_tick] = useState(
     values.indexOf(rightStart)
   );
+  const [filler_left,set_filler_left] = useState(0);
+  const [filler_width,set_filler_width] = useState(0);
 
   const thumb_on_mouse_down = (e, thumb) => {
     e.stopPropagation();
@@ -86,7 +98,6 @@ function MainBar(props) {
     }
   };
   const bar_on_mouse_up = (e,view,office) => {
-    console.log('????');
     thumb_dragging.current.style.cursor = 'grab';
     if (thumb_dragging) {
       const pos =
@@ -109,7 +120,6 @@ function MainBar(props) {
       console.log(key);
       if (key === 'left') {
         set_left_thumb_snap_tick(tick_to_snap_to);
-        console.log(tick_to_snap_to);
         dispatch(setHeatMapYears(view, office, 0, values[tick_to_snap_to]));
       } else if (key === 'right') {
         set_right_thumb_snap_tick(tick_to_snap_to);
@@ -156,11 +166,12 @@ function MainBar(props) {
     <div
       className="slider-bar-alignment-container"
       style={{
-        height: '100px',
+        height: '50px',
         display: 'flex',
         alignItems: 'center',
         flexWrap: 'wrap',
         margin: '10%',
+        backgroundColor: 'lightgray',
       }}
       onMouseMove={bar_on_mouse_move}
       onMouseUp={e => bar_on_mouse_up(e,view,office)}
@@ -176,13 +187,12 @@ function MainBar(props) {
       />
       <div className='filler'
         style={{
-          width: 'auto',
           position: 'absolute',
           zIndex: '1',
-          left: bar_start + (left_thumb_snap_tick * bar_width) / (values.length - 1),
-          right: bar_start + (right_thumb_snap_tick * bar_width) / (values.length - 1),
-          height: '20px',
-          backgroundColor: 'purple',
+          left: filler_left + 'px',
+          width: filler_width + 'px',
+          height: '5px',
+          backgroundColor: 'darkblue',
         }}
       >
       </div>

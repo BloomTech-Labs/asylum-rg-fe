@@ -9,7 +9,7 @@ function Tick(props) {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        height: '50px',
+        height: '30px',
         transform: 'translateY(5px)',
       }}
     >

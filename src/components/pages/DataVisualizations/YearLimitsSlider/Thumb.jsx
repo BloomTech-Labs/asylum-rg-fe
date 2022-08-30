@@ -30,17 +30,27 @@ function Thumb(props) {
       className={thumb_key}
       ref={thumb_ref}
       style={{
-        height: '20px',
-        width: '20px',
-        backgroundColor: 'lightgray',
-        border: '1px solid gray',
+        zIndex: '2',
+        height: '30px',
+        width: '30px',
         position: 'absolute',
         left: pos + 'px',
         cursor: 'grab',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
-      
       onMouseDown={e => thumb_on_mouse_down(e, thumb_key)}
-    ></div>
+      >
+      <div className="thumb_visual"
+        style={{
+          height: '25px', 
+          width: '5px',
+          backgroundColor: 'gray',
+        }}
+      >
+      </div>
+    </div>
   );
 }
 

@@ -6,8 +6,6 @@ import Thumb from './Thumb';
 import { useInterval } from '../../../../utils';
 import { setHeatMapYears } from '../../../../state/actionCreators';
 
-/* '[the useRef hook makes it possible to acces DOM nodes
-    from within functional components' -Codevolution tutorial */
 const mapStateToProps = (state, ownProps) => {
   const { view, office } = ownProps;
   if (office === 'all' || !office) {
@@ -113,11 +111,9 @@ function MainBar(props) {
         set_left_thumb_snap_tick(tick_to_snap_to);
         console.log(tick_to_snap_to);
         dispatch(setHeatMapYears(view, office, 0, values[tick_to_snap_to]));
-        console.log('GETS HERE');
       } else if (key === 'right') {
         set_right_thumb_snap_tick(tick_to_snap_to);
         dispatch(setHeatMapYears(view, office, 1, values[tick_to_snap_to]));
-        console.log('GETS HERE');
       }
     }
     set_thumb_dragging(null);
@@ -177,8 +173,19 @@ function MainBar(props) {
         thumb_key={'left'}
         thumb_ref={left_thumb_ref}
         thumb_on_mouse_down={thumb_on_mouse_down}
-        color={'blue'}
       />
+      <div className='filler'
+        style={{
+          width: 'auto',
+          position: 'absolute',
+          zIndex: '1',
+          left: bar_start + (left_thumb_snap_tick * bar_width) / (values.length - 1),
+          right: bar_start + (right_thumb_snap_tick * bar_width) / (values.length - 1),
+          height: '20px',
+          backgroundColor: 'purple',
+        }}
+      >
+      </div>
       <Thumb
         bar_ref={bar_ref ? bar_ref : null}
         snap_tick={right_thumb_snap_tick}
@@ -186,7 +193,6 @@ function MainBar(props) {
         thumb_key={'right'}
         thumb_ref={right_thumb_ref}
         thumb_on_mouse_down={thumb_on_mouse_down}
-        color={'red'}
       />
       <div
         className="slider-bar"

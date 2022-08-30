@@ -1,19 +1,12 @@
-import { Button, Space, Typography, Layout, Image } from 'antd';
 import React from 'react';
+import { Button, Space, Typography, Layout, Image } from 'antd';
 import Logo from '../../styles/Images/WhiteLogo.png';
-import { DownloadOutlined } from '@ant-design/icons';
+import { DownloadButton } from '../common/DownloadButton'
 const { Text } = Typography;
 function FooterContent() {
   return (
     <div>
-        <Button
-          icon={<DownloadOutlined />}
-          type="primary"
-          size="large"
-          /* href="https://www.humanrightsfirst.org/about" */
-          /* style={{ color: '#E2F0F7' }} */
-        >Download
-        </Button>
+        <DownloadButton/>
 
 
 

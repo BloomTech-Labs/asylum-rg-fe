@@ -1,13 +1,10 @@
-import React from 'react';
-import Redux from 'redux';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import Plot from 'react-plotly.js';
-import reducer from '../../../../state/reducers';
-import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
 import Table from './TableComponents/Table';
 import { colors } from '../../../../styles/data_vis_colors';
 
-const { background_color, primary_accent_color, secondary_accent_color } = colors;
+const { background_color } = colors;
 
 const mapStateToProps = state => {
   return {
@@ -17,58 +14,28 @@ const mapStateToProps = state => {
 
 function OfficeHeatMap(props) {
   const { officeHeatMapData } = props;
-  const yYearsStart = officeHeatMapData.hasOwnProperty('yYearsStart')
-    ? officeHeatMapData.yYearsStart
-    : 2015;
-  const yYearsEnd = officeHeatMapData.hasOwnProperty('yYearsEnd')
-    ? officeHeatMapData.yYearsEnd
-    : 2022;
-  const yYears = officeHeatMapData.hasOwnProperty('yYears')
-    ? officeHeatMapData.yYears
-    : [];
-  const totalsByOffice = officeHeatMapData.hasOwnProperty('totalsByOffice')
-    ? officeHeatMapData.totalsByOffice
-    : [];
-  const zPercentGrantedsByOffice = officeHeatMapData.hasOwnProperty(
-    'zPercentGrantedsByOffice'
-  )
-    ? officeHeatMapData.zPercentGrantedsByOffice
-    : [];
+  const [plotlyGraphAxis, setPlotlyGraphAxis] = useState({
+    x: [],
+    y: [],
+    z: [],
+  });
+
+  useEffect(() => {
+    if (officeHeatMapData['officeHeatMapDataObject'] !== undefined) {
+      setPlotlyGraphAxis({
+        x: officeHeatMapData['officeHeatMapDataObject']['x'],
+        y: officeHeatMapData['officeHeatMapDataObject']['y'],
+        z: officeHeatMapData['officeHeatMapDataObject']['z'],
+      });
+    } else {
+      setPlotlyGraphAxis({ x: [], y: [], z: [] });
+    }
+  }, [officeHeatMapData]);
+
   const rowsForTable = officeHeatMapData.hasOwnProperty('rowsForTable')
     ? officeHeatMapData.rowsForTable
     : [];
-  const officeCodes = [
-    'ZLA',
-    'ZSF',
-    'ZNY',
-    'ZHN',
-    'ZCH',
-    'ZNK',
-    'ZAR',
-    'ZBO',
-    'ZMI',
-    'ZOL',
-  ];
-  const displayOfficeData = [];
-  if (zPercentGrantedsByOffice) {
-    for (let years_idx = 0; years_idx < yYears.length; years_idx++) {
-      let yearDataItem = [];
-      for (
-        let offices_idx = 0;
-        offices_idx < officeCodes.length;
-        offices_idx++
-      ) {
-        if (zPercentGrantedsByOffice.hasOwnProperty(officeCodes[offices_idx])) {
-          yearDataItem.push(
-            zPercentGrantedsByOffice[officeCodes[offices_idx]][years_idx]
-          );
-        } else {
-          yearDataItem.push(0);
-        }
-      }
-      displayOfficeData.push(yearDataItem);
-    }
-  }
+
   const columnsForTable = [
     'Year [Office]',
     'Total Cases',
@@ -76,6 +43,7 @@ function OfficeHeatMap(props) {
     '% Admin Close / Dismissal',
     '% Denied',
   ];
+
   return (
     <div
       className="office-heat-map-container"
@@ -91,9 +59,9 @@ function OfficeHeatMap(props) {
       <Plot
         data={[
           {
-            x: officeCodes,
-            y: yYears,
-            z: displayOfficeData,
+            x: plotlyGraphAxis['x'],
+            y: plotlyGraphAxis['y'],
+            z: plotlyGraphAxis['z'],
             type: 'heatmap',
           },
         ]}

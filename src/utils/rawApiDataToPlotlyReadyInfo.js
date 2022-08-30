@@ -13,38 +13,12 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
   ];
   let rowItem;
   let rowsForTable;
-  /*
-      ------------------------------------------------------
-
-      NOTE ON ALL THE SWITCH STATEMENTS:
-
-          Technically, for queries that don't have
-        to do with citizenship, we COULD set the data
-        in state for ALL the non-citizenship views between 
-        those years, since we get all the necessary data 
-        anyway, but I think it's more intuitive and 
-        convenient for the UI to be able to remember a 
-        DIFFERENT user query for each individual view. 
-        That way if, say, a researcher wants to see all
-        the data by office just from 2017, and then they
-        tab over to view all the data as a time series from
-        2015-2022, and then they go back to the Office tab,
-        their previous query won't be overwritten by the
-        one they made in the different tab, and they'll
-        be able to seamlessly resume.
-
-            -- Mack
-
-      ------------------------------------------------------
-
-    */
 
   //extra variable to set minYear and MaxYear
   let yearMinMax = [];
   for (let yearResults of data[0]['yearResults']) {
     yearMinMax.push(yearResults['year']);
   }
-
   const yearByOfficeByGrant = {}; //Object that contacts year by Office by grant rate information
   for (let office of data[0]['yearResults']) {
     if (!yearByOfficeByGrant[office['year']])
@@ -56,6 +30,31 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
         adminClosed: yearData['adminClosed'],
         denied: yearData['denied'],
       };
+    }
+  }
+  const officeData = {}; //object that holds each % as a key of array value
+  for (let officeName of officeCodes) {
+    officeData[officeName] = {
+      xYears: [],
+      totals: [],
+      yTotalPercentGranteds: [],
+      totalPercentAdminCloseds: [],
+      totalPercentDenieds: [],
+    };
+  }
+  for (let yearResults of data[0]['yearResults']) {
+    for (let yearData of yearResults['yearData']) {
+      officeData[yearData['office']]['xYears'].push(yearResults['year']);
+      officeData[yearData['office']]['totals'].push(yearData['totalCases']);
+      officeData[yearData['office']]['yTotalPercentGranteds'].push(
+        yearData['granted']
+      );
+      officeData[yearData['office']]['totalPercentAdminCloseds'].push(
+        yearData['adminClosed']
+      );
+      officeData[yearData['office']]['totalPercentDenieds'].push(
+        yearData['denied']
+      );
     }
   }
 
@@ -75,35 +74,6 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
             '% Denied': Number(data[0].yearResults[i].denied).toFixed(2),
           };
           rowsForAllDisplay.push(rowItem);
-        }
-
-        const officeData = {}; //object that holds each % as a key of array value
-        for (let officeName of officeCodes) {
-          officeData[officeName] = {
-            xYears: [],
-            totals: [],
-            yTotalPercentGranteds: [],
-            totalPercentAdminCloseds: [],
-            totalPercentDenieds: [],
-          };
-        }
-
-        for (let yearResults of data[0]['yearResults']) {
-          for (let yearData of yearResults['yearData']) {
-            officeData[yearData['office']]['xYears'].push(yearResults['year']);
-            officeData[yearData['office']]['totals'].push(
-              yearData['totalCases']
-            );
-            officeData[yearData['office']]['yTotalPercentGranteds'].push(
-              yearData['granted']
-            );
-            officeData[yearData['office']]['totalPercentAdminCloseds'].push(
-              yearData['adminClosed']
-            );
-            officeData[yearData['office']]['totalPercentDenieds'].push(
-              yearData['denied']
-            );
-          }
         }
 
         const finalData = {
@@ -162,96 +132,28 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
             }
           }
         }
-
-        //office:{%%%}
-
-        const totalsByOffice = {};
-        const zPercentGrantedsByOffice = {};
-        const percentAdminClosedsByOffice = {};
-        const percentDeniedsByOffice = {};
-        for (let officeKey of officeCodes) {
-          totalsByOffice[officeKey] = [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .reduce((acc, yearItem) => {
-                return yearItem.yearData.filter(
-                  yearItem => yearItem.office === officeKey
-                )[0]
-                  ? acc.concat(
-                      yearItem.yearData.filter(
-                        yearItem => yearItem.office === officeKey
-                      )[0].totalCases
-                    )
-                  : acc;
-              }, []),
-          ];
-          zPercentGrantedsByOffice[officeKey] = [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .reduce((acc, yearItem) => {
-                return yearItem.yearData.filter(
-                  yearItem => yearItem.office === officeKey
-                )[0]
-                  ? acc.concat(
-                      yearItem.yearData.filter(
-                        yearItem => yearItem.office === officeKey
-                      )[0].granted
-                    )
-                  : acc;
-              }, []),
-          ];
-          percentAdminClosedsByOffice[officeKey] = [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .reduce((acc, yearItem) => {
-                return yearItem.yearData.filter(
-                  yearItem => yearItem.office === officeKey
-                )[0]
-                  ? acc.concat(
-                      yearItem.yearData.filter(
-                        yearItem => yearItem.office === officeKey
-                      )[0].adminClosed
-                    )
-                  : acc;
-              }, []),
-          ];
-          percentDeniedsByOffice[officeKey] = [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .reduce((acc, yearItem) => {
-                return yearItem.yearData.filter(
-                  yearItem => yearItem.office === officeKey
-                )[0]
-                  ? acc.concat(
-                      yearItem.yearData.filter(
-                        yearItem => yearItem.office === officeKey
-                      )[0].denied
-                    )
-                  : acc;
-              }, []),
-          ];
-        }
-
-        return {
-          rowsForTable,
-          yYearsStart: data[0].yearResults.reduce(
-            (acc, yearItem) => (yearItem.year < acc ? yearItem.year : acc),
-            data[0].yearResults[0].year
-          ), // min year
-          yYearsEnd: data[0].yearResults.reduce(
-            (acc, yearItem) => (yearItem.year > acc ? yearItem.year : acc),
-            data[0].yearResults[0].year
-          ), // max year
-          yYears: [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .map(yearItem => yearItem.year),
-          ],
-          totalsByOffice,
-          zPercentGrantedsByOffice,
-          percentAdminClosedsByOffice,
-          percentDeniedsByOffice,
+        const officeHeatMapDataObject = {
+          //declare helper object to construct data for heatmap plotly
+          x: officeCodes, //office
+          y: [], //year
+          z: [], //rate
         };
+        for (let year in yearByOfficeByGrant) {
+          //loop through
+          officeHeatMapDataObject['y'].push(year); //include year into y axis
+          let zAxisArray = []; //Array to hold each row for z axis
+          for (let officeName of officeCodes) {
+            //loop using unique office names
+            zAxisArray.push(
+              yearByOfficeByGrant[year][officeName]
+                ? yearByOfficeByGrant[year][officeName]['granted']
+                : 0
+            );
+          }
+          officeHeatMapDataObject['z'].push(zAxisArray); //push to zaxis array
+        }
+        return { officeHeatMapDataObject, rowsForTable };
+
       case 'citizenship':
         rowsForTable = [];
         for (let item of data[0].citizenshipResults) {

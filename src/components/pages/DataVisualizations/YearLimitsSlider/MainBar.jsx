@@ -69,7 +69,6 @@ function MainBar(props) {
     set_filler_width(right_thumb_ref.current.getBoundingClientRect().right
                       - left_thumb_ref.current.getBoundingClientRect().right); 
     } else {
-        console.log(left_thumb_ref.current);
       set_filler_left(bar_start);
       set_filler_width(0);
     }
@@ -120,7 +119,6 @@ function MainBar(props) {
         Math.floor(thumb_width / 2) +
         'px';
       const key = thumb_dragging.current.className;
-      console.log(key);
       if (key === 'left') {
         set_left_thumb_snap_tick(tick_to_snap_to);
         dispatch(setHeatMapYears(view, office, 0, values[tick_to_snap_to]));

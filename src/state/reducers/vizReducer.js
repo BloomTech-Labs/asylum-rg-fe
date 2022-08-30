@@ -104,7 +104,6 @@ const vizReducer = (state = initialState, action) => {
   let dataKey = '';
   switch (action.type) {
     case RESET_VISUALIZATION_QUERY:
-      console.log(action);
       if (!action.payload.office) {
         switch (action.payload.view) {
           case 'time-series':
@@ -196,7 +195,6 @@ const vizReducer = (state = initialState, action) => {
         };
       }
     case SET_HEAT_MAP_YEARS:
-      console.log(action);
       if (!action.payload.office) {
         switch (action.payload.view) {
           case 'time-series':

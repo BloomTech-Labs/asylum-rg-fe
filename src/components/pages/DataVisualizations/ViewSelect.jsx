@@ -31,7 +31,7 @@ function ViewSelect(props) {
         ''
       ) : (
         <Button onClick={() => update_view('office-heat-map', office)}>
-          Office Heat Map
+          Offices Heat Map
         </Button>
       )}
       <Button onClick={() => update_view('citizenship', office)}>

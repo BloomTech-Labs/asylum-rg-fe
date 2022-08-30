@@ -10,8 +10,8 @@ import {
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { LandingPage } from './components/pages/Landing';
-import { FooterContent, SubFooter } from './components/Layout/Footer';
-import { HeaderContent } from './components/Layout/Header';
+import { TablePage } from './components/pages/Table';
+import { FooterContent, SubFooter } from './components/Layout';
 import { Layout } from 'antd';
 import GraphsContainer from './components/pages/DataVisualizations/GraphsContainer';
 import { Provider } from 'react-redux';
@@ -37,24 +37,19 @@ export function App() {
   const { Footer, Header } = Layout;
   return (
     <Layout>
-      <Header
-        style={{
-          height: '15vh',
-          display: 'flex',
-          alignItems: 'center',
-          backgroundColor: primary_accent_color,
-        }}
-      >
-        <HeaderContent />
-      </Header>
-      <Switch>
-        <Route path="/" exact component={LandingPage} />
-        <Route path="/graphs" component={GraphsContainer} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <Layout>
+        <Content>
+          <Switch>
+            <Route path="/" exact component={LandingPage} />
+            <Route path="/table" component={TablePage} />
+            <Route path="/heatmap" component={HeatMapContainer} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </Content>
+      </Layout>
       <Footer
         style={{
-          backgroundColor: primary_accent_color,
+          backgroundColor: '#404C4A',
           color: '#E2F0F7',
         }}
       >
@@ -62,7 +57,7 @@ export function App() {
       </Footer>
       <Footer
         style={{
-          backgroundColor: primary_accent_color,
+          backgroundColor: '#404C4A',
           padding: 0,
         }}
       >

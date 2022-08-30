@@ -5,9 +5,13 @@ import GrantRatesByNationalityImg from '../../../styles/Images/pie-chart-no-text
 import GrantRatesOverTimeImg from '../../../styles/Images/line-graph-no-text.png';
 import HrfPhoto from '../../../styles/Images/HRF2.png';
 import '../../../styles/RenderLandingPage.less';
-import { Button } from 'antd';
 // for the purposes of testing PageNav
 // import PageNav from '../../common/PageNav';
+
+const scrollToTop = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
 
 function RenderLandingPage(props) {
   const scrollToTop = () => {
@@ -28,7 +32,7 @@ function RenderLandingPage(props) {
           <h3>
             The Asylum Office Grant Rate Tracker provides asylum seekers,
             researchers, policymakers, and the public an interactive tool to
-            explore USCIS data on Asylum Office decisions
+            explore USCIS data on Asylum Office decisions.
           </h3>
         </div>
       </div>
@@ -59,18 +63,17 @@ function RenderLandingPage(props) {
           <p>Search Grant Rates Over Time</p>
         </div>
       </div>
-      <div className="view-more-data-btn-container">
-        <Button
-          type="default"
-          style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
-        >
-          View More Data
-        </Button>
+      <div className="view-more-data-btn">
+        <p>View More Data</p>
       </div>
 
       <div className="middle-section">
-        <div className="hrf-img-container">
-          <img src={HrfPhoto} alt="Human Rights First" className="hrf-img" />
+        <div className="hrf-photo-container">
+          <img
+            src={HrfPhoto}
+            alt="Human Rights First Photo"
+            className="hrf-img"
+          />
         </div>
         <div className="middle-section-text-container">
           <h3>
@@ -112,16 +115,9 @@ function RenderLandingPage(props) {
             </h3>
           </div>
         </div>
-        <a href="https://www.humanrightsfirst.org/resource/uscis-records-reveal-systemic-disparities-asylum-decisions">
-          <div className="read-more-btn">
-            <Button
-              type="default"
-              style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
-            >
-              Read More
-            </Button>
-          </div>
-        </a>
+        <div className="read-more-btn">
+          <p>Read More</p>
+        </div>
 
         <p onClick={() => scrollToTop()} className="back-to-top">
           Back To Top ^

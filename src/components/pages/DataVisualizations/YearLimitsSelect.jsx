@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Form, Button, Input, getFieldValue } from 'antd';
 import {
   setVisualizationData,
@@ -54,7 +54,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 function YearLimitsSelect(props) {
-  let { view, office, dispatch, clearQuery, updateStateWithNewData, years } = props;
+  let { view, office, dispatch, clearQuery, updateStateWithNewData, years } =
+    props;
   const yearInputsOnChange = (view, office, e) =>
     dispatch(
       setHeatMapYears(
@@ -74,7 +75,7 @@ function YearLimitsSelect(props) {
       year_start: years[0],
       year_end: years[1],
     });
-  },1000);
+  }, 1000);
   return (
     <div
       className="year-limits-select-container"

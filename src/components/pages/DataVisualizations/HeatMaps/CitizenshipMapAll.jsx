@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import Plot from 'react-plotly.js';
-
-import Redux from 'redux';
 import { connect } from 'react-redux';
-
-import reducer from '../../../../state/reducers';
-import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
 import Table from './TableComponents/Table';
 
 const mapStateToProps = state => {

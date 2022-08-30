@@ -1,17 +1,9 @@
 import React, { useState } from 'react';
 import { useHistory, Switch, Route, Link } from 'react-router-dom';
-import Redux from 'redux';
-import { connect } from 'react-redux';
-
 import AllOfficesRoute from './AllOfficesRoute';
 import SingleOfficeRoute from './SingleOfficeRoute';
-
 import 'antd/dist/antd.css';
 import { Select } from 'antd';
-
-import reducer from '../../../state/reducers';
-
-import { SET_VISUALIZATION_DATA } from '../../../state/actionTypes';
 
 const { Option } = Select;
 

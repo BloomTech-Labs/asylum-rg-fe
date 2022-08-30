@@ -8,12 +8,12 @@ import '../../../styles/RenderLandingPage.less';
 // for the purposes of testing PageNav
 // import PageNav from '../../common/PageNav';
 
-const scrollToTop = () => {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-};
-
 function RenderLandingPage(props) {
+  const scrollToTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <div className="main">
       <div className="header">
@@ -63,12 +63,8 @@ function RenderLandingPage(props) {
       </div>
 
       <div className="middle-section">
-        <div className="hrf-photo-container">
-          <img
-            src={HrfPhoto}
-            alt="Human Rights First Photo"
-            className="hrf-img"
-          />
+        <div className="hrf-img-container">
+          <img src={HrfPhoto} alt="Human Rights First" className="hrf-img" />
         </div>
         <div className="middle-section-text-container">
           <h3>

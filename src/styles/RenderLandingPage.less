@@ -2,9 +2,14 @@
     background-color: #404C4A;
     position: relative;
     text-align: center;
+    width: 100%;
     height: 20vh;
     padding-top: 25px;
     margin-bottom: 10%;
+
+    @media (max-width: 375px) {
+        height: 30vh;
+    }
 }
 
 .hrf-logo-img-container img {
@@ -13,27 +18,53 @@
     position: absolute;
     left: 0;
     margin-left: 2%;
+
+    @media (max-width: 375px) {
+        height: 30px;
+        width: 48px;
+        top: 0;
+        left: 0;
+        margin: 2% 2%;
+    }
 }
 
 .header-text-container {
     text-align: center;
+    width: 100%;
+    align-items: center;
 }
 
 .header-text-container h1 {
     font-size: 3rem;
     color: #FFFFFF;
     font-family: 'moneta';
+
+    @media (max-width: 375px) {
+        font-size: 1.5rem;
+        padding-top: 5%;
+    }
 }
 
 .header-text-container h3 {
     font-family: 'beatrice';
     color: #FFFFFF;
     font-size: 1.2rem;
+
+    @media (max-width: 375px) {
+        font-size: .85rem;
+        width: 75%;
+        margin: 0 auto;
+    }
 }
 
 .graphs-section {
     display: flex;
     justify-content: space-evenly;
+
+    @media (max-width: 375px) {
+        display: block;
+        width: 100%;
+    }
 }
 
 .grant-rates-by-office-graph-container {
@@ -41,6 +72,11 @@
     cursor: pointer;
     height: 165px;
     font-size: 1.5rem;
+
+    @media (max-width: 375px) {
+        margin-top: 20%;
+        margin-bottom: 40%;
+    }
 }
 
 .gr-office-img {
@@ -54,12 +90,20 @@
     margin-bottom: 3%;
     cursor: pointer;
     font-size: 1.5rem;
+
+    @media (max-width: 375px) {
+        margin-bottom: 40%;
+    }
 }
 
 .gr-nationality-img {
     height: 175px;
     width: 200px;
     margin-bottom: 7%;
+
+    @media (max-width: 375px) {
+        margin-bottom: 8%;
+    }
 }
 
 .grant-rates-over-time-container {
@@ -67,6 +111,10 @@
     cursor: pointer;
     height: 165px;
     font-size: 1.5rem;
+
+    @media (max-width: 375px) {
+        margin-bottom: 40%;
+    }
 }
 
 .gr-overtime-img {
@@ -98,22 +146,48 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    @media (max-width: 375px) {
+        display: block;
+        width: 100%;
+        height: 75vh;
+        background-color: #707070;
+        padding-top: 15%;
+        text-align: center;
+    }
 }
 
 .hrf-img {
     height: 237px;
     width: 454px;
     border-radius: 10px;
+
+    @media (max-width: 375px) {
+        height: 169px;
+        width: 324px;
+    }
 }
 
 .middle-section-text-container {
     width: 964px;
     text-align: center;
+
+    @media (max-width: 375px) {
+        width: 85%;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 10%;
+    }
 }
 
 .middle-section-text-container h3 {
     font-family: 'acumin';
     font-size: 1.3rem;
+
+    @media (max-width: 375px) {
+        font-size: .95rem;
+        color: #ffffff;
+    }
 }
 
 .bottom-section {
@@ -125,16 +199,32 @@
     font-family: 'moneta';
     font-size: 3.5rem;
     margin-bottom: 10%;
+
+    @media (max-width: 375px) {
+        font-size: 2rem;
+    }
 }
 
 .data-container {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 5%;
+
+    @media (max-width: 375px) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
 }
 
 .first-data-point-container {
     width: 433px;
+
+    @media (max-width: 375px) {
+        width: 85%;
+        margin-bottom: 5%;
+    }
 }
 
 .first-data-point-container h2 {
@@ -144,6 +234,11 @@
 
 .second-data-point-container {
     width: 433px;
+
+    @media (max-width: 375px) {
+        width: 85%;
+        margin-bottom: 5%;
+    }
 }
 
 .second-data-point-container h2 {
@@ -158,17 +253,15 @@
 
 .third-data-point-container {
     width: 433px;
+
+    @media (max-width: 375px) {
+        width: 85%;
+        margin-bottom: 5%;
+    }
 }
 
 .read-more-btn {
-    height: 44px;
-    width: 180px;
-    background-color: #404C4A;
-    margin: 0 auto;
-    border-radius: 15px;
-    margin-bottom: 10%;
-    display: table;
-    cursor: pointer;
+    .view-more-data-btn();
 }
 
 .read-more-btn p {
@@ -185,4 +278,15 @@
     cursor: pointer;
     color: black;
     margin: 5% auto;
+
+    @media (max-width: 375px) {
+        width: 35%;
+    }
+}
+
+.ant-space-align-center {
+    @media (max-width: 375px) {
+      display: flex;
+     flex-wrap: wrap;
+    }
 }

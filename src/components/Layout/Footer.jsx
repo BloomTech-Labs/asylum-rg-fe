@@ -1,10 +1,22 @@
 import { Button, Space, Typography, Layout, Image } from 'antd';
 import React from 'react';
 import Logo from '../../styles/Images/WhiteLogo.png';
+import { DownloadOutlined } from '@ant-design/icons';
 const { Text } = Typography;
 function FooterContent() {
   return (
     <div>
+        <Button
+          icon={<DownloadOutlined />}
+          type="primary"
+          size="large"
+          /* href="https://www.humanrightsfirst.org/about" */
+          /* style={{ color: '#E2F0F7' }} */
+        >Download
+        </Button>
+
+
+
       {/*logo*/}
       <div>
         <Image width={100} src={Logo} preview={false} alt="HRF logo white" />

@@ -11,6 +11,9 @@ import reducers from '../../../state/reducers';
 
 import Redux, { createStore } from 'redux';
 import { connect } from 'react-redux';
+import { colors } from '../../../styles/data_vis_colors';
+
+const { background_color, primary_accent_color, secondary_accent_color } = colors;
 
 const store = createStore(reducers);
 
@@ -154,15 +157,23 @@ function YearLimitsSelect(props) {
           <Input />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit" data-testid="filter">
+          <Button 
+            htmlType="submit" 
+            data-testid="filter"
+            style={{
+              backgroundColor: primary_accent_color,
+              color: 'white',
+            }}
+          >
             Update Query
           </Button>
         </Form.Item>
       </Form>
       <Button
-        type="primary"
         style={{
           width: '122px', // this is to match the width of the Form.Item button
+          backgroundColor: primary_accent_color,
+          color: 'white',
         }}
         onClick={() => {
           clearQuery(view, office);

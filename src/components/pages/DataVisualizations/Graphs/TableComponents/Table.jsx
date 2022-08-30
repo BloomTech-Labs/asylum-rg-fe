@@ -1,5 +1,8 @@
 import React from 'react';
 import TableRow from './TableRow';
+import { colors } from '../../../../../styles/data_vis_colors';
+
+const { background_color, primary_accent_color, secondary_accent_color } = colors;
 
 function Table(props) {
   const { rows, columns, tableWidth, rowHeight } = props;
@@ -29,8 +32,9 @@ function Table(props) {
             <div
               className="column-id"
               style={{
-                backgroundColor: 'lightblue',
-                border: '1px solid blue',
+                backgroundColor: primary_accent_color,
+                border: '1px solid black',
+                color: 'white',
                 width: '100%',
                 overflow: 'hidden',
                 display: 'flex',

@@ -24,7 +24,7 @@ function Thumb(props) {
         (snap_tick * bar_width) / (n_ticks - 1) -
         Math.floor(my_width / 2)
     );
-  }, 100);
+  }, 10);
   return (
     <div
       className={thumb_key}

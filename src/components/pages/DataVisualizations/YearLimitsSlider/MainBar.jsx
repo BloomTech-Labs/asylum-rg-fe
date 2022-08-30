@@ -5,6 +5,9 @@ import Tick from './Tick';
 import Thumb from './Thumb';
 import { useInterval } from '../../../../utils';
 import { setHeatMapYears } from '../../../../state/actionCreators';
+import { colors } from '../../../../styles/data_vis_colors';
+
+const { background_color, primary_accent_color, secondary_accent_color } = colors;
 
 const mapStateToProps = (state, ownProps) => {
   const { view, office } = ownProps;
@@ -70,7 +73,7 @@ function MainBar(props) {
       set_filler_left(bar_start);
       set_filler_width(0);
     }
-  },100);
+  },10);
 
   const bar_ref = useRef();
   const left_thumb_ref = useRef();
@@ -192,7 +195,7 @@ function MainBar(props) {
           left: filler_left + 'px',
           width: filler_width + 'px',
           height: '5px',
-          backgroundColor: 'darkblue',
+          backgroundColor: primary_accent_color,
         }}
       >
       </div>
@@ -212,7 +215,7 @@ function MainBar(props) {
           justifyContent: 'space-between',
           width: '100%',
           height: '1px',
-          backgroundColor: 'blue',
+          backgroundColor: 'black',
         }}
       >
         {values.map((val, idx) => {

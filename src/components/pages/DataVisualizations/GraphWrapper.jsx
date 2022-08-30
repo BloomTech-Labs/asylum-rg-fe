@@ -2,18 +2,21 @@ import React, { useState, useEffect } from 'react';
 import Redux from 'redux';
 import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import CitizenshipMapAll from './HeatMaps/CitizenshipMapAll';
-import CitizenshipMapSingleOffice from './HeatMaps/CitizenshipMapSingleOffice';
-import TimeSeriesAll from './HeatMaps/TimeSeriesAll';
-import OfficeHeatMap from './HeatMaps/OfficeHeatMap';
-import TimeSeriesSingleOffice from './HeatMaps/TimeSeriesSingleOffice';
+import CitizenshipMapAll from './Graphs/CitizenshipMapAll';
+import CitizenshipMapSingleOffice from './Graphs/CitizenshipMapSingleOffice';
+import TimeSeriesAll from './Graphs/TimeSeriesAll';
+import OfficeHeatMap from './Graphs/OfficeHeatMap';
+import TimeSeriesSingleOffice from './Graphs/TimeSeriesSingleOffice';
 import YearLimitsSelect from './YearLimitsSelect';
 import ViewSelect from './ViewSelect';
 import axios from 'axios';
 import { resetVisualizationQuery } from '../../../state/actionCreators';
 import test_data from '../../../data/test_data.json';
+import { colors } from '../../../styles/data_vis_colors';
 
-function MapWrapper(props) {
+const { background_color, primary_accent_color, secondary_accent_color } = colors;
+
+function GraphWrapper(props) {
   const { set_view, dispatch } = props;
   const { office, view } = useParams();
   let map_to_render;
@@ -75,8 +78,7 @@ function MapWrapper(props) {
         alignItems: 'flex-start',
         justifyContent: 'center',
         minHeight: '50px',
-        backgroundColor: 'white',
-        border: '1px solid red',
+        backgroundColor: background_color,
       }}
     >
       {map_to_render}
@@ -98,4 +100,4 @@ function MapWrapper(props) {
   );
 }
 
-export default connect()(MapWrapper);
+export default connect()(GraphWrapper);

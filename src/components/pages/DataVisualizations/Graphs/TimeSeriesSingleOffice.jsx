@@ -1,14 +1,14 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-
 import Redux from 'redux';
 import { connect } from 'react-redux';
-
 import Plot from 'react-plotly.js';
-
 import reducer from '../../../../state/reducers';
 import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
 import Table from './TableComponents/Table';
+import { colors } from '../../../../styles/data_vis_colors';
+
+const { background_color, primary_accent_color, secondary_accent_color } = colors;
 
 const mapStateToProps = (state, ownProps) => {
   const { office, timeSeriesData } = ownProps;
@@ -87,9 +87,9 @@ function TimeSeriesSingleOffice(props) {
             range: [xYearsStart, xYearsEnd],
             title: `Year`,
           },
-          paper_bgcolor: '#f7e4ca',
+          paper_bgcolor: background_color,
           hoverlabel: {
-            bordercolor: '#f7e4ca',
+            bordercolor: background_color,
           },
         }}
       />

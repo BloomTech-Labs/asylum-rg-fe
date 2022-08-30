@@ -2,6 +2,9 @@ import React from 'react';
 import Plot from 'react-plotly.js';
 import { connect } from 'react-redux';
 import Table from './TableComponents/Table';
+import { colors } from '../../../../styles/data_vis_colors';
+
+const { background_color, primary_accent_color, secondary_accent_color } = colors;
 
 const mapStateToProps = state => {
   return {
@@ -65,9 +68,9 @@ function TimeSeriesAll(props) {
             ],
             title: 'Year',
           },
-          paper_bgcolor: '#f7e4ca',
+          paper_bgcolor: background_color,
           hoverlabel: {
-            bordercolor: '#f7e4ca',
+            bordercolor: background_color,
           },
         }}
       />

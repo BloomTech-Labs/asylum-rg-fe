@@ -1,4 +1,7 @@
 import React from 'react';
+import { colors } from '../../../../../styles/data_vis_colors';
+
+const { background_color, primary_accent_color, secondary_accent_color } = colors;
 
 function TableInnerSquare(props) {
   const { innerData, rowHeight } = props;
@@ -6,8 +9,8 @@ function TableInnerSquare(props) {
     <div
       className="table-inner-square"
       style={{
-        backgroundColor: 'gold',
-        border: '1px solid red',
+        backgroundColor: background_color,
+        border: '1px solid lightgray',
         height: rowHeight,
         overflow: 'hidden',
         padding: '2%',

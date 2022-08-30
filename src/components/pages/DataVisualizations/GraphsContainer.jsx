@@ -4,10 +4,12 @@ import AllOfficesRoute from './AllOfficesRoute';
 import SingleOfficeRoute from './SingleOfficeRoute';
 import 'antd/dist/antd.css';
 import { Select } from 'antd';
+import { colors } from '../../../styles/data_vis_colors';
 
 const { Option } = Select;
+const { background_color, primary_accent_color, secondary_accent_color } = colors;
 
-function HeatMapContainer() {
+function GraphsContainer() {
   const [view, set_view] = useState('time-series');
   const history = useHistory();
   const offices = [
@@ -36,7 +38,7 @@ function HeatMapContainer() {
         display: 'flex',
         flexDirection: 'column',
         height: '100%',
-        backgroundColor: 'rgb(247,228,202)',
+        backgroundColor: background_color,
       }}
     >
       <div
@@ -54,7 +56,20 @@ function HeatMapContainer() {
             justifyContent: 'space-around',
           }}
         >
-          <Link to={`/graphs/all/${view}`}>All</Link>
+          <Link to={`/graphs/all/${view}`}
+            style={{
+              height: '40px',
+              width: '70px',
+              borderRadius: '4px',
+              color: 'white',
+              backgroundColor: primary_accent_color,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            All
+          </Link>
           <Select
             defaultValue={offices[0]}
             onSelect={value => handle_office_select(value)}
@@ -81,4 +96,4 @@ function HeatMapContainer() {
   );
 }
 
-export default HeatMapContainer;
+export default GraphsContainer;

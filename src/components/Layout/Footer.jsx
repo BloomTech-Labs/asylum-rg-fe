@@ -2,6 +2,7 @@ import { Button, Space, Typography, Layout, Image } from 'antd';
 import React from 'react';
 import Logo from '../../styles/Images/WhiteLogo.png';
 import '../../styles/RenderLandingPage.less';
+import '../../styles/RenderLandingPage.less';
 const { Text } = Typography;
 const { primary_accent_color } = colors;
 
@@ -56,7 +57,7 @@ function SubFooter() {
     Careers: `${base_url}/careers`,
   };
   return (
-    <Footer style={{ backgroundColor: '#404C4A' }}>
+    <Footer style={{ backgroundColor: '#707070' }}>
       <Space direction="horizontal">
         {Object.entries(button_links_by_text).map(text_link_pair => {
           return (

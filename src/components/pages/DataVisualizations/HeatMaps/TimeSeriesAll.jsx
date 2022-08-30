@@ -11,51 +11,12 @@ const mapStateToProps = state => {
 
 function TimeSeriesAll(props) {
   const { timeSeriesAllData } = props;
-  let xYearsStart = timeSeriesAllData.hasOwnProperty('xYearsStart')
-    ? timeSeriesAllData.xYearsStart
-    : 2015;
-  let xYearsEnd = timeSeriesAllData.hasOwnProperty('xYearsEnd')
-    ? timeSeriesAllData.xYearsEnd
-    : 2022;
-  let xYears = timeSeriesAllData.hasOwnProperty('xYears')
-    ? timeSeriesAllData.xYears
-    : [];
-  let totals = timeSeriesAllData.hasOwnProperty('totals')
-    ? timeSeriesAllData.totals
-    : [];
-  let yTotalPercentGranteds = timeSeriesAllData.hasOwnProperty(
-    'yTotalPercentGranteds'
-  )
-    ? timeSeriesAllData.yTotalPercentGranteds
-    : [];
-  let totalPercentAdminCloseds = timeSeriesAllData.hasOwnProperty(
-    'totalPercentAdminCloseds'
-  )
-    ? timeSeriesAllData.totalPercentAdminCloseds
-    : [];
-  let totalPercentDenieds = timeSeriesAllData.hasOwnProperty(
-    'totalPercentDenieds'
-  )
-    ? timeSeriesAllData.totalPercentDenieds
-    : [];
-  let officeData = timeSeriesAllData.hasOwnProperty('officeData')
-    ? timeSeriesAllData.officeData
-    : {};
-  let rowsForAllDisplay = timeSeriesAllData.hasOwnProperty('rowsForAllDisplay')
+  const currentYear = new Date().getFullYear();
+
+  let rowsForAllDisplay = timeSeriesAllData['rowsForAllDisplay']
     ? timeSeriesAllData.rowsForAllDisplay
     : [];
-  const officeCodes = [
-    'ZLA',
-    'ZSF',
-    'ZNY',
-    'ZHN',
-    'ZCH',
-    'ZNK',
-    'ZAR',
-    'ZBO',
-    'ZMI',
-    'ZOL',
-  ];
+
   const columnsForAllDisplay = [
     'Year',
     'Total Cases',
@@ -63,6 +24,7 @@ function TimeSeriesAll(props) {
     '% Admin Close / Dismissal',
     '% Denied',
   ];
+
   return (
     <div
       className="time-series-all-container"
@@ -78,8 +40,8 @@ function TimeSeriesAll(props) {
       <Plot
         data={[
           {
-            x: xYears,
-            y: yTotalPercentGranteds,
+            x: timeSeriesAllData['xYears'],
+            y: timeSeriesAllData['yTotalPercentGranteds'],
             type: 'scatter',
             mode: 'lines+markers',
             dy: 1,
@@ -97,7 +59,10 @@ function TimeSeriesAll(props) {
             dtick: 10,
           },
           xaxis: {
-            range: [xYearsStart, xYearsEnd],
+            range: [
+              timeSeriesAllData[0] || 2015,
+              timeSeriesAllData[timeSeriesAllData.length - 1] || currentYear,
+            ],
             title: 'Year',
           },
           paper_bgcolor: '#f7e4ca',

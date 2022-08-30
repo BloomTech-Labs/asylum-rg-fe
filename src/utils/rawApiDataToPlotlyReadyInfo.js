@@ -106,6 +106,20 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
 
     */
 
+  const yearByOfficeByGrant = {}; //Object that contacts year by Office by grant rate information
+  for (let office of data[0]['yearResults']) {
+    if (!yearByOfficeByGrant[office['year']])
+      yearByOfficeByGrant[office['year']] = {}; //if year not existing set to empty object
+    for (let yearData of office['yearData']) {
+      yearByOfficeByGrant[office['year']][yearData['office']] = {
+        //assign rates to year:{office:{}}
+        granted: yearData['granted'],
+        adminClosed: yearData['adminClosed'],
+        denied: yearData['denied'],
+      };
+    }
+  }
+
   if (!office || office === 'all') {
     switch (view) {
       case 'time-series':
@@ -123,114 +137,53 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           };
           rowsForAllDisplay.push(rowItem);
         }
-        const officeData = {};
-        for (let officeKey of officeCodes) {
-          officeData[officeKey] = {
-            xYears: [
-              ...data[0].yearResults
-                .sort((a, b) => a.year - b.year)
-                .map(yearItem => yearItem.year),
-            ],
-            totals: [
-              ...data[0].yearResults
-                .sort((a, b) => a.year - b.year)
-                .reduce((acc, yearItem) => {
-                  return yearItem.yearData.filter(
-                    yearItem => yearItem.office === officeKey
-                  )[0]
-                    ? acc.concat(
-                        yearItem.yearData.filter(
-                          yearItem => yearItem.office === officeKey
-                        )[0].totalCases
-                      )
-                    : acc;
-                }, []),
-            ],
-            yPercentGranteds: [
-              ...data[0].yearResults
-                .sort((a, b) => a.year - b.year)
-                .reduce((acc, yearItem) => {
-                  return yearItem.yearData.filter(
-                    yearItem => yearItem.office === officeKey
-                  )[0]
-                    ? acc.concat(
-                        yearItem.yearData.filter(
-                          yearItem => yearItem.office === officeKey
-                        )[0].granted
-                      )
-                    : acc;
-                }, []),
-            ],
-            percentAdminCloseds: [
-              ...data[0].yearResults
-                .sort((a, b) => a.year - b.year)
-                .reduce((acc, yearItem) => {
-                  return yearItem.yearData.filter(
-                    yearItem => yearItem.office === officeKey
-                  )[0]
-                    ? acc.concat(
-                        yearItem.yearData.filter(
-                          yearItem => yearItem.office === officeKey
-                        )[0].adminClosed
-                      )
-                    : acc;
-                }, []),
-            ],
-            percentDenieds: [
-              ...data[0].yearResults
-                .sort((a, b) => a.year - b.year)
-                .reduce((acc, yearItem) => {
-                  return yearItem.yearData.filter(
-                    yearItem => yearItem.office === officeKey
-                  )[0]
-                    ? acc.concat(
-                        yearItem.yearData.filter(
-                          yearItem => yearItem.office === officeKey
-                        )[0].denied
-                      )
-                    : acc;
-                }, []),
-            ],
+
+        const officeData = {}; //object that holds each % as a key of array value
+        for (let officeName of officeCodes) {
+          officeData[officeName] = {
+            xYears: [],
+            totals: [],
+            yTotalPercentGranteds: [],
+            totalPercentAdminCloseds: [],
+            totalPercentDenieds: [],
           };
         }
-        return {
-          rowsForAllDisplay,
-          xYearsStart: data[0].yearResults.reduce(
-            (acc, yearItem) => (yearItem.year < acc ? yearItem.year : acc),
-            data[0].yearResults[0].year
-          ), // min year
-          xYearsEnd: data[0].yearResults.reduce(
-            (acc, yearItem) => (yearItem.year > acc ? yearItem.year : acc),
-            data[0].yearResults[0].year
-          ), // max year
-          xYears: [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .map(yearItem => yearItem.year),
-          ],
-          totals: [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .map(yearItem => yearItem.totalCases),
-          ],
-          yTotalPercentGranteds: [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .map(yearItem => yearItem.granted),
-          ],
-          totalPercentAdminCloseds: [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .map(yearItem => yearItem.adminClosed),
-          ],
-          totalPercentDenieds: [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .map(yearItem => yearItem.denied),
-          ],
 
-          officeData,
+        for (let yearResults of data[0]['yearResults']) {
+          for (let yearData of yearResults['yearData']) {
+            officeData[yearData['office']]['xYears'].push(yearResults['year']);
+            officeData[yearData['office']]['totals'].push(
+              yearData['totalCases']
+            );
+            officeData[yearData['office']]['yTotalPercentGranteds'].push(
+              yearData['granted']
+            );
+            officeData[yearData['office']]['totalPercentAdminCloseds'].push(
+              yearData['adminClosed']
+            );
+            officeData[yearData['office']]['totalPercentDenieds'].push(
+              yearData['denied']
+            );
+          }
+        }
+
+        const finalData = {
+          xYears: [],
+          totals: [],
+          yTotalPercentGranteds: [],
+          totalPercentAdminCloseds: [],
+          totalPercentDenieds: [],
         };
+        for (let officeName of data[0]['yearResults']) {
+          finalData['xYears'].push(officeName['year']);
+          finalData['totals'].push(officeName['totalCases']);
+          finalData['yTotalPercentGranteds'].push(officeName['granted']);
+          finalData['totalPercentAdminCloseds'].push(officeName['adminClosed']);
+          finalData['totalPercentDenieds'].push(officeName['denied']);
+        }
+
+        return { ...finalData, rowsForAllDisplay, officeData };
+
       case 'office-heat-map':
         data[0].yearResults.sort((a, b) => a.year - b.year);
         rowsForTable = [];

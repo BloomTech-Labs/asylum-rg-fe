@@ -110,9 +110,11 @@ function RenderLandingPage(props) {
             </h3>
           </div>
         </div>
-        <div className="read-more-btn">
-          <p>Read More</p>
-        </div>
+        <a href="https://www.humanrightsfirst.org/resource/uscis-records-reveal-systemic-disparities-asylum-decisions">
+          <div className="read-more-btn">
+            <p>Read More</p>
+          </div>
+        </a>
 
         <p onClick={() => scrollToTop()} className="back-to-top">
           Back To Top ^

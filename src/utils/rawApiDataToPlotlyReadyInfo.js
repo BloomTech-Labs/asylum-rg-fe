@@ -40,6 +40,10 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
     */
 
   //extra variable to set minYear and MaxYear
+  let yearMinMax = [];
+  for (let yearResults of data[0]['yearResults']) {
+    yearMinMax.push(yearResults['year']);
+  }
 
   const yearByOfficeByGrant = {}; //Object that contacts year by Office by grant rate information
   for (let office of data[0]['yearResults']) {
@@ -158,6 +162,9 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
             }
           }
         }
+
+        //office:{%%%}
+
         const totalsByOffice = {};
         const zPercentGrantedsByOffice = {};
         const percentAdminClosedsByOffice = {};
@@ -224,6 +231,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
               }, []),
           ];
         }
+
         return {
           rowsForTable,
           yYearsStart: data[0].yearResults.reduce(

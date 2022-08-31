@@ -187,7 +187,6 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
     switch (view) {
       case 'time-series':
         rowsForTable = [];
-        console.log(officeData);
         data[0].yearResults.sort((a, b) => a.year - b.year);
         for (let i = 0; i < data[0].yearResults.length; i++) {
           if (
@@ -228,33 +227,19 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           };
           rowsForTable.push(rowItem);
         }
+        const countryGrantRateObj = {
+          countries: [],
+          countriesPercentGranteds: [],
+        };
+        for (let country of data[0]['citizenshipResults']) {
+          countryGrantRateObj['countries'].push(country['citizenship']);
+          countryGrantRateObj['countriesPercentGranteds'].push(
+            country['granted']
+          );
+        }
         return {
           rowsForTable,
-          countries: [
-            ...data[0].citizenshipResults.map(
-              countryItem => countryItem.citizenship
-            ),
-          ],
-          countriesTotals: [
-            ...data[0].citizenshipResults.map(
-              countryItem => countryItem.totalCases
-            ),
-          ],
-          countriesPercentGranteds: [
-            ...data[0].citizenshipResults.map(
-              countryItem => countryItem.granted
-            ),
-          ],
-          countriesPercentAdminCloseds: [
-            ...data[0].citizenshipResults.map(
-              countryItem => countryItem.adminClosed
-            ),
-          ],
-          countriesPercentDenieds: [
-            ...data[0].citizenshipResults.map(
-              countryItem => countryItem.denied
-            ),
-          ],
+          countryGrantRateObj,
         };
       default:
         return {};

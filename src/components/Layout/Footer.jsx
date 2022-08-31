@@ -4,6 +4,8 @@ import Logo from '../../styles/Images/WhiteLogo.png';
 import { DownloadButton } from '../common/DownloadButton'
 const { Text } = Typography;
 function FooterContent() {
+
+
   return (
     <div>
         <DownloadButton/>

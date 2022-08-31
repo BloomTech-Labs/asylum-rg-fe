@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 import { connect } from 'react-redux';
 import Table from './TableComponents/Table';
 import { colors } from '../../../../styles/data_vis_colors';
 
-const { background_color, primary_accent_color, secondary_accent_color } = colors;
+const { background_color, primary_accent_color, secondary_accent_color } =
+  colors;
 
 const mapStateToProps = state => {
   return {
@@ -14,6 +15,25 @@ const mapStateToProps = state => {
 
 function CitizenshipMapAll(props) {
   const { citizenshipMapAllData } = props;
+  const [plotlyGraphAxis, setPlotlyGraphAxis] = useState({
+    locationsAndText: [],
+    z: [],
+  });
+
+  useEffect(() => {
+    if (citizenshipMapAllData['countryGrantRateObj'] !== undefined) {
+      setPlotlyGraphAxis({
+        locationsAndText:
+          citizenshipMapAllData['countryGrantRateObj']['countries'],
+        z: citizenshipMapAllData['countryGrantRateObj'][
+          'countriesPercentGranteds'
+        ],
+      });
+    } else {
+      setPlotlyGraphAxis({ locationsAndText: [], z: [] });
+    }
+  }, [citizenshipMapAllData]);
+
   const geoScopeArray = [
     'world',
     'usa',
@@ -30,32 +50,10 @@ function CitizenshipMapAll(props) {
     setGeoScope(value);
   };
 
-  const countries = citizenshipMapAllData.hasOwnProperty('countries')
-    ? citizenshipMapAllData.countries
-    : [];
-  const countriesTotals = citizenshipMapAllData.hasOwnProperty(
-    'countriesTotals'
-  )
-    ? citizenshipMapAllData.countriesTotals
-    : [];
-  const countriesPercentGranteds = citizenshipMapAllData.hasOwnProperty(
-    'countriesPercentGranteds'
-  )
-    ? citizenshipMapAllData.countriesPercentGranteds
-    : [];
-  const countriesPercentAdminCloseds = citizenshipMapAllData.hasOwnProperty(
-    'countriesPercentAdminCloseds'
-  )
-    ? citizenshipMapAllData.countriesPercentAdminCloseds
-    : [];
-  const countriesPercentDenieds = citizenshipMapAllData.hasOwnProperty(
-    'countriesPercentDenieds'
-  )
-    ? citizenshipMapAllData.countriesPercentDenieds
-    : [];
   const rowsForTable = citizenshipMapAllData.hasOwnProperty('rowsForTable')
     ? citizenshipMapAllData.rowsForTable
     : [];
+
   const columnsForTable = [
     'Citizenship',
     'Total Cases',
@@ -63,6 +61,7 @@ function CitizenshipMapAll(props) {
     '% Admin Close / Dismissal',
     '% Denied',
   ];
+
   return (
     <div
       className="citizenship-map-all-container"
@@ -83,9 +82,9 @@ function CitizenshipMapAll(props) {
           {
             type: 'choropleth',
             locationmode: 'country names',
-            locations: countries,
-            z: countriesPercentGranteds,
-            text: countries,
+            locations: plotlyGraphAxis['locationsAndText'],
+            z: plotlyGraphAxis['z'],
+            text: plotlyGraphAxis['locationsAndText'],
             colorscale: [
               [0, 'rgb(255,78,17)'],
               [0.5, 'rgb(250,183,51)'],
@@ -100,7 +99,7 @@ function CitizenshipMapAll(props) {
           title: 'Grant Percentage by Citizenship',
           paper_bgcolor: background_color,
           hoverlabel: {
-            bordercolor: primary_accent_color,
+            bordercolor: secondary_accent_color,
           },
           geo: {
             scope: geoScope,
@@ -128,10 +127,6 @@ function CitizenshipMapAll(props) {
         tableWidth={'100%'}
         rowHeight={'50px'}
         scroll={{ y: 550 }}
-        pagination={{
-          position: ['bottomCenter'],
-          pageSize: 25,
-        }}
       />
     </div>
   );

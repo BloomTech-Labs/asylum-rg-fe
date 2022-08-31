@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { useInterval } from '../../../../utils';
 
 function Thumb(props) {
@@ -7,7 +7,6 @@ function Thumb(props) {
     snap_tick,
     bar_ref,
     thumb_ref,
-    color,
     n_ticks,
     thumb_on_mouse_down,
   } = props;
@@ -41,15 +40,15 @@ function Thumb(props) {
         justifyContent: 'center',
       }}
       onMouseDown={e => thumb_on_mouse_down(e, thumb_key)}
-      >
-      <div className="thumb_visual"
+    >
+      <div
+        className="thumb_visual"
         style={{
-          height: '25px', 
+          height: '25px',
           width: '5px',
           backgroundColor: 'gray',
         }}
-      >
-      </div>
+      ></div>
     </div>
   );
 }

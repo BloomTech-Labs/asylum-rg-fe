@@ -4,7 +4,7 @@ import Logo from '../../styles/Images/WhiteLogo.png';
 import { colors } from '../../styles/data_vis_colors';
 
 const { Text } = Typography;
-const { background_color, primary_accent_color, secondary_accent_color } = colors;
+const { primary_accent_color } = colors;
 
 function FooterContent() {
 
@@ -48,9 +48,11 @@ function FooterContent() {
 function SubFooter() {
   const { Footer } = Layout;
   return (
-    <Footer style={{ 
-      backgroundColor: primary_accent_color, 
-    }}>
+    <Footer
+      style={{
+        backgroundColor: primary_accent_color,
+      }}
+    >
       <Space direction="horizontal">
         <Button
           type="text"

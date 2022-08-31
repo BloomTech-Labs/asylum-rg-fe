@@ -1,7 +1,7 @@
 import React from 'react';
 import { colors } from '../../../../../styles/data_vis_colors';
 
-const { background_color, primary_accent_color, secondary_accent_color } = colors;
+const { background_color } = colors;
 
 function TableInnerSquare(props) {
   const { innerData, rowHeight } = props;

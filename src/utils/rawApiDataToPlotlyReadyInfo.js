@@ -14,11 +14,11 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
   let rowItem;
   let rowsForTable;
 
-  //extra variable to set minYear and MaxYear
-  let yearMinMax = [];
+  let yearMinMax = []; //variable to set minYear and MaxYear
   for (let yearResults of data[0]['yearResults']) {
     yearMinMax.push(yearResults['year']);
   }
+
   const yearByOfficeByGrant = {}; //Object that contacts year by Office by grant rate information
   for (let office of data[0]['yearResults']) {
     if (!yearByOfficeByGrant[office['year']])
@@ -32,6 +32,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
       };
     }
   }
+
   const officeData = {}; //object that holds each % as a key of array value
   for (let officeName of officeCodes) {
     officeData[officeName] = {

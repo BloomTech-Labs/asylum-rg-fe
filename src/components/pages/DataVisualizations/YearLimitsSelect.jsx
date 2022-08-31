@@ -1,19 +1,18 @@
 import React from 'react';
-import { Form, Button, Input, getFieldValue } from 'antd';
+import { Form, Button, Input } from 'antd';
 import {
   setVisualizationData,
-  resetVisualizationQuery,
   setHeatMapYears,
 } from '../../../state/actionCreators';
 import YearLimitsSlider from './YearLimitsSlider';
 import { rawApiDataToPlotlyReadyInfo, useInterval } from '../../../utils';
 import reducers from '../../../state/reducers';
 
-import Redux, { createStore } from 'redux';
+import { createStore } from 'redux';
 import { connect } from 'react-redux';
 import { colors } from '../../../styles/data_vis_colors';
 
-const { background_color, primary_accent_color, secondary_accent_color } = colors;
+const { primary_accent_color } = colors;
 
 const store = createStore(reducers);
 
@@ -157,8 +156,8 @@ function YearLimitsSelect(props) {
           <Input />
         </Form.Item>
         <Form.Item>
-          <Button 
-            htmlType="submit" 
+          <Button
+            htmlType="submit"
             data-testid="filter"
             style={{
               backgroundColor: primary_accent_color,
@@ -169,7 +168,8 @@ function YearLimitsSelect(props) {
           </Button>
         </Form.Item>
       </Form>
-      <div className='clear-query-button-alignment-container'
+      <div
+        className="clear-query-button-alignment-container"
         style={{
           display: 'flex',
           flexDirection: 'column',

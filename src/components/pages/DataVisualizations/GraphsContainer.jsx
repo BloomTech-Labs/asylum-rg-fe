@@ -1,4 +1,5 @@
-import React, { useState } from 'react'; import { useHistory, Switch, Route, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useHistory, Switch, Route, Link } from 'react-router-dom';
 import AllOfficesRoute from './AllOfficesRoute';
 import SingleOfficeRoute from './SingleOfficeRoute';
 import 'antd/dist/antd.css';
@@ -6,7 +7,7 @@ import { Select } from 'antd';
 import { colors } from '../../../styles/data_vis_colors';
 
 const { Option } = Select;
-const { background_color, primary_accent_color, secondary_accent_color } = colors;
+const { background_color, primary_accent_color } = colors;
 
 function GraphsContainer() {
   const [view, set_view] = useState('time-series');
@@ -57,7 +58,8 @@ function GraphsContainer() {
             alignItems: 'center',
           }}
         >
-          <Link to={`/graphs/all/${view}`}
+          <Link
+            to={`/graphs/all/${view}`}
             style={{
               height: '40px',
               width: '70px',

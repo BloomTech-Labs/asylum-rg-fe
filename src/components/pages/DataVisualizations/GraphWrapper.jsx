@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Redux from 'redux';
+import React from 'react';
 import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import CitizenshipMapAll from './Graphs/CitizenshipMapAll';
@@ -14,7 +13,7 @@ import { resetVisualizationQuery } from '../../../state/actionCreators';
 import test_data from '../../../data/test_data.json';
 import { colors } from '../../../styles/data_vis_colors';
 
-const { background_color, primary_accent_color, secondary_accent_color } = colors;
+const { background_color } = colors;
 
 function GraphWrapper(props) {
   const { set_view, dispatch } = props;

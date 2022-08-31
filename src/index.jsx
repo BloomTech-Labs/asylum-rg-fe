@@ -19,7 +19,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import reducer from './state/reducers';
 import { colors } from './styles/data_vis_colors';
 
-const { background_color, primary_accent_color, secondary_accent_color } = colors;
+const { primary_accent_color } = colors;
 
 const store = configureStore({ reducer: reducer });
 ReactDOM.render(
@@ -34,7 +34,7 @@ ReactDOM.render(
 );
 
 export function App() {
-  const { Content, Footer, Header } = Layout;
+  const { Footer, Header } = Layout;
   return (
     <Layout>
       <Header

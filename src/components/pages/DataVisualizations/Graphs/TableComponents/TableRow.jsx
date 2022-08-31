@@ -3,7 +3,7 @@ import TableInnerSquare from './TableInnerSquare';
 import SubTable from './SubTable';
 
 function TableRow(props) {
-  const { columns, row, rowId, tableWidth, rowHeight } = props;
+  const { columns, row, tableWidth, rowHeight } = props;
   // row should be an object with keys for each column here;
   // columns should be an array
   return (

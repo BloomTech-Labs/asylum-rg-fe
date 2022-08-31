@@ -4,8 +4,7 @@ import { connect } from 'react-redux';
 import Table from './TableComponents/Table';
 import { colors } from '../../../../styles/data_vis_colors';
 
-const { background_color, primary_accent_color, secondary_accent_color } =
-  colors;
+const { background_color, secondary_accent_color } = colors;
 
 const mapStateToProps = state => {
   return {

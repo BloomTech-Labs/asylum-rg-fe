@@ -4,7 +4,6 @@ Import the action-types and export an action-creator function for each.
 Each synchronous function should return an action object with a type and a payload -- these will be passed to the reducer.
 Each asynchronous function should dispatch its action object (type/payload) to the reducer.
 */
-import axios from 'axios';
 import {
   SET_VISUALIZATION_DATA,
   RESET_VISUALIZATION_QUERY,

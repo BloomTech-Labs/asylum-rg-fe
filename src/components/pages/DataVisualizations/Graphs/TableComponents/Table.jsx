@@ -2,7 +2,7 @@ import React from 'react';
 import TableRow from './TableRow';
 import { colors } from '../../../../../styles/data_vis_colors';
 
-const { background_color, primary_accent_color, secondary_accent_color } = colors;
+const { primary_accent_color } = colors;
 
 function Table(props) {
   const { rows, columns, tableWidth, rowHeight } = props;

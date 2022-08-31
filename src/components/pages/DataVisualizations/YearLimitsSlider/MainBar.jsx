@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
-import Redux from 'redux';
+import React, { useState, useRef } from 'react';
 import { connect } from 'react-redux';
 import Tick from './Tick';
 import Thumb from './Thumb';
@@ -7,7 +6,7 @@ import { useInterval } from '../../../../utils';
 import { setHeatMapYears } from '../../../../state/actionCreators';
 import { colors } from '../../../../styles/data_vis_colors';
 
-const { background_color, primary_accent_color, secondary_accent_color } = colors;
+const { primary_accent_color } = colors;
 
 const mapStateToProps = (state, ownProps) => {
   const { view, office } = ownProps;
@@ -64,15 +63,19 @@ function MainBar(props) {
     set_left_thumb_snap_tick(values.indexOf(leftStart));
     set_right_thumb_snap_tick(values.indexOf(rightStart));
     if (left_thumb_ref.current) {
-    set_filler_left(left_thumb_ref.current.getBoundingClientRect().right
-                    - Math.floor(left_thumb_ref.current.getBoundingClientRect().width / 2));
-    set_filler_width(right_thumb_ref.current.getBoundingClientRect().right
-                      - left_thumb_ref.current.getBoundingClientRect().right); 
+      set_filler_left(
+        left_thumb_ref.current.getBoundingClientRect().right -
+          Math.floor(left_thumb_ref.current.getBoundingClientRect().width / 2)
+      );
+      set_filler_width(
+        right_thumb_ref.current.getBoundingClientRect().right -
+          left_thumb_ref.current.getBoundingClientRect().right
+      );
     } else {
       set_filler_left(bar_start);
       set_filler_width(0);
     }
-  },10);
+  }, 10);
 
   const bar_ref = useRef();
   const left_thumb_ref = useRef();
@@ -85,8 +88,8 @@ function MainBar(props) {
   const [right_thumb_snap_tick, set_right_thumb_snap_tick] = useState(
     values.indexOf(rightStart)
   );
-  const [filler_left,set_filler_left] = useState(0);
-  const [filler_width,set_filler_width] = useState(0);
+  const [filler_left, set_filler_left] = useState(0);
+  const [filler_width, set_filler_width] = useState(0);
 
   const thumb_on_mouse_down = (e, thumb) => {
     e.stopPropagation();
@@ -99,7 +102,7 @@ function MainBar(props) {
       right_thumb_ref.current.style.cursor = 'grabbing';
     }
   };
-  const bar_on_mouse_up = (e,view,office) => {
+  const bar_on_mouse_up = (e, view, office) => {
     thumb_dragging.current.style.cursor = 'grab';
     if (thumb_dragging) {
       const pos =
@@ -164,9 +167,10 @@ function MainBar(props) {
     : null;
 
   return (
-    <div className="slider-bar-visual-border"
+    <div
+      className="slider-bar-visual-border"
       onMouseMove={bar_on_mouse_move}
-      onMouseUp={e => bar_on_mouse_up(e,view,office)}
+      onMouseUp={e => bar_on_mouse_up(e, view, office)}
       style={{
         width: '360px',
         height: '70px',
@@ -176,61 +180,61 @@ function MainBar(props) {
         justifyContent: 'center',
       }}
     >
-    <div
-      className="slider-bar-alignment-container"
-      style={{
-        height: '50px',
-        display: 'flex',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-        width: '300px',
-        margin: '10%',
-      }}
-      ref={bar_ref}
-    >
-      <Thumb
-        bar_ref={bar_ref ? bar_ref : null}
-        snap_tick={left_thumb_snap_tick}
-        n_ticks={values.length}
-        thumb_key={'left'}
-        thumb_ref={left_thumb_ref}
-        thumb_on_mouse_down={thumb_on_mouse_down}
-      />
-      <div className='filler'
-        style={{
-          position: 'absolute',
-          zIndex: '1',
-          left: filler_left + 'px',
-          width: filler_width + 'px',
-          height: '5px',
-          backgroundColor: primary_accent_color,
-        }}
-      >
-      </div>
-      <Thumb
-        bar_ref={bar_ref ? bar_ref : null}
-        snap_tick={right_thumb_snap_tick}
-        n_ticks={values.length}
-        thumb_key={'right'}
-        thumb_ref={right_thumb_ref}
-        thumb_on_mouse_down={thumb_on_mouse_down}
-      />
       <div
-        className="slider-bar"
+        className="slider-bar-alignment-container"
         style={{
+          height: '50px',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between',
-          width: '100%',
-          height: '1px',
-          backgroundColor: 'black',
+          flexWrap: 'wrap',
+          width: '300px',
+          margin: '10%',
         }}
+        ref={bar_ref}
       >
-        {values.map((val, idx) => {
-          return <Tick value={val} key={val} />;
-        })}
+        <Thumb
+          bar_ref={bar_ref ? bar_ref : null}
+          snap_tick={left_thumb_snap_tick}
+          n_ticks={values.length}
+          thumb_key={'left'}
+          thumb_ref={left_thumb_ref}
+          thumb_on_mouse_down={thumb_on_mouse_down}
+        />
+        <div
+          className="filler"
+          style={{
+            position: 'absolute',
+            zIndex: '1',
+            left: filler_left + 'px',
+            width: filler_width + 'px',
+            height: '5px',
+            backgroundColor: primary_accent_color,
+          }}
+        ></div>
+        <Thumb
+          bar_ref={bar_ref ? bar_ref : null}
+          snap_tick={right_thumb_snap_tick}
+          n_ticks={values.length}
+          thumb_key={'right'}
+          thumb_ref={right_thumb_ref}
+          thumb_on_mouse_down={thumb_on_mouse_down}
+        />
+        <div
+          className="slider-bar"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            width: '100%',
+            height: '1px',
+            backgroundColor: 'black',
+          }}
+        >
+          {values.map((val, idx) => {
+            return <Tick value={val} key={val} />;
+          })}
+        </div>
       </div>
-    </div>
     </div>
   );
 }

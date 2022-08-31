@@ -14,8 +14,6 @@ import { colors } from '../../../styles/data_vis_colors';
 
 const { primary_accent_color } = colors;
 
-const store = createStore(reducers);
-
 const mapStateToProps = (state, ownProps) => {
   const { view, office } = ownProps;
   if (office === 'all' || !office) {

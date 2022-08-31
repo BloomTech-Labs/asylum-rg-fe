@@ -30,7 +30,7 @@ function TimeSeriesSingleOffice(props) {
     } else {
       setPlotlyGraphAxis({ x: [2015, currentYear], y: [] });
     }
-  }, [timeSeriesData]);
+  }, []);
 
   const rowsForTable = timeSeriesData.hasOwnProperty('rowsForTable')
     ? timeSeriesData.rowsForTable

@@ -124,6 +124,8 @@ const vizReducer = (state = initialState, action) => {
               citizenshipMapAllData: {},
               citizenshipMapAllYears: [2015, currentYear],
             };
+          default:
+            return state;
         }
       } else {
         switch (action.payload.view) {
@@ -151,6 +153,8 @@ const vizReducer = (state = initialState, action) => {
                 },
               },
             };
+          default:
+            return state;
         }
       }
     case SET_VISUALIZATION_DATA:

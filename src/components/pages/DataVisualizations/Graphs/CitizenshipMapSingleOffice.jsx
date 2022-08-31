@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import Plot from 'react-plotly.js';
 import Table from './TableComponents/Table';
+import { colors } from '../../../../styles/data_vis_colors';
+
+const { background_color, primary_accent_color, secondary_accent_color } = colors;
 
 const mapStateToProps = (state, ownProps) => {
   const { office } = ownProps;
@@ -92,9 +95,9 @@ function CitizenshipMapSingleOffice(props) {
         ]}
         layout={{
           title: 'Grant Percentage by Citizenship',
-          paper_bgcolor: '#f7e4ca',
+          paper_bgcolor: background_color,
           hoverlabel: {
-            bordercolor: '#f7e4ca',
+            bordercolor: background_color,
           },
           geo: {
             scope: geoScope,

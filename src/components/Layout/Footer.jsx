@@ -56,7 +56,7 @@ function SubFooter() {
     Careers: `${base_url}/careers`,
   };
   return (
-    <Footer style={{ backgroundColor: '#707070' }}>
+    <Footer style={{ backgroundColor: '#404C4A' }}>
       <Space direction="horizontal">
         {Object.entries(button_links_by_text).map(text_link_pair => {
           return (

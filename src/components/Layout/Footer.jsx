@@ -7,9 +7,6 @@ function FooterContent() {
   return (
     <div>
         <DownloadButton/>
-
-
-
       {/*logo*/}
       <div>
         <Image width={100} src={Logo} preview={false} alt="HRF logo white" />

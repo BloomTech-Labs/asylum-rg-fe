@@ -1,14 +1,10 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import Redux from 'redux';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import Plot from 'react-plotly.js';
-import reducer from '../../../../state/reducers';
-import { SET_VISUALIZATION_DATA } from '../../../../state/actionTypes';
 import Table from './TableComponents/Table';
 import { colors } from '../../../../styles/data_vis_colors';
 
-const { background_color, primary_accent_color, secondary_accent_color } = colors;
+const { background_color } = colors;
 
 const mapStateToProps = (state, ownProps) => {
   const { office, timeSeriesData } = ownProps;
@@ -19,26 +15,23 @@ const mapStateToProps = (state, ownProps) => {
 
 function TimeSeriesSingleOffice(props) {
   const { office, timeSeriesData } = props;
-  const xYearsStart = timeSeriesData.hasOwnProperty('xYearsStart')
-    ? timeSeriesData.xYearsStart
-    : 2015;
-  const xYearsEnd = timeSeriesData.hasOwnProperty('xYearsEnd')
-    ? timeSeriesData.xYearsEnd
-    : 2022;
-  const xYears = timeSeriesData.hasOwnProperty('xYears')
-    ? timeSeriesData.xYears
-    : [];
-  const yPercentGranteds = timeSeriesData.hasOwnProperty('yPercentGranteds')
-    ? timeSeriesData.yPercentGranteds
-    : [];
-  const percentAdminCloseds = timeSeriesData.hasOwnProperty(
-    'percentAdminCloseds'
-  )
-    ? timeSeriesData.percentAdminCloseds
-    : [];
-  const percentDenieds = timeSeriesData.hasOwnProperty('percentDenieds')
-    ? timeSeriesData.percentDenieds
-    : [];
+  const currentYear = new Date().getFullYear();
+  const [plotlyGraphAxis, setPlotlyGraphAxis] = useState({
+    x: [2015, currentYear],
+    y: [],
+  });
+
+  useEffect(() => {
+    if (timeSeriesData['singleOfficeDataObject'] !== undefined) {
+      setPlotlyGraphAxis({
+        x: timeSeriesData['singleOfficeDataObject']['xYears'],
+        y: timeSeriesData['singleOfficeDataObject']['yTotalPercentGranteds'],
+      });
+    } else {
+      setPlotlyGraphAxis({ x: [2015, currentYear], y: [] });
+    }
+  }, [timeSeriesData]);
+
   const rowsForTable = timeSeriesData.hasOwnProperty('rowsForTable')
     ? timeSeriesData.rowsForTable
     : [];
@@ -64,8 +57,8 @@ function TimeSeriesSingleOffice(props) {
       <Plot
         data={[
           {
-            x: xYears,
-            y: yPercentGranteds,
+            x: plotlyGraphAxis['x'],
+            y: plotlyGraphAxis['y'],
             type: 'scatter',
             mode: 'lines+markers',
             yMax: 1,
@@ -84,7 +77,10 @@ function TimeSeriesSingleOffice(props) {
             dtick: 10,
           },
           xaxis: {
-            range: [xYearsStart, xYearsEnd],
+            range: [
+              plotlyGraphAxis['x'][0],
+              plotlyGraphAxis['x'][plotlyGraphAxis['x'].length - 1],
+            ],
             title: `Year`,
           },
           paper_bgcolor: background_color,

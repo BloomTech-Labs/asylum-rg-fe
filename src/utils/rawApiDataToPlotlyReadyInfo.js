@@ -187,6 +187,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
     switch (view) {
       case 'time-series':
         rowsForTable = [];
+        console.log(officeData);
         data[0].yearResults.sort((a, b) => a.year - b.year);
         for (let i = 0; i < data[0].yearResults.length; i++) {
           if (
@@ -209,67 +210,12 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
             rowsForTable.push(rowItem);
           }
         }
+        const singleOfficeDataObject = officeData[office];
         return {
           rowsForTable,
-          xYearsStart: data[0].yearResults.reduce(
-            (acc, yearItem) => (yearItem.year > acc ? yearItem.year : acc),
-            data[0].yearResults[0].year
-          ),
-          xYearsEnd: data[0].yearResults.reduce(
-            (acc, yearItem) => (yearItem.year < acc ? yearItem.year : acc),
-            data[0].yearResults[0].year
-          ),
-          xYears: [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .map(yearItem => yearItem.year),
-          ],
-          yPercentGranteds: [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .reduce((acc, yearItem) => {
-                return yearItem.yearData.filter(
-                  yearItem => yearItem.office === office
-                )[0]
-                  ? acc.concat(
-                      yearItem.yearData.filter(
-                        yearItem => yearItem.office === office
-                      )[0].granted
-                    )
-                  : acc;
-              }, []),
-          ],
-          percentAdminCloseds: [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .reduce((acc, yearItem) => {
-                return yearItem.yearData.filter(
-                  yearItem => yearItem.office === office
-                )[0]
-                  ? acc.concat(
-                      yearItem.yearData.filter(
-                        yearItem => yearItem.office === office
-                      )[0].adminClosed
-                    )
-                  : acc;
-              }, []),
-          ],
-          percentDenieds: [
-            ...data[0].yearResults
-              .sort((a, b) => a.year - b.year)
-              .reduce((acc, yearItem) => {
-                return yearItem.yearData.filter(
-                  yearItem => yearItem.office === office
-                )[0]
-                  ? acc.concat(
-                      yearItem.yearData.filter(
-                        yearItem => yearItem.office === office
-                      )[0].denied
-                    )
-                  : acc;
-              }, []),
-          ],
+          singleOfficeDataObject,
         };
+
       case 'citizenship':
         rowsForTable = [];
         for (let item of data[0].citizenshipResults) {

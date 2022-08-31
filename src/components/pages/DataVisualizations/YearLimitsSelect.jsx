@@ -78,7 +78,7 @@ function YearLimitsSelect(props) {
       year_start: years[0],
       year_end: years[1],
     });
-  }, 1000);
+  }, 10);
   return (
     <div
       className="year-limits-select-container"

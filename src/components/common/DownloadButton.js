@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { Button, message} from 'antd';
+import { Button, message, message} from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
 import Axios from 'axios';
+import { loadProgressBar } from 'axios-progress-bar'
 import { loadProgressBar } from 'axios-progress-bar';
 import fileDownload from 'js-file-download';
+import '../../styles/nprogress.css'
+import 'antd/dist/antd.css';
 import '../../styles/nprogress.css';
 import 'antd/dist/antd.css';
 
@@ -19,6 +22,9 @@ const defaultInfo = {
 };
 
 function DownloadButton(props){
+  const { DOWNLOAD_URL, BTN_TXT, MSG_LOADING, DOWNLOAD_TXT, MSG_DOWNLOAD_FINISHED, CSV_FILENAME } = downloadInfo
+  const [txt, setTxt] = useState(BTN_TXT);
+  const url = process.env.REACT_APP_DOWNLOAD_RAW_CSV_DATA_URL || DOWNLOAD_URL
   const info = props.downloadBtnInfo || defaultInfo;
   const { BTN_TXT, MSG_LOADING, DOWNLOAD_TXT, MSG_DOWNLOAD_FINISHED, STYLING } = info;
   const [txt, setTxt] = useState(BTN_TXT);

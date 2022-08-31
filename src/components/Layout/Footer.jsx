@@ -14,6 +14,8 @@ const { primary_accent_color } = colors;
 
 function FooterContent() {
 
+
+
   const downloadBtnInfo = {
     BTN_TXT:'Download all data',
     MSG_LOADING:'Downloading all data...',

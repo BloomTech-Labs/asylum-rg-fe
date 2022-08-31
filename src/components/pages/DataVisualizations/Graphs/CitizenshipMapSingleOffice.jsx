@@ -4,7 +4,7 @@ import Plot from 'react-plotly.js';
 import Table from './TableComponents/Table';
 import { colors } from '../../../../styles/data_vis_colors';
 
-const { background_color, primary_accent_color, secondary_accent_color } = colors;
+const { background_color } = colors;
 
 const mapStateToProps = (state, ownProps) => {
   const { office } = ownProps;

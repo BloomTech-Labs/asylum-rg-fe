@@ -66,7 +66,6 @@ function RenderLandingPage(props) {
         >
           View More Data
         </Button>
-        {/* <p>View More Data</p> */}
       </div>
 
       <div className="middle-section">

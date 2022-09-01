@@ -47,6 +47,15 @@ function FooterContent() {
 
 function SubFooter() {
   const { Footer } = Layout;
+  const base_url = 'https://www.humanrightsfirst.org/';
+  const button_links_by_text = {
+    'About Us': `${base_url}/about`,
+    'Contact Us': `${base_url}/about/contact`,
+    Press: `${base_url}/press`,
+    'Terms & Privacy': `${base_url}/about/privacy-policy`,
+    'Sign Up': `${base_url}/sign-up`,
+    Careers: `${base_url}/careers`,
+  };
   return (
     <Footer
       style={{
@@ -54,54 +63,18 @@ function SubFooter() {
       }}
     >
       <Space direction="horizontal">
-        <Button
-          type="text"
-          size="small"
-          href="https://www.humanrightsfirst.org/about"
-          style={{ color: 'white' }}
-        >
-          About Us
-        </Button>
-        <Button
-          type="text"
-          size="small"
-          href="https://www.humanrightsfirst.org/about/contact"
-          style={{ color: 'white' }}
-        >
-          Contact Us
-        </Button>
-        <Button
-          type="text"
-          size="small"
-          href="https://www.humanrightsfirst.org/press"
-          style={{ color: 'white' }}
-        >
-          Press
-        </Button>
-        <Button
-          type="text"
-          size="small"
-          href="https://www.humanrightsfirst.org/about/privacy-policy"
-          style={{ color: 'white' }}
-        >
-          Terms & Privacy
-        </Button>
-        <Button
-          type="text"
-          size="small"
-          href="https://www.humanrightsfirst.org/sign-up"
-          style={{ color: 'white' }}
-        >
-          Sign Up
-        </Button>
-        <Button
-          type="text"
-          size="small"
-          href="http://www.humanrightsfirst.org/careers"
-          style={{ color: 'white' }}
-        >
-          Careers
-        </Button>
+        {Object.entries(button_links_by_text).map(text_link_pair => {
+          return (
+            <Button
+              type="text"
+              size="small"
+              href={text_link_pair[1]}
+              style={{ color: 'white' }}
+            >
+              {text_link_pair[0]}
+            </Button>
+          );
+        })}
       </Space>
     </Footer>
   );

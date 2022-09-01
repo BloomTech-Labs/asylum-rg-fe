@@ -20,6 +20,7 @@ function TimeSeriesSingleOffice(props) {
     x: [2015, currentYear],
     y: [],
   });
+  const [rowsForTable, setRowsForTable] = useState([]);
 
   useEffect(() => {
     if (timeSeriesData['singleOfficeDataObject'] !== undefined) {
@@ -30,11 +31,13 @@ function TimeSeriesSingleOffice(props) {
     } else {
       setPlotlyGraphAxis({ x: [2015, currentYear], y: [] });
     }
-  }, []);
+    if (timeSeriesData.rowsForTable === undefined) {
+      setRowsForTable([]);
+    } else {
+      setRowsForTable(timeSeriesData.rowsForTable);
+    }
+  }, [timeSeriesData]);
 
-  const rowsForTable = timeSeriesData.hasOwnProperty('rowsForTable')
-    ? timeSeriesData.rowsForTable
-    : [];
   const columnsForTable = [
     'Year',
     'Total Cases',

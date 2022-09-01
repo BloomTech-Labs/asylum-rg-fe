@@ -19,6 +19,7 @@ function CitizenshipMapSingleOffice(props) {
     locationsAndText: [],
     z: [],
   });
+  const [rowsForTable, setRowsForTable] = useState([]);
 
   useEffect(() => {
     if (citizenshipMapData['countryGrantRateObj'] !== undefined) {
@@ -31,6 +32,11 @@ function CitizenshipMapSingleOffice(props) {
       });
     } else {
       setPlotlyGraphAxis({ locationsAndText: [], z: [] });
+    }
+    if (citizenshipMapData.rowsForTable === undefined) {
+      setRowsForTable([]);
+    } else {
+      setRowsForTable(citizenshipMapData.rowsForTable);
     }
   }, [citizenshipMapData]);
   const geoScopeArray = [
@@ -48,11 +54,6 @@ function CitizenshipMapSingleOffice(props) {
     const { value } = e.target;
     setGeoScope(value);
   };
-
-  const rowsForTable = citizenshipMapData.hasOwnProperty('rowsForTable')
-    ? citizenshipMapData.rowsForTable
-    : [];
-
   const columnsForTable = [
     'Citizenship',
     'Total Cases',

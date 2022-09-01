@@ -63,16 +63,15 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
     switch (view) {
       case 'time-series':
         const rowsForAllDisplay = [];
-        data[0].yearResults.sort((a, b) => a.year - b.year);
-        for (let i = 0; i < data[0].yearResults.length; i++) {
+        for (let yearResults of data[0].yearResults) {
           rowItem = {
-            Year: data[0].yearResults[i].year,
-            'Total Cases': data[0].yearResults[i].totalCases,
-            '% Granted': Number(data[0].yearResults[i].granted).toFixed(2),
+            Year: yearResults.year,
+            'Total Cases': yearResults.totalCases,
+            '% Granted': Number(yearResults.granted).toFixed(2),
             '% Admin Close / Dismissal': Number(
-              data[0].yearResults[i].adminClosed
+              yearResults.adminClosed
             ).toFixed(2),
-            '% Denied': Number(data[0].yearResults[i].denied).toFixed(2),
+            '% Denied': Number(yearResults.denied).toFixed(2),
           };
           rowsForAllDisplay.push(rowItem);
         }
@@ -95,36 +94,32 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
         return { ...finalData, rowsForAllDisplay, officeData };
 
       case 'office-heat-map':
-        data[0].yearResults.sort((a, b) => a.year - b.year);
         rowsForTable = [];
-        for (let i = 0; i < data[0].yearResults.length; i++) {
+        for (let yearResults of data[0].yearResults) {
           for (let officeKey of officeCodes) {
             if (
-              data[0].yearResults[i].yearData.filter(
+              yearResults.yearData.filter(
                 yearItem => yearItem.office === officeKey
               ).length > 0
             ) {
               rowItem = {
                 'Year [Office]':
-                  String(data[0].yearResults[i].year) +
-                  ' [' +
-                  String(officeKey) +
-                  ']',
-                'Total Cases': data[0].yearResults[i].yearData.filter(
+                  String(yearResults.year) + ' [' + String(officeKey) + ']',
+                'Total Cases': yearResults.yearData.filter(
                   yearItem => yearItem.office === officeKey
                 )[0].totalCases,
                 '% Granted': Number(
-                  data[0].yearResults[i].yearData.filter(
+                  yearResults.yearData.filter(
                     yearItem => yearItem.office === officeKey
                   )[0].granted
                 ).toFixed(2),
                 '% Admin Close / Dismissal': Number(
-                  data[0].yearResults[i].yearData.filter(
+                  yearResults.yearData.filter(
                     yearItem => yearItem.office === officeKey
                   )[0].adminClosed
                 ).toFixed(2),
                 '% Denied': Number(
-                  data[0].yearResults[i].yearData.filter(
+                  yearResults.yearData.filter(
                     yearItem => yearItem.office === officeKey
                   )[0].denied
                 ).toFixed(2),

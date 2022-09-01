@@ -18,6 +18,7 @@ function CitizenshipMapAll(props) {
     locationsAndText: [],
     z: [],
   });
+  const [rowsForTable, setRowsForTable] = useState([]);
 
   useEffect(() => {
     if (citizenshipMapAllData['countryGrantRateObj'] !== undefined) {
@@ -30,6 +31,11 @@ function CitizenshipMapAll(props) {
       });
     } else {
       setPlotlyGraphAxis({ locationsAndText: [], z: [] });
+    }
+    if (citizenshipMapAllData.rowsForTable === undefined) {
+      setRowsForTable([]);
+    } else {
+      setRowsForTable(citizenshipMapAllData.rowsForTable);
     }
   }, [citizenshipMapAllData]);
 
@@ -48,10 +54,6 @@ function CitizenshipMapAll(props) {
     const { value } = e.target;
     setGeoScope(value);
   };
-
-  const rowsForTable = citizenshipMapAllData.hasOwnProperty('rowsForTable')
-    ? citizenshipMapAllData.rowsForTable
-    : [];
 
   const columnsForTable = [
     'Citizenship',

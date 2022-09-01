@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 import { connect } from 'react-redux';
 import Table from './TableComponents/Table';
@@ -15,11 +15,7 @@ const mapStateToProps = state => {
 function TimeSeriesAll(props) {
   const { timeSeriesAllData } = props;
   const currentYear = new Date().getFullYear();
-
-  let rowsForAllDisplay = timeSeriesAllData['rowsForAllDisplay']
-    ? timeSeriesAllData.rowsForAllDisplay
-    : [];
-
+  const [rowsForAllDisplay, setRowsForAllDisplay] = useState([]);
   const columnsForAllDisplay = [
     'Year',
     'Total Cases',
@@ -27,7 +23,13 @@ function TimeSeriesAll(props) {
     '% Admin Close / Dismissal',
     '% Denied',
   ];
-
+  useEffect(() => {
+    if (timeSeriesAllData.rowsForAllDisplay === undefined) {
+      setRowsForAllDisplay([]);
+    } else {
+      setRowsForAllDisplay(timeSeriesAllData.rowsForAllDisplay);
+    }
+  }, [timeSeriesAllData]);
   return (
     <div
       className="time-series-all-container"

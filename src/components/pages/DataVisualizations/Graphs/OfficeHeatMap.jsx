@@ -19,6 +19,7 @@ function OfficeHeatMap(props) {
     y: [],
     z: [],
   });
+  const [rowsForTable, setRowsForTable] = useState([]);
 
   useEffect(() => {
     if (officeHeatMapData['officeHeatMapDataObject'] !== undefined) {
@@ -30,11 +31,12 @@ function OfficeHeatMap(props) {
     } else {
       setPlotlyGraphAxis({ x: [], y: [], z: [] });
     }
+    if (officeHeatMapData.rowsForTable === undefined) {
+      setRowsForTable([]);
+    } else {
+      setRowsForTable(officeHeatMapData.rowsForTable);
+    }
   }, [officeHeatMapData]);
-
-  const rowsForTable = officeHeatMapData.hasOwnProperty('rowsForTable')
-    ? officeHeatMapData.rowsForTable
-    : [];
 
   const columnsForTable = [
     'Year [Office]',

@@ -47,7 +47,7 @@ function FooterContent() {
 
 function SubFooter() {
   const { Footer } = Layout;
-  const base_url = 'https://www.humanrightsfirst.org/';
+  const base_url = 'https://www.humanrightsfirst.org';
   const button_links_by_text = {
     'About Us': `${base_url}/about`,
     'Contact Us': `${base_url}/about/contact`,

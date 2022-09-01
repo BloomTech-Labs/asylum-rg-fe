@@ -86,6 +86,11 @@ function GraphsContainer() {
         </div>
         <Switch>
           <Route
+            exact
+            path="/graphs/"
+            component={() => AllOfficesRoute({ set_view })}
+          />
+          <Route
             path="/graphs/all/:view"
             component={() => AllOfficesRoute({ set_view })}
           />

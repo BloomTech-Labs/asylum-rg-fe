@@ -17,7 +17,11 @@ const { background_color } = colors;
 
 function GraphWrapper(props) {
   const { set_view, dispatch } = props;
-  const { office, view } = useParams();
+  let { office, view } = useParams();
+  if (!view) {
+    set_view('time-series');
+    view = 'time-series';
+  }
   let map_to_render;
   if (!office) {
     switch (view) {

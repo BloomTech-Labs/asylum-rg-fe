@@ -1,31 +1,31 @@
+@main-color: #404C4A;
+@secondary-color: #707070;
+@white: #FFFFFF;
+
+@mobile-small: ~"(min-width: 320px) and (max-width: 375px)";
+@mobile-medium: ~"(min-width: 376px) and (max-width: 414px)";
+@mobile-large: ~"(min-width: 415px) and (max-width: 480px)";
+@tablet-small: ~"(min-width: 415px) and (max-width: 768px)";
+@tablet-large: ~"(min-width: 769px) and (max-width: 1024px)";
+@laptop: ~"(min-width: 1025px) and (max-width: 1280px)";
+
+
+
+
 .header {
-    background-color: #404C4A;
-    position: relative;
+    background-color: @main-color;
+    display:flex;
     text-align: center;
     width: 100%;
     height: 20vh;
     padding-top: 25px;
     margin-bottom: 10%;
-
-    @media (max-width: 375px) {
-        height: 30vh;
-    }
 }
 
 .hrf-logo-img-container img {
     height: 64px;
     width: 98px;
-    position: absolute;
-    left: 0;
-    margin-left: 2%;
-
-    @media (max-width: 375px) {
-        height: 30px;
-        width: 48px;
-        top: 0;
-        left: 0;
-        margin: 2% 2%;
-    }
+    margin-left: 15%;
 }
 
 .header-text-container {
@@ -36,35 +36,19 @@
 
 .header-text-container h1 {
     font-size: 3rem;
-    color: #FFFFFF;
+    color: @white;
     font-family: 'moneta';
-
-    @media (max-width: 375px) {
-        font-size: 1.5rem;
-        padding-top: 5%;
-    }
 }
 
 .header-text-container h3 {
-    font-family: 'beatrice';
-    color: #FFFFFF;
+    font-family: 'beatrice regular';
+    color: @white;
     font-size: 1.2rem;
-
-    @media (max-width: 375px) {
-        font-size: .85rem;
-        width: 75%;
-        margin: 0 auto;
-    }
 }
 
 .graphs-section {
     display: flex;
     justify-content: space-evenly;
-
-    @media (max-width: 375px) {
-        display: block;
-        width: 100%;
-    }
 }
 
 .grant-rates-by-office-graph-container {
@@ -72,11 +56,7 @@
     cursor: pointer;
     height: 165px;
     font-size: 1.5rem;
-
-    @media (max-width: 375px) {
-        margin-top: 20%;
-        margin-bottom: 40%;
-    }
+    font-family: 'acumin';
 }
 
 .gr-office-img {
@@ -90,20 +70,13 @@
     margin-bottom: 3%;
     cursor: pointer;
     font-size: 1.5rem;
-
-    @media (max-width: 375px) {
-        margin-bottom: 40%;
-    }
+    font-family: 'acumin';
 }
 
 .gr-nationality-img {
     height: 175px;
     width: 200px;
     margin-bottom: 7%;
-
-    @media (max-width: 375px) {
-        margin-bottom: 8%;
-    }
 }
 
 .grant-rates-over-time-container {
@@ -111,10 +84,7 @@
     cursor: pointer;
     height: 165px;
     font-size: 1.5rem;
-
-    @media (max-width: 375px) {
-        margin-bottom: 40%;
-    }
+    font-family: 'acumin';
 }
 
 .gr-overtime-img {
@@ -123,71 +93,34 @@
     margin-bottom: 10%;
 }
 
-.view-more-data-btn {
+.view-more-data-btn-container {
     height: 44px;
     width: 180px;
-    // background-color: #404C4A;
     margin: 0 auto;
     text-align: center;
-    // border-radius: 15px;
     margin-bottom: 10%;
-    // display: table;
-    // cursor: pointer;
-}
-
-.view-more-data-btn p {
-    color: #FFFFFF;
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 1.2rem;
 }
 
 .middle-section {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
-    @media (max-width: 375px) {
-        display: block;
-        width: 100%;
-        height: 75vh;
-        background-color: #707070;
-        padding-top: 15%;
-        text-align: center;
-    }
 }
 
 .hrf-img {
-    height: 237px;
-    width: 454px;
+    height: 339px;
+    width: 648px;
     border-radius: 10px;
-
-    @media (max-width: 375px) {
-        height: 169px;
-        width: 324px;
-    }
 }
 
 .middle-section-text-container {
     width: 964px;
     text-align: center;
-
-    @media (max-width: 375px) {
-        width: 85%;
-        text-align: center;
-        margin: 0 auto;
-        padding-top: 10%;
-    }
 }
 
 .middle-section-text-container h3 {
     font-family: 'acumin';
-    font-size: 1.3rem;
-
-    @media (max-width: 375px) {
-        font-size: .95rem;
-        color: #ffffff;
-    }
+    font-size: 1.4rem;
 }
 
 .bottom-section {
@@ -199,51 +132,44 @@
     font-family: 'moneta';
     font-size: 3.5rem;
     margin-bottom: 10%;
-
-    @media (max-width: 375px) {
-        font-size: 2rem;
-    }
 }
 
 .data-container {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 5%;
-
-    @media (max-width: 375px) {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
 }
 
 .first-data-point-container {
     width: 433px;
-
-    @media (max-width: 375px) {
-        width: 85%;
-        margin-bottom: 5%;
-    }
 }
 
 .first-data-point-container h2 {
-    font-family: 'beatrice';
+    font-family: 'moneta';
     font-size: 3rem;
+}
+
+.first-data-point-container h3 {
+    font-family: 'acumin';
+    font-size: 1.2rem;
 }
 
 .second-data-point-container {
     width: 433px;
-
-    @media (max-width: 375px) {
-        width: 85%;
-        margin-bottom: 5%;
-    }
 }
 
 .second-data-point-container h2 {
-    font-family: 'beatrice';
+    font-family: 'beatrice_regular';
     font-size: 3rem;
+}
+
+.second-data-point-container h3 {
+    font-family: 'acumin';
+    font-size: 1.2rem;
+}
+
+.third-data-point-container {
+    width: 433px;
 }
 
 .third-data-point-container h2 {
@@ -251,23 +177,8 @@
     font-size: 3rem;
 }
 
-.third-data-point-container {
-    width: 433px;
-
-    @media (max-width: 375px) {
-        width: 85%;
-        margin-bottom: 5%;
-    }
-}
-
-.read-more-btn {
-    .view-more-data-btn();
-}
-
-.read-more-btn p {
-    color: #FFFFFF;
-    display: table-cell;
-    vertical-align: middle;
+.third-data-point-container h3 {
+    font-family: 'acumin';
     font-size: 1.2rem;
 }
 
@@ -278,19 +189,687 @@
     cursor: pointer;
     color: black;
     margin: 5% auto;
-
-    @media (max-width: 375px) {
-        width: 35%;
-    }
 }
 
 .ant-space-align-center {
     @media (max-width: 375px) {
-      display: flex;
-     flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
 .ant-btn:hover {
-   border-color: #707070 !important;
+    border-color: @secondary-color  !important;
+}
+
+@media @mobile-small {
+    .header {
+        height: 30vh;
+       display: block;
+       position: relative;
+    }
+    .hrf-logo-img-container{
+       height:fit-content;
+       position: absolute;
+       top: 0;
+       left: 0;
+       margin: 2% 2%;
+    }
+
+    .hrf-logo-img-container img {
+        height: 30px;
+        width: 48px;
+       
+    }
+   
+    .header-text-container h1 {
+        font-size: 1.5rem;
+        padding-top: 5%;
+    }
+
+    .header-text-container h3 {
+        font-size: .85rem;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .graphs-section {
+        display: block;
+        width: 100%;
+    }
+
+    .grant-rates-by-office-graph-container {
+        margin-top: 20%;
+        margin-bottom: 40%;
+    }
+
+    .grant-rates-by-nationality-container {
+        margin-bottom: 40%;
+    }
+
+    .gr-nationality-img {
+        margin-bottom: 8%;
+    }
+
+    .grant-rates-over-time-container {
+        margin-bottom: 40%;
+    }
+
+    .middle-section {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 75vh;
+        background-color: @secondary-color;
+        padding-top: 15%;
+        text-align: center;
+    }
+
+    .hrf-img {
+        height: 169px;
+        width: 324px;
+    }
+
+    .middle-section-text-container {
+        width: 85%;
+        text-align: center;
+        margin: 0 auto;
+       
+    }
+
+    .middle-section-text-container h3 {
+        font-size: .95rem;
+        color: @white;
+    }
+
+    .bottom-section h1 {
+        font-size: 2rem;
+    }
+
+    .data-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .first-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+
+    .second-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+
+    .third-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+
+    .back-to-top {
+        width: 35%;
+    }
+
+
+}
+
+@media @mobile-medium {
+    .header {
+        height: 20vh;
+       display: block;
+       position: relative;
+    }
+    .hrf-logo-img-container{
+       height:fit-content;
+       position: absolute;
+       top: 0;
+       left: 0;
+       margin: 2% 2%;
+    }
+
+    .hrf-logo-img-container img {
+        height: 30px;
+        width: 48px;
+       
+    }
+   
+    .header-text-container h1 {
+        font-size: 1.5rem;
+        padding-top: 5%;
+    }
+
+    .header-text-container h3 {
+        font-size: .85rem;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .graphs-section {
+        display: block;
+        width: 100%;
+    }
+
+    .grant-rates-by-office-graph-container {
+        margin-top: 20%;
+        margin-bottom: 40%;
+    }
+
+    .grant-rates-by-nationality-container {
+        margin-bottom: 40%;
+    }
+
+    .gr-nationality-img {
+        margin-bottom: 8%;
+    }
+
+    .grant-rates-over-time-container {
+        margin-bottom: 40%;
+    }
+
+    .middle-section {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 75vh;
+        background-color: @secondary-color;
+        padding-top: 5%;
+        text-align: center;
+        
+    }
+
+    .hrf-img {
+        height: 197px;
+        width: 378px;
+    }
+
+    .middle-section-text-container {
+        width: 85%;
+       text-align: center;
+        margin: 0 auto;
+    }
+
+    .middle-section-text-container h3 {
+        font-size: 1.1rem;
+        color: @white;
+    }
+
+    .bottom-section h1 {
+        font-size: 2.1rem;
+    }
+
+    .data-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .first-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+
+    .second-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+
+    .third-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+
+    .back-to-top {
+        width: 35%;
+    }
+
+    .ant-space-align-center {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media @mobile-large {
+    .header {
+        height: 20vh;
+       display: block;
+       position: relative;
+    }
+    .hrf-logo-img-container{
+       height:fit-content;
+       position: absolute;
+       top: 0;
+       left: 0;
+       margin: 2% 2%;
+    }
+
+    .hrf-logo-img-container img {
+        height: 30px;
+        width: 48px;
+       
+    }
+   
+    .header-text-container h1 {
+        font-size: 1.5rem;
+        padding-top: 5%;
+    }
+
+    .header-text-container h3 {
+        font-size: .85rem;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .graphs-section {
+        display: block;
+        width: 100%;
+    }
+
+    .grant-rates-by-office-graph-container {
+        margin-top: 20%;
+        margin-bottom: 40%;
+    }
+
+    .grant-rates-by-nationality-container {
+        margin-bottom: 40%;
+    }
+
+    .gr-nationality-img {
+        margin-bottom: 8%;
+    }
+
+    .grant-rates-over-time-container {
+        margin-bottom: 40%;
+    }
+
+    .middle-section {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 75vh;
+        background-color: @secondary-color;
+        padding-top: 5%;
+        text-align: center;
+        
+    }
+
+    .hrf-img {
+        height: 197px;
+        width: 378px;
+    }
+
+    .middle-section-text-container {
+        width: 85%;
+       text-align: center;
+        margin: 0 auto;
+    }
+
+    .middle-section-text-container h3 {
+        font-size: 1.1rem;
+        color: @white;
+    }
+
+    .bottom-section h1 {
+        font-size: 2.1rem;
+    }
+
+    .data-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .first-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+
+    .second-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+
+    .third-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+
+    .back-to-top {
+        width: 35%;
+    }
+
+    .ant-space-align-center {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media @tablet-small {
+    .header {
+        height: 30vh;
+       display: block;
+       position: relative;
+    }
+    .hrf-logo-img-container{
+       height:fit-content;
+       position: absolute;
+       top: 0;
+       left: 0;
+       margin: 1% 1%;
+    }
+
+    .hrf-logo-img-container img {
+        height: 66px;
+        width: 108px;
+       
+    }
+   
+    .header-text-container h1 {
+        font-size: 2.5rem;
+        padding-top: 5%;
+    }
+
+    .header-text-container h3 {
+        font-size: 1.3rem;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .graphs-section {
+        display: block;
+        width: 100%;
+    }
+
+    .grant-rates-by-office-graph-container {
+        margin-top: 20%;
+        margin-bottom: 40%;
+    }
+
+    .grant-rates-by-nationality-container {
+        margin-bottom: 25%;
+    }
+
+    .gr-nationality-img {
+        margin-bottom: 8%;
+    }
+
+    .grant-rates-over-time-container {
+        margin-bottom: 40%;
+    }
+
+    .middle-section {
+        display: block;
+        width: 100%;
+        height: 75vh;
+        background-color: @secondary-color;
+        padding-top: 10%;
+        text-align: center;
+    }
+
+    .hrf-img {
+        height: 288px;
+        width: 552px;
+    }
+
+    .middle-section-text-container {
+        width: 85%;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 10%;
+    }
+
+    .middle-section-text-container h3 {
+        font-size: 1.5rem;
+        color: @white;
+    }
+
+    .bottom-section h1 {
+        font-size: 2.7rem;
+    }
+
+    .data-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .first-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+
+    .second-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+
+    .third-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+
+    .back-to-top {
+        width: 35%;
+    }
+
+    .ant-space-align-center {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media @tablet-large {
+    .header {
+        height: 30vh;
+       display: block;
+       position: relative;
+    }
+    .hrf-logo-img-container{
+       height:fit-content;
+       position: absolute;
+       top: 0;
+       left: 0;
+       
+    }
+
+    .hrf-logo-img-container img {
+        height: 83px;
+        width: 136px;
+       
+    }
+   
+    .header-text-container h1 {
+        font-size: 3.5rem;
+        padding-top: 5%;
+    }
+
+    .header-text-container h3 {
+        font-size: 1.8rem;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .graphs-section {
+        display: block;
+        width: 100%;
+    }
+
+    .grant-rates-by-office-graph-container {
+        margin-top: 20%;
+        margin-bottom: 40%;
+    }
+
+    .grant-rates-by-office-graph-container p {
+        font-size: 2.5rem;
+    }
+
+    .gr-office-img {
+        height: 232px;
+        width: 450px;
+    }
+
+    .grant-rates-by-nationality-container {
+        margin-bottom: 25%;
+    }
+
+    .grant-rates-by-nationality-container p {
+        font-size: 2.5rem;
+    }
+
+    .gr-nationality-img {
+        margin-bottom: 8%;
+        height: 335px;
+        width: 383px;
+    }
+
+    .grant-rates-over-time-container {
+        margin-bottom: 40%;
+    }
+
+    .gr-overtime-img {
+        height: 232px;
+        width: 450px;
+    }
+    .grant-rates-over-time-container p {
+        font-size: 2.5rem;
+    }
+
+    .ant-btn {
+        line-height: 2;
+        width: 172px;
+    }
+
+    .middle-section {
+        display: block;
+        width: 100%;
+        height: 75vh;
+        background-color: @secondary-color;
+        padding-top: 10%;
+        text-align: center;
+    }
+
+    .hrf-img {
+        height: 418px;
+        width: 800px;
+    }
+
+    .middle-section-text-container {
+        width: 85%;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 10%;
+    }
+
+    .middle-section-text-container h3 {
+        font-size: 1.9rem;
+        color: @white;
+    }
+
+    .bottom-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .data-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .first-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+    .first-data-point-container h2 {
+       font-size: 3.5rem;
+    }
+    .first-data-point-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .second-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+    .second-data-point-container h2 {
+        font-size: 3.5rem;
+     }
+     .second-data-point-container h3 {
+         font-size: 1.5rem;
+     }
+
+    .third-data-point-container {
+        width: 85%;
+        margin-bottom: 5%;
+    }
+    .third-data-point-container h2 {
+        font-size: 3.5rem;
+     }
+     .third-data-point-container h3 {
+         font-size: 1.5rem;
+     }
+
+    .back-to-top {
+        width: 35%;
+    }
+
+    .ant-space-align-center {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+}
+
+@media @laptop {
+    .header {
+        height: 35vh;
+    }
+
+    .header-text-container h1 {
+        font-size: 2.8rem;
+        padding-top: 5%;
+    }
+
+    .header-text-container h3 {
+        font-size: 1.4rem;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .middle-section {
+        display:flex;
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 0 2%;
+    }
+
+    .hrf-img {
+        height: 318px;
+        width: 608px;
+    }
+
+    .middle-section-text-container {
+        width: 85%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 2%;
+    }
+
+   
+ .first-data-point-container {
+        width: 23%;
+    }
+
+    .second-data-point-container {
+        width: 23%;
+    }
+
+    .third-data-point-container {
+        width: 23%;
+    }
+    
+    .back-to-top {
+        width: 35%;
+    }
 }

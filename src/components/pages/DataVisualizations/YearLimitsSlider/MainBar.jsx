@@ -65,14 +65,15 @@ function MainBar(props) {
     if (left_thumb_ref.current) {
       set_filler_left(
         left_thumb_ref.current.getBoundingClientRect().right -
-          Math.floor(left_thumb_ref.current.getBoundingClientRect().width / 2)
+          Math.floor(left_thumb_ref.current.getBoundingClientRect().width / 2) +
+          window.scrollX
       );
       set_filler_width(
         right_thumb_ref.current.getBoundingClientRect().right -
           left_thumb_ref.current.getBoundingClientRect().right
       );
     } else {
-      set_filler_left(bar_start);
+      set_filler_left(bar_start + window.scrollX);
       set_filler_width(0);
     }
   }, 10);
@@ -155,7 +156,7 @@ function MainBar(props) {
     e.stopPropagation();
     e.preventDefault();
     if (thumb_dragging) {
-      thumb_dragging.current.style.left = e.clientX + 'px';
+      thumb_dragging.current.style.left = e.clientX + window.scrollX + 'px';
     }
   };
 

@@ -16,7 +16,7 @@ function Thumb(props) {
   let bar_width;
   useInterval(() => {
     my_width = thumb_ref.current.getBoundingClientRect().width;
-    bar_start = bar_ref.current.getBoundingClientRect().left;
+    bar_start = bar_ref.current.getBoundingClientRect().left + window.scrollX;
     bar_width = bar_ref.current.getBoundingClientRect().width;
     set_pos(
       bar_start +

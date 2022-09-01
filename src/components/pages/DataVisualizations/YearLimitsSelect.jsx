@@ -97,7 +97,7 @@ function YearLimitsSelect(props) {
         name="yearLimitsSelect"
         initialValues={{ year_start: years[0], year_end: years[1] }}
         onFinish={() => {
-          updateStateWithNewData(view, office, stateSettingFn);
+          updateStateWithNewData(years, view, office, stateSettingFn);
         }}
         autoComplete="off"
         layout="inline"

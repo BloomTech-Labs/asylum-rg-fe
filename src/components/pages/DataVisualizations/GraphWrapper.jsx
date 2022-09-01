@@ -49,10 +49,37 @@ function GraphWrapper(props) {
         break;
     }
   }
-  function updateStateWithNewData(view, office, stateSettingCallback) {
+  function updateStateWithNewData(years, view, office, stateSettingCallback) {
+    /*
+          _                                                                             _
+        |                                                                                 |
+        |   Example request for once the `/summary` endpoint is up and running:           |
+        |                                                                                 |
+        |     `${url}/summary?to=2022&from=2015&office=ZLA`                               |
+        |                                                                                 |
+        |     so in axios we will say:                                                    |
+        |                                                                                 |     
+        |       axios.get(`${url}/summary`, {                                             |
+        |         params: {                                                               |
+        |           from: <year_start>,                                                   |
+        |           to: <year_end>,                                                       |
+        |           office: <office>,       [ <-- this one is optional! when    ]         |
+        |         },                        [ querying by `all offices` there's ]         |
+        |       })                          [ no `office` param in the query    ]         |
+        |                                                                                 |
+          _                                                                             _
+                                   -- Mack 
+    
+    */
+
     if (office === 'all' || !office) {
       axios
-        .get('http://localhost:3000')
+        .get('http://localhost:3000', {
+          params: {
+            from: years[0],
+            to: years[1],
+          },
+        })
         .then(result => {
           stateSettingCallback(view, office, test_data);
         })
@@ -61,7 +88,13 @@ function GraphWrapper(props) {
         });
     } else {
       axios
-        .get('http://localhost:3000')
+        .get('http://localhost:3000', {
+          params: {
+            from: years[0],
+            to: years[1],
+            office: office,
+          },
+        })
         .then(result => {
           stateSettingCallback(view, office, test_data);
         })

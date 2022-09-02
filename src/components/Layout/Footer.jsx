@@ -5,10 +5,18 @@ import { DownloadButton } from '../common/DownloadButton'
 const { Text } = Typography;
 function FooterContent() {
 
+  const downloadBtnInfo = {
+    DOWNLOAD_URL:'http://localhost:3000/test-raw-data.zip',
+    BTN_TXT:'poipoi Report .csv',
+    MSG_LOADING:'Downloading data...',
+    DOWNLOAD_TXT:'downloading CSV file',
+    MSG_DOWNLOAD_FINISHED:'Downloading finished',
+    CSV_FILENAME:'Asylum_Report.zip'
+  }
 
   return (
     <div>
-        <DownloadButton/>
+        <DownloadButton downloadBtnInfo={downloadBtnInfo} />
       {/*logo*/}
       <div>
         <Image width={100} src={Logo} preview={false} alt="HRF logo white" />

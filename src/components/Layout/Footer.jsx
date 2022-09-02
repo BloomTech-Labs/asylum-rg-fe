@@ -14,22 +14,18 @@ const { primary_accent_color } = colors;
 
 function FooterContent() {
 
-
-
   const downloadBtnInfo = {
-    BTN_TXT:'Download all data',
-    MSG_LOADING:'Downloading all data...',
+    DOWNLOAD_URL:'http://localhost:3000/test-raw-data.zip',
+    BTN_TXT:'poipoi Report .csv',
+    MSG_LOADING:'Downloading data...',
     DOWNLOAD_TXT:'downloading CSV file',
     MSG_DOWNLOAD_FINISHED:'Downloading finished',
-    STYLING:{background: '#404C4A', color:'#FFFFFF' , borderColor:'#8D8D99'}
+    CSV_FILENAME:'Asylum_Report.zip'
   }
 
   return (
     <div>
-        <DownloadButton/>
-
-
-
+        <DownloadButton downloadBtnInfo={downloadBtnInfo} />
       {/*logo*/}
       <div>
         <Image width={100} src={Logo} preview={false} alt="HRF logo white" />

@@ -2,21 +2,24 @@ import React from 'react';
 import { Button, Space, Typography, Layout, Image } from 'antd';
 import Logo from '../../styles/Images/WhiteLogo.png';
 import { DownloadButton } from '../common/DownloadButton'
+import '../../styles/styles.css'
+
 const { Text } = Typography;
 function FooterContent() {
 
   const downloadBtnInfo = {
-    DOWNLOAD_URL:'http://localhost:3000/test-raw-data.zip',
-    BTN_TXT:'poipoi Report .csv',
-    MSG_LOADING:'Downloading data...',
+    BTN_TXT:'Download all data',
+    MSG_LOADING:'Downloading all data...',
     DOWNLOAD_TXT:'downloading CSV file',
     MSG_DOWNLOAD_FINISHED:'Downloading finished',
-    CSV_FILENAME:'Asylum_Report.zip'
+    STYLING:{background: '#404C4A', color:'#FFFFFF' , borderColor:'#8D8D99'}
   }
 
   return (
     <div>
-        <DownloadButton downloadBtnInfo={downloadBtnInfo} />
+      <div className='download-btn-container'>
+        <DownloadButton className='download-btn' downloadBtnInfo={downloadBtnInfo} />
+      </div>
       {/*logo*/}
       <div>
         <Image width={100} src={Logo} preview={false} alt="HRF logo white" />
@@ -44,7 +47,7 @@ function FooterContent() {
 function SubFooter() {
   const { Footer } = Layout;
   return (
-    <Footer style={{ backgroundColor: '#403737' }}>
+    <Footer style={{ backgroundColor: '#404C4A' }}>
       <Space direction="horizontal">
         <Button
           type="text"

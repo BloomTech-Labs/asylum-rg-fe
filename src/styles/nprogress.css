@@ -71,13 +71,3 @@
     0%   { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-  
-  .download-btn-container{
-    position: absolute;
-    right: 3.5rem;
-
-}
-
-.downloadBtn{
-
-}

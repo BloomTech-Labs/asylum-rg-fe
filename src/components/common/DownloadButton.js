@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Button, message} from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
 import Axios from 'axios';
-import { loadProgressBar } from 'axios-progress-bar'
+import { loadProgressBar } from 'axios-progress-bar';
 import fileDownload from 'js-file-download';
-import '../../styles/nprogress.css'
+import '../../styles/nprogress.css';
 import 'antd/dist/antd.css';
 
 const CSV_FILENAME = 'USCIS_Asylum_Data.zip';
@@ -16,16 +16,16 @@ const defaultInfo = {
   DOWNLOAD_TXT:'downloading CSV file',
   MSG_DOWNLOAD_FINISHED:'Downloading finished',
   STYLING:{background: '#FD8960', color:'#FFFFFF' , borderColor:'#8D8D99'}
-}
+};
 
 function DownloadButton(props){
   const info = props.downloadBtnInfo || defaultInfo;
   const { BTN_TXT, MSG_LOADING, DOWNLOAD_TXT, MSG_DOWNLOAD_FINISHED, STYLING } = info;
   const [txt, setTxt] = useState(BTN_TXT);
   const url = process.env.REACT_APP_DOWNLOAD_RAW_CSV_DATA_URL || DEFAULT_DOWNLOAD_URL;
-  const STYLE = STYLING || defaultInfo.STYLING
+  const STYLE = STYLING || defaultInfo.STYLING;
 
-  loadProgressBar({showSpinner:false})
+  loadProgressBar({showSpinner:false});
    
   const downloadCsv = () => {
     setTxt(DOWNLOAD_TXT);
@@ -34,7 +34,7 @@ function DownloadButton(props){
       Axios.get(url, {
         responseType: 'blob'
       }).then(res => {
-        message.destroy()
+        message.destroy();
         message.success(MSG_DOWNLOAD_FINISHED);
         setTxt(BTN_TXT);
         fileDownload(res.data, CSV_FILENAME);

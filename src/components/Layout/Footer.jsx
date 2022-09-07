@@ -7,15 +7,15 @@ import { colors } from '../../styles/data_vis_colors';
 import '../../styles/RenderLandingPage.less';
 import { DownloadOutlined } from '@ant-design/icons';
 =======
-import { DownloadButton } from '../common/DownloadButton'
+import { DownloadButton } from '../common/DownloadButton';
 <<<<<<< HEAD
 >>>>>>> 42a7cab (addedd Downloadbutton as component)
 =======
-import { DownloadButton } from '../common/DownloadButton'
+import { DownloadButton } from '../common/DownloadButton';
 <<<<<<< HEAD
 >>>>>>> 42a7cab (addedd Downloadbutton as component)
 =======
-import '../../styles/styles.css'
+import '../../styles/styles.css';
 
 >>>>>>> b60cbd2 (updated styles to be overwritten out of component)
 const { Text } = Typography;
@@ -73,7 +73,11 @@ function SubFooter() {
   };
   return (
 <<<<<<< HEAD
-    <Footer style={{ backgroundColor: '#404C4A' }}>
+    <Footer
+      style={{
+        backgroundColor: primary_accent_color,
+      }}
+    >
 =======
     <Footer style={{ backgroundColor: '#404C4A' }}>
 >>>>>>> b60cbd2 (updated styles to be overwritten out of component)

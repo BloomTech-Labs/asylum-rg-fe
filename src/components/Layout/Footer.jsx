@@ -8,24 +8,34 @@ import '../../styles/RenderLandingPage.less';
 import { DownloadOutlined } from '@ant-design/icons';
 =======
 import { DownloadButton } from '../common/DownloadButton'
+<<<<<<< HEAD
 >>>>>>> 42a7cab (addedd Downloadbutton as component)
+=======
+import { DownloadButton } from '../common/DownloadButton'
+<<<<<<< HEAD
+>>>>>>> 42a7cab (addedd Downloadbutton as component)
+=======
+import '../../styles/styles.css'
+
+>>>>>>> b60cbd2 (updated styles to be overwritten out of component)
 const { Text } = Typography;
 const { primary_accent_color } = colors;
 
 function FooterContent() {
 
   const downloadBtnInfo = {
-    DOWNLOAD_URL:'http://localhost:3000/test-raw-data.zip',
-    BTN_TXT:'poipoi Report .csv',
-    MSG_LOADING:'Downloading data...',
+    BTN_TXT:'Download all data',
+    MSG_LOADING:'Downloading all data...',
     DOWNLOAD_TXT:'downloading CSV file',
     MSG_DOWNLOAD_FINISHED:'Downloading finished',
-    CSV_FILENAME:'Asylum_Report.zip'
+    STYLING:{background: '#404C4A', color:'#FFFFFF' , borderColor:'#8D8D99'}
   }
 
   return (
     <div>
-        <DownloadButton downloadBtnInfo={downloadBtnInfo} />
+      <div className='download-btn-container'>
+        <DownloadButton className='download-btn' downloadBtnInfo={downloadBtnInfo} />
+      </div>
       {/*logo*/}
       <div>
         <Image width={100} src={Logo} preview={false} alt="HRF logo white" />
@@ -62,7 +72,11 @@ function SubFooter() {
     Careers: `${base_url}/careers`,
   };
   return (
+<<<<<<< HEAD
     <Footer style={{ backgroundColor: '#404C4A' }}>
+=======
+    <Footer style={{ backgroundColor: '#404C4A' }}>
+>>>>>>> b60cbd2 (updated styles to be overwritten out of component)
       <Space direction="horizontal">
         {Object.entries(button_links_by_text).map(text_link_pair => {
           return (

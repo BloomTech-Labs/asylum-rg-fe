@@ -23,7 +23,7 @@ const defaultInfo = {
 
 function DownloadButton(props){
   const info = props.downloadBtnInfo || defaultInfo;
-  const { DOWNLOAD_URL, BTN_TXT, MSG_LOADING, DOWNLOAD_TXT, MSG_DOWNLOAD_FINISHED, CSV_FILENAME } = info;
+  const { BTN_TXT, MSG_LOADING, DOWNLOAD_TXT, MSG_DOWNLOAD_FINISHED, STYLING } = info;
   const [txt, setTxt] = useState(BTN_TXT);
   const url = process.env.REACT_APP_DOWNLOAD_RAW_CSV_DATA_URL || DOWNLOAD_URL
   const info = props.downloadBtnInfo || defaultInfo;

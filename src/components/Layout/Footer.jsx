@@ -1,10 +1,14 @@
-import { Button, Space, Typography, Layout, Image } from 'antd';
 import React from 'react';
+import { Button, Space, Typography, Layout, Image } from 'antd';
 import Logo from '../../styles/Images/WhiteLogo.png';
+<<<<<<< HEAD
 import { colors } from '../../styles/data_vis_colors';
 
 import '../../styles/RenderLandingPage.less';
 import { DownloadOutlined } from '@ant-design/icons';
+=======
+import { DownloadButton } from '../common/DownloadButton'
+>>>>>>> 42a7cab (addedd Downloadbutton as component)
 const { Text } = Typography;
 const { primary_accent_color } = colors;
 
@@ -20,14 +24,7 @@ function FooterContent() {
 
   return (
     <div>
-        <Button
-          icon={<DownloadOutlined />}
-          type="primary"
-          size="large"
-          /* href="https://www.humanrightsfirst.org/about" */
-          /* style={{ color: '#E2F0F7' }} */
-        >Download
-        </Button>
+        <DownloadButton/>
 
 
 

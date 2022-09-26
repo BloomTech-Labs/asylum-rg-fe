@@ -18,11 +18,6 @@ function RenderLandingPage(props) {
   return (
     <div className="main">
       <div className="header">
-        <div className="hrf-logo-img-container">
-          <a href="https://www.humanrightsfirst.org/">
-            <img src={WhiteLogo} alt="Human Rights First white logo" />
-          </a>
-        </div>
         <div className="header-text-container">
           <h1>Asylum Office Grant Rate Tracker</h1>
           <h3>

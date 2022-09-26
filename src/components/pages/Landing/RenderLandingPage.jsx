@@ -83,11 +83,11 @@ function RenderLandingPage(props) {
         <h1>Systemic Disparity Insights</h1>
         <div className="data-container">
           <div className="first-data-point-container">
-            <h2>-16%</h2>
+            <h2>36%</h2>
             <h3>
-              By the end of the Trump administration, asylum office grant rates
-              had fallen from 44 percent in fiscal year 2016 to 28 percent in
-              fiscal year 2020
+              By the end of the Trump administration, the average asylum office
+              grant rate had fallen 44 percent in fiscal year 2016 to 28 percent
+              in fiscal year 2020.
             </h3>
           </div>
           <div className="second-data-point-container">

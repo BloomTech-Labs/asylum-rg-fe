@@ -22,6 +22,8 @@ function ViewSelect(props) {
         flexDirection: 'column',
         justifyContent: 'space-around',
         minHeight: '100px',
+        marginTop: '-250px',
+        marginLeft: '40px',
       }}
     >
       <Button onClick={() => update_view('time-series', office)}>

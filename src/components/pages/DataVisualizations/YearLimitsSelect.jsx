@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Form, Button, Input } from 'antd';
 import {
   setVisualizationData,
@@ -6,9 +6,7 @@ import {
 } from '../../../state/actionCreators';
 import YearLimitsSlider from './YearLimitsSlider';
 import { rawApiDataToPlotlyReadyInfo, useInterval } from '../../../utils';
-import reducers from '../../../state/reducers';
 
-import { createStore } from 'redux';
 import { connect } from 'react-redux';
 import { colors } from '../../../styles/data_vis_colors';
 
@@ -105,7 +103,7 @@ function YearLimitsSelect(props) {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center',
+          // alignItems: 'center',
         }}
       >
         <Form.Item
@@ -116,7 +114,7 @@ function YearLimitsSelect(props) {
             {
               validator: (_, value) => {
                 return value &&
-                  parseInt(value) == value &&
+                  parseInt(value) === value &&
                   value >= 2015 &&
                   value <= 2022
                   ? Promise.resolve()
@@ -133,12 +131,13 @@ function YearLimitsSelect(props) {
         <Form.Item
           label="To:"
           name="year_end"
+          style={{ marginLeft: '17px' }}
           rules={[
             { required: true },
             {
               validator: (_, value) => {
                 return value &&
-                  parseInt(value) == value &&
+                  parseInt(value) === value &&
                   value >= 2015 &&
                   value <= 2022 &&
                   value > form.getFieldValue('year_start')
@@ -160,6 +159,7 @@ function YearLimitsSelect(props) {
             style={{
               backgroundColor: primary_accent_color,
               color: 'white',
+              marginLeft: '89px',
             }}
           >
             Update Query

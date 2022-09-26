@@ -36,7 +36,7 @@ function TimeSeriesSingleOffice(props) {
     } else {
       setRowsForTable(timeSeriesData.rowsForTable);
     }
-  }, [timeSeriesData]);
+  }, [timeSeriesData, currentYear]);
 
   const columnsForTable = [
     'Year',

@@ -49,6 +49,7 @@ function SubFooter() {
     <Footer
       style={{
         backgroundColor: primary_accent_color,
+        marginLeft: '-7px',
       }}
     >
       <Space direction="horizontal">

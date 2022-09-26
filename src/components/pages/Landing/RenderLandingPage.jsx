@@ -1,5 +1,4 @@
 import React from 'react';
-import WhiteLogo from '../../../styles/Images/WhiteLogo.png';
 import GrantRatesByOfficeImg from '../../../styles/Images/bar-graph-no-text.png';
 import GrantRatesByNationalityImg from '../../../styles/Images/pie-chart-no-text.png';
 import GrantRatesOverTimeImg from '../../../styles/Images/line-graph-no-text.png';

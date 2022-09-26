@@ -9,10 +9,9 @@ const { primary_accent_color } = colors;
 function HeaderContent() {
   return (
     <div
-      className="header-content"
       style={{
         display: 'flex',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         width: '100%',
         backgroundColor: primary_accent_color,
       }}
@@ -22,12 +21,14 @@ function HeaderContent() {
           <Image width={100} src={Logo} preview={false} alt="HRF logo white" />
         </a>
       </div>
-      <Link to="/" style={{ color: '#E2F0F7' }}>
-        Home
-      </Link>
-      <Link to="/graphs" style={{ color: '#E2F0F7' }}>
-        Graphs
-      </Link>
+      <div>
+        <Link to="/" style={{ color: '#E2F0F7', paddingRight: '75px' }}>
+          Home
+        </Link>
+        <Link to="/graphs" style={{ color: '#E2F0F7' }}>
+          Graphs
+        </Link>
+      </div>
     </div>
   );
 }

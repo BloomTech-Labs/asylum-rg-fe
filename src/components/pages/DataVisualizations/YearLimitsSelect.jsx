@@ -103,7 +103,7 @@ function YearLimitsSelect(props) {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center',
+          // alignItems: 'center',
         }}
       >
         <Form.Item
@@ -131,6 +131,7 @@ function YearLimitsSelect(props) {
         <Form.Item
           label="To:"
           name="year_end"
+          style={{ marginLeft: '17px' }}
           rules={[
             { required: true },
             {
@@ -158,6 +159,7 @@ function YearLimitsSelect(props) {
             style={{
               backgroundColor: primary_accent_color,
               color: 'white',
+              marginLeft: '89px',
             }}
           >
             Update Query

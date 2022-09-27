@@ -41,7 +41,6 @@ function CitizenshipMapAll(props) {
 
   const geoScopeArray = [
     'world',
-    'usa',
     'europe',
     'asia',
     'africa',

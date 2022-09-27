@@ -41,7 +41,6 @@ function CitizenshipMapSingleOffice(props) {
   }, [citizenshipMapData]);
   const geoScopeArray = [
     'world',
-    'usa',
     'europe',
     'asia',
     'africa',

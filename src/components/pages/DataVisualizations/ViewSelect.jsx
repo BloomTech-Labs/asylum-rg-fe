@@ -37,7 +37,7 @@ function ViewSelect(props) {
         </Button>
       )}
       <Button onClick={() => update_view('citizenship', office)}>
-        Citizenship
+        Citizenship of Asylum Seeker
       </Button>
     </div>
   );

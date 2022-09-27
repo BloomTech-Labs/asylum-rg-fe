@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory, Switch, Route, Link } from 'react-router-dom';
+import { useHistory, Switch, Route } from 'react-router-dom';
 import AllOfficesRoute from './AllOfficesRoute';
 import SingleOfficeRoute from './SingleOfficeRoute';
 import 'antd/dist/antd.css';
@@ -7,23 +7,23 @@ import { Select } from 'antd';
 import { colors } from '../../../styles/data_vis_colors';
 
 const { Option } = Select;
-const { background_color, primary_accent_color } = colors;
+const { background_color } = colors;
 
 function GraphsContainer() {
   const [view, set_view] = useState('time-series');
   const history = useHistory();
   const offices = [
     'All',
-    'ZLA',
-    'ZSF',
-    'ZNY',
-    'ZHN',
-    'ZCH',
-    'ZNK',
-    'ZAR',
-    'ZBO',
-    'ZMI',
-    'ZOL',
+    'ZLA', //Los Angeles, CA
+    'ZSF', //San Francisco, CA
+    'ZNY', //New York, NY
+    'ZHN', //Houston, TX
+    'ZCH', //Chicago, IL
+    'ZNK', //Newark, NJ
+    'ZAR', //Arlington, VA
+    'ZBO', //Boston, MA
+    'ZMI', //Miami, FL
+    'ZOL', //New Orleans, LA
   ];
   function handle_office_select(value) {
     if (view === 'office-heat-map') {

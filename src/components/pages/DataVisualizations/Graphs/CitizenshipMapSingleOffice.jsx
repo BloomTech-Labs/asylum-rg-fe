@@ -95,7 +95,7 @@ function CitizenshipMapSingleOffice(props) {
           },
         ]}
         layout={{
-          title: 'Grant Percentage by Citizenship',
+          title: 'USCIS Asylum Grant Rates by Citizenship of Asylum Seeker',
           paper_bgcolor: background_color,
           hoverlabel: {
             bordercolor: background_color,

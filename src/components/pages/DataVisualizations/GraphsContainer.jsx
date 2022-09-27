@@ -13,6 +13,7 @@ function GraphsContainer() {
   const [view, set_view] = useState('time-series');
   const history = useHistory();
   const offices = [
+    'All',
     'ZLA',
     'ZSF',
     'ZNY',
@@ -27,6 +28,11 @@ function GraphsContainer() {
   function handle_office_select(value) {
     if (view === 'office-heat-map') {
       set_view('time-series');
+    }
+    if (value === 'All') {
+      history.push(
+        `/graphs/all/${view === 'office-heat-map' ? 'time-series' : view}`
+      );
     }
     history.push(
       `/graphs/${value}/${view === 'office-heat-map' ? 'time-series' : view}`
@@ -53,35 +59,27 @@ function GraphsContainer() {
           className="heatmaps-main-nav-container"
           style={{
             display: 'flex',
-            justifyContent: 'space-around',
+            justifyContent: 'right',
+            marginRight: '17.4%',
             height: '10vh',
             alignItems: 'center',
           }}
         >
-          <Link
-            to={`/graphs/all/${view}`}
-            style={{
-              height: '40px',
-              width: '70px',
-              borderRadius: '4px',
-              color: 'white',
-              backgroundColor: primary_accent_color,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            All
-          </Link>
           <Select
             defaultValue={offices[0]}
             onSelect={value => handle_office_select(value)}
           >
-            {offices.map((office, idx) => (
-              <Option key={idx} value={office}>
-                {office}
-              </Option>
-            ))}
+            {offices.map((office, idx) =>
+              office === 'All' ? (
+                <Option key={idx} value={'all'}>
+                  {office}
+                </Option>
+              ) : (
+                <Option key={idx} value={office}>
+                  {office}
+                </Option>
+              )
+            )}
           </Select>
         </div>
         <Switch>

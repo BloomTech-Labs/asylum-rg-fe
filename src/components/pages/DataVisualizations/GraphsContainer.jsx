@@ -13,30 +13,89 @@ function GraphsContainer() {
   const [view, set_view] = useState('time-series');
   const history = useHistory();
   const offices = [
-    'All',
-    'ZLA', //Los Angeles, CA
-    'ZSF', //San Francisco, CA
-    'ZNY', //New York, NY
-    'ZHN', //Houston, TX
-    'ZCH', //Chicago, IL
-    'ZNK', //Newark, NJ
-    'ZAR', //Arlington, VA
-    'ZBO', //Boston, MA
-    'ZMI', //Miami, FL
-    'ZOL', //New Orleans, LA
+    'All Offices',
+    'Los Angeles, CA',
+    'San Francisco, CA',
+    'New York, NY',
+    'Houston, TX',
+    'Chicago, IL',
+    'Newark, NJ',
+    'Arlington, VA',
+    'Boston, MA',
+    'Miami, FL',
+    'New Orleans, LA',
   ];
   function handle_office_select(value) {
-    if (view === 'office-heat-map') {
-      set_view('time-series');
+    // if (view === 'office-heat-map') {
+    //   set_view('time-series');
+    // }
+    // if (value === 'All') {
+    //   history.push(
+    //     `/graphs/all/${view === 'office-heat-map' ? 'time-series' : view}`
+    //   );
+    // }
+    // history.push(
+    //   `/graphs/${value}/${view === 'office-heat-map' ? 'time-series' : view}`
+    // );
+
+    switch (value) {
+      case 'All Offices':
+        history.push(
+          `/graphs/all/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Los Angeles, CA':
+        history.push(
+          `/graphs/ZLA/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'San Francisco, CA':
+        history.push(
+          `/graphs/ZSF/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'New York, NY':
+        history.push(
+          `/graphs/ZNY/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Houston, TX':
+        history.push(
+          `/graphs/ZHN/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Chicago, IL':
+        history.push(
+          `/graphs/ZCH/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Newark, NJ':
+        history.push(
+          `/graphs/ZNK/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Arlington, VA':
+        history.push(
+          `/graphs/ZAR/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Boston, MA':
+        history.push(
+          `/graphs/ZBO/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Miami, FL':
+        history.push(
+          `/graphs/ZMI/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'New Orleans, LA':
+        history.push(
+          `/graphs/ZOL/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      default:
     }
-    if (value === 'All') {
-      history.push(
-        `/graphs/all/${view === 'office-heat-map' ? 'time-series' : view}`
-      );
-    }
-    history.push(
-      `/graphs/${value}/${view === 'office-heat-map' ? 'time-series' : view}`
-    );
   }
   return (
     <div
@@ -56,7 +115,6 @@ function GraphsContainer() {
         }}
       >
         <div
-          className="heatmaps-main-nav-container"
           style={{
             display: 'flex',
             justifyContent: 'right',
@@ -66,7 +124,8 @@ function GraphsContainer() {
           }}
         >
           <Select
-            defaultValue={offices[0]}
+            // defaultValue={offices[0]}
+            placeholder="Select an Asylum Office"
             onSelect={value => handle_office_select(value)}
           >
             {offices.map((office, idx) =>

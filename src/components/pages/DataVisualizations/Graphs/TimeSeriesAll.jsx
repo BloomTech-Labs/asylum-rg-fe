@@ -17,7 +17,7 @@ function TimeSeriesAll(props) {
   const currentYear = new Date().getFullYear();
   const [rowsForAllDisplay, setRowsForAllDisplay] = useState([]);
   const columnsForAllDisplay = [
-    'Year',
+    'Fiscal Year',
     'Total Cases',
     '% Granted',
     '% Admin Close / Dismissal',
@@ -54,7 +54,8 @@ function TimeSeriesAll(props) {
           },
         ]}
         layout={{
-          title: 'Grant Rate for All Offices',
+          title:
+            'Disparate Asylum Grant Rates Shown by USCIS Asylum Office and Fiscal Year',
           height: 500,
           width: 700,
           yaxis: {
@@ -68,7 +69,7 @@ function TimeSeriesAll(props) {
               timeSeriesAllData[0] || 2015,
               timeSeriesAllData[timeSeriesAllData.length - 1] || currentYear,
             ],
-            title: 'Year',
+            title: 'Fiscal Year',
           },
           paper_bgcolor: background_color,
           hoverlabel: {

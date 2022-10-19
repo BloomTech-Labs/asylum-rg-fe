@@ -41,7 +41,7 @@ function TimeSeriesAll(props) {
         justifyContent: 'center',
       }}
     >
-      <p>Showing: Time series data for all asylum offices</p>
+      <p>Showing: Time series data for all USCIS Asylum Offices</p>
       <Plot
         data={[
           {
@@ -54,13 +54,12 @@ function TimeSeriesAll(props) {
           },
         ]}
         layout={{
-          title:
-            'Disparate Asylum Grant Rates Shown by USCIS Asylum Office and Fiscal Year',
+          title: 'Asylum Grant Rate for All USCIS Asylum Offices Over Time',
           height: 500,
           width: 700,
           yaxis: {
             range: [0, 100],
-            title: `Grant Rate %`,
+            title: `Asylum Grant Rate %`,
             autotick: false,
             dtick: 10,
           },

@@ -52,7 +52,7 @@ function TimeSeriesSingleOffice(props) {
   }, [timeSeriesData, currentYear]);
 
   const columnsForTable = [
-    'Year',
+    'Fiscal Year',
     'Total Cases',
     '% Granted',
     '% Admin Close / Dismissal',

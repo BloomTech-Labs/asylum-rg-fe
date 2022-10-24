@@ -83,13 +83,13 @@ function YearLimitsSelect(props) {
         minHeight: '50px',
       }}
     >
-      <YearLimitsSlider
+      {/* <YearLimitsSlider
         office={office}
         view={view}
         lowerLimit={2015}
         upperLimit={2022}
         step={1}
-      />
+      /> */}
       <Form
         form={form}
         name="yearLimitsSelect"
@@ -106,7 +106,7 @@ function YearLimitsSelect(props) {
           // alignItems: 'center',
         }}
       >
-        <Form.Item
+        {/* <Form.Item
           label="From:"
           name="year_start"
           rules={[
@@ -151,7 +151,7 @@ function YearLimitsSelect(props) {
           onChange={e => yearInputsOnChange(view, office, e)}
         >
           <Input />
-        </Form.Item>
+        </Form.Item> */}
         <Form.Item>
           <Button
             htmlType="submit"

@@ -74,7 +74,7 @@ function GraphWrapper(props) {
 
     if (office === 'all' || !office) {
       axios
-        .get('https://asylum-rg-fe.vercel.app', {
+        .get(process.env.REACT_APP_API_URI, {
           // mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
           params: {
             from: years[0],
@@ -89,7 +89,7 @@ function GraphWrapper(props) {
         });
     } else {
       axios
-        .get('https://asylum-rg-fe.vercel.app', {
+        .get(process.env.REACT_APP_API_URI, {
           // mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
           params: {
             from: years[0],

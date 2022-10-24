@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory, Switch, Route, Link } from 'react-router-dom';
+import { useHistory, Switch, Route } from 'react-router-dom';
 import AllOfficesRoute from './AllOfficesRoute';
 import SingleOfficeRoute from './SingleOfficeRoute';
 import 'antd/dist/antd.css';
@@ -7,30 +7,95 @@ import { Select } from 'antd';
 import { colors } from '../../../styles/data_vis_colors';
 
 const { Option } = Select;
-const { background_color, primary_accent_color } = colors;
+const { background_color } = colors;
 
 function GraphsContainer() {
   const [view, set_view] = useState('time-series');
   const history = useHistory();
   const offices = [
-    'ZLA',
-    'ZSF',
-    'ZNY',
-    'ZHN',
-    'ZCH',
-    'ZNK',
-    'ZAR',
-    'ZBO',
-    'ZMI',
-    'ZOL',
+    'All Offices',
+    'Los Angeles, CA',
+    'San Francisco, CA',
+    'New York, NY',
+    'Houston, TX',
+    'Chicago, IL',
+    'Newark, NJ',
+    'Arlington, VA',
+    'Boston, MA',
+    'Miami, FL',
+    'New Orleans, LA',
   ];
   function handle_office_select(value) {
-    if (view === 'office-heat-map') {
-      set_view('time-series');
+    // if (view === 'office-heat-map') {
+    //   set_view('time-series');
+    // }
+    // if (value === 'All') {
+    //   history.push(
+    //     `/graphs/all/${view === 'office-heat-map' ? 'time-series' : view}`
+    //   );
+    // }
+    // history.push(
+    //   `/graphs/${value}/${view === 'office-heat-map' ? 'time-series' : view}`
+    // );
+
+    switch (value) {
+      case 'All Offices':
+        history.push(
+          `/graphs/all/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Los Angeles, CA':
+        history.push(
+          `/graphs/ZLA/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'San Francisco, CA':
+        history.push(
+          `/graphs/ZSF/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'New York, NY':
+        history.push(
+          `/graphs/ZNY/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Houston, TX':
+        history.push(
+          `/graphs/ZHN/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Chicago, IL':
+        history.push(
+          `/graphs/ZCH/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Newark, NJ':
+        history.push(
+          `/graphs/ZNK/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Arlington, VA':
+        history.push(
+          `/graphs/ZAR/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Boston, MA':
+        history.push(
+          `/graphs/ZBO/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'Miami, FL':
+        history.push(
+          `/graphs/ZMI/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      case 'New Orleans, LA':
+        history.push(
+          `/graphs/ZOL/${view === 'office-heat-map' ? 'time-series' : view}`
+        );
+        break;
+      default:
     }
-    history.push(
-      `/graphs/${value}/${view === 'office-heat-map' ? 'time-series' : view}`
-    );
   }
   return (
     <div
@@ -50,38 +115,30 @@ function GraphsContainer() {
         }}
       >
         <div
-          className="heatmaps-main-nav-container"
           style={{
             display: 'flex',
-            justifyContent: 'space-around',
+            justifyContent: 'right',
+            marginRight: '17.4%',
             height: '10vh',
             alignItems: 'center',
           }}
         >
-          <Link
-            to={`/graphs/all/${view}`}
-            style={{
-              height: '40px',
-              width: '70px',
-              borderRadius: '4px',
-              color: 'white',
-              backgroundColor: primary_accent_color,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            All
-          </Link>
           <Select
-            defaultValue={offices[0]}
+            // defaultValue={offices[0]}
+            placeholder="Select an Asylum Office"
             onSelect={value => handle_office_select(value)}
           >
-            {offices.map((office, idx) => (
-              <Option key={idx} value={office}>
-                {office}
-              </Option>
-            ))}
+            {offices.map((office, idx) =>
+              office === 'All' ? (
+                <Option key={idx} value={'all'}>
+                  {office}
+                </Option>
+              ) : (
+                <Option key={idx} value={office}>
+                  {office}
+                </Option>
+              )
+            )}
           </Select>
         </div>
         <Switch>

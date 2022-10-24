@@ -21,6 +21,41 @@ function OfficeHeatMap(props) {
   });
   const [rowsForTable, setRowsForTable] = useState([]);
 
+  // function officeHeatMapDataFormatter(yearOffice) {
+  //   switch (yearOffice['Year [Office]']) {
+  //     case yearOffice['Year [Office]'].includes('ZHN'):
+  //       yearOffice['Year [Office]'] = '';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZNY'):
+  //       yearOffice['Year [Office]'] = '';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZNK'):
+  //       yearOffice['Year [Office]'] = '';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZBO'):
+  //       yearOffice['Year [Office]'] = '';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZMI'):
+  //       yearOffice['Year [Office]'] = '';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZAR'):
+  //       yearOffice['Year [Office]'] = '';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZSF'):
+  //       yearOffice['Year [Office]'] = '';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZLA'):
+  //       yearOffice['Year [Office]'] = 'Las Angelas';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZCH'):
+  //       yearOffice['Year [Office]'] = '';
+  //       break;
+  //     default:
+  //       console.log(yearOffice['Year [Office]']);
+  //       console.log('No Year [Office] Found!');
+  //   }
+  // }
+
   useEffect(() => {
     if (officeHeatMapData['officeHeatMapDataObject'] !== undefined) {
       setPlotlyGraphAxis({
@@ -34,6 +69,8 @@ function OfficeHeatMap(props) {
     if (officeHeatMapData.rowsForTable === undefined) {
       setRowsForTable([]);
     } else {
+      // console.log(officeHeatMapData);
+      // officeHeatMapData.rowsForTable = officeHeatMapData.rowsForTable.map(officeHeatMapDataFormatter);
       setRowsForTable(officeHeatMapData.rowsForTable);
     }
   }, [officeHeatMapData]);
@@ -64,10 +101,23 @@ function OfficeHeatMap(props) {
             x: plotlyGraphAxis['x'],
             y: plotlyGraphAxis['y'],
             z: plotlyGraphAxis['z'],
+            colorscale: [
+              ['0.0', 'rgb(165,0,38)'],
+              ['0.111111111111', 'rgb(215,48,39)'],
+              ['0.222222222222', 'rgb(244,109,67)'],
+              ['0.333333333333', 'rgb(253,174,97)'],
+              ['0.444444444444', 'rgb(254,224,144)'],
+              ['0.555555555556', 'rgb(224,243,248)'],
+              ['0.666666666667', 'rgb(171,217,233)'],
+              ['0.777777777778', 'rgb(116,173,209)'],
+              ['0.888888888889', 'rgb(69,117,180)'],
+              ['1.0', 'rgb(49,54,149)'],
+            ],
             type: 'heatmap',
           },
         ]}
         layout={{
+          title: 'USCIS Asylum Office Grant Rates by Year and Office',
           height: 500,
           width: 700,
           paper_bgcolor: background_color,

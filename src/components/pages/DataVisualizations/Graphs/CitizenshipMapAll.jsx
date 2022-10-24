@@ -41,7 +41,6 @@ function CitizenshipMapAll(props) {
 
   const geoScopeArray = [
     'world',
-    'usa',
     'europe',
     'asia',
     'africa',
@@ -97,7 +96,7 @@ function CitizenshipMapAll(props) {
           },
         ]}
         layout={{
-          title: 'Grant Percentage by Citizenship',
+          title: 'USCIS Asylum Grant Rates by Citizenship of Asylum Seeker',
           paper_bgcolor: background_color,
           hoverlabel: {
             bordercolor: secondary_accent_color,

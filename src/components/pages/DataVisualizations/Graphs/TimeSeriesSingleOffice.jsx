@@ -13,6 +13,19 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
+const officeNameMap = {
+  ZLA: 'Los Angelas, CA',
+  ZSF: 'San Francisco, CA',
+  ZNY: 'New York, NY',
+  ZHN: 'Houston, TX',
+  ZCH: 'Chicago, IL',
+  ZNK: 'Newark, NJ',
+  ZAR: 'Arlington, VA',
+  ZBO: 'Boston, MA',
+  ZMI: 'Miami, FL',
+  ZOL: 'New Orleans, LA',
+};
+
 function TimeSeriesSingleOffice(props) {
   const { office, timeSeriesData } = props;
   const currentYear = new Date().getFullYear();
@@ -39,7 +52,7 @@ function TimeSeriesSingleOffice(props) {
   }, [timeSeriesData, currentYear]);
 
   const columnsForTable = [
-    'Year',
+    'Fiscal Year',
     'Total Cases',
     '% Granted',
     '% Admin Close / Dismissal',
@@ -56,7 +69,10 @@ function TimeSeriesSingleOffice(props) {
         minHeight: '100px',
       }}
     >
-      <p>Showing: Time series data for {office}</p>
+      <p>
+        Showing: Time series data for all USCIS Asylum Offices - (
+        {officeNameMap[office]})
+      </p>
       <Plot
         data={[
           {
@@ -70,12 +86,12 @@ function TimeSeriesSingleOffice(props) {
           },
         ]}
         layout={{
-          title: `Grant Rate % for ${office}`,
+          title: `Asylum Grant Rate for the ${officeNameMap[office]} Asylum Office Over Time`,
           height: 500,
           width: 700,
           yaxis: {
             range: [0, 100],
-            title: `Grant Rate %`,
+            title: `Asylum Grant Rate %`,
             autotick: false,
             dtick: 10,
           },
@@ -84,7 +100,7 @@ function TimeSeriesSingleOffice(props) {
               plotlyGraphAxis['x'][0],
               plotlyGraphAxis['x'][plotlyGraphAxis['x'].length - 1],
             ],
-            title: `Year`,
+            title: `Fiscal Year`,
           },
           paper_bgcolor: background_color,
           hoverlabel: {

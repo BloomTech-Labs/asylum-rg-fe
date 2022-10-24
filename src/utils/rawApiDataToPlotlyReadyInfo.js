@@ -16,15 +16,15 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
 
   let yearMinMax = []; //variable to set minYear and MaxYear
   for (let yearResults of data[0]['yearResults']) {
-    yearMinMax.push(yearResults['year']);
+    yearMinMax.push(yearResults['fiscal_year']);
   }
 
   const yearByOfficeByGrant = {}; //Object that contacts year by Office by grant rate information
   for (let office of data[0]['yearResults']) {
-    if (!yearByOfficeByGrant[office['year']])
-      yearByOfficeByGrant[office['year']] = {}; //if year not existing set to empty object
+    if (!yearByOfficeByGrant[office['fiscal_year']])
+      yearByOfficeByGrant[office['fiscal_year']] = {}; //if year not existing set to empty object
     for (let yearData of office['yearData']) {
-      yearByOfficeByGrant[office['year']][yearData['office']] = {
+      yearByOfficeByGrant[office['fiscal_year']][yearData['office']] = {
         //assign rates to year:{office:{}}
         granted: yearData['granted'],
         adminClosed: yearData['adminClosed'],
@@ -45,7 +45,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
   }
   for (let yearResults of data[0]['yearResults']) {
     for (let yearData of yearResults['yearData']) {
-      officeData[yearData['office']]['xYears'].push(yearResults['year']);
+      officeData[yearData['office']]['xYears'].push(yearResults['fiscal_year']);
       officeData[yearData['office']]['totals'].push(yearData['totalCases']);
       officeData[yearData['office']]['yTotalPercentGranteds'].push(
         yearData['granted']
@@ -65,7 +65,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
         const rowsForAllDisplay = [];
         for (let yearResults of data[0].yearResults) {
           rowItem = {
-            Year: yearResults.year,
+            'Fiscal Year': yearResults.fiscal_year,
             'Total Cases': yearResults.totalCases,
             '% Granted': Number(yearResults.granted).toFixed(2),
             '% Admin Close / Dismissal': Number(
@@ -84,7 +84,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           totalPercentDenieds: [],
         };
         for (let officeName of data[0]['yearResults']) {
-          finalData['xYears'].push(officeName['year']);
+          finalData['xYears'].push(officeName['fiscal_year']);
           finalData['totals'].push(officeName['totalCases']);
           finalData['yTotalPercentGranteds'].push(officeName['granted']);
           finalData['totalPercentAdminCloseds'].push(officeName['adminClosed']);
@@ -104,7 +104,10 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
             ) {
               rowItem = {
                 'Year [Office]':
-                  String(yearResults.year) + ' [' + String(officeKey) + ']',
+                  String(yearResults.fiscal_year) +
+                  ' [' +
+                  String(officeKey) +
+                  ']',
                 'Total Cases': yearResults.yearData.filter(
                   yearItem => yearItem.office === officeKey
                 )[0].totalCases,
@@ -134,15 +137,15 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           y: [], //year
           z: [], //rate
         };
-        for (let year in yearByOfficeByGrant) {
+        for (let fiscal_year in yearByOfficeByGrant) {
           //loop through
-          officeHeatMapDataObject['y'].push(year); //include year into y axis
+          officeHeatMapDataObject['y'].push(fiscal_year); //include year into y axis
           let zAxisArray = []; //Array to hold each row for z axis
           for (let officeName of officeCodes) {
             //loop using unique office names
             zAxisArray.push(
-              yearByOfficeByGrant[year][officeName]
-                ? yearByOfficeByGrant[year][officeName]['granted']
+              yearByOfficeByGrant[fiscal_year][officeName]
+                ? yearByOfficeByGrant[fiscal_year][officeName]['granted']
                 : 0
             );
           }
@@ -183,7 +186,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
     switch (view) {
       case 'time-series':
         rowsForTable = [];
-        data[0].yearResults.sort((a, b) => a.year - b.year);
+        data[0].yearResults.sort((a, b) => a.fiscal_year - b.fiscal_year);
         for (let i = 0; i < data[0].yearResults.length; i++) {
           if (
             data[0].yearResults[i].yearData.filter(
@@ -194,7 +197,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
               dataItem => dataItem.office === office
             )[0];
             rowItem = {
-              Year: data[0].yearResults[i].year,
+              'Fiscal Year': data[0].yearResults[i].fiscal_year,
               'Total Cases': officeObj.totalCases,
               '% Granted': Number(officeObj.granted).toFixed(2),
               '% Admin Close / Dismissal': Number(

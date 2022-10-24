@@ -1,6 +1,7 @@
 import React from 'react';
 import TableRow from './TableRow';
 import { colors } from '../../../../../styles/data_vis_colors';
+import { useEffect } from 'react';
 
 const { primary_accent_color } = colors;
 
@@ -8,6 +9,46 @@ function Table(props) {
   const { rows, columns, tableWidth, rowHeight } = props;
   // rows here should be an array of rows containing objects w/ properties keyed by column names
   // columns should just be an array of column names
+  // function officeHeatMapDataFormatter(yearOffice) {
+  //   switch (yearOffice['Year [Office]']) {
+  //     case yearOffice['Year [Office]'].includes('ZHN'):
+  //       yearOffice['Year [Office]'] = 'test';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZNY'):
+  //       yearOffice['Year [Office]'] = 'test';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZNK'):
+  //       yearOffice['Year [Office]'] = 'test';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZBO'):
+  //       yearOffice['Year [Office]'] = 'test';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZMI'):
+  //       yearOffice['Year [Office]'] = 'test';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZAR'):
+  //       yearOffice['Year [Office]'] = 'test';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZSF'):
+  //       yearOffice['Year [Office]'] = 'test';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZLA'):
+  //       yearOffice['Year [Office]'] = 'Las Angelas';
+  //       break;
+  //     case yearOffice['Year [Office]'].includes('ZCH'):
+  //       yearOffice['Year [Office]'] = 'test';
+  //       break;
+  //     default:
+  //       console.log(yearOffice['Year [Office]']);
+  //       console.log('No Year [Office] Found!');
+  //   }
+  // }
+
+  // let newRows = [];
+
+  // newRows = rows.map(officeHeatMapDataFormatter);
+  // console.log(newRows);
+
   return (
     <div
       className="g-table"

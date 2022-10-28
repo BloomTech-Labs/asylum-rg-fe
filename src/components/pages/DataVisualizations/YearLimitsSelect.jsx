@@ -1,10 +1,10 @@
 import React from 'react';
-import { Form, Button, Input } from 'antd';
+import { Form, Button /* Input */ } from 'antd';
 import {
   setVisualizationData,
   setHeatMapYears,
 } from '../../../state/actionCreators';
-import YearLimitsSlider from './YearLimitsSlider';
+// import YearLimitsSlider from './YearLimitsSlider';
 import { rawApiDataToPlotlyReadyInfo, useInterval } from '../../../utils';
 
 import { connect } from 'react-redux';

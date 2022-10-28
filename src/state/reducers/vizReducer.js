@@ -37,61 +37,61 @@ export const initialState = {
   citizenshipMapAllData: {},
   citizenshipMapAllYears: [2015, currentYear],
   offices: {
-    ZLA: {
+    'Los Angeles, CA': {
       timeSeriesData: {},
       timeSeriesYears: [2015, currentYear],
       citizenshipMapData: {},
       citizenshipMapYears: [2015, currentYear],
     },
-    ZSF: {
+    'San Francisco, CA': {
       timeSeriesData: {},
       timeSeriesYears: [2015, currentYear],
       citizenshipMapData: {},
       citizenshipMapYears: [2015, currentYear],
     },
-    ZNY: {
+    'New York, NY': {
       timeSeriesData: {},
       timeSeriesYears: [2015, currentYear],
       citizenshipMapData: {},
       citizenshipMapYears: [2015, currentYear],
     },
-    ZHN: {
+    'Houston, TX': {
       timeSeriesData: {},
       timeSeriesYears: [2015, currentYear],
       citizenshipMapData: {},
       citizenshipMapYears: [2015, currentYear],
     },
-    ZCH: {
+    'Chicago, IL': {
       timeSeriesData: {},
       timeSeriesYears: [2015, currentYear],
       citizenshipMapData: {},
       citizenshipMapYears: [2015, currentYear],
     },
-    ZNK: {
+    'Newark, NJ': {
       timeSeriesData: {},
       timeSeriesYears: [2015, currentYear],
       citizenshipMapData: {},
       citizenshipMapYears: [2015, currentYear],
     },
-    ZAR: {
+    'Arlington, VA': {
       timeSeriesData: {},
       timeSeriesYears: [2015, currentYear],
       citizenshipMapData: {},
       citizenshipMapYears: [2015, currentYear],
     },
-    ZBO: {
+    'Boston, MA': {
       timeSeriesData: {},
       timeSeriesYears: [2015, currentYear],
       citizenshipMapData: {},
       citizenshipMapYears: [2015, currentYear],
     },
-    ZMI: {
+    'Miami, FL': {
       timeSeriesData: {},
       timeSeriesYears: [2015, currentYear],
       citizenshipMapData: {},
       citizenshipMapYears: [2015, currentYear],
     },
-    ZOL: {
+    'New Orleans, LA': {
       timeSeriesData: {},
       timeSeriesYears: [2015, currentYear],
       citizenshipMapData: {},

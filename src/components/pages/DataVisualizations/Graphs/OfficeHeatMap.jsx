@@ -21,41 +21,6 @@ function OfficeHeatMap(props) {
   });
   const [rowsForTable, setRowsForTable] = useState([]);
 
-  // function officeHeatMapDataFormatter(yearOffice) {
-  //   switch (yearOffice['Year [Office]']) {
-  //     case yearOffice['Year [Office]'].includes('ZHN'):
-  //       yearOffice['Year [Office]'] = '';
-  //       break;
-  //     case yearOffice['Year [Office]'].includes('ZNY'):
-  //       yearOffice['Year [Office]'] = '';
-  //       break;
-  //     case yearOffice['Year [Office]'].includes('ZNK'):
-  //       yearOffice['Year [Office]'] = '';
-  //       break;
-  //     case yearOffice['Year [Office]'].includes('ZBO'):
-  //       yearOffice['Year [Office]'] = '';
-  //       break;
-  //     case yearOffice['Year [Office]'].includes('ZMI'):
-  //       yearOffice['Year [Office]'] = '';
-  //       break;
-  //     case yearOffice['Year [Office]'].includes('ZAR'):
-  //       yearOffice['Year [Office]'] = '';
-  //       break;
-  //     case yearOffice['Year [Office]'].includes('ZSF'):
-  //       yearOffice['Year [Office]'] = '';
-  //       break;
-  //     case yearOffice['Year [Office]'].includes('ZLA'):
-  //       yearOffice['Year [Office]'] = 'Las Angelas';
-  //       break;
-  //     case yearOffice['Year [Office]'].includes('ZCH'):
-  //       yearOffice['Year [Office]'] = '';
-  //       break;
-  //     default:
-  //       console.log(yearOffice['Year [Office]']);
-  //       console.log('No Year [Office] Found!');
-  //   }
-  // }
-
   useEffect(() => {
     if (officeHeatMapData['officeHeatMapDataObject'] !== undefined) {
       setPlotlyGraphAxis({
@@ -69,8 +34,6 @@ function OfficeHeatMap(props) {
     if (officeHeatMapData.rowsForTable === undefined) {
       setRowsForTable([]);
     } else {
-      // console.log(officeHeatMapData);
-      // officeHeatMapData.rowsForTable = officeHeatMapData.rowsForTable.map(officeHeatMapDataFormatter);
       setRowsForTable(officeHeatMapData.rowsForTable);
     }
   }, [officeHeatMapData]);

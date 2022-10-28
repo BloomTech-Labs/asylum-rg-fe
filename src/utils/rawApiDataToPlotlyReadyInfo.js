@@ -1,15 +1,15 @@
 const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
-  const officeCodes = [
-    'ZLA',
-    'ZSF',
-    'ZNY',
-    'ZHN',
-    'ZCH',
-    'ZNK',
-    'ZAR',
-    'ZBO',
-    'ZMI',
-    'ZOL',
+  const officeNames = [
+    'Los Angeles, CA',
+    'San Francisco, CA',
+    'New York, NY',
+    'Houston, TX',
+    'Chicago, IL',
+    'Newark, NJ',
+    'Arlington, VA',
+    'Boston, MA',
+    'Miami, FL',
+    'New Orleans, LA',
   ];
   let rowItem;
   let rowsForTable;
@@ -34,7 +34,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
   }
 
   const officeData = {}; //object that holds each % as a key of array value
-  for (let officeName of officeCodes) {
+  for (let officeName of officeNames) {
     officeData[officeName] = {
       xYears: [],
       totals: [],
@@ -96,7 +96,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
       case 'office-heat-map':
         rowsForTable = [];
         for (let yearResults of data[0].yearResults) {
-          for (let officeKey of officeCodes) {
+          for (let officeKey of officeNames) {
             if (
               yearResults.yearData.filter(
                 yearItem => yearItem.office === officeKey
@@ -133,7 +133,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
         }
         const officeHeatMapDataObject = {
           //declare helper object to construct data for heatmap plotly
-          x: officeCodes, //office
+          x: officeNames, //office
           y: [], //year
           z: [], //rate
         };
@@ -141,7 +141,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           //loop through
           officeHeatMapDataObject['y'].push(fiscal_year); //include year into y axis
           let zAxisArray = []; //Array to hold each row for z axis
-          for (let officeName of officeCodes) {
+          for (let officeName of officeNames) {
             //loop using unique office names
             zAxisArray.push(
               yearByOfficeByGrant[fiscal_year][officeName]

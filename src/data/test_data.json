@@ -17,7 +17,7 @@
                 "totalCases": 7034,
                 "yearData": [
                     {
-                        "office": "ZHN",
+                        "office": "Houston, TX",
                         "granted": 19.112627986348123,
                         "adminClosed": 56.996587030716725,
                         "denied": 23.890784982935152,
@@ -26,7 +26,7 @@
                         "totalCases": 293
                     },
                     {
-                        "office": "ZNY",
+                        "office": "New York, NY",
                         "granted": 20.373831775700936,
                         "adminClosed": 7.538940809968847,
                         "denied": 71.90031152647975,
@@ -35,7 +35,7 @@
                         "totalCases": 1605
                     },
                     {
-                        "office": "ZNK",
+                        "office": "Newark, NJ",
                         "granted": 38.9920424403183,
                         "adminClosed": 17.639257294429708,
                         "denied": 43.36870026525199,
@@ -44,7 +44,7 @@
                         "totalCases": 754
                     },
                     {
-                        "office": "ZBO",
+                        "office": "Boston, MA",
                         "granted": 27.536231884057973,
                         "adminClosed": 16.231884057971012,
                         "denied": 55.94202898550724,
@@ -53,7 +53,7 @@
                         "totalCases": 345
                     },
                     {
-                        "office": "ZMI",
+                        "office": "Miami, FL",
                         "granted": 25.44642857142857,
                         "adminClosed": 14.732142857142858,
                         "denied": 59.672619047619044,
@@ -62,7 +62,7 @@
                         "totalCases": 672
                     },
                     {
-                        "office": "ZAR",
+                        "office": "Arlington, VA",
                         "granted": 47.53820033955857,
                         "adminClosed": 7.979626485568761,
                         "denied": 44.14261460101868,
@@ -71,7 +71,7 @@
                         "totalCases": 589
                     },
                     {
-                        "office": "ZSF",
+                        "office": "San Francisco, CA",
                         "granted": 70.4225352112676,
                         "adminClosed": 12.242686890574214,
                         "denied": 17.33477789815818,
@@ -80,7 +80,7 @@
                         "totalCases": 923
                     },
                     {
-                        "office": "ZLA",
+                        "office": "Los Angeles, CA",
                         "granted": 44.97701904136572,
                         "adminClosed": 23.24359816152331,
                         "denied": 31.254103742613264,
@@ -89,7 +89,7 @@
                         "totalCases": 1523
                     },
                     {
-                        "office": "ZCH",
+                        "office": "Chicago, IL",
                         "granted": 36.36363636363637,
                         "adminClosed": 12.727272727272727,
                         "denied": 50.90909090909091,
@@ -98,7 +98,7 @@
                         "totalCases": 330
                     },
                     {
-                        "office": "ZOL",
+                        "office": "New Orleans, LA",
                         "granted": 19.047619047619047,
                         "adminClosed": 28.57142857142857,
                         "denied": 47.61904761904761,
@@ -118,7 +118,7 @@
                 "totalCases": 29942,
                 "yearData": [
                     {
-                        "office": "ZHN",
+                        "office": "Houston, TX",
                         "granted": 30.667593880389433,
                         "adminClosed": 34.42280945757997,
                         "denied": 34.63143254520167,
@@ -127,7 +127,7 @@
                         "totalCases": 1438
                     },
                     {
-                        "office": "ZNY",
+                        "office": "New York, NY",
                         "granted": 14.657293497363796,
                         "adminClosed": 12.530755711775043,
                         "denied": 72.51318101933217,
@@ -136,7 +136,7 @@
                         "totalCases": 5690
                     },
                     {
-                        "office": "ZNK",
+                        "office": "Newark, NJ",
                         "granted": 35.93429158110883,
                         "adminClosed": 20.02053388090349,
                         "denied": 43.81416837782341,
@@ -145,7 +145,7 @@
                         "totalCases": 3896
                     },
                     {
-                        "office": "ZBO",
+                        "office": "Boston, MA",
                         "granted": 19.529837251356238,
                         "adminClosed": 26.94394213381555,
                         "denied": 53.34538878842676,
@@ -154,7 +154,7 @@
                         "totalCases": 1106
                     },
                     {
-                        "office": "ZMI",
+                        "office": "Miami, FL",
                         "granted": 28.86036561649164,
                         "adminClosed": 20.18669778296383,
                         "denied": 50.68066900038895,
@@ -163,7 +163,7 @@
                         "totalCases": 2571
                     },
                     {
-                        "office": "ZAR",
+                        "office": "Arlington, VA",
                         "granted": 35.66988950276243,
                         "adminClosed": 16.367403314917127,
                         "denied": 47.41022099447514,
@@ -172,7 +172,7 @@
                         "totalCases": 2896
                     },
                     {
-                        "office": "ZSF",
+                        "office": "San Francisco, CA",
                         "granted": 69.31071049840934,
                         "adminClosed": 6.977730646871685,
                         "denied": 23.244962884411454,
@@ -181,7 +181,7 @@
                         "totalCases": 4715
                     },
                     {
-                        "office": "ZLA",
+                        "office": "Los Angeles, CA",
                         "granted": 41.63846838824577,
                         "adminClosed": 32.359750667853966,
                         "denied": 24.3633125556545,
@@ -190,7 +190,7 @@
                         "totalCases": 5615
                     },
                     {
-                        "office": "ZCH",
+                        "office": "Chicago, IL",
                         "granted": 29.03225806451613,
                         "adminClosed": 19.205955334987593,
                         "denied": 51.16625310173697,
@@ -199,7 +199,7 @@
                         "totalCases": 2015
                     },
                     {
-                        "office": "ZOL",
+                        "office": "New Orleans, LA",
                         "granted": 37.150837988826815,
                         "adminClosed": 12.104283054003725,
                         "denied": 50.46554934823091,
@@ -219,7 +219,7 @@
                 "totalCases": 53966,
                 "yearData": [
                     {
-                        "office": "ZHN",
+                        "office": "Houston, TX",
                         "granted": 17.8425838820947,
                         "adminClosed": 21.38601442458451,
                         "denied": 60.708686108497965,
@@ -228,7 +228,7 @@
                         "totalCases": 3189
                     },
                     {
-                        "office": "ZNY",
+                        "office": "New York, NY",
                         "granted": 10.110761101514074,
                         "adminClosed": 10.740778376181282,
                         "denied": 78.55908952342241,
@@ -237,7 +237,7 @@
                         "totalCases": 9841
                     },
                     {
-                        "office": "ZNK",
+                        "office": "Newark, NJ",
                         "granted": 18.216968625718074,
                         "adminClosed": 14.858594785682723,
                         "denied": 66.82501104728237,
@@ -246,7 +246,7 @@
                         "totalCases": 9052
                     },
                     {
-                        "office": "ZBO",
+                        "office": "Boston, MA",
                         "granted": 12.222887956860395,
                         "adminClosed": 18.933493109646495,
                         "denied": 68.66387058118633,
@@ -255,7 +255,7 @@
                         "totalCases": 1669
                     },
                     {
-                        "office": "ZMI",
+                        "office": "Miami, FL",
                         "granted": 15.91891891891892,
                         "adminClosed": 27,
                         "denied": 56.81081081081081,
@@ -264,7 +264,7 @@
                         "totalCases": 3700
                     },
                     {
-                        "office": "ZAR",
+                        "office": "Arlington, VA",
                         "granted": 31.815843621399175,
                         "adminClosed": 13.194444444444445,
                         "denied": 53.18930041152263,
@@ -273,7 +273,7 @@
                         "totalCases": 3888
                     },
                     {
-                        "office": "ZSF",
+                        "office": "San Francisco, CA",
                         "granted": 47.27574750830565,
                         "adminClosed": 12.17607973421927,
                         "denied": 40.43189368770764,
@@ -282,7 +282,7 @@
                         "totalCases": 6020
                     },
                     {
-                        "office": "ZLA",
+                        "office": "Los Angeles, CA",
                         "granted": 36.02466017975191,
                         "adminClosed": 24.489341157245782,
                         "denied": 39.107182648740995,
@@ -291,7 +291,7 @@
                         "totalCases": 13463
                     },
                     {
-                        "office": "ZCH",
+                        "office": "Chicago, IL",
                         "granted": 26.33587786259542,
                         "adminClosed": 23.60050890585242,
                         "denied": 49.77735368956743,
@@ -300,7 +300,7 @@
                         "totalCases": 3144
                     },
                     {
-                        "office": "ZOL",
+                        "office": "New Orleans, LA",
                         "granted": 41.024436090225564,
                         "adminClosed": 16.11842105263158,
                         "denied": 42.62218045112782,
@@ -320,7 +320,7 @@
                 "totalCases": 78130,
                 "yearData": [
                     {
-                        "office": "ZHN",
+                        "office": "Houston, TX",
                         "granted": 23.926627696029026,
                         "adminClosed": 16.508768393469058,
                         "denied": 59.38318887321105,
@@ -329,7 +329,7 @@
                         "totalCases": 4961
                     },
                     {
-                        "office": "ZNY",
+                        "office": "New York, NY",
                         "granted": 8.511119487372785,
                         "adminClosed": 16.049754994346024,
                         "denied": 75.19035054655107,
@@ -338,7 +338,7 @@
                         "totalCases": 13265
                     },
                     {
-                        "office": "ZNK",
+                        "office": "Newark, NJ",
                         "granted": 19.582307631223696,
                         "adminClosed": 14.73040578098944,
                         "denied": 65.63964107043596,
@@ -347,7 +347,7 @@
                         "totalCases": 12593
                     },
                     {
-                        "office": "ZBO",
+                        "office": "Boston, MA",
                         "granted": 10.863031343924431,
                         "adminClosed": 16.70244740231859,
                         "denied": 72.21983683984543,
@@ -356,7 +356,7 @@
                         "totalCases": 2329
                     },
                     {
-                        "office": "ZMI",
+                        "office": "Miami, FL",
                         "granted": 18.267858484188388,
                         "adminClosed": 20.62645534440021,
                         "denied": 61.000525801847814,
@@ -365,7 +365,7 @@
                         "totalCases": 13313
                     },
                     {
-                        "office": "ZAR",
+                        "office": "Arlington, VA",
                         "granted": 18.397335423197493,
                         "adminClosed": 25.019592476489027,
                         "denied": 55.99529780564263,
@@ -374,7 +374,7 @@
                         "totalCases": 5104
                     },
                     {
-                        "office": "ZSF",
+                        "office": "San Francisco, CA",
                         "granted": 44.064254930129295,
                         "adminClosed": 7.9535065952723,
                         "denied": 47.83857907796787,
@@ -383,7 +383,7 @@
                         "totalCases": 7657
                     },
                     {
-                        "office": "ZLA",
+                        "office": "Los Angeles, CA",
                         "granted": 32.10730298654913,
                         "adminClosed": 18.892013070902046,
                         "denied": 48.76510373128657,
@@ -392,7 +392,7 @@
                         "totalCases": 13159
                     },
                     {
-                        "office": "ZCH",
+                        "office": "Chicago, IL",
                         "granted": 31.309793007479563,
                         "adminClosed": 21.4993911984693,
                         "denied": 46.94729518177074,
@@ -401,7 +401,7 @@
                         "totalCases": 5749
                     },
                     {
-                        "office": "ZOL",
+                        "office": "New Orleans, LA",
                         "granted": 54.09618573797679,
                         "adminClosed": 16.683250414593697,
                         "denied": 29.087893864013264,
@@ -421,7 +421,7 @@
                 "totalCases": 70993,
                 "yearData": [
                     {
-                        "office": "ZHN",
+                        "office": "Houston, TX",
                         "granted": 26.25863770977295,
                         "adminClosed": 13.57354392892399,
                         "denied": 59.9457058242843,
@@ -430,7 +430,7 @@
                         "totalCases": 4052
                     },
                     {
-                        "office": "ZNY",
+                        "office": "New York, NY",
                         "granted": 6.899050072452101,
                         "adminClosed": 15.569151505393656,
                         "denied": 77.40299468684591,
@@ -439,7 +439,7 @@
                         "totalCases": 12422
                     },
                     {
-                        "office": "ZNK",
+                        "office": "Newark, NJ",
                         "granted": 25.547697084698985,
                         "adminClosed": 12.377091599102984,
                         "denied": 62.07521131619803,
@@ -448,7 +448,7 @@
                         "totalCases": 11594
                     },
                     {
-                        "office": "ZBO",
+                        "office": "Boston, MA",
                         "granted": 12.783595113438045,
                         "adminClosed": 33.46422338568936,
                         "denied": 53.49040139616056,
@@ -457,7 +457,7 @@
                         "totalCases": 2292
                     },
                     {
-                        "office": "ZMI",
+                        "office": "Miami, FL",
                         "granted": 11.499658002735979,
                         "adminClosed": 23.68331053351573,
                         "denied": 64.68023255813954,
@@ -466,7 +466,7 @@
                         "totalCases": 11696
                     },
                     {
-                        "office": "ZAR",
+                        "office": "Arlington, VA",
                         "granted": 15.248852806212495,
                         "adminClosed": 19.69643487469114,
                         "denied": 64.70172961524885,
@@ -475,7 +475,7 @@
                         "totalCases": 2833
                     },
                     {
-                        "office": "ZSF",
+                        "office": "San Francisco, CA",
                         "granted": 52.09851355290003,
                         "adminClosed": 10.069950451763335,
                         "denied": 37.700378898280384,
@@ -484,7 +484,7 @@
                         "totalCases": 6862
                     },
                     {
-                        "office": "ZLA",
+                        "office": "Los Angeles, CA",
                         "granted": 33.11153622224071,
                         "adminClosed": 17.73267903185561,
                         "denied": 48.922897779256424,
@@ -493,7 +493,7 @@
                         "totalCases": 12023
                     },
                     {
-                        "office": "ZCH",
+                        "office": "Chicago, IL",
                         "granted": 36.26541072170661,
                         "adminClosed": 14.628064828923673,
                         "denied": 49.07881978113312,
@@ -502,7 +502,7 @@
                         "totalCases": 7219
                     },
                     {
-                        "office": "ZOL",
+                        "office": "New Orleans, LA",
                         "granted": 32.748538011695906,
                         "adminClosed": 32.16374269005848,
                         "denied": 34.7953216374269,
@@ -522,7 +522,7 @@
                 "totalCases": 47449,
                 "yearData": [
                     {
-                        "office": "ZHN",
+                        "office": "Houston, TX",
                         "granted": 10.556710556710556,
                         "adminClosed": 40.54054054054054,
                         "denied": 48.44074844074844,
@@ -531,7 +531,7 @@
                         "totalCases": 4329
                     },
                     {
-                        "office": "ZNY",
+                        "office": "New York, NY",
                         "granted": 3.804347826086957,
                         "adminClosed": 26.67701863354037,
                         "denied": 69.36335403726707,
@@ -540,7 +540,7 @@
                         "totalCases": 6440
                     },
                     {
-                        "office": "ZNK",
+                        "office": "Newark, NJ",
                         "granted": 18.144218665707605,
                         "adminClosed": 28.55601510519691,
                         "denied": 53.13792483366301,
@@ -549,7 +549,7 @@
                         "totalCases": 5561
                     },
                     {
-                        "office": "ZBO",
+                        "office": "Boston, MA",
                         "granted": 7.334963325183375,
                         "adminClosed": 49.205378973105134,
                         "denied": 43.27628361858191,
@@ -558,7 +558,7 @@
                         "totalCases": 1636
                     },
                     {
-                        "office": "ZMI",
+                        "office": "Miami, FL",
                         "granted": 9.46048058032341,
                         "adminClosed": 51.367689285174556,
                         "denied": 39.03581683542391,
@@ -567,7 +567,7 @@
                         "totalCases": 6617
                     },
                     {
-                        "office": "ZAR",
+                        "office": "Arlington, VA",
                         "granted": 14.325068870523417,
                         "adminClosed": 37.40653286107832,
                         "denied": 47.756788665879576,
@@ -576,7 +576,7 @@
                         "totalCases": 5082
                     },
                     {
-                        "office": "ZSF",
+                        "office": "San Francisco, CA",
                         "granted": 33.34712453454696,
                         "adminClosed": 34.40215142738933,
                         "denied": 32.10591642532064,
@@ -585,7 +585,7 @@
                         "totalCases": 4834
                     },
                     {
-                        "office": "ZLA",
+                        "office": "Los Angeles, CA",
                         "granted": 37.26009265387161,
                         "adminClosed": 28.193249503639972,
                         "denied": 34.050297816015885,
@@ -594,7 +594,7 @@
                         "totalCases": 6044
                     },
                     {
-                        "office": "ZCH",
+                        "office": "Chicago, IL",
                         "granted": 23.935708079930496,
                         "adminClosed": 15.102809151462496,
                         "denied": 60.88908195771793,
@@ -603,7 +603,7 @@
                         "totalCases": 6906
                     },
                     {
-                        "office": "ZOL",
+                        "office": "New Orleans, LA",
                         "granted": 19.53405017921147,
                         "adminClosed": 39.96415770609319,
                         "denied": 40.50179211469534,
@@ -623,7 +623,7 @@
                 "totalCases": 15951,
                 "yearData": [
                     {
-                        "office": "ZHN",
+                        "office": "Houston, TX",
                         "granted": 10.142348754448399,
                         "adminClosed": 50.355871886120994,
                         "denied": 39.44246737841044,
@@ -632,7 +632,7 @@
                         "totalCases": 1686
                     },
                     {
-                        "office": "ZNY",
+                        "office": "New York, NY",
                         "granted": 7.13121434392828,
                         "adminClosed": 22.779136104319477,
                         "denied": 70.08964955175225,
@@ -641,7 +641,7 @@
                         "totalCases": 2454
                     },
                     {
-                        "office": "ZNK",
+                        "office": "Newark, NJ",
                         "granted": 31.03103103103103,
                         "adminClosed": 22.62262262262262,
                         "denied": 46.346346346346344,
@@ -650,7 +650,7 @@
                         "totalCases": 999
                     },
                     {
-                        "office": "ZBO",
+                        "office": "Boston, MA",
                         "granted": 7.325383304940375,
                         "adminClosed": 25.894378194207835,
                         "denied": 66.78023850085178,
@@ -659,7 +659,7 @@
                         "totalCases": 587
                     },
                     {
-                        "office": "ZMI",
+                        "office": "Miami, FL",
                         "granted": 6.3395570994355195,
                         "adminClosed": 55.796786799826315,
                         "denied": 37.776812852800695,
@@ -668,7 +668,7 @@
                         "totalCases": 2303
                     },
                     {
-                        "office": "ZAR",
+                        "office": "Arlington, VA",
                         "granted": 28.35746380429356,
                         "adminClosed": 28.756864702945585,
                         "denied": 42.78582126809785,
@@ -677,7 +677,7 @@
                         "totalCases": 2003
                     },
                     {
-                        "office": "ZSF",
+                        "office": "San Francisco, CA",
                         "granted": 29.942693409742123,
                         "adminClosed": 39.61318051575931,
                         "denied": 30.01432664756447,
@@ -686,7 +686,7 @@
                         "totalCases": 1396
                     },
                     {
-                        "office": "ZLA",
+                        "office": "Los Angeles, CA",
                         "granted": 23.00388433318947,
                         "adminClosed": 38.670694864048336,
                         "denied": 37.59171342252913,
@@ -695,7 +695,7 @@
                         "totalCases": 2317
                     },
                     {
-                        "office": "ZCH",
+                        "office": "Chicago, IL",
                         "granted": 30.099728014505896,
                         "adminClosed": 16.047144152311876,
                         "denied": 53.76246600181324,
@@ -704,7 +704,7 @@
                         "totalCases": 2206
                     },
                     {
-                        "office": "ZOL",
+                        "office": "New Orleans, LA",
                         "granted": 29.00763358778626,
                         "adminClosed": 36.6412213740458,
                         "denied": 34.35114503816794,

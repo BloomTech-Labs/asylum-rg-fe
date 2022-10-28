@@ -13,19 +13,6 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const officeNameMap = {
-  ZLA: 'Los Angelas, CA',
-  ZSF: 'San Francisco, CA',
-  ZNY: 'New York, NY',
-  ZHN: 'Houston, TX',
-  ZCH: 'Chicago, IL',
-  ZNK: 'Newark, NJ',
-  ZAR: 'Arlington, VA',
-  ZBO: 'Boston, MA',
-  ZMI: 'Miami, FL',
-  ZOL: 'New Orleans, LA',
-};
-
 function TimeSeriesSingleOffice(props) {
   const { office, timeSeriesData } = props;
   const currentYear = new Date().getFullYear();
@@ -69,10 +56,7 @@ function TimeSeriesSingleOffice(props) {
         minHeight: '100px',
       }}
     >
-      <p>
-        Showing: Time series data for all USCIS Asylum Offices - (
-        {officeNameMap[office]})
-      </p>
+      <p>Showing: Time series data for all USCIS Asylum Offices - ({office})</p>
       <Plot
         data={[
           {
@@ -86,7 +70,7 @@ function TimeSeriesSingleOffice(props) {
           },
         ]}
         layout={{
-          title: `Asylum Grant Rate for the ${officeNameMap[office]} Asylum Office Over Time`,
+          title: `Asylum Grant Rate for the ${office} Asylum Office Over Time`,
           height: 500,
           width: 700,
           yaxis: {

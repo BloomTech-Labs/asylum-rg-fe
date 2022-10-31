@@ -218,8 +218,8 @@ const vizReducer = (state = initialState, action) => {
           ...state,
           [dataKey]:
             action.payload.idx === 0
-              ? [action.payload.fiscal_year, state[dataKey][1]]
-              : [state[dataKey][0], action.payload.fiscal_year],
+              ? [action.payload.year, state[dataKey][1]]
+              : [state[dataKey][0], action.payload.year],
         };
       } else {
         switch (action.payload.view) {
@@ -242,12 +242,12 @@ const vizReducer = (state = initialState, action) => {
               [dataKey]:
                 action.payload.idx === 0
                   ? [
-                      action.payload.fiscal_year,
+                      action.payload.year,
                       state.offices[action.payload.office][dataKey][1],
                     ]
                   : [
                       state.offices[action.payload.office][dataKey][0],
-                      action.payload.fiscal_year,
+                      action.payload.year,
                     ],
             },
           },

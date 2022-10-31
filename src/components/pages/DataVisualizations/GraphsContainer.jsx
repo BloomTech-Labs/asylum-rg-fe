@@ -144,7 +144,9 @@ function GraphsContainer() {
           }}
         >
           <Select
-            // defaultValue={offices[0]}
+            style={{
+              marginRight: '115px',
+            }}
             placeholder="Select an Asylum Office"
             onSelect={value => handle_office_select(value)}
           >

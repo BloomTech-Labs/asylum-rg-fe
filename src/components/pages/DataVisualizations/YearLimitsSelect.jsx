@@ -159,34 +159,27 @@ function YearLimitsSelect(props) {
             style={{
               backgroundColor: primary_accent_color,
               color: 'white',
-              marginLeft: '89px',
+              marginLeft: '105px',
+              marginTop: '10px',
             }}
           >
             Update Query
           </Button>
         </Form.Item>
       </Form>
-      <div
-        className="clear-query-button-alignment-container"
+      <Button
         style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          width: '122px', // this is to match the width of the Form.Item button
+          backgroundColor: primary_accent_color,
+          color: 'white',
+          marginLeft: '105px',
+        }}
+        onClick={() => {
+          clearQuery(view, office);
         }}
       >
-        <Button
-          style={{
-            width: '122px', // this is to match the width of the Form.Item button
-            backgroundColor: primary_accent_color,
-            color: 'white',
-          }}
-          onClick={() => {
-            clearQuery(view, office);
-          }}
-        >
-          Clear Query
-        </Button>
-      </div>
+        Clear Query
+      </Button>
     </div>
   );
 }

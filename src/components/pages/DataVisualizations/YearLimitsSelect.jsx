@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Form, Button /*Input*/ } from 'antd';
 import {
   setVisualizationData,
@@ -74,6 +74,11 @@ function YearLimitsSelect(props) {
       year_end: years[1],
     });
   }, 10);
+
+  useEffect(() => {
+    updateStateWithNewData(years, view, office, stateSettingFn);
+  });
+
   return (
     <div
       className="year-limits-select-container"

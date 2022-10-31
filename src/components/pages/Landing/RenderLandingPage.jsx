@@ -5,6 +5,7 @@ import GrantRatesOverTimeImg from '../../../styles/Images/line-graph-no-text.png
 import HrfPhoto from '../../../styles/Images/paper-stack.jpg';
 import '../../../styles/RenderLandingPage.less';
 import { Button } from 'antd';
+import { useHistory } from 'react-router-dom';
 // for the purposes of testing PageNav
 // import PageNav from '../../common/PageNav';
 
@@ -13,6 +14,8 @@ function RenderLandingPage(props) {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   };
+
+  const history = useHistory();
 
   return (
     <div className="main">
@@ -57,8 +60,9 @@ function RenderLandingPage(props) {
         <Button
           type="default"
           style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+          onClick={() => history.push('/graphs')}
         >
-          View More Data
+          View the Data
         </Button>
       </div>
 

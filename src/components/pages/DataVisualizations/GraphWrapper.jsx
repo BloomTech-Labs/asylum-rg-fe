@@ -12,6 +12,7 @@ import axios from 'axios';
 import { resetVisualizationQuery } from '../../../state/actionCreators';
 import test_data from '../../../data/test_data.json';
 import { colors } from '../../../styles/data_vis_colors';
+import ScrollToTopOnMount from '../../../utils/scrollToTopOnMount';
 
 const { background_color } = colors;
 
@@ -119,6 +120,7 @@ function GraphWrapper(props) {
         backgroundColor: background_color,
       }}
     >
+      <ScrollToTopOnMount />
       {map_to_render}
       <div
         className="user-input-sidebar-container"

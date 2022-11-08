@@ -72,8 +72,8 @@ function CitizenshipMapSingleOffice(props) {
       }}
     >
       <p>
-        Showing: Rates of 'granted' case decision by nationality of origin, for{' '}
-        {office}
+        Showing: Rates of 'granted' case decision by nationality of origin for{' '}
+        {office} asylum office
       </p>
       <Plot
         data={[

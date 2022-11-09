@@ -41,9 +41,9 @@ function OfficeHeatMap(props) {
   const columnsForTable = [
     'Year [Office]',
     'Total Cases',
-    '% Granted',
-    '% Admin Close / Dismissal',
-    '% Denied',
+    'Grants',
+    'Admin Closed / Dismissals',
+    'Referrals / Denials',
   ];
 
   return (

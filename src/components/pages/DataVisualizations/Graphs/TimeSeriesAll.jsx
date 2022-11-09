@@ -19,9 +19,9 @@ function TimeSeriesAll(props) {
   const columnsForAllDisplay = [
     'Fiscal Year',
     'Total Cases',
-    '% Granted',
-    '% Admin Close / Dismissal',
-    '% Denied',
+    'Grants',
+    'Admin Closed / Dismissals',
+    'Referrals / Denials',
   ];
   useEffect(() => {
     if (timeSeriesAllData.rowsForAllDisplay === undefined) {

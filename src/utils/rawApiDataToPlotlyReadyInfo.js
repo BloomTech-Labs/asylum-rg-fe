@@ -67,11 +67,9 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           rowItem = {
             'Fiscal Year': yearResults.fiscal_year,
             'Total Cases': yearResults.totalCases,
-            '% Granted': Number(yearResults.granted).toFixed(2),
-            '% Admin Close / Dismissal': Number(
-              yearResults.adminClosed
-            ).toFixed(2),
-            '% Denied': Number(yearResults.denied).toFixed(2),
+            Grants: Number(yearResults.granted).toFixed(2),
+            'Admin Closed / Dismissals': Number(yearResults.adminClosed),
+            'Referrals / Denials': Number(yearResults.denied),
           };
           rowsForAllDisplay.push(rowItem);
         }
@@ -111,21 +109,21 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
                 'Total Cases': yearResults.yearData.filter(
                   yearItem => yearItem.office === officeKey
                 )[0].totalCases,
-                '% Granted': Number(
+                Grants: Number(
                   yearResults.yearData.filter(
                     yearItem => yearItem.office === officeKey
                   )[0].granted
-                ).toFixed(2),
-                '% Admin Close / Dismissal': Number(
+                ),
+                'Admin Closed / Dismissals': Number(
                   yearResults.yearData.filter(
                     yearItem => yearItem.office === officeKey
                   )[0].adminClosed
-                ).toFixed(2),
-                '% Denied': Number(
+                ),
+                'Referrals / Denials': Number(
                   yearResults.yearData.filter(
                     yearItem => yearItem.office === officeKey
                   )[0].denied
-                ).toFixed(2),
+                ),
               };
               rowsForTable.push(rowItem);
             }
@@ -159,9 +157,9 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           rowItem = {
             Citizenship: item.citizenship,
             'Total Cases': item.totalCases,
-            '% Granted': Number(item.granted).toFixed(2),
-            '% Admin Close / Dismissal': Number(item.adminClosed).toFixed(2),
-            '% Denied': Number(item.denied).toFixed(2),
+            Grants: Number(item.granted).toFixed(2),
+            'Admin Closed / Dismissals': Number(item.adminClosed),
+            'Referrals / Denials': Number(item.denied),
           };
           rowsForTable.push(rowItem);
         }
@@ -199,11 +197,9 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
             rowItem = {
               'Fiscal Year': data[0].yearResults[i].fiscal_year,
               'Total Cases': officeObj.totalCases,
-              '% Granted': Number(officeObj.granted).toFixed(2),
-              '% Admin Close / Dismissal': Number(
-                officeObj.adminClosed
-              ).toFixed(2),
-              '% Denied': Number(officeObj.denied).toFixed(2),
+              Grants: Number(officeObj.granted).toFixed(2),
+              'Admin Closed / Dismissals': Number(officeObj.adminClosed),
+              'Referrals / Denials': Number(officeObj.denied),
             };
             rowsForTable.push(rowItem);
           }
@@ -220,9 +216,9 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           rowItem = {
             Citizenship: item.citizenship,
             'Total Cases': item.totalCases,
-            '% Granted': Number(item.granted).toFixed(2),
-            '% Admin Close / Dismissal': Number(item.adminClosed).toFixed(2),
-            '% Denied': Number(item.denied).toFixed(2),
+            Grants: Number(item.granted).toFixed(2),
+            'Admin Closed / Dismissals': Number(item.adminClosed),
+            'Referrals / Denials': Number(item.denied),
           };
           rowsForTable.push(rowItem);
         }

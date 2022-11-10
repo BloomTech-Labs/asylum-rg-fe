@@ -23,6 +23,7 @@ function TimeSeriesSingleOffice(props) {
   const [rowsForTable, setRowsForTable] = useState([]);
 
   useEffect(() => {
+    console.log(timeSeriesData['singleOfficeDataObject']);
     if (timeSeriesData['singleOfficeDataObject'] !== undefined) {
       setPlotlyGraphAxis({
         x: timeSeriesData['singleOfficeDataObject']['xYears'],
@@ -39,11 +40,12 @@ function TimeSeriesSingleOffice(props) {
   }, [timeSeriesData, currentYear]);
 
   const columnsForTable = [
-    'Citizenship',
+    'Fiscal Year',
     'Total Cases',
     'Grants',
-    'Admin Closed / Dismissals',
     'Referrals / Denials',
+    'Admin Closed / Dismissals',
+    'Granted Rate',
   ];
   return (
     <div

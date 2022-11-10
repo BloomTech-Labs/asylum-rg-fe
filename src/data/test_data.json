@@ -1,6 +1,6 @@
 [
     {
-        "granted": 24.840441633342362,
+        "granted": 31.50798430218694,
         "adminClosed": 65580,
         "denied": 169465,
         "closedNacaraGrant": 557,
@@ -10,7 +10,7 @@
         "yearResults": [
             {
                 "fiscal_year": "2015",
-                "granted": 37.90333943919966,
+                "granted": 45.37021420138303,
                 "adminClosed": 1150,
                 "denied": 3239,
                 "closedNacaraGrant": 13,
@@ -19,7 +19,7 @@
                 "yearData": [
                     {
                         "office": "Houston, TX",
-                        "granted": 19.112627986348123,
+                        "granted": 44.44444444444444,
                         "adminClosed": 167,
                         "denied": 70,
                         "closedNacaraGrant": 0,
@@ -29,7 +29,7 @@
                     },
                     {
                         "office": "New York, NY",
-                        "granted": 20.373831775700936,
+                        "granted": 22.079675894665765,
                         "adminClosed": 121,
                         "denied": 1154,
                         "closedNacaraGrant": 0,
@@ -39,7 +39,7 @@
                     },
                     {
                         "office": "Newark, NJ",
-                        "granted": 38.9920424403183,
+                        "granted": 47.34299516908212,
                         "adminClosed": 133,
                         "denied": 327,
                         "closedNacaraGrant": 0,
@@ -49,7 +49,7 @@
                     },
                     {
                         "office": "Boston, MA",
-                        "granted": 27.536231884057973,
+                        "granted": 32.98611111111111,
                         "adminClosed": 56,
                         "denied": 193,
                         "closedNacaraGrant": 1,
@@ -59,7 +59,7 @@
                     },
                     {
                         "office": "Miami, FL",
-                        "granted": 25.44642857142857,
+                        "granted": 29.895104895104897,
                         "adminClosed": 99,
                         "denied": 401,
                         "closedNacaraGrant": 1,
@@ -69,7 +69,7 @@
                     },
                     {
                         "office": "Arlington, VA",
-                        "granted": 47.53820033955857,
+                        "granted": 51.85185185185185,
                         "adminClosed": 47,
                         "denied": 260,
                         "closedNacaraGrant": 2,
@@ -79,7 +79,7 @@
                     },
                     {
                         "office": "San Francisco, CA",
-                        "granted": 70.4225352112676,
+                        "granted": 80.24691358024691,
                         "adminClosed": 113,
                         "denied": 160,
                         "closedNacaraGrant": 0,
@@ -89,7 +89,7 @@
                     },
                     {
                         "office": "Los Angeles, CA",
-                        "granted": 44.97701904136572,
+                        "granted": 59.000861326442724,
                         "adminClosed": 354,
                         "denied": 476,
                         "closedNacaraGrant": 8,
@@ -99,7 +99,7 @@
                     },
                     {
                         "office": "Chicago, IL",
-                        "granted": 36.36363636363637,
+                        "granted": 41.66666666666667,
                         "adminClosed": 42,
                         "denied": 168,
                         "closedNacaraGrant": 0,
@@ -109,7 +109,7 @@
                     },
                     {
                         "office": "New Orleans, LA",
-                        "granted": 19.047619047619047,
+                        "granted": 28.57142857142857,
                         "adminClosed": 18,
                         "denied": 30,
                         "closedNacaraGrant": 1,
@@ -122,7 +122,7 @@
             },
             {
                 "fiscal_year": "2016",
-                "granted": 36.29094660820222,
+                "granted": 45.222981116914426,
                 "adminClosed": 5942,
                 "denied": 13634,
                 "closedNacaraGrant": 164,
@@ -131,7 +131,7 @@
                 "yearData": [
                     {
                         "office": "Houston, TX",
-                        "granted": 30.667593880389433,
+                        "granted": 46.96485623003195,
                         "adminClosed": 495,
                         "denied": 498,
                         "closedNacaraGrant": 4,
@@ -141,7 +141,7 @@
                     },
                     {
                         "office": "New York, NY",
-                        "granted": 14.657293497363796,
+                        "granted": 16.81451612903226,
                         "adminClosed": 713,
                         "denied": 4126,
                         "closedNacaraGrant": 7,
@@ -151,7 +151,7 @@
                     },
                     {
                         "office": "Newark, NJ",
-                        "granted": 35.93429158110883,
+                        "granted": 45.05954296749276,
                         "adminClosed": 780,
                         "denied": 1707,
                         "closedNacaraGrant": 9,
@@ -161,7 +161,7 @@
                     },
                     {
                         "office": "Boston, MA",
-                        "granted": 19.529837251356238,
+                        "granted": 26.799007444168733,
                         "adminClosed": 298,
                         "denied": 590,
                         "closedNacaraGrant": 0,
@@ -171,7 +171,7 @@
                     },
                     {
                         "office": "Miami, FL",
-                        "granted": 28.86036561649164,
+                        "granted": 36.28361858190709,
                         "adminClosed": 519,
                         "denied": 1303,
                         "closedNacaraGrant": 6,
@@ -181,7 +181,7 @@
                     },
                     {
                         "office": "Arlington, VA",
-                        "granted": 35.66988950276243,
+                        "granted": 42.93433083956775,
                         "adminClosed": 474,
                         "denied": 1373,
                         "closedNacaraGrant": 13,
@@ -191,7 +191,7 @@
                     },
                     {
                         "office": "San Francisco, CA",
-                        "granted": 69.31071049840934,
+                        "granted": 74.88542621448214,
                         "adminClosed": 329,
                         "denied": 1096,
                         "closedNacaraGrant": 20,
@@ -201,7 +201,7 @@
                     },
                     {
                         "office": "Los Angeles, CA",
-                        "granted": 41.63846838824577,
+                        "granted": 63.08688613059903,
                         "adminClosed": 1817,
                         "denied": 1368,
                         "closedNacaraGrant": 90,
@@ -211,7 +211,7 @@
                     },
                     {
                         "office": "Chicago, IL",
-                        "granted": 29.03225806451613,
+                        "granted": 36.20049504950495,
                         "adminClosed": 387,
                         "denied": 1031,
                         "closedNacaraGrant": 12,
@@ -221,7 +221,7 @@
                     },
                     {
                         "office": "New Orleans, LA",
-                        "granted": 37.150837988826815,
+                        "granted": 42.40170031880977,
                         "adminClosed": 130,
                         "denied": 542,
                         "closedNacaraGrant": 3,
@@ -234,7 +234,7 @@
             },
             {
                 "fiscal_year": "2017",
-                "granted": 26.0990480265269,
+                "granted": 31.93508278254041,
                 "adminClosed": 10027,
                 "denied": 31203,
                 "closedNacaraGrant": 129,
@@ -243,7 +243,7 @@
                 "yearData": [
                     {
                         "office": "Houston, TX",
-                        "granted": 17.8425838820947,
+                        "granted": 22.714570858283434,
                         "adminClosed": 682,
                         "denied": 1936,
                         "closedNacaraGrant": 2,
@@ -253,7 +253,7 @@
                     },
                     {
                         "office": "New York, NY",
-                        "granted": 10.110761101514074,
+                        "granted": 11.402704561081825,
                         "adminClosed": 1057,
                         "denied": 7731,
                         "closedNacaraGrant": 7,
@@ -263,7 +263,7 @@
                     },
                     {
                         "office": "Newark, NJ",
-                        "granted": 18.216968625718074,
+                        "granted": 21.421148350220836,
                         "adminClosed": 1345,
                         "denied": 6049,
                         "closedNacaraGrant": 7,
@@ -273,7 +273,7 @@
                     },
                     {
                         "office": "Boston, MA",
-                        "granted": 12.222887956860395,
+                        "granted": 15.11111111111111,
                         "adminClosed": 316,
                         "denied": 1146,
                         "closedNacaraGrant": 3,
@@ -283,7 +283,7 @@
                     },
                     {
                         "office": "Miami, FL",
-                        "granted": 15.91891891891892,
+                        "granted": 21.887774061687104,
                         "adminClosed": 999,
                         "denied": 2102,
                         "closedNacaraGrant": 1,
@@ -293,7 +293,7 @@
                     },
                     {
                         "office": "Arlington, VA",
-                        "granted": 31.815843621399175,
+                        "granted": 37.428139183055976,
                         "adminClosed": 513,
                         "denied": 2068,
                         "closedNacaraGrant": 43,
@@ -303,7 +303,7 @@
                     },
                     {
                         "office": "San Francisco, CA",
-                        "granted": 47.27574750830565,
+                        "granted": 53.901515151515156,
                         "adminClosed": 733,
                         "denied": 2434,
                         "closedNacaraGrant": 7,
@@ -313,7 +313,7 @@
                     },
                     {
                         "office": "Los Angeles, CA",
-                        "granted": 36.02466017975191,
+                        "granted": 47.94859120118636,
                         "adminClosed": 3297,
                         "denied": 5265,
                         "closedNacaraGrant": 51,
@@ -323,7 +323,7 @@
                     },
                     {
                         "office": "Chicago, IL",
-                        "granted": 26.33587786259542,
+                        "granted": 34.60091934809862,
                         "adminClosed": 742,
                         "denied": 1565,
                         "closedNacaraGrant": 5,
@@ -333,7 +333,7 @@
                     },
                     {
                         "office": "New Orleans, LA",
-                        "granted": 41.024436090225564,
+                        "granted": 49.04494382022472,
                         "adminClosed": 343,
                         "denied": 907,
                         "closedNacaraGrant": 3,
@@ -346,7 +346,7 @@
             },
             {
                 "fiscal_year": "2018",
-                "granted": 23.952184361328484,
+                "granted": 29.035390430093074,
                 "adminClosed": 14049,
                 "denied": 47503,
                 "closedNacaraGrant": 108,
@@ -355,7 +355,7 @@
                 "yearData": [
                     {
                         "office": "Houston, TX",
-                        "granted": 23.926627696029026,
+                        "granted": 28.720058069199126,
                         "adminClosed": 819,
                         "denied": 2946,
                         "closedNacaraGrant": 9,
@@ -365,7 +365,7 @@
                     },
                     {
                         "office": "New York, NY",
-                        "granted": 8.511119487372785,
+                        "granted": 10.168422948752589,
                         "adminClosed": 2129,
                         "denied": 9974,
                         "closedNacaraGrant": 10,
@@ -375,7 +375,7 @@
                     },
                     {
                         "office": "Newark, NJ",
-                        "granted": 19.582307631223696,
+                        "granted": 22.9780096906448,
                         "adminClosed": 1855,
                         "denied": 8266,
                         "closedNacaraGrant": 5,
@@ -385,7 +385,7 @@
                     },
                     {
                         "office": "Boston, MA",
-                        "granted": 10.863031343924431,
+                        "granted": 13.074935400516797,
                         "adminClosed": 389,
                         "denied": 1682,
                         "closedNacaraGrant": 3,
@@ -395,7 +395,7 @@
                     },
                     {
                         "office": "Miami, FL",
-                        "granted": 18.267858484188388,
+                        "granted": 23.04557945607884,
                         "adminClosed": 2746,
                         "denied": 8121,
                         "closedNacaraGrant": 4,
@@ -405,7 +405,7 @@
                     },
                     {
                         "office": "Arlington, VA",
-                        "granted": 18.397335423197493,
+                        "granted": 24.73005003950487,
                         "adminClosed": 1277,
                         "denied": 2858,
                         "closedNacaraGrant": 28,
@@ -415,7 +415,7 @@
                     },
                     {
                         "office": "San Francisco, CA",
-                        "granted": 44.064254930129295,
+                        "granted": 47.946568139832316,
                         "adminClosed": 609,
                         "denied": 3663,
                         "closedNacaraGrant": 11,
@@ -425,7 +425,7 @@
                     },
                     {
                         "office": "Los Angeles, CA",
-                        "granted": 32.10730298654913,
+                        "granted": 39.701183987972186,
                         "adminClosed": 2486,
                         "denied": 6417,
                         "closedNacaraGrant": 31,
@@ -435,7 +435,7 @@
                     },
                     {
                         "office": "Chicago, IL",
-                        "granted": 31.309793007479563,
+                        "granted": 40.008890864636584,
                         "adminClosed": 1236,
                         "denied": 2699,
                         "closedNacaraGrant": 4,
@@ -445,7 +445,7 @@
                     },
                     {
                         "office": "New Orleans, LA",
-                        "granted": 54.09618573797679,
+                        "granted": 65.03189792663477,
                         "adminClosed": 503,
                         "denied": 877,
                         "closedNacaraGrant": 3,
@@ -458,7 +458,7 @@
             },
             {
                 "fiscal_year": "2019",
-                "granted": 24.287945163831345,
+                "granted": 29.326858897343477,
                 "adminClosed": 12333,
                 "denied": 42353,
                 "closedNacaraGrant": 61,
@@ -467,7 +467,7 @@
                 "yearData": [
                     {
                         "office": "Houston, TX",
-                        "granted": 26.25863770977295,
+                        "granted": 30.460921843687377,
                         "adminClosed": 550,
                         "denied": 2429,
                         "closedNacaraGrant": 9,
@@ -477,7 +477,7 @@
                     },
                     {
                         "office": "New York, NY",
-                        "granted": 6.899050072452101,
+                        "granted": 8.183728036669214,
                         "adminClosed": 1934,
                         "denied": 9615,
                         "closedNacaraGrant": 6,
@@ -487,7 +487,7 @@
                     },
                     {
                         "office": "Newark, NJ",
-                        "granted": 25.547697084698985,
+                        "granted": 29.156413032778815,
                         "adminClosed": 1435,
                         "denied": 7197,
                         "closedNacaraGrant": 0,
@@ -497,7 +497,7 @@
                     },
                     {
                         "office": "Boston, MA",
-                        "granted": 12.783595113438045,
+                        "granted": 19.289005924950626,
                         "adminClosed": 767,
                         "denied": 1226,
                         "closedNacaraGrant": 3,
@@ -507,7 +507,7 @@
                     },
                     {
                         "office": "Miami, FL",
-                        "granted": 11.499658002735979,
+                        "granted": 15.095398428731762,
                         "adminClosed": 2770,
                         "denied": 7565,
                         "closedNacaraGrant": 4,
@@ -517,7 +517,7 @@
                     },
                     {
                         "office": "Arlington, VA",
-                        "granted": 15.248852806212495,
+                        "granted": 19.072847682119207,
                         "adminClosed": 558,
                         "denied": 1833,
                         "closedNacaraGrant": 1,
@@ -527,7 +527,7 @@
                     },
                     {
                         "office": "San Francisco, CA",
-                        "granted": 52.09851355290003,
+                        "granted": 58.016877637130804,
                         "adminClosed": 691,
                         "denied": 2587,
                         "closedNacaraGrant": 8,
@@ -537,7 +537,7 @@
                     },
                     {
                         "office": "Los Angeles, CA",
-                        "granted": 33.11153622224071,
+                        "granted": 40.36297272635101,
                         "adminClosed": 2132,
                         "denied": 5882,
                         "closedNacaraGrant": 25,
@@ -547,7 +547,7 @@
                     },
                     {
                         "office": "Chicago, IL",
-                        "granted": 36.26541072170661,
+                        "granted": 42.493101769193316,
                         "adminClosed": 1056,
                         "denied": 3543,
                         "closedNacaraGrant": 1,
@@ -557,7 +557,7 @@
                     },
                     {
                         "office": "New Orleans, LA",
-                        "granted": 32.748538011695906,
+                        "granted": 48.484848484848484,
                         "adminClosed": 440,
                         "denied": 476,
                         "closedNacaraGrant": 4,
@@ -570,7 +570,7 @@
             },
             {
                 "fiscal_year": "2020",
-                "granted": 18.380392077031125,
+                "granted": 27.561891388626027,
                 "adminClosed": 16245,
                 "denied": 23730,
                 "closedNacaraGrant": 58,
@@ -579,7 +579,7 @@
                 "yearData": [
                     {
                         "office": "Houston, TX",
-                        "granted": 10.556710556710556,
+                        "granted": 17.893500391542677,
                         "adminClosed": 1755,
                         "denied": 2097,
                         "closedNacaraGrant": 11,
@@ -589,7 +589,7 @@
                     },
                     {
                         "office": "New York, NY",
-                        "granted": 3.804347826086957,
+                        "granted": 5.199490662139219,
                         "adminClosed": 1718,
                         "denied": 4467,
                         "closedNacaraGrant": 1,
@@ -599,7 +599,7 @@
                     },
                     {
                         "office": "Newark, NJ",
-                        "granted": 18.144218665707605,
+                        "granted": 25.45408678102926,
                         "adminClosed": 1588,
                         "denied": 2955,
                         "closedNacaraGrant": 2,
@@ -609,7 +609,7 @@
                     },
                     {
                         "office": "Boston, MA",
-                        "granted": 7.334963325183375,
+                        "granted": 14.492753623188406,
                         "adminClosed": 805,
                         "denied": 708,
                         "closedNacaraGrant": 3,
@@ -619,7 +619,7 @@
                     },
                     {
                         "office": "Miami, FL",
-                        "granted": 9.46048058032341,
+                        "granted": 19.507634777189157,
                         "adminClosed": 3399,
                         "denied": 2583,
                         "closedNacaraGrant": 0,
@@ -629,7 +629,7 @@
                     },
                     {
                         "office": "Arlington, VA",
-                        "granted": 14.325068870523417,
+                        "granted": 23.07448494453249,
                         "adminClosed": 1901,
                         "denied": 2427,
                         "closedNacaraGrant": 6,
@@ -639,7 +639,7 @@
                     },
                     {
                         "office": "San Francisco, CA",
-                        "granted": 33.34712453454696,
+                        "granted": 50.94816687737042,
                         "adminClosed": 1663,
                         "denied": 1552,
                         "closedNacaraGrant": 7,
@@ -649,7 +649,7 @@
                     },
                     {
                         "office": "Los Angeles, CA",
-                        "granted": 37.26009265387161,
+                        "granted": 52.25058004640372,
                         "adminClosed": 1704,
                         "denied": 2058,
                         "closedNacaraGrant": 26,
@@ -659,7 +659,7 @@
                     },
                     {
                         "office": "Chicago, IL",
-                        "granted": 23.935708079930496,
+                        "granted": 28.217821782178216,
                         "adminClosed": 1043,
                         "denied": 4205,
                         "closedNacaraGrant": 2,
@@ -669,7 +669,7 @@
                     },
                     {
                         "office": "New Orleans, LA",
-                        "granted": 19.53405017921147,
+                        "granted": 32.537313432835816,
                         "adminClosed": 669,
                         "denied": 678,
                         "closedNacaraGrant": 0,
@@ -682,7 +682,7 @@
             },
             {
                 "fiscal_year": "2021",
-                "granted": 19.60115300900053,
+                "granted": 29.923664122137406,
                 "adminClosed": 5834,
                 "denied": 7803,
                 "closedNacaraGrant": 24,
@@ -691,7 +691,7 @@
                 "yearData": [
                     {
                         "office": "Houston, TX",
-                        "granted": 10.142348754448399,
+                        "granted": 20.454545454545457,
                         "adminClosed": 849,
                         "denied": 665,
                         "closedNacaraGrant": 0,
@@ -701,7 +701,7 @@
                     },
                     {
                         "office": "New York, NY",
-                        "granted": 7.13121434392828,
+                        "granted": 9.234828496042216,
                         "adminClosed": 559,
                         "denied": 1720,
                         "closedNacaraGrant": 0,
@@ -711,7 +711,7 @@
                     },
                     {
                         "office": "Newark, NJ",
-                        "granted": 31.03103103103103,
+                        "granted": 40.10349288486417,
                         "adminClosed": 226,
                         "denied": 463,
                         "closedNacaraGrant": 0,
@@ -721,7 +721,7 @@
                     },
                     {
                         "office": "Boston, MA",
-                        "granted": 7.325383304940375,
+                        "granted": 9.885057471264368,
                         "adminClosed": 152,
                         "denied": 392,
                         "closedNacaraGrant": 0,
@@ -731,7 +731,7 @@
                     },
                     {
                         "office": "Miami, FL",
-                        "granted": 6.3395570994355195,
+                        "granted": 14.37007874015748,
                         "adminClosed": 1285,
                         "denied": 870,
                         "closedNacaraGrant": 0,
@@ -741,7 +741,7 @@
                     },
                     {
                         "office": "Arlington, VA",
-                        "granted": 28.35746380429356,
+                        "granted": 39.859649122807014,
                         "adminClosed": 576,
                         "denied": 857,
                         "closedNacaraGrant": 1,
@@ -751,7 +751,7 @@
                     },
                     {
                         "office": "San Francisco, CA",
-                        "granted": 29.942693409742123,
+                        "granted": 49.94026284348865,
                         "adminClosed": 553,
                         "denied": 419,
                         "closedNacaraGrant": 4,
@@ -761,7 +761,7 @@
                     },
                     {
                         "office": "Los Angeles, CA",
-                        "granted": 23.00388433318947,
+                        "granted": 37.96296296296296,
                         "adminClosed": 896,
                         "denied": 871,
                         "closedNacaraGrant": 17,
@@ -771,7 +771,7 @@
                     },
                     {
                         "office": "Chicago, IL",
-                        "granted": 30.099728014505896,
+                        "granted": 35.891891891891895,
                         "adminClosed": 354,
                         "denied": 1186,
                         "closedNacaraGrant": 2,
@@ -781,7 +781,7 @@
                     },
                     {
                         "office": "New Orleans, LA",
-                        "granted": 29.00763358778626,
+                        "granted": 45.78313253012048,
                         "adminClosed": 384,
                         "denied": 360,
                         "closedNacaraGrant": 0,
@@ -796,7 +796,7 @@
         "citizenshipResults": [
             {
                 "citizenship": "MEXICO",
-                "granted": 7.977709695317589,
+                "granted": 10.588498975409836,
                 "adminClosed": 10221,
                 "denied": 27925,
                 "closedNacaraGrant": 0,
@@ -806,7 +806,7 @@
             },
             {
                 "citizenship": "ROMANIA",
-                "granted": 7.73067331670823,
+                "granted": 20.80536912751678,
                 "adminClosed": 499,
                 "denied": 236,
                 "closedNacaraGrant": 0,
@@ -816,7 +816,7 @@
             },
             {
                 "citizenship": "GUATEMALA",
-                "granted": 20.12028751650286,
+                "granted": 26.621637358798182,
                 "adminClosed": 8110,
                 "denied": 18903,
                 "closedNacaraGrant": 212,
@@ -826,7 +826,7 @@
             },
             {
                 "citizenship": "SYRIA",
-                "granted": 60.101651842439644,
+                "granted": 73.67601246105919,
                 "adminClosed": 579,
                 "denied": 676,
                 "closedNacaraGrant": 0,
@@ -836,7 +836,7 @@
             },
             {
                 "citizenship": "CHINA, PEOPLE'S REPUBLIC OF",
-                "granted": 33.71807262184178,
+                "granted": 42.35812404606632,
                 "adminClosed": 7295,
                 "denied": 16617,
                 "closedNacaraGrant": 0,
@@ -846,7 +846,7 @@
             },
             {
                 "citizenship": "IRAN",
-                "granted": 57.35357917570499,
+                "granted": 74.35320584926885,
                 "adminClosed": 523,
                 "denied": 456,
                 "closedNacaraGrant": 0,
@@ -856,7 +856,7 @@
             },
             {
                 "citizenship": "EL SALVADOR",
-                "granted": 21.820983518692216,
+                "granted": 27.816209753181315,
                 "adminClosed": 6095,
                 "denied": 16904,
                 "closedNacaraGrant": 339,
@@ -866,7 +866,7 @@
             },
             {
                 "citizenship": "HONDURAS",
-                "granted": 19.053271294274047,
+                "granted": 27.065488635597223,
                 "adminClosed": 6228,
                 "denied": 10814,
                 "closedNacaraGrant": 3,
@@ -876,7 +876,7 @@
             },
             {
                 "citizenship": "RUSSIA",
-                "granted": 42.33455882352941,
+                "granted": 52.09228681293825,
                 "adminClosed": 1015,
                 "denied": 2118,
                 "closedNacaraGrant": 0,
@@ -886,7 +886,7 @@
             },
             {
                 "citizenship": "UKRAINE",
-                "granted": 23.73163293595786,
+                "granted": 31.598375784422295,
                 "adminClosed": 894,
                 "denied": 1853,
                 "closedNacaraGrant": 0,
@@ -896,7 +896,7 @@
             },
             {
                 "citizenship": "INDONESIA",
-                "granted": 15.937241948802642,
+                "granted": 19.358074222668005,
                 "adminClosed": 209,
                 "denied": 804,
                 "closedNacaraGrant": 0,
@@ -906,7 +906,7 @@
             },
             {
                 "citizenship": "VENEZUELA",
-                "granted": 32.63074919459867,
+                "granted": 36.94176075738176,
                 "adminClosed": 3394,
                 "denied": 16252,
                 "closedNacaraGrant": 0,
@@ -916,7 +916,7 @@
             },
             {
                 "citizenship": "UGANDA",
-                "granted": 38.767395626242546,
+                "granted": 42.11663066954643,
                 "adminClosed": 120,
                 "denied": 804,
                 "closedNacaraGrant": 0,
@@ -926,7 +926,7 @@
             },
             {
                 "citizenship": "PHILIPPINES",
-                "granted": 4.134929270946682,
+                "granted": 5.499276410998553,
                 "adminClosed": 228,
                 "denied": 653,
                 "closedNacaraGrant": 0,
@@ -936,7 +936,7 @@
             },
             {
                 "citizenship": "INDIA",
-                "granted": 11.010808884665638,
+                "granted": 13.521003500583431,
                 "adminClosed": 1558,
                 "denied": 5929,
                 "closedNacaraGrant": 0,
@@ -946,7 +946,7 @@
             },
             {
                 "citizenship": "NEPAL",
-                "granted": 17.182246133154003,
+                "granted": 20.141899881750096,
                 "adminClosed": 436,
                 "denied": 2026,
                 "closedNacaraGrant": 0,
@@ -956,7 +956,7 @@
             },
             {
                 "citizenship": "JORDAN",
-                "granted": 24.935064935064936,
+                "granted": 33.4106728538283,
                 "adminClosed": 293,
                 "denied": 574,
                 "closedNacaraGrant": 0,
@@ -966,7 +966,7 @@
             },
             {
                 "citizenship": "IRAQ",
-                "granted": 45.62841530054645,
+                "granted": 57.71889400921659,
                 "adminClosed": 690,
                 "denied": 1101,
                 "closedNacaraGrant": 0,
@@ -976,7 +976,7 @@
             },
             {
                 "citizenship": "ERITREA",
-                "granted": 79.26267281105991,
+                "granted": 83.95363026235509,
                 "adminClosed": 90,
                 "denied": 263,
                 "closedNacaraGrant": 0,
@@ -986,7 +986,7 @@
             },
             {
                 "citizenship": "PAKISTAN",
-                "granted": 39.02618959793434,
+                "granted": 46.855624446412754,
                 "adminClosed": 451,
                 "denied": 1200,
                 "closedNacaraGrant": 0,
@@ -996,7 +996,7 @@
             },
             {
                 "citizenship": "AZERBAIJAN",
-                "granted": 39.166666666666664,
+                "granted": 48.329048843187664,
                 "adminClosed": 91,
                 "denied": 201,
                 "closedNacaraGrant": 0,
@@ -1006,7 +1006,7 @@
             },
             {
                 "citizenship": "KYRGYZSTAN",
-                "granted": 33.808724832214764,
+                "granted": 39.1642371234208,
                 "adminClosed": 159,
                 "denied": 626,
                 "closedNacaraGrant": 0,
@@ -1016,7 +1016,7 @@
             },
             {
                 "citizenship": "ARMENIA",
-                "granted": 28.998699609882966,
+                "granted": 35.56618819776715,
                 "adminClosed": 142,
                 "denied": 404,
                 "closedNacaraGrant": 0,
@@ -1026,7 +1026,7 @@
             },
             {
                 "citizenship": "PERU",
-                "granted": 6.447187928669409,
+                "granted": 8.238387379491673,
                 "adminClosed": 317,
                 "denied": 1047,
                 "closedNacaraGrant": 0,
@@ -1036,7 +1036,7 @@
             },
             {
                 "citizenship": "NIGERIA",
-                "granted": 21.424296828246558,
+                "granted": 23.635563380281692,
                 "adminClosed": 467,
                 "denied": 3470,
                 "closedNacaraGrant": 0,
@@ -1046,7 +1046,7 @@
             },
             {
                 "citizenship": "BULGARIA",
-                "granted": 23.770491803278688,
+                "granted": 29.896907216494846,
                 "adminClosed": 25,
                 "denied": 68,
                 "closedNacaraGrant": 0,
@@ -1056,7 +1056,7 @@
             },
             {
                 "citizenship": "COLOMBIA",
-                "granted": 15.453899028205736,
+                "granted": 18.11111111111111,
                 "adminClosed": 611,
                 "denied": 2948,
                 "closedNacaraGrant": 0,
@@ -1066,7 +1066,7 @@
             },
             {
                 "citizenship": "NICARAGUA",
-                "granted": 26.805385556915546,
+                "granted": 37.98785776235906,
                 "adminClosed": 481,
                 "denied": 715,
                 "closedNacaraGrant": 0,
@@ -1076,7 +1076,7 @@
             },
             {
                 "citizenship": "LEBANON",
-                "granted": 22.10953346855984,
+                "granted": 30.193905817174517,
                 "adminClosed": 132,
                 "denied": 252,
                 "closedNacaraGrant": 0,
@@ -1086,7 +1086,7 @@
             },
             {
                 "citizenship": "TURKEY",
-                "granted": 74.16086130462318,
+                "granted": 81.63123039386547,
                 "adminClosed": 289,
                 "denied": 527,
                 "closedNacaraGrant": 0,
@@ -1096,7 +1096,7 @@
             },
             {
                 "citizenship": "GEORGIA",
-                "granted": 21.437908496732025,
+                "granted": 26.580226904376016,
                 "adminClosed": 148,
                 "denied": 453,
                 "closedNacaraGrant": 0,
@@ -1106,7 +1106,7 @@
             },
             {
                 "citizenship": "CONGO",
-                "granted": 38.01756587202008,
+                "granted": 45.770392749244714,
                 "adminClosed": 132,
                 "denied": 359,
                 "closedNacaraGrant": 0,
@@ -1116,7 +1116,7 @@
             },
             {
                 "citizenship": "EGYPT",
-                "granted": 70.99125364431487,
+                "granted": 78.91432043751266,
                 "adminClosed": 550,
                 "denied": 1041,
                 "closedNacaraGrant": 0,
@@ -1126,7 +1126,7 @@
             },
             {
                 "citizenship": "MOLDOVA",
-                "granted": 27.52808988764045,
+                "granted": 35.201149425287355,
                 "adminClosed": 194,
                 "denied": 451,
                 "closedNacaraGrant": 0,
@@ -1136,7 +1136,7 @@
             },
             {
                 "citizenship": "MONGOLIA",
-                "granted": 26.4750378214826,
+                "granted": 31.13879003558719,
                 "adminClosed": 97,
                 "denied": 387,
                 "closedNacaraGrant": 0,
@@ -1146,7 +1146,7 @@
             },
             {
                 "citizenship": "YEMEN",
-                "granted": 40.55727554179567,
+                "granted": 52.505010020040075,
                 "adminClosed": 147,
                 "denied": 237,
                 "closedNacaraGrant": 0,
@@ -1156,7 +1156,7 @@
             },
             {
                 "citizenship": "ETHIOPIA",
-                "granted": 55.02464922260144,
+                "granted": 64.03353927625773,
                 "adminClosed": 365,
                 "denied": 815,
                 "closedNacaraGrant": 0,
@@ -1166,7 +1166,7 @@
             },
             {
                 "citizenship": "CAMEROON",
-                "granted": 42.2543352601156,
+                "granted": 51.6973125884017,
                 "adminClosed": 299,
                 "denied": 683,
                 "closedNacaraGrant": 0,
@@ -1176,7 +1176,7 @@
             },
             {
                 "citizenship": "BURMA",
-                "granted": 37.05408515535098,
+                "granted": 41.28205128205128,
                 "adminClosed": 87,
                 "denied": 458,
                 "closedNacaraGrant": 0,
@@ -1186,7 +1186,7 @@
             },
             {
                 "citizenship": "AFGHANISTAN",
-                "granted": 58.006042296072515,
+                "granted": 71.11111111111111,
                 "adminClosed": 117,
                 "denied": 156,
                 "closedNacaraGrant": 0,
@@ -1196,7 +1196,7 @@
             },
             {
                 "citizenship": "SAUDI ARABIA",
-                "granted": 53.92781316348195,
+                "granted": 71.75141242937853,
                 "adminClosed": 117,
                 "denied": 100,
                 "closedNacaraGrant": 0,
@@ -1206,7 +1206,7 @@
             },
             {
                 "citizenship": "MALI",
-                "granted": 30.65326633165829,
+                "granted": 34.56090651558073,
                 "adminClosed": 45,
                 "denied": 231,
                 "closedNacaraGrant": 0,
@@ -1216,7 +1216,7 @@
             },
             {
                 "citizenship": "BELARUS",
-                "granted": 32.468780019212296,
+                "granted": 38.27859569648924,
                 "adminClosed": 158,
                 "denied": 545,
                 "closedNacaraGrant": 0,
@@ -1226,7 +1226,7 @@
             },
             {
                 "citizenship": "HAITI",
-                "granted": 10.221043324491601,
+                "granted": 18.051217988757028,
                 "adminClosed": 2445,
                 "denied": 2624,
                 "closedNacaraGrant": 0,
@@ -1236,7 +1236,7 @@
             },
             {
                 "citizenship": "JAMAICA",
-                "granted": 53.85964912280702,
+                "granted": 64.90486257928119,
                 "adminClosed": 97,
                 "denied": 166,
                 "closedNacaraGrant": 0,
@@ -1246,7 +1246,7 @@
             },
             {
                 "citizenship": "ISRAEL",
-                "granted": 18.48341232227488,
+                "granted": 27.659574468085108,
                 "adminClosed": 70,
                 "denied": 102,
                 "closedNacaraGrant": 0,
@@ -1256,7 +1256,7 @@
             },
             {
                 "citizenship": "BRAZIL",
-                "granted": 14.450867052023122,
+                "granted": 23.14814814814815,
                 "adminClosed": 1105,
                 "denied": 1411,
                 "closedNacaraGrant": 0,
@@ -1266,7 +1266,7 @@
             },
             {
                 "citizenship": "CUBA",
-                "granted": 2.7966101694915255,
+                "granted": 24.62686567164179,
                 "adminClosed": 1044,
                 "denied": 101,
                 "closedNacaraGrant": 0,
@@ -1276,7 +1276,7 @@
             },
             {
                 "citizenship": "UZBEKISTAN",
-                "granted": 24.210526315789473,
+                "granted": 31.04294478527607,
                 "adminClosed": 229,
                 "denied": 562,
                 "closedNacaraGrant": 0,
@@ -1286,7 +1286,7 @@
             },
             {
                 "citizenship": "ALGERIA",
-                "granted": 29.84293193717277,
+                "granted": 37.5,
                 "adminClosed": 37,
                 "denied": 95,
                 "closedNacaraGrant": 0,
@@ -1296,7 +1296,7 @@
             },
             {
                 "citizenship": "ZIMBABWE",
-                "granted": 47.34513274336283,
+                "granted": 55.58441558441558,
                 "adminClosed": 63,
                 "denied": 171,
                 "closedNacaraGrant": 0,
@@ -1306,7 +1306,7 @@
             },
             {
                 "citizenship": "LIBYA",
-                "granted": 28.51851851851852,
+                "granted": 38.9873417721519,
                 "adminClosed": 145,
                 "denied": 241,
                 "closedNacaraGrant": 0,
@@ -1316,7 +1316,7 @@
             },
             {
                 "citizenship": "MAURITANIA",
-                "granted": 34.404283801874165,
+                "granted": 41.120000000000005,
                 "adminClosed": 120,
                 "denied": 368,
                 "closedNacaraGrant": 0,
@@ -1326,7 +1326,7 @@
             },
             {
                 "citizenship": "BURKINA FASO",
-                "granted": 18.269896193771626,
+                "granted": 20.902612826603324,
                 "adminClosed": 182,
                 "denied": 999,
                 "closedNacaraGrant": 0,
@@ -1336,7 +1336,7 @@
             },
             {
                 "citizenship": "BENIN",
-                "granted": 20.37037037037037,
+                "granted": 26.506024096385545,
                 "adminClosed": 25,
                 "denied": 61,
                 "closedNacaraGrant": 0,
@@ -1346,7 +1346,7 @@
             },
             {
                 "citizenship": "SERBIA AND MONTENEGRO",
-                "granted": 25.177304964539005,
+                "granted": 33.80952380952381,
                 "adminClosed": 71,
                 "denied": 139,
                 "closedNacaraGrant": 0,
@@ -1356,7 +1356,7 @@
             },
             {
                 "citizenship": "KENYA",
-                "granted": 28.792822185970635,
+                "granted": 35.33533533533533,
                 "adminClosed": 227,
                 "denied": 646,
                 "closedNacaraGrant": 0,
@@ -1366,7 +1366,7 @@
             },
             {
                 "citizenship": "TAJIKISTAN",
-                "granted": 26.642335766423358,
+                "granted": 32.88288288288289,
                 "adminClosed": 48,
                 "denied": 149,
                 "closedNacaraGrant": 0,
@@ -1376,7 +1376,7 @@
             },
             {
                 "citizenship": "DEM REP OF THE CONGO",
-                "granted": 29.30672268907563,
+                "granted": 33.777239709443094,
                 "adminClosed": 124,
                 "denied": 547,
                 "closedNacaraGrant": 0,
@@ -1386,7 +1386,7 @@
             },
             {
                 "citizenship": "GHANA",
-                "granted": 21.09704641350211,
+                "granted": 28.08988764044944,
                 "adminClosed": 59,
                 "denied": 128,
                 "closedNacaraGrant": 0,
@@ -1396,7 +1396,7 @@
             },
             {
                 "citizenship": "BURUNDI",
-                "granted": 41.35514018691589,
+                "granted": 47.7088948787062,
                 "adminClosed": 57,
                 "denied": 194,
                 "closedNacaraGrant": 0,
@@ -1406,7 +1406,7 @@
             },
             {
                 "citizenship": "SOUTH SUDAN",
-                "granted": 58.18181818181818,
+                "granted": 60.37735849056604,
                 "adminClosed": 2,
                 "denied": 21,
                 "closedNacaraGrant": 0,
@@ -1416,7 +1416,7 @@
             },
             {
                 "citizenship": "VIETNAM",
-                "granted": 23.097826086956523,
+                "granted": 32.31939163498099,
                 "adminClosed": 105,
                 "denied": 178,
                 "closedNacaraGrant": 0,
@@ -1426,7 +1426,7 @@
             },
             {
                 "citizenship": "SRI LANKA",
-                "granted": 15.04315659679408,
+                "granted": 18.373493975903614,
                 "adminClosed": 136,
                 "denied": 542,
                 "closedNacaraGrant": 0,
@@ -1436,7 +1436,7 @@
             },
             {
                 "citizenship": "GABON",
-                "granted": 19.047619047619047,
+                "granted": 20.833333333333336,
                 "adminClosed": 8,
                 "denied": 76,
                 "closedNacaraGrant": 0,
@@ -1446,7 +1446,7 @@
             },
             {
                 "citizenship": "NIGER",
-                "granted": 27.33812949640288,
+                "granted": 31.666666666666664,
                 "adminClosed": 19,
                 "denied": 82,
                 "closedNacaraGrant": 0,
@@ -1456,7 +1456,7 @@
             },
             {
                 "citizenship": "ARGENTINA",
-                "granted": 0.6756756756756757,
+                "granted": 1.5873015873015872,
                 "adminClosed": 85,
                 "denied": 62,
                 "closedNacaraGrant": 0,
@@ -1466,7 +1466,7 @@
             },
             {
                 "citizenship": "NORTH MACEDONIA",
-                "granted": 27.43362831858407,
+                "granted": 32.97872340425532,
                 "adminClosed": 19,
                 "denied": 63,
                 "closedNacaraGrant": 0,
@@ -1476,7 +1476,7 @@
             },
             {
                 "citizenship": "ALBANIA",
-                "granted": 11.035267349260524,
+                "granted": 14.54272863568216,
                 "adminClosed": 209,
                 "denied": 570,
                 "closedNacaraGrant": 0,
@@ -1495,7 +1495,7 @@
             },
             {
                 "citizenship": "ECUADOR",
-                "granted": 3.2341526520051747,
+                "granted": 3.7917087967644085,
                 "adminClosed": 1363,
                 "denied": 7612,
                 "closedNacaraGrant": 1,
@@ -1505,7 +1505,7 @@
             },
             {
                 "citizenship": "SENEGAL",
-                "granted": 22.76657060518732,
+                "granted": 26.158940397350992,
                 "adminClosed": 43,
                 "denied": 223,
                 "closedNacaraGrant": 0,
@@ -1515,7 +1515,7 @@
             },
             {
                 "citizenship": "LIBERIA",
-                "granted": 34.78260869565217,
+                "granted": 42.03612479474548,
                 "adminClosed": 123,
                 "denied": 353,
                 "closedNacaraGrant": 0,
@@ -1525,7 +1525,7 @@
             },
             {
                 "citizenship": "DOMINICAN REPUBLIC",
-                "granted": 9.411764705882353,
+                "granted": 12.749003984063744,
                 "adminClosed": 89,
                 "denied": 219,
                 "closedNacaraGrant": 0,
@@ -1535,7 +1535,7 @@
             },
             {
                 "citizenship": "COSTA RICA",
-                "granted": 0.6557377049180327,
+                "granted": 0.8264462809917356,
                 "adminClosed": 63,
                 "denied": 240,
                 "closedNacaraGrant": 0,
@@ -1545,7 +1545,7 @@
             },
             {
                 "citizenship": "BANGLADESH",
-                "granted": 12.631578947368421,
+                "granted": 15.450643776824036,
                 "adminClosed": 363,
                 "denied": 1379,
                 "closedNacaraGrant": 0,
@@ -1555,7 +1555,7 @@
             },
             {
                 "citizenship": "DJIBOUTI",
-                "granted": 60.55555555555555,
+                "granted": 68.9873417721519,
                 "adminClosed": 22,
                 "denied": 49,
                 "closedNacaraGrant": 0,
@@ -1565,7 +1565,7 @@
             },
             {
                 "citizenship": "RWANDA",
-                "granted": 45.63492063492063,
+                "granted": 49.14529914529914,
                 "adminClosed": 53,
                 "denied": 357,
                 "closedNacaraGrant": 0,
@@ -1575,7 +1575,7 @@
             },
             {
                 "citizenship": "KAZAKHSTAN",
-                "granted": 34.923339011925044,
+                "granted": 40.5940594059406,
                 "adminClosed": 163,
                 "denied": 600,
                 "closedNacaraGrant": 0,
@@ -1585,7 +1585,7 @@
             },
             {
                 "citizenship": "POLAND",
-                "granted": 0.5964214711729622,
+                "granted": 0.6944444444444444,
                 "adminClosed": 70,
                 "denied": 429,
                 "closedNacaraGrant": 1,
@@ -1595,7 +1595,7 @@
             },
             {
                 "citizenship": "THE GAMBIA",
-                "granted": 41.54589371980676,
+                "granted": 48.04469273743017,
                 "adminClosed": 84,
                 "denied": 279,
                 "closedNacaraGrant": 0,
@@ -1605,7 +1605,7 @@
             },
             {
                 "citizenship": "KOSOVO",
-                "granted": 16.831683168316832,
+                "granted": 19.54022988505747,
                 "adminClosed": 70,
                 "denied": 350,
                 "closedNacaraGrant": 0,
@@ -1615,7 +1615,7 @@
             },
             {
                 "citizenship": "CHAD",
-                "granted": 45.714285714285715,
+                "granted": 51.2,
                 "adminClosed": 14,
                 "denied": 61,
                 "closedNacaraGrant": 0,
@@ -1625,7 +1625,7 @@
             },
             {
                 "citizenship": "GUINEA",
-                "granted": 36.69590643274854,
+                "granted": 41.28289473684211,
                 "adminClosed": 74,
                 "denied": 357,
                 "closedNacaraGrant": 0,
@@ -1635,7 +1635,7 @@
             },
             {
                 "citizenship": "MALAYSIA",
-                "granted": 13.725490196078432,
+                "granted": 15.555555555555555,
                 "adminClosed": 24,
                 "denied": 152,
                 "closedNacaraGrant": 0,
@@ -1645,7 +1645,7 @@
             },
             {
                 "citizenship": "GERMANY",
-                "granted": 8.16326530612245,
+                "granted": 14.814814814814813,
                 "adminClosed": 22,
                 "denied": 23,
                 "closedNacaraGrant": 0,
@@ -1664,7 +1664,7 @@
             },
             {
                 "citizenship": "TUNISIA",
-                "granted": 26.993865030674847,
+                "granted": 35.199999999999996,
                 "adminClosed": 38,
                 "denied": 81,
                 "closedNacaraGrant": 0,
@@ -1674,7 +1674,7 @@
             },
             {
                 "citizenship": "CÃ”TE D'IVOIRE",
-                "granted": 22.22222222222222,
+                "granted": 25.702811244979916,
                 "adminClosed": 78,
                 "denied": 370,
                 "closedNacaraGrant": 0,
@@ -1684,7 +1684,7 @@
             },
             {
                 "citizenship": "CHILE",
-                "granted": 5.3097345132743365,
+                "granted": 8.695652173913043,
                 "adminClosed": 44,
                 "denied": 63,
                 "closedNacaraGrant": 0,
@@ -1694,7 +1694,7 @@
             },
             {
                 "citizenship": "SERBIA",
-                "granted": 21.768707482993197,
+                "granted": 22.69503546099291,
                 "adminClosed": 6,
                 "denied": 109,
                 "closedNacaraGrant": 0,
@@ -1704,7 +1704,7 @@
             },
             {
                 "citizenship": "ANGOLA",
-                "granted": 12.79707495429616,
+                "granted": 15.350877192982457,
                 "adminClosed": 90,
                 "denied": 386,
                 "closedNacaraGrant": 0,
@@ -1714,7 +1714,7 @@
             },
             {
                 "citizenship": "GUYANA",
-                "granted": 16.376306620209057,
+                "granted": 19.665271966527197,
                 "adminClosed": 48,
                 "denied": 192,
                 "closedNacaraGrant": 0,
@@ -1724,7 +1724,7 @@
             },
             {
                 "citizenship": "HUNGARY",
-                "granted": 0.5780346820809248,
+                "granted": 1.5625,
                 "adminClosed": 109,
                 "denied": 63,
                 "closedNacaraGrant": 0,
@@ -1734,7 +1734,7 @@
             },
             {
                 "citizenship": "SUDAN",
-                "granted": 51.5625,
+                "granted": 64.93738819320215,
                 "adminClosed": 141,
                 "denied": 196,
                 "closedNacaraGrant": 0,
@@ -1744,7 +1744,7 @@
             },
             {
                 "citizenship": "MALAWI",
-                "granted": 22.58064516129032,
+                "granted": 24.137931034482758,
                 "adminClosed": 4,
                 "denied": 44,
                 "closedNacaraGrant": 0,
@@ -1754,7 +1754,7 @@
             },
             {
                 "citizenship": "JAPAN",
-                "granted": 3.278688524590164,
+                "granted": 5.555555555555555,
                 "adminClosed": 25,
                 "denied": 34,
                 "closedNacaraGrant": 0,
@@ -1764,7 +1764,7 @@
             },
             {
                 "citizenship": "MONTENEGRO",
-                "granted": 14.418604651162791,
+                "granted": 16.230366492146597,
                 "adminClosed": 24,
                 "denied": 160,
                 "closedNacaraGrant": 0,
@@ -1774,7 +1774,7 @@
             },
             {
                 "citizenship": "SOMALIA",
-                "granted": 44.559585492227974,
+                "granted": 65.64885496183206,
                 "adminClosed": 52,
                 "denied": 45,
                 "closedNacaraGrant": 0,
@@ -1784,7 +1784,7 @@
             },
             {
                 "citizenship": "STATELESS",
-                "granted": 27.292817679558013,
+                "granted": 36.05839416058394,
                 "adminClosed": 216,
                 "denied": 438,
                 "closedNacaraGrant": 0,
@@ -1794,7 +1794,7 @@
             },
             {
                 "citizenship": "YUGOSLAVIA",
-                "granted": 38.46153846153847,
+                "granted": 55.55555555555556,
                 "adminClosed": 7,
                 "denied": 12,
                 "closedNacaraGrant": 1,
@@ -1804,7 +1804,7 @@
             },
             {
                 "citizenship": "EQUATORIAL GUINEA",
-                "granted": 40.74074074074074,
+                "granted": 44,
                 "adminClosed": 2,
                 "denied": 14,
                 "closedNacaraGrant": 0,
@@ -1814,7 +1814,7 @@
             },
             {
                 "citizenship": "FIJI",
-                "granted": 13.274336283185843,
+                "granted": 15.625,
                 "adminClosed": 17,
                 "denied": 81,
                 "closedNacaraGrant": 0,
@@ -1824,7 +1824,7 @@
             },
             {
                 "citizenship": "MOROCCO",
-                "granted": 35.18518518518518,
+                "granted": 45.78313253012048,
                 "adminClosed": 25,
                 "denied": 45,
                 "closedNacaraGrant": 0,
@@ -1834,7 +1834,7 @@
             },
             {
                 "citizenship": "TOGO",
-                "granted": 35.51136363636363,
+                "granted": 38.940809968847354,
                 "adminClosed": 31,
                 "denied": 196,
                 "closedNacaraGrant": 0,
@@ -1844,7 +1844,7 @@
             },
             {
                 "citizenship": "SOUTH AFRICA",
-                "granted": 7.547169811320755,
+                "granted": 8.47457627118644,
                 "adminClosed": 29,
                 "denied": 216,
                 "closedNacaraGrant": 0,
@@ -1854,7 +1854,7 @@
             },
             {
                 "citizenship": "TRINIDAD AND TOBAGO",
-                "granted": 7.2992700729927,
+                "granted": 9.70873786407767,
                 "adminClosed": 34,
                 "denied": 93,
                 "closedNacaraGrant": 0,
@@ -1864,7 +1864,7 @@
             },
             {
                 "citizenship": "NETHERLANDS",
-                "granted": 21.428571428571427,
+                "granted": 100,
                 "adminClosed": 11,
                 "denied": 0,
                 "closedNacaraGrant": 0,
@@ -1874,7 +1874,7 @@
             },
             {
                 "citizenship": "USSR",
-                "granted": 44.71544715447154,
+                "granted": 49.549549549549546,
                 "adminClosed": 12,
                 "denied": 56,
                 "closedNacaraGrant": 0,
@@ -1884,7 +1884,7 @@
             },
             {
                 "citizenship": "TAIWAN",
-                "granted": 1.639344262295082,
+                "granted": 3.4482758620689653,
                 "adminClosed": 32,
                 "denied": 28,
                 "closedNacaraGrant": 0,
@@ -1894,7 +1894,7 @@
             },
             {
                 "citizenship": "LITHUANIA",
-                "granted": 8.108108108108109,
+                "granted": 18.75,
                 "adminClosed": 21,
                 "denied": 13,
                 "closedNacaraGrant": 0,
@@ -1913,7 +1913,7 @@
             },
             {
                 "citizenship": "LAOS",
-                "granted": 23,
+                "granted": 32.857142857142854,
                 "adminClosed": 30,
                 "denied": 47,
                 "closedNacaraGrant": 0,
@@ -1923,7 +1923,7 @@
             },
             {
                 "citizenship": "TANZANIA",
-                "granted": 31.914893617021278,
+                "granted": 41.0958904109589,
                 "adminClosed": 21,
                 "denied": 43,
                 "closedNacaraGrant": 0,
@@ -1933,7 +1933,7 @@
             },
             {
                 "citizenship": "THAILAND",
-                "granted": 9.042553191489363,
+                "granted": 23.943661971830984,
                 "adminClosed": 117,
                 "denied": 54,
                 "closedNacaraGrant": 0,
@@ -1943,7 +1943,7 @@
             },
             {
                 "citizenship": "URUGUAY",
-                "granted": 5.333333333333334,
+                "granted": 9.30232558139535,
                 "adminClosed": 32,
                 "denied": 39,
                 "closedNacaraGrant": 0,
@@ -1953,7 +1953,7 @@
             },
             {
                 "citizenship": "BELIZE",
-                "granted": 14.925373134328357,
+                "granted": 20.408163265306122,
                 "adminClosed": 18,
                 "denied": 39,
                 "closedNacaraGrant": 0,
@@ -1963,7 +1963,7 @@
             },
             {
                 "citizenship": "BHUTAN",
-                "granted": 3.0303030303030303,
+                "granted": 4.123711340206185,
                 "adminClosed": 35,
                 "denied": 93,
                 "closedNacaraGrant": 0,
@@ -1973,7 +1973,7 @@
             },
             {
                 "citizenship": "PARAGUAY",
-                "granted": 7.547169811320755,
+                "granted": 8.88888888888889,
                 "adminClosed": 8,
                 "denied": 41,
                 "closedNacaraGrant": 0,
@@ -1992,7 +1992,7 @@
             },
             {
                 "citizenship": "BOSNIA-HERZEGOVINA",
-                "granted": 30.58823529411765,
+                "granted": 39.39393939393939,
                 "adminClosed": 19,
                 "denied": 40,
                 "closedNacaraGrant": 0,
@@ -2002,7 +2002,7 @@
             },
             {
                 "citizenship": "SPAIN",
-                "granted": 1.36986301369863,
+                "granted": 3.3333333333333335,
                 "adminClosed": 43,
                 "denied": 29,
                 "closedNacaraGrant": 0,
@@ -2021,7 +2021,7 @@
             },
             {
                 "citizenship": "BOLIVIA",
-                "granted": 11.851851851851853,
+                "granted": 15.09433962264151,
                 "adminClosed": 29,
                 "denied": 90,
                 "closedNacaraGrant": 0,
@@ -2031,7 +2031,7 @@
             },
             {
                 "citizenship": "MAURITIUS",
-                "granted": 47.05882352941176,
+                "granted": 53.333333333333336,
                 "adminClosed": 2,
                 "denied": 7,
                 "closedNacaraGrant": 0,
@@ -2041,7 +2041,7 @@
             },
             {
                 "citizenship": "LATVIA",
-                "granted": 5.714285714285714,
+                "granted": 11.11111111111111,
                 "adminClosed": 17,
                 "denied": 16,
                 "closedNacaraGrant": 0,
@@ -2051,7 +2051,7 @@
             },
             {
                 "citizenship": "PANAMA",
-                "granted": 5.405405405405405,
+                "granted": 9.090909090909092,
                 "adminClosed": 15,
                 "denied": 20,
                 "closedNacaraGrant": 0,
@@ -2080,7 +2080,7 @@
             },
             {
                 "citizenship": "UNKNOWN",
-                "granted": 39.62264150943396,
+                "granted": 45.65217391304348,
                 "adminClosed": 7,
                 "denied": 25,
                 "closedNacaraGrant": 0,
@@ -2090,7 +2090,7 @@
             },
             {
                 "citizenship": "GRENADA",
-                "granted": 8.333333333333332,
+                "granted": 11.76470588235294,
                 "adminClosed": 7,
                 "denied": 15,
                 "closedNacaraGrant": 0,
@@ -2100,7 +2100,7 @@
             },
             {
                 "citizenship": "SOUTH KOREA",
-                "granted": 4.098360655737705,
+                "granted": 9.25925925925926,
                 "adminClosed": 68,
                 "denied": 49,
                 "closedNacaraGrant": 0,
@@ -2110,7 +2110,7 @@
             },
             {
                 "citizenship": "CZECHOSLOVAKIA",
-                "granted": 6.666666666666667,
+                "granted": 11.11111111111111,
                 "adminClosed": 6,
                 "denied": 8,
                 "closedNacaraGrant": 0,
@@ -2120,7 +2120,7 @@
             },
             {
                 "citizenship": "TURKMENISTAN",
-                "granted": 47.66839378238342,
+                "granted": 53.80116959064327,
                 "adminClosed": 22,
                 "denied": 79,
                 "closedNacaraGrant": 0,
@@ -2130,7 +2130,7 @@
             },
             {
                 "citizenship": "UNITED ARAB EMIRATES",
-                "granted": 41.46341463414634,
+                "granted": 68,
                 "adminClosed": 16,
                 "denied": 8,
                 "closedNacaraGrant": 0,
@@ -2140,7 +2140,7 @@
             },
             {
                 "citizenship": "ITALY",
-                "granted": 1.3793103448275863,
+                "granted": 2.7027027027027026,
                 "adminClosed": 71,
                 "denied": 72,
                 "closedNacaraGrant": 0,
@@ -2150,7 +2150,7 @@
             },
             {
                 "citizenship": "FRANCE",
-                "granted": 5.128205128205128,
+                "granted": 15.384615384615385,
                 "adminClosed": 26,
                 "denied": 11,
                 "closedNacaraGrant": 0,
@@ -2160,7 +2160,7 @@
             },
             {
                 "citizenship": "SIERRA LEONE",
-                "granted": 41.988950276243095,
+                "granted": 48.10126582278481,
                 "adminClosed": 21,
                 "denied": 82,
                 "closedNacaraGrant": 0,
@@ -2170,7 +2170,7 @@
             },
             {
                 "citizenship": "ZAMBIA",
-                "granted": 31.57894736842105,
+                "granted": 33.9622641509434,
                 "adminClosed": 4,
                 "denied": 35,
                 "closedNacaraGrant": 0,
@@ -2180,7 +2180,7 @@
             },
             {
                 "citizenship": "SWAZILAND",
-                "granted": 50,
+                "granted": 75,
                 "adminClosed": 2,
                 "denied": 1,
                 "closedNacaraGrant": 0,
@@ -2190,7 +2190,7 @@
             },
             {
                 "citizenship": "UNITED KINGDOM",
-                "granted": 6.896551724137931,
+                "granted": 20,
                 "adminClosed": 19,
                 "denied": 8,
                 "closedNacaraGrant": 0,
@@ -2200,7 +2200,7 @@
             },
             {
                 "citizenship": "BAHRAIN",
-                "granted": 30,
+                "granted": 37.5,
                 "adminClosed": 4,
                 "denied": 10,
                 "closedNacaraGrant": 0,
@@ -2210,7 +2210,7 @@
             },
             {
                 "citizenship": "CENTRAL AFRICAN REPUBLIC",
-                "granted": 63.23529411764706,
+                "granted": 67.1875,
                 "adminClosed": 4,
                 "denied": 21,
                 "closedNacaraGrant": 0,
@@ -2220,7 +2220,7 @@
             },
             {
                 "citizenship": "GUINEA-BISSAU",
-                "granted": 10,
+                "granted": 12.5,
                 "adminClosed": 2,
                 "denied": 7,
                 "closedNacaraGrant": 0,
@@ -2230,7 +2230,7 @@
             },
             {
                 "citizenship": "CAMBODIA",
-                "granted": 52.77777777777778,
+                "granted": 61.29032258064516,
                 "adminClosed": 5,
                 "denied": 12,
                 "closedNacaraGrant": 0,
@@ -2249,7 +2249,7 @@
             },
             {
                 "citizenship": "KUWAIT",
-                "granted": 49.36708860759494,
+                "granted": 68.42105263157895,
                 "adminClosed": 22,
                 "denied": 18,
                 "closedNacaraGrant": 0,
@@ -2277,7 +2277,7 @@
             },
             {
                 "citizenship": "AUSTRIA",
-                "granted": 50,
+                "granted": 100,
                 "adminClosed": 2,
                 "denied": 0,
                 "closedNacaraGrant": 0,
@@ -2314,7 +2314,7 @@
             },
             {
                 "citizenship": "CROATIA",
-                "granted": 8.695652173913043,
+                "granted": 11.11111111111111,
                 "adminClosed": 5,
                 "denied": 16,
                 "closedNacaraGrant": 0,
@@ -2342,7 +2342,7 @@
             },
             {
                 "citizenship": "DOMINICA",
-                "granted": 33.33333333333333,
+                "granted": 58.333333333333336,
                 "adminClosed": 9,
                 "denied": 5,
                 "closedNacaraGrant": 0,
@@ -2352,7 +2352,7 @@
             },
             {
                 "citizenship": "BAHAMAS",
-                "granted": 27.27272727272727,
+                "granted": 33.33333333333333,
                 "adminClosed": 4,
                 "denied": 12,
                 "closedNacaraGrant": 0,
@@ -2371,7 +2371,7 @@
             },
             {
                 "citizenship": "QATAR",
-                "granted": 50,
+                "granted": 100,
                 "adminClosed": 3,
                 "denied": 0,
                 "closedNacaraGrant": 0,
@@ -2408,7 +2408,7 @@
             },
             {
                 "citizenship": "SURINAME",
-                "granted": 27.27272727272727,
+                "granted": 33.33333333333333,
                 "adminClosed": 2,
                 "denied": 6,
                 "closedNacaraGrant": 0,
@@ -2418,7 +2418,7 @@
             },
             {
                 "citizenship": "HONG KONG",
-                "granted": 12,
+                "granted": 16.666666666666664,
                 "adminClosed": 7,
                 "denied": 15,
                 "closedNacaraGrant": 0,
@@ -2456,7 +2456,7 @@
             },
             {
                 "citizenship": "ESTONIA",
-                "granted": 8.333333333333332,
+                "granted": 33.33333333333333,
                 "adminClosed": 9,
                 "denied": 2,
                 "closedNacaraGrant": 0,
@@ -2522,7 +2522,7 @@
             },
             {
                 "citizenship": "MOZAMBIQUE",
-                "granted": 28.57142857142857,
+                "granted": 33.33333333333333,
                 "adminClosed": 2,
                 "denied": 8,
                 "closedNacaraGrant": 0,
@@ -2541,7 +2541,7 @@
             },
             {
                 "citizenship": "ANTIGUA-BARBUDA",
-                "granted": 33.33333333333333,
+                "granted": 40,
                 "adminClosed": 1,
                 "denied": 3,
                 "closedNacaraGrant": 0,

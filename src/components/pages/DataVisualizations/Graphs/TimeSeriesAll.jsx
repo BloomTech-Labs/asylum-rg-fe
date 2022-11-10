@@ -20,8 +20,9 @@ function TimeSeriesAll(props) {
     'Fiscal Year',
     'Total Cases',
     'Grants',
-    'Admin Closed / Dismissals',
     'Referrals / Denials',
+    'Admin Closed / Dismissals',
+    'Granted Rate',
   ];
   useEffect(() => {
     if (timeSeriesAllData.rowsForAllDisplay === undefined) {

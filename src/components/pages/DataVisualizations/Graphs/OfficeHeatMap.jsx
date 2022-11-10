@@ -42,8 +42,9 @@ function OfficeHeatMap(props) {
     'Year [Office]',
     'Total Cases',
     'Grants',
-    'Admin Closed / Dismissals',
     'Referrals / Denials',
+    'Admin Closed / Dismissals',
+    'Granted Rate',
   ];
 
   return (

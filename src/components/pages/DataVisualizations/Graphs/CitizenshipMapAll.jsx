@@ -58,8 +58,9 @@ function CitizenshipMapAll(props) {
     'Citizenship',
     'Total Cases',
     'Grants',
-    'Admin Closed / Dismissals',
     'Referrals / Denials',
+    'Admin Closed / Dismissals',
+    'Granted Rate',
   ];
 
   return (

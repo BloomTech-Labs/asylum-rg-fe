@@ -7,8 +7,6 @@ const { primary_accent_color } = colors;
 function Table(props) {
   const { rows, columns, tableWidth, rowHeight } = props;
 
-  console.log({ rows: rows, columns: columns });
-
   return (
     <div
       className="g-table"

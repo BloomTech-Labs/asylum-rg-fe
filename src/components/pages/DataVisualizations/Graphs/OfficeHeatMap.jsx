@@ -22,7 +22,6 @@ function OfficeHeatMap(props) {
   const [rowsForTable, setRowsForTable] = useState([]);
 
   useEffect(() => {
-    console.log(officeHeatMapData);
     if (officeHeatMapData['officeHeatMapDataObject'] !== undefined) {
       setPlotlyGraphAxis({
         x: officeHeatMapData['officeHeatMapDataObject']['x'],

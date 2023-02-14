@@ -45,7 +45,6 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
   }
   for (let yearResults of data['yearResults']) {
     for (let yearData of yearResults['yearData']) {
-      console.log(yearData['office']);
       officeData[yearData['office']]['xYears'].push(yearResults['fiscal_year']);
       officeData[yearData['office']]['totals'].push(yearData['totalCases']);
       officeData[yearData['office']]['yTotalPercentGranteds'].push(
@@ -150,7 +149,6 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           //loop through
           officeHeatMapDataObject['y'].push(fiscal_year); //include year into y axis
           let zAxisArray = []; //Array to hold each row for z axis
-          console.log(yearByOfficeByGrant);
           for (let officeName of officeNames) {
             //loop using unique office names
             zAxisArray.push(

@@ -23,7 +23,6 @@ function TimeSeriesSingleOffice(props) {
   const [rowsForTable, setRowsForTable] = useState([]);
 
   useEffect(() => {
-    console.log(timeSeriesData['singleOfficeDataObject']);
     if (timeSeriesData['singleOfficeDataObject'] !== undefined) {
       setPlotlyGraphAxis({
         x: timeSeriesData['singleOfficeDataObject']['xYears'],

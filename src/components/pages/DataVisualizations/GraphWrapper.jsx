@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import CitizenshipMapAll from './Graphs/CitizenshipMapAll';
@@ -13,12 +13,14 @@ import { resetVisualizationQuery } from '../../../state/actionCreators';
 import test_data from '../../../data/test_data.json';
 import { colors } from '../../../styles/data_vis_colors';
 import ScrollToTopOnMount from '../../../utils/scrollToTopOnMount';
+import { setData } from '../../../state/actionCreators';
 
 const { background_color } = colors;
 
 function GraphWrapper(props) {
-  const { set_view, dispatch } = props;
+  const { set_view, dispatch, rawData } = props;
   let { office, view } = useParams();
+
   if (!view) {
     set_view('time-series');
     view = 'time-series';
@@ -77,57 +79,38 @@ function GraphWrapper(props) {
                                    -- Mack 
     
     */
-
     if (office === 'all' || !office) {
-      // axios
-      //   .get(`${process.env.REACT_APP_API_URI}/cases/fiscalSummary`, {
-      //     // mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
-      //     params: {
-      //       from: years[0],
-      //       to: years[1],
-      //     },
-      //   })
-      //   .then(result => {
-      //     stateSettingCallback(view, office, test_data); // <-- `test_data` here can be simply replaced by `result.data` in prod!
-      //   })
-      //   .catch(err => {
-      //     console.error(err);
-      //   });
+      if (rawData.length === 0) {
+        const [firstResponse, secondResponse] = await Promise.all([
+          axios.get(`${process.env.REACT_APP_API_URI}/cases/fiscalSummary`),
+          axios.get(
+            `${process.env.REACT_APP_API_URI}/cases/citizenshipSummary`
+          ),
+        ]);
 
-      const [firstResponse, secondResponse] = await Promise.all([
-        axios.get(`${process.env.REACT_APP_API_URI}/cases/fiscalSummary`),
-        axios.get(`${process.env.REACT_APP_API_URI}/cases/citizenshipSummary`),
-      ]);
-
-      let data = firstResponse.data;
-      data.citizenshipResults = secondResponse.data;
-      stateSettingCallback(view, office, data);
-      console.log(data);
+        let data = firstResponse.data;
+        data.citizenshipResults = secondResponse.data;
+        dispatch(setData(data));
+        stateSettingCallback(view, office, data);
+      } else {
+        stateSettingCallback(view, office, rawData);
+      }
     } else {
-      // axios
-      //   .get(`${process.env.REACT_APP_API_URI}/cases/fiscalSummary`, {
-      //     // mock URL, can be simply replaced by `${Real_Production_URL}/summary` in prod!
-      //     params: {
-      //       from: years[0],
-      //       to: years[1],
-      //       office: office,
-      //     },
-      //   })
-      //   .then(result => {
-      //     stateSettingCallback(view, office, test_data); // <-- `test_data` here can be simply replaced by `result.data` in prod!
-      //   })
-      //   .catch(err => {
-      //     console.error(err);
-      //   });
+      if (rawData.length === 0) {
+        const [firstResponse, secondResponse] = await Promise.all([
+          axios.get(`${process.env.REACT_APP_API_URI}/cases/fiscalSummary`),
+          axios.get(
+            `${process.env.REACT_APP_API_URI}/cases/citizenshipSummary`
+          ),
+        ]);
 
-      const [firstResponse, secondResponse] = await Promise.all([
-        axios.get(`${process.env.REACT_APP_API_URI}/cases/fiscalSummary`),
-        axios.get(`${process.env.REACT_APP_API_URI}/cases/citizenshipSummary`),
-      ]);
-
-      let data = firstResponse.data;
-      data.citizenshipResults = secondResponse.data;
-      stateSettingCallback(view, office, data);
+        let data = firstResponse.data;
+        data.citizenshipResults = secondResponse.data;
+        dispatch(setData(data));
+        stateSettingCallback(view, office, data);
+      } else {
+        stateSettingCallback(view, office, rawData);
+      }
     }
   }
   const clearQuery = (view, office) => {
@@ -169,7 +152,9 @@ function GraphWrapper(props) {
 }
 
 function mapStateToProps(state) {
-  console.log(state);
+  return {
+    rawData: state.dataReducer.data,
+  };
 }
 
 export default connect(mapStateToProps)(GraphWrapper);

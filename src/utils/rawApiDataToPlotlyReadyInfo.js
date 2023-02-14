@@ -15,12 +15,12 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
   let rowsForTable;
 
   let yearMinMax = []; //variable to set minYear and MaxYear
-  for (let yearResults of data[0]['yearResults']) {
+  for (let yearResults of data['yearResults']) {
     yearMinMax.push(yearResults['fiscal_year']);
   }
 
   const yearByOfficeByGrant = {}; //Object that contacts year by Office by grant rate information
-  for (let office of data[0]['yearResults']) {
+  for (let office of data['yearResults']) {
     if (!yearByOfficeByGrant[office['fiscal_year']])
       yearByOfficeByGrant[office['fiscal_year']] = {}; //if year not existing set to empty object
     for (let yearData of office['yearData']) {
@@ -43,8 +43,9 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
       totalPercentDenieds: [],
     };
   }
-  for (let yearResults of data[0]['yearResults']) {
+  for (let yearResults of data['yearResults']) {
     for (let yearData of yearResults['yearData']) {
+      console.log(yearData['office']);
       officeData[yearData['office']]['xYears'].push(yearResults['fiscal_year']);
       officeData[yearData['office']]['totals'].push(yearData['totalCases']);
       officeData[yearData['office']]['yTotalPercentGranteds'].push(
@@ -63,13 +64,17 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
     switch (view) {
       case 'time-series':
         const rowsForAllDisplay = [];
-        for (let yearResults of data[0].yearResults) {
+        for (let yearResults of data.yearResults) {
           rowItem = {
             'Fiscal Year': yearResults.fiscal_year,
-            'Total Cases': yearResults.totalCases,
-            Grants: Number(yearResults.totalGranted),
-            'Referrals / Denials': Number(yearResults.denied),
-            'Admin Closed / Dismissals': Number(yearResults.adminClosed),
+            'Total Cases': yearResults.totalCases.toLocaleString('en-US'),
+            Grants: Number(yearResults.totalGranted).toLocaleString('en-US'),
+            'Referrals / Denials': Number(yearResults.denied).toLocaleString(
+              'en-US'
+            ),
+            'Admin Closed / Dismissals': Number(
+              yearResults.adminClosed
+            ).toLocaleString('en-US'),
             'Granted Rate': Number(yearResults.granted).toFixed(2),
           };
           rowsForAllDisplay.push(rowItem);
@@ -82,7 +87,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           totalPercentAdminCloseds: [],
           totalPercentDenieds: [],
         };
-        for (let officeName of data[0]['yearResults']) {
+        for (let officeName of data['yearResults']) {
           finalData['xYears'].push(officeName['fiscal_year']);
           finalData['totals'].push(officeName['totalCases']);
           finalData['yTotalPercentGranteds'].push(officeName['granted']);
@@ -94,7 +99,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
 
       case 'office-heat-map':
         rowsForTable = [];
-        for (let yearResults of data[0].yearResults) {
+        for (let yearResults of data.yearResults) {
           for (let officeKey of officeNames) {
             if (
               yearResults.yearData.filter(
@@ -145,6 +150,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           //loop through
           officeHeatMapDataObject['y'].push(fiscal_year); //include year into y axis
           let zAxisArray = []; //Array to hold each row for z axis
+          console.log(yearByOfficeByGrant);
           for (let officeName of officeNames) {
             //loop using unique office names
             zAxisArray.push(
@@ -159,7 +165,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
 
       case 'citizenship':
         rowsForTable = [];
-        for (let item of data[0].citizenshipResults) {
+        for (let item of data.citizenshipResults) {
           rowItem = {
             Citizenship: item.citizenship,
             'Total Cases': item.totalCases,
@@ -174,7 +180,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           countries: [],
           countriesPercentGranteds: [],
         };
-        for (let country of data[0]['citizenshipResults']) {
+        for (let country of data['citizenshipResults']) {
           countryGrantRateObj['countries'].push(country['citizenship']);
           countryGrantRateObj['countriesPercentGranteds'].push(
             country['granted']
@@ -191,22 +197,24 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
     switch (view) {
       case 'time-series':
         rowsForTable = [];
-        data[0].yearResults.sort((a, b) => a.fiscal_year - b.fiscal_year);
-        for (let i = 0; i < data[0].yearResults.length; i++) {
+        data.yearResults.sort((a, b) => a.fiscal_year - b.fiscal_year);
+        for (let i = 0; i < data.yearResults.length; i++) {
           if (
-            data[0].yearResults[i].yearData.filter(
+            data.yearResults[i].yearData.filter(
               dataItem => dataItem.office === office
             )[0]
           ) {
-            const officeObj = data[0].yearResults[i].yearData.filter(
+            const officeObj = data.yearResults[i].yearData.filter(
               dataItem => dataItem.office === office
             )[0];
             rowItem = {
-              'Fiscal Year': data[0].yearResults[i].fiscal_year,
-              'Total Cases': officeObj.totalCases,
-              Grants: Number(officeObj.totalGranted),
+              'Fiscal Year': data.yearResults[i].fiscal_year,
+              'Total Cases': officeObj.totalCases.toLocaleString('en-US'),
+              Grants: Number(officeObj.totalGranted).toLocaleString('en-US'),
               'Referrals / Denials': Number(officeObj.denied),
-              'Admin Closed / Dismissals': Number(officeObj.adminClosed),
+              'Admin Closed / Dismissals': Number(
+                officeObj.adminClosed
+              ).toLocaleString('en-US'),
               'Granted Rate': Number(officeObj.granted).toFixed(2),
             };
             rowsForTable.push(rowItem);
@@ -220,13 +228,15 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
 
       case 'citizenship':
         rowsForTable = [];
-        for (let item of data[0].citizenshipResults) {
+        for (let item of data.citizenshipResults) {
           rowItem = {
             Citizenship: item.citizenship,
-            'Total Cases': item.totalCases,
-            Grants: Number(item.totalGranted),
-            'Referrals / Denials': Number(item.denied),
-            'Admin Closed / Dismissals': Number(item.adminClosed),
+            'Total Cases': item.totalCases.toLocaleString('en-US'),
+            Grants: Number(item.totalGranted).toLocaleString('en-US'),
+            'Referrals / Denials': Number(item.denied).toLocaleString('en-US'),
+            'Admin Closed / Dismissals': Number(
+              item.adminClosed
+            ).toLocaleString('en-US'),
             'Granted Rate': Number(item.granted).toFixed(2),
           };
           rowsForTable.push(rowItem);
@@ -235,7 +245,7 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
           countries: [],
           countriesPercentGranteds: [],
         };
-        for (let country of data[0]['citizenshipResults']) {
+        for (let country of data['citizenshipResults']) {
           countryGrantRateObj['countries'].push(country['citizenship']);
           countryGrantRateObj['countriesPercentGranteds'].push(
             country['granted']

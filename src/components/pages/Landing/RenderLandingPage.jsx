@@ -64,6 +64,21 @@ function RenderLandingPage(props) {
         >
           View the Data
         </Button>
+
+        <a
+          href="https://humanrightsfirst.org/wp-content/uploads/2022/10/COW2021001887-I589Data.csv"
+          // target="_blank"
+          // rel="noreferrer"
+        >
+          <div className="read-more-btn">
+            <Button
+              type="default"
+              style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+            >
+              Download the Data
+            </Button>
+          </div>
+        </a>
       </div>
 
       <div className="middle-section">
@@ -78,7 +93,7 @@ function RenderLandingPage(props) {
             through a Freedom of Information Act request. You can search for
             information on asylum grant rates by year, nationality, and asylum
             office, visualize the data with charts and heat maps, and download
-            the data set
+            the data set.
           </h3>
         </div>
       </div>
@@ -90,15 +105,15 @@ function RenderLandingPage(props) {
             <h2>36%</h2>
             <h3>
               By the end of the Trump administration, the average asylum office
-              grant rate had fallen 44 percent in fiscal year 2016 to 28 percent
-              in fiscal year 2020.
+              grant rate had fallen 36 percent from an average of 44 percent in
+              fiscal year 2016 to 28 percent in fiscal year 2020.
             </h3>
           </div>
           <div className="second-data-point-container">
             <h2>5%</h2>
             <h3>
               The New York asylum office grant rate dropped to 5 percent in
-              fiscal year 2020
+              fiscal year 2020.
             </h3>
           </div>
           <div className="third-data-point-container">
@@ -106,11 +121,15 @@ function RenderLandingPage(props) {
             <h3>
               Between fiscal year 2017 and 2020, the New York asylum office’s
               average grant rate was six times lower than the San Francisco
-              asylum office
+              asylum office.
             </h3>
           </div>
         </div>
-        <a href="https://www.humanrightsfirst.org/resource/uscis-records-reveal-systemic-disparities-asylum-decisions">
+        <a
+          href="https://humanrightsfirst.org/library/uscis-records-reveal-systemic-disparities-in-asylum-decisions/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <div className="read-more-btn">
             <Button
               type="default"

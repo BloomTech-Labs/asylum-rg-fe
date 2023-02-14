@@ -8,6 +8,7 @@ import {
   SET_VISUALIZATION_DATA,
   RESET_VISUALIZATION_QUERY,
   SET_HEAT_MAP_YEARS,
+  GET_DATA,
 } from '../actionTypes';
 
 export const setVisualizationData = (view, office, data) => {
@@ -40,5 +41,12 @@ export const setHeatMapYears = (view, office, idx, year) => {
       idx,
       year,
     },
+  };
+};
+
+export const setData = data => {
+  return {
+    type: GET_DATA,
+    payload: data,
   };
 };

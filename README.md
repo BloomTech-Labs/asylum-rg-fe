@@ -30,7 +30,9 @@ You can find the deployed project at [https://asylum-rg-fe.vercel.app/](https://
 - run: `npm start` to start your local development server.
 <br />
 <br />
+
 ## Back-end
+
 - Fork and clone the repo to install it as your own remote.
 - run: `npm install` to download all dependencies.
 - Create a new `.env` file (Refer to environment variables given to you by codebase owner.)
@@ -47,6 +49,7 @@ You can find the deployed project at [https://asylum-rg-fe.vercel.app/](https://
     "ZCH", "ZNK", "ZAR", "ZBO", "ZMI", "ZOL"]}`)
 - run: `npm start` to start your local development server.
 - To check that the data is being returned properly, you can check the `GET:/cases/fiscalSummary` and `GET:/cases/citizenshipSummary` endpoints and compare to the test data located in this repo, in the `src/data/test_data.json` file.
+
 <br />
 <br />
 
